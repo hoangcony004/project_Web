@@ -24,15 +24,15 @@ switch ($controller) {
     case 'giohang':
         include 'controller/C_giohang.php';
         break;
-        case 'thanhtoan':
-            include 'controller/C_thanhtoan.php';
-            break;
-            case 'giohang':
-                include 'controller/C_giohang.php';
-                break;
-                case 'giohang':
-                    include 'controller/C_giohang.php';
-                    break;
+    case 'thanhtoan':
+        include 'controller/C_thanhtoan.php';
+        break;
+    case 'donhang':
+        include 'controller/C_donhang.php';
+        break;
+    case 'chitietsanpham':
+        include 'controller/C_chitietsanpham.php';
+        break;
     default:
         break;
 }

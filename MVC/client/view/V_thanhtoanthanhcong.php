@@ -54,56 +54,39 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="user-menu">
-                            <ul>
-                                <li>
-                                    <!--menu dropdown-->
-                                    <div class="dropdown">
-                                        <a style="text-decoration: none;"
-                                            href="login_sigin.html"><i
-                                                class="fa fa-user"></i>&ensp;Đăng
-                                            nhập</a>
-                                        <div class="dropdown-toggle"
-                                            data-toggle="dropdown">
-                                            <a style="text-decoration: none;"
-                                                href="#"><img src="img/user.png"
-                                                    width="25px" height="20px"
-                                                    alt>&ensp;Hồ sơ</a>
-                                        </div>
-                                        <div class="dropdown-menu">
-                                            <a style="text-decoration: none;"
-                                                href="#"
-                                                class="dropdown-item"><i
-                                                    class="fa-regular fa-address-card"></i>&ensp;Trang
-                                                cá nhân</a>
-                                            <a
-                                                style="text-decoration: none;"
-                                                href="V_donhang.html"
-                                                class="dropdown-item"><i
-                                                    class="fa-solid fa-layer-group"></i>&ensp;Xem
-                                                đơn hàng</a>
-                                            <a
-                                                style="text-decoration: none;"
-                                                href="#"
-                                                class="dropdown-item"><i
-                                                    class="fa-solid fa-gear"></i>&ensp;Cài
-                                                đặt</a>
-                                            <a
-                                                style="text-decoration: none;"
-                                                href="login_sigin.html"
-                                                class="dropdown-item"><i
-                                                    class="fa-solid fa-right-from-bracket"></i>&ensp;Đăng
-                                                xuất</a>
-                                        </div>
+                        <ul>
+                            <li>
+                                <!--menu dropdown-->
+                                <div class="dropdown">
+                                    <?php if (isset($_SESSION['ss_client'])) {
+                                    } else {
+                                        echo '<a style="text-decoration: none;" href="?controller=dangnhap"><i class="fa fa-user"></i>&ensp;Đăng nhập</a>';
+                                    } ?>
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        <?php
+                                        if (isset($_SESSION['ss_client'])) {
+                                            echo '<a style="text-decoration: none;" href="#"><img src="img/user.png" width="25px" height="20px" alt>&ensp;' . $_SESSION['ss_client1'];
+                                        }
+                                        ?>
+                                        </a>
                                     </div>
-                                </li>
-                                <li><a style="text-decoration: none;"
-                                        href="#"><i class="fa fa-heart"></i>&ensp;Yêu
-                                        thích</a></li>
-                                <li><a style="text-decoration: none;"
-                                        href="cart.html"><i
-                                            class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
-                                        hàng</a></li>
-                            </ul>
+                                    <div class="dropdown-menu">
+                                        <a style="text-decoration: none;" href="V_profile.html" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
+                                            cá nhân</a>
+                                        <a style="text-decoration: none;" href="V_donhang.html" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
+                                            đơn hàng</a>
+                                        <a style="text-decoration: none;" href="#" class="dropdown-item"><i class="fa-solid fa-gear"></i>&ensp;Cài
+                                            đặt</a>
+                                        <a style="text-decoration: none;" href="?controller=dangxuat" class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i>&ensp;Đăng
+                                            xuất</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a style="text-decoration: none;" href="#"><i class="fa fa-heart"></i>&ensp;Yêu
+                                    thích</a></li>
+                            <li><a style="text-decoration: none;" href="?controller=giohang"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
+                                    hàng</a></li>
+                        </ul>
                         </div>
                     </div>
 
@@ -140,7 +123,7 @@
 
                     <div class="col-sm-6">
                         <div class="shopping-item">
-                            <a href="cart.html">Giỏ hàng
+                            <a href="?controller=giohang">Giỏ hàng
                                 <i class="fa fa-shopping-cart"></i> <span
                                     class="product-count">5</span></a>
                         </div>

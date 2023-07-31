@@ -89,7 +89,7 @@
                             </li>
                             <li><a style="text-decoration: none;" href="#"><i class="fa fa-heart"></i>&ensp;Yêu
                                     thích</a></li>
-                            <li><a style="text-decoration: none;" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
+                            <li><a style="text-decoration: none;" href="?controller=giohang"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
                                     hàng</a></li>
                         </ul>
                         </div>
@@ -129,7 +129,7 @@
 
                     <div class="col-sm-6">
                         <div class="shopping-item">
-                            <a href="cart.html">Giỏ hàng<i
+                            <a href="?controller=giohang">Giỏ hàng<i
                                     class="fa fa-shopping-cart"></i> <span
                                     class="product-count">5</span></a>
                         </div>
@@ -153,9 +153,9 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Trang chủ</a></li>
-                            <li><a href="shop.html">Cửa hàng</a></li>
-                            <li class="active"><a href="cart.html"><i
+                            <li><a href="?controller=trangchu">Trang chủ</a></li>
+                            <li><a href="?controller=cuahang">Cửa hàng</a></li>
+                            <li class="active"><a href="?controller=giohang"><i
                                         class="fa-sharp fa-solid fa-cart-shopping"></i>
                                     Giỏ hàng</a></li>
                             <li><a href="#">Giới thiệu</a></li>

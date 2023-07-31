@@ -84,7 +84,7 @@
                             </li>
                             <li><a style="text-decoration: none;" href="#"><i class="fa fa-heart"></i>&ensp;Yêu
                                     thích</a></li>
-                            <li><a style="text-decoration: none;" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
+                            <li><a style="text-decoration: none;" href="?controller=giohang"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
                                     hàng</a></li>
                         </ul>
                         </div>
@@ -123,7 +123,7 @@
 
                     <div class="col-sm-6">
                         <div class="shopping-item">
-                            <a href="cart.html">Giỏ hàng <i
+                            <a href="?controller=giohang">Giỏ hàng <i
                                     class="fa fa-shopping-cart"></i> <span
                                     class="product-count">5</span></a>
                         </div>
@@ -239,7 +239,7 @@
                                                             <div class="product-upper">
                                                                 <img src="img/product-2.jpg" alt>
                                                             </div>
-                                                            <h2><a style="text-decoration: none;" href="single-product.html">Macbook M2 2023</a></h2>
+                                                            <h2><a style="text-decoration: none;" href="?controller=chitietsanpham">Macbook M2 2023</a></h2>
                                                             <div class="product-carousel-price">
                                                                 <ins>$899.00</ins> <del>$999.00</del>
                                                             </div>
@@ -247,7 +247,7 @@
                                                             <div class="product-option-shop">
                                                                 <a class="add_to_cart_button" data-quantity="1"
                                                                     data-product_sku data-product_id="70"
-                                                                    rel="nofollow" href="cart.html"><i
+                                                                    rel="nofollow" href="#"><i
                                                                         class="fa-sharp fa-solid fa-cart-shopping"></i>
                                                                     Thêm giỏ hàng</a>
                                                             </div>

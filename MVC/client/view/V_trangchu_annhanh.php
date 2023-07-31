@@ -69,7 +69,7 @@
                             </li>
                             <li><a style="text-decoration: none;" href="#"><i class="fa fa-heart"></i>&ensp;Yêu
                                     thích</a></li>
-                            <li><a style="text-decoration: none;" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
+                            <li><a style="text-decoration: none;" href="?controller=giohang"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
                                     hàng</a></li>
                         </ul>
                     </div>
@@ -104,7 +104,7 @@
 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.html">Giỏ hàng<i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="?controller=giohang">Giỏ hàng<i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
