@@ -54,54 +54,39 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="user-menu">
-                            <ul>
-                                <li>
-                                    <!--menu dropdown-->
-                                    <div class="dropdown">
-                                        <a style="text-decoration: none;"
-                                            href="login_sigin.html"><i
-                                                class="fa fa-user"></i>&ensp;Đăng
-                                            nhập</a>
-                                        <div class="dropdown-toggle"
-                                            data-toggle="dropdown">
-                                            <a style="text-decoration: none;"
-                                                href="#"><img src="img/user.png"
-                                                    width="25px" height="20px"
-                                                    alt>&ensp;Hồ sơ</a>
-                                        </div>
-                                        <div class="dropdown-menu">
-                                            <a style="text-decoration: none;"
-                                                href="#"
-                                                class="dropdown-item"><i
-                                                    class="fa-regular fa-address-card"></i>&ensp;Trang
-                                                cá nhân</a>
-                                                <a
-                                                    style="text-decoration: none;"
-                                                    href="V_donhang.html"
-                                                    class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem đơn hàng</a>
-                                                <a
-                                                    style="text-decoration: none;"
-                                                    href="#"
-                                                    class="dropdown-item"><i
-                                                        class="fa-solid fa-gear"></i>&ensp;Cài
-                                                    đặt</a>
-                                                <a
-                                                    style="text-decoration: none;"
-                                                    href="login_sigin.html"
-                                                    class="dropdown-item"><i
-                                                        class="fa-solid fa-right-from-bracket"></i>&ensp;Đăng
-                                                    xuất</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a style="text-decoration: none;"
-                                            href="#"><i class="fa fa-heart"></i>&ensp;Yêu
-                                            thích</a></li>
-                                    <li><a style="text-decoration: none;"
-                                            href="cart.html"><i
-                                                class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
-                                            hàng</a></li>
-                                </ul>
+                        <ul>
+                            <li>
+                                <!--menu dropdown-->
+                                <div class="dropdown">
+                                    <?php if (isset($_SESSION['ss_client'])) {
+                                    } else {
+                                        echo '<a style="text-decoration: none;" href="?controller=dangnhap"><i class="fa fa-user"></i>&ensp;Đăng nhập</a>';
+                                    } ?>
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        <?php
+                                        if (isset($_SESSION['ss_client'])) {
+                                            echo '<a style="text-decoration: none;" href="#"><img src="img/user.png" width="25px" height="20px" alt>&ensp;' . $_SESSION['ss_client1'];
+                                        }
+                                        ?>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <a style="text-decoration: none;" href="V_profile.html" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
+                                            cá nhân</a>
+                                        <a style="text-decoration: none;" href="V_donhang.html" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
+                                            đơn hàng</a>
+                                        <a style="text-decoration: none;" href="#" class="dropdown-item"><i class="fa-solid fa-gear"></i>&ensp;Cài
+                                            đặt</a>
+                                        <a style="text-decoration: none;" href="?controller=dangxuat" class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i>&ensp;Đăng
+                                            xuất</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a style="text-decoration: none;" href="#"><i class="fa fa-heart"></i>&ensp;Yêu
+                                    thích</a></li>
+                            <li><a style="text-decoration: none;" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Giỏ
+                                    hàng</a></li>
+                        </ul>
                         </div>
                     </div>
 
@@ -162,8 +147,8 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Trang chủ</a></li>
-                            <li><a href="shop.html">Cửa hàng</a></li>
+                            <li><a href="?controller=trangchu">Trang chủ</a></li>
+                            <li><a href="?controller=cuahang">Cửa hàng</a></li>
                             <li class="active"><a href="cart.html"><i
                                         class="fa-sharp fa-solid fa-cart-shopping"></i>
                                     Giỏ hàng</a></li>
@@ -276,23 +261,6 @@
                                             <div
                                                 class="woocommerce-billing-fields">
                                                 <h3 style="text-align: center;">Chi tiết thanh toán</h3>
-                                                <p id="billing_country_field"
-                                                    class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
-                                                    <label class
-                                                        for="billing_country">Quốc
-                                                        gia <abbr
-                                                            title="required"
-                                                            class="required">*</abbr>
-                                                    </label>
-                                                    <select
-                                                        class="country_to_state country_select"
-                                                        id="billing_country"
-                                                        name="billing_country">
-                                                        <option value  selected="selected">Chọn quốc gia…</option>
-                                                        <option value="VN">Vietnam</option>
-                                                    </select>
-                                                </p>
-
                                                 <p id="billing_first_name_field"
                                                     class="form-row form-row-first validate-required">
                                                     <label class
@@ -317,7 +285,7 @@
                                                                     class="btn btn-outline-decondary">Nam
                                                                     <input type="radio"
                                                                         name="fav_language"
-                                                                        value="nam">
+                                                                        value="Nam">
                                                                 </label>
                                                             
                                                             
@@ -325,7 +293,7 @@
                                                                     class="btn btn-outline-decondary">Nữ
                                                                     <input type="radio"
                                                                         name="fav_language"
-                                                                        value="nu">
+                                                                        value="Nữ">
                                                                 </label>
  
                                                 <p id="billing_company_field"
@@ -549,13 +517,7 @@
                                             </ul>
 
                                             <div class="form-row place-order">
-                                                <button class="btn btn-info">Thanh Toán</button>
-                                                <a href="V_thanhtoanthanhcong.html"
-                                                    name="proceed"
-                                                    class="checkout-button button alt wc-forward"
-                                                    style="padding: 13px 25px; background-color: cornflowerblue; color:white; text-decoration: none;">
-                                                    Thanh toán</a>
-
+                                                <button type="submit" name="btn_thanhtoan" class="btn btn-info">Thanh Toán</button>
                                             </div>
 
                                             <div class="clear"></div>
