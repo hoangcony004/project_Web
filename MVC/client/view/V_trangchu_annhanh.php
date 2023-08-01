@@ -211,329 +211,46 @@
                             <div class="zigzag-bottom"></div>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a style="text-decoration: none;" href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
+                                    <?php
+                                    foreach ($product as $key => $value) { ?>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="single-shop-product">
+                                                <div class="product-upper">
+                                                    <a href="?controller=chitietsanpham&id=<?php echo $value['id_sanpham'] ?>"><img src="<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
+                                                </div>
+                                                <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id_sanpham'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
+                                                <div class="product-carousel-price">
+                                                    <ins><?php echo number_format($value['giasanpham']) ?></ins> <del>$999.00</del>
+                                                </div>
 
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
+                                                <div class="product-option-shop">
+                                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                                        Thêm giỏ hàng</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
-
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
-
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
-
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
-
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
-
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
-
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="single-shop-product">
-                                            <div class="product-upper">
-                                                <img src="img/product-2.jpg" alt>
-                                            </div>
-                                            <h2><a href="single-product.html">Macbook
-                                                    M2 2023</a></h2>
-                                            <div class="product-carousel-price">
-                                                <ins>$899.00</ins> <del>$999.00</del>
-                                            </div>
-
-                                            <div class="product-option-shop">
-                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                                    Thêm giỏ hàng</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
                         <h2 class="section-title">Sản Phẩm bán chạy</h2>
                         <div class="product-carousel">
-
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
+                            <?php
+                            foreach ($product as $key => $value) { ?>
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="<?php echo $value['anhsanpham']; ?>" alt="anh">
                                     </div>
-                                </div>
 
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
+                                    <h2><a href="?controller=chitietsanpham&id=<?php echo $value['id_sanpham'] ?>"><?php echo $value['tensanpham']; ?> </a></h2>
+                                    
+                                    <div class="product-carousel-price">
+                                        <ins><?php echo number_format($value['giasanpham']) ?></ins> <del>100,000vnd</del>
                                     </div>
+                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                        Mua ngay</a>
                                 </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="img/product-3.jpg" alt>
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                            Mua ngay</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                            Xem
-                                            chi tiết</a>
-                                    </div>
-                                </div>
-
-                                <h2>LG Leon 2015</h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>
-                            </div>
-
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

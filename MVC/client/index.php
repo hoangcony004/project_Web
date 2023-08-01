@@ -33,6 +33,9 @@ switch ($controller) {
     case 'chitietsanpham':
         include 'controller/C_chitietsanpham.php';
         break;
+    case 'themgiohang':
+        include 'controller/C_themgiohang.php';
+        break;
     default:
         break;
 }
