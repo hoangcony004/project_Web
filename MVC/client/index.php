@@ -39,6 +39,9 @@ switch ($controller) {
     case 'xulygiohang':
         include 'controller/C_xulygiohang.php';
         break;
+    case 'thanhtoanthanhcong':
+        include 'controller/C_thanhtoanthanhcong.php';
+        break;
     default:
         break;
 }

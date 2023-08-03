@@ -181,12 +181,12 @@
             </div><br>
             <p>Đơn hàng sẽ được xử lý trong giây lát, bạn có thể theo dõi đơn hàng của mình ở phần xem đơn hàng.</p>
             <br><br><br>
-            <a href="index.html"
+            <a href="?controller=trangchu"
                 name="proceed"
                 class="checkout-button button alt wc-forward"
                 style="padding: 13px 25px; background-color: crimson; color:white; text-decoration: none; border-radius: 5px;"><i class="fa-solid fa-house"></i>
                 Trang chủ</a>
-            <a href="V_donhang.html"
+            <a href="?controller=donhang"
                 name="proceed"
                 class="checkout-button button alt wc-forward"
                 style="padding: 13px 25px; background-color: crimson; color:white; text-decoration: none; border-radius: 5px;"><i class="fa-solid fa-layer-group"></i>
