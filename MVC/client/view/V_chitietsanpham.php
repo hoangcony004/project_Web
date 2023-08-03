@@ -196,28 +196,27 @@
                         <div class="product-breadcroumb">
                             <a style="text-decoration: none;" href="?controller=trangchu">Trang chủ</a>
                             <a style="text-decoration: none;" href="#">Thông tin sản phẩm</a>
-                            <a style="text-decoration: none;" href>Sony Smart TV - 2015</a>
+                            <a style="text-decoration: none;" href><?php echo $sanpham[0]['tensanpham'] ?></a>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="img/product-2.jpg" alt>
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
                                     </div>
 
                                     <div class="product-gallery">
-                                        <img src="img/product-thumb-1.jpg" alt>
-                                        <img src="img/product-thumb-2.jpg" alt>
-                                        <img src="img/product-thumb-3.jpg" alt>
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">Sony Smart TV -
-                                        2015</h2>
+                                    <h2 class="product-name"><?php echo $sanpham[0]['tensanpham'] ?></h2>
                                     <div class="product-inner-price">
                                         <ins>$700.00</ins> <del>$100.00</del>
                                     </div>

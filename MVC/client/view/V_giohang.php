@@ -187,6 +187,7 @@
                                         foreach ($_SESSION['cart'] as $key => $value) {
                                             $tongtien += $value['soluong'] * $value['giasanpham'];
                                     ?>
+                                    
                                             <tbody>
 
                                                 <tr class="cart_item">
@@ -212,7 +213,7 @@
                                                     </td>
 
                                                     <td class="product-subtotal">
-                                                        <span class="amount"><?php echo number_format($value['giasanpham']) ?>vnd</span>
+                                                        <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
                                                     </td>
 
                                                     <td class="product-remove">
@@ -274,17 +275,24 @@
 
                                 <div class="cart_totals ">
                                     <h2>Tổng giỏ hàng</h2>
-
+                                    <?php
+                                        if (isset($_SESSION['cart'])) {
+                                            $sp = $_SESSION['cart'];
+                                            $soluong = count($sp);
+                                        } else {
+                                            $soluong = 0;
+                                        }
+                                        ?>
                                     <table cellspacing="0">
                                         <tbody>
                                             <tr class="cart-subtotal">
                                                 <th>Tổng sản phẩm</th>
-                                                <td><span class="amount">10</span></td>
+                                                <td><span class="amount"><?php echo $soluong?></span></td>
                                             </tr>
 
                                             <tr class="order-total">
                                                 <th>Tổng tiền</th>
-                                                <td><strong><span class="amount"><?php echo number_format($tongtien) ?></span></strong></td>
+                                                <td><strong><span class="amount"><?php echo number_format($tongtien) ?>vnd</span></strong></td>
                                             </tr>
                                         </tbody>
                                     </table>

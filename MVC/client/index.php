@@ -36,6 +36,9 @@ switch ($controller) {
     case 'themgiohang':
         include 'controller/C_themgiohang.php';
         break;
+    case 'xulygiohang':
+        include 'controller/C_xulygiohang.php';
+        break;
     default:
         break;
 }
