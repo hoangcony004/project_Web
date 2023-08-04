@@ -55,8 +55,10 @@
                                         ?>
                                         </a>
                                     </div>
+                                    <?php
+                                    foreach ($khachhang as $key => $value) { ?>
                                     <div class="dropdown-menu">
-                                        <a style="text-decoration: none;" href="V_profile.html" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
+                                        <a style="text-decoration: none;" href="?controller=trangcanhan&id=<?php echo $value['id_khachhang'] ?>" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
                                             cá nhân</a>
                                         <a style="text-decoration: none;" href="V_donhang.html" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
                                             đơn hàng</a>
@@ -65,6 +67,7 @@
                                         <a style="text-decoration: none;" href="?controller=dangxuat" class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i>&ensp;Đăng
                                             xuất</a>
                                     </div>
+                                    <?php }?>
                                 </div>
                             </li>
                             <li><a style="text-decoration: none;" href="#"><i class="fa fa-heart"></i>&ensp;Yêu

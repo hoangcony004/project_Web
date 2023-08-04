@@ -20,7 +20,7 @@ if (!isset($_SESSION['ss_client'])) {
         }
 
         if (!$loi) {
-            $user = $db->get('admin', array('tendangnhap' => $username));
+            $user = $db->get('khachhang', array('tendangnhap' => $username));
             if (empty($user)) {
                 $loi['username'] = 'Tên đăng nhập không tồn tại!';
             }
@@ -34,7 +34,7 @@ if (!isset($_SESSION['ss_client'])) {
         // neu thoa man taat ca dieu kien ttren (khong con loi nao say ra)
         if (!$loi) {
             // gan id nguoi dung vao session
-            $_SESSION['ss_client'] = $user[0]['id_admin'];
+            $_SESSION['ss_client'] = $user[0]['id_khachhang'];
             $_SESSION['ss_client1'] = $user[0]['hovaten'];
             header('location: ?controller=trangchu');
         }

@@ -225,10 +225,10 @@
                                         <div class="quantity" style="margin-top: 5px;">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" max="10" step="1">
                                         </div>
-                                        <button class="add_to_cart_button" type="submit"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                            Thêm giỏ hàng</button>
+                                        
                                     </form>
-
+                                    <a style="margin-top: 5px;" class="add_to_cart_button" href="?controller=themgiohang&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                            Thêm giỏ hàng</a>
                                     <div class="product-inner-category">
                                         <p>Category: <a href>Summer</a>.
                                             Tags: <a href>awesome</a>, <a href>best</a>, <a href>sale</a>,

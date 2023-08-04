@@ -27,9 +27,8 @@ if (isset($_POST['btn_thanhtoan'])) {
             'donhang_id' => $donhang_id,
             'sanpham_id' => $value['id_sanpham'],
             'soluong' => $value['soluong'],
-            'giatien' => $value['giatien'],
             'tongtien' => $tongtien,
-            'mota' => $value['mota'],
+            'mota' => $ghichu
 
         ));
 
