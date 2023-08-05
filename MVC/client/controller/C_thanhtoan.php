@@ -9,34 +9,37 @@ if (isset($_POST['btn_thanhtoan'])) {
     $xa = $_POST['xa'];
     $thon = $_POST['thon'];
     $ghichu = $_POST['ghichu'];
-    
+
 
     //echo 'hotenla: '.$hoten;
     //echo 'gioi tinh la : '.$gioitinh;
+    // $id_donhang = 1;
 
 
     $donhang = $db->get('donhang', array());
     foreach ($donhang as $key => $value) {
-        $donhang_id += $value['id_donhang'];
+        $id_donhang = $value['id_donhang']+1;
     }
+    // var_dump($id_donhang);
+    // die;
 
     $tongtien = 0;
     foreach ($_SESSION['cart'] as $key => $value) {
         $tongtien += $value['soluong'] * $value['giasanpham'];
         $db->insert('chitietdonhang', array(
-            'donhang_id' => $donhang_id,
+            'donhang_id' => $id_donhang,
             'sanpham_id' => $value['id_sanpham'],
             'soluong' => $value['soluong'],
             'tongtien' => $tongtien,
             'mota' => $ghichu
 
         ));
-
+       
     }
     $db->insert(
         'donhang',
         array(
-            'id_donhang' => $donhang_id,
+            //'id_donhang' => $id_donhang,
             'hovaten' => $hoten,
             'gioitinh' => $gioitinh,
             'email' => $email,
@@ -48,9 +51,10 @@ if (isset($_POST['btn_thanhtoan'])) {
             'ghichu' => $ghichu,
             'tongtien' => $tongtien,
             'trangthai' => 0,
-            
+
         )
     );
+    //unset($id_donhang);
     unset($_SESSION['cart']);
     header('location: ?controller=thanhtoanthanhcong');
 }
