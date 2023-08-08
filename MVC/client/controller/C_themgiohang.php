@@ -9,7 +9,7 @@ if (isset($_SESSION['cart'])) {
     // kiem tra san pham da ton tai chua
     if(isset($_SESSION['cart'][$id])) {
         // neu da co san pham do rooi thi cong 1
-        $_SESSION['cart'][$id]['sl']+=1;
+        $_SESSION['cart'][$id]['soluong']+=1;
     }else{
         // san pham do chua themm vao lan nao
         $_SESSION['cart'][$id]['id_sanpham'] = $product[0]['id_sanpham'];

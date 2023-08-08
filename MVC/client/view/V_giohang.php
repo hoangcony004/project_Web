@@ -213,7 +213,7 @@
                                                     </td>
 
                                                     <td class="product-subtotal">
-                                                        <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
+                                                        <span class="amount"><?php echo number_format($value['soluong'] * $value['giasanpham']) ?>vnd</span>
                                                     </td>
 
                                                     <td class="product-remove">

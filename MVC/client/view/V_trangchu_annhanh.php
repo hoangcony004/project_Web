@@ -137,8 +137,9 @@
                         <li><a href="https://www.facebook.com/profile.php?id=100020891342691">Liên
                                 hệ</a></li>
                         <li>
-                            <form action="#" method="post">
-                                <input type="search" placeholder="Tìm kiếm..." name="tim_kiem" style=" border: 1px solid; border-radius: 5px; margin-top: 18px; padding: 2px 5px;">
+                            <form action="#" method="get">
+                                <input type="search" placeholder="Tìm kiếm..." name="keyword" style=" border: 1px solid; border-radius: 5px; margin-top: 18px; padding: 2px 5px;"
+                                value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>">
                                 <button style="padding: 3px 15px; border: 1px solid; border-radius: 5px; background-color: cornflowerblue;
                                 "><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
@@ -250,7 +251,7 @@
                                     <div class="product-carousel-price">
                                         <ins><?php echo number_format($value['giasanpham']) ?></ins> <del>100,000vnd</del>
                                     </div>
-                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
                                         Mua ngay</a>
                                 </div>
                             <?php } ?>

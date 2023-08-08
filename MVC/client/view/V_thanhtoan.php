@@ -324,7 +324,7 @@
                                             Tổng sản phẩm <strong class="product-quantity">×
                                                 <?php echo $soluong ?></strong> </td>
                                         <td class="product-total">
-                                            <span class="amount"><?php echo number_format($tongtien) ?></span>
+                                            <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
                                         </td>
                                     </tr>
                                 </tbody>
