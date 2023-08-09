@@ -58,7 +58,7 @@
                                     <?php
                                     foreach ($khachhang as $key => $value) { ?>
                                     <div class="dropdown-menu">
-                                        <a style="text-decoration: none;" href="?controller=trangcanhan&id=<?php echo $value['id_khachhang'] ?>" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
+                                        <a style="text-decoration: none;" href="?controller=trangcanhan&id=<?php echo $value['id'] ?>" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
                                             cá nhân</a>
                                         <a style="text-decoration: none;" href="V_donhang.html" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
                                             đơn hàng</a>
@@ -155,17 +155,17 @@
         <div class="block-slider block-slider4">
             <ul class id="bxslider-home4">
                 <li>
-                    <a href="#"><img src="img/baner-pizza.jpg" alt="Slide"></a>
+                    <a href="#"><img style=" height: 400px;" src="img/baner-pizza.jpg" alt="Slide"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="img/banne_bbq.jpg" alt="Slide"></a>
+                    <a href="#"><img style=" height: 400px;" src="img/banne_bbq.jpg" alt="Slide"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="img/banner-salad.webp" alt="Slide"></a>
+                    <a href="#"><img style=" height: 400px;" src="img/banner-salad.webp" alt="Slide"></a>
 
                 </li>
                 <li>
-                    <a href="#"><img src="img/bannner_miy.jpg" alt="Slide"></a>
+                    <a href="#"><img style=" height: 400px;" src="img/bannner_miy.jpg" alt="Slide"></a>
                 </li>
             </ul>
         </div>
@@ -220,15 +220,15 @@
                                         <div class="col-md-3 col-sm-6">
                                             <div class="single-shop-product">
                                                 <div class="product-upper">
-                                                    <a href="?controller=chitietsanpham&id=<?php echo $value['id_sanpham'] ?>"><img src="<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
+                                                    <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
                                                 </div>
-                                                <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id_sanpham'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
+                                                <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                 <div class="product-carousel-price">
-                                                    <ins><?php echo number_format($value['giasanpham']) ?></ins> <del>$999.00</del>
+                                                    <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
                                                 </div>
 
                                                 <div class="product-option-shop">
-                                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
                                                         Thêm giỏ hàng</a>
                                                 </div>
                                             </div>
@@ -243,15 +243,15 @@
                             foreach ($product as $key => $value) { ?>
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img src="<?php echo $value['anhsanpham']; ?>" alt="anh">
+                                        <img  style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh">
                                     </div>
 
-                                    <h2><a href="?controller=chitietsanpham&id=<?php echo $value['id_sanpham'] ?>"><?php echo $value['tensanpham']; ?> </a></h2>
+                                    <h2><a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?> </a></h2>
                                     
                                     <div class="product-carousel-price">
-                                        <ins><?php echo number_format($value['giasanpham']) ?></ins> <del>100,000vnd</del>
+                                        <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
                                     </div>
-                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
                                         Mua ngay</a>
                                 </div>
                             <?php } ?>

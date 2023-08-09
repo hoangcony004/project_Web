@@ -34,7 +34,7 @@ if (!isset($_SESSION['ss_client'])) {
         // neu thoa man taat ca dieu kien ttren (khong con loi nao say ra)
         if (!$loi) {
             // gan id nguoi dung vao session
-            $_SESSION['ss_client'] = $user[0]['id_khachhang'];
+            $_SESSION['ss_client'] = $user[0]['id'];
             $_SESSION['ss_client1'] = $user[0]['hovaten'];
             header('location: ?controller=trangchu');
         }

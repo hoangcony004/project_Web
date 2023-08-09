@@ -316,7 +316,7 @@
                                 $tongtien = 0;
                                 if (isset($_SESSION['cart'])) {
                                     foreach ($_SESSION['cart'] as $key => $value) {
-                                        $tongtien += $value['soluong'] * $value['giasanpham'];
+                                        $tongtien += $value['soluong'] * $value['giamoi'];
                                 ?>
                                 <tbody>
                                     <tr class="cart_item">

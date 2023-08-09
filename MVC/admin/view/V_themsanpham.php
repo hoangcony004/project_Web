@@ -1043,10 +1043,7 @@
                                     <div class="card-header py-3 bg-transparent">
                                         <div class="d-sm-flex align-items-center">
                                             <h5 class="mb-2 mb-sm-0">Thêm sản phẩm mới</h5>
-                                            <div class="ms-auto">
-                                                
-                                                <button type="submit" class="btn btn-primary" name="btn_themsp">Thêm sản phẩm</button>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -1096,42 +1093,50 @@
                                                             <h4>Nguyên liệu</h4>
                                                             <div class="col-12">
                                                                 <label class="form-label">Thịt: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên thịt...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên thịt(hoặc để trống)...">
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Cá: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên cá...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên cá(hoặc để trống)...">
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Rau: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên rau...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)...">
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Củ: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập Tên củ...">
+                                                                <input type="text" class="form-control" placeholder="Nhập Tên củ(hoặc để trống)...">
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Quả: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên quả...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên quả(hoặc để trống)...">
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Rau thơm: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên rau...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)...">
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Gia vị: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên gia vị...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên gia vị(hoặc để trống)...">
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Nguyên liệu khác: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên nguyên liệu...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên nguyên liệu(hoặc để trống)...">
                                                             </div>
 
                                                         </div><!--end row-->
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <div class="card-header py-3 bg-transparent">
+                                        <div class="d-sm-flex align-items-center">
+                                            
+                                            <div class="ms-auto">
+                                                
+                                                <button type="submit" class="btn btn-primary" name="btn_themsp"><i class="fa-solid fa-plus"></i> Thêm sản phẩm</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                         </div><!--end row-->
                                     </div>
                                 </div>

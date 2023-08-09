@@ -185,7 +185,7 @@
                                     $tongtien = 0;
                                     if (isset($_SESSION['cart'])) {
                                         foreach ($_SESSION['cart'] as $key => $value) {
-                                            $tongtien += $value['soluong'] * $value['giasanpham'];
+                                            $tongtien += $value['soluong'] * $value['giamoi'];
                                     ?>
                                     
                                             <tbody>
@@ -197,27 +197,27 @@
                                                     </td>
 
                                                     <td class="product-name">
-                                                        <a href="?controller=chitietsanpham&id=<?php echo $value['id_sanpham']?>"><?php echo $value['tensanpham'] ?></a>
+                                                        <a href="?controller=chitietsanpham&id=<?php echo $value['id']?>"><?php echo $value['tensanpham'] ?></a>
                                                     </td>
 
                                                     <td class="product-price">
-                                                        <span class="amount"><?php echo number_format($value['giasanpham']) ?>vnd</span>
+                                                        <span class="amount"><?php echo number_format($value['giamoi']) ?>vnd</span>
                                                     </td>
 
                                                     <td class="product-quantity">
                                                         <div class="quantity buttons_added">
-                                                            <a style="text-decoration: none;" href="?controller=xulygiohang&method=giam&id=<?php echo $value['id_sanpham'] ?>">&ensp;-&ensp;</a>
+                                                            <a style="text-decoration: none;" href="?controller=xulygiohang&method=giam&id=<?php echo $value['id'] ?>">&ensp;-&ensp;</a>
                                                             <?php echo $value['soluong'] ?>
-                                                            <a style="text-decoration: none;" href="?controller=xulygiohang&method=tang&id=<?php echo $value['id_sanpham'] ?>">&ensp;+&ensp;</a>
+                                                            <a style="text-decoration: none;" href="?controller=xulygiohang&method=tang&id=<?php echo $value['id'] ?>">&ensp;+&ensp;</a>
                                                         </div>
                                                     </td>
 
                                                     <td class="product-subtotal">
-                                                        <span class="amount"><?php echo number_format($value['soluong'] * $value['giasanpham']) ?>vnd</span>
+                                                        <span class="amount"><?php echo number_format($value['soluong'] * $value['giamoi']) ?>vnd</span>
                                                     </td>
 
                                                     <td class="product-remove">
-                                                        <a title="Remove this item" class="remove" href="?controller=xulygiohang&method=xoa&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                                        <a title="Remove this item" class="remove" href="?controller=xulygiohang&method=xoa&id=<?php echo $value['id'] ?>"><i class="fa-solid fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                         <?php }
@@ -225,13 +225,13 @@
                                         <tr>
                                             <td class="actions" colspan="6">
                                                 <div class="coupon">
-                                                    <form action>
+                                                    <form action="?controller=giohang" method="post">
                                                         <label for="coupon_code">Mã
                                                             giảm giá:</label>
-                                                        <input type="text" placeholder="Nhập mã giảm giá..." value id="coupon_code" class="input-text" name="coupon_code">
+                                                        <input type="number" placeholder="Nhập mã giảm giá..." class="input-text" name="magiamgia" style="padding: 9px 10px;">
                                                         <input type="submit" value="Áp dụng" name="btn_magiamgia" class="button">
                                                     </form>
-                                                    <a href="" name="btn_xoacart" class="button" style="padding: 13px 25px; background-color: chocolate; color:white; margin-left: 50px; text-decoration: none;">
+                                                    <a href="?controller=xoatatca" class="button" style="padding: 13px 25px; background-color: chocolate; color:white; margin-left: 50px; text-decoration: none;">
                                                         Xóa tất cả</a>
                                                     <a href="?controller=thanhtoan" name="proceed" class="checkout-button button alt wc-forward" style="padding: 13px 25px; background-color: chocolate; color:white; text-decoration: none;">
                                                         Thanh toán</a>
