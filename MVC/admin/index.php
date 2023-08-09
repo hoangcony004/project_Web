@@ -24,6 +24,9 @@ switch ($controller) {
     case 'themsanpham':
         include 'controller/C_themsanpham.php';
         break;
+    case 'chitietsanpham':
+        include 'controller/C_chitietsanpham.php';
+        break;
     default:
         break;
 }

@@ -1174,13 +1174,13 @@
                                                             </p>
                                                         </td>
                                                         <td>
-                                                        <?php echo $value['nhacungcap_id'] ?>
+                                                        <?php echo $value['id_nhacungcap'] ?>
                                                         </td>
                                                         <td>
                                                         <?php echo $value['ngaythemsanpham'] ?>
                                                         </td>
                                                         <td>
-                                                        <?php echo number_format($value['giasanpham']) ?>vnd
+                                                        <?php echo number_format($value['giamoi']) ?>vnd
                                                         </td>
 
                                                         <td>
@@ -1191,7 +1191,7 @@
                                                         </td>
 
                                                         <td class="table-action">
-                                                            <a href="V_chitietsanpham.html" class="action-icon">
+                                                            <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>" class="action-icon">
                                                                 <i class="mdi mdi-eye"></i></a>
                                                             <a href="V_suasanpham.html" class="action-icon">
                                                                 <i class="mdi mdi-square-edit-outline"></i></a>

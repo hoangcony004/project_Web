@@ -1041,7 +1041,7 @@
                             <div class="page-title-box">
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Ăn nhanh 247</a></li>
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Ứng dụng</a></li>
                                         <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
                                     </ol>
@@ -1060,15 +1060,15 @@
                                         <div class="col-lg-5">
                                             <!-- Product image -->
                                             <a href="javascript: void(0);" class="text-center d-block mb-4">
-                                                <img src="images/products/product-5.jpg" class="img-fluid" style="max-width: 280px;" alt="Product-img">
+                                                <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" class="img-fluid" style="max-width: 280px;" alt="Product-img">
                                             </a>
 
                                         </div> <!-- end col -->
                                         <div class="col-lg-7">
                                             <form class="ps-lg-4">
                                                 <!-- Product title -->
-                                                <h3 class="mt-0">Amazing Modern Chair (Orange) <a href="javascript: void(0);" class="text-muted"><i class="mdi mdi-square-edit-outline ms-2"></i></a> </h3>
-                                                <p class="mb-1">Ngày thêm: 19/07/2023 </p>
+                                                <h3 class="mt-0"><?php echo $sanpham[0]['tensanpham'] ?> <a href="javascript: void(0);" class="text-muted"><i class="mdi mdi-square-edit-outline ms-2"></i></a> </h3>
+                                                <p class="mb-1">Ngày thêm: <?php echo $sanpham[0]['ngaythemsanpham'] ?></p>
                                                 <p class="font-16">
                                                     <span class="text-warning mdi mdi-star"></span>
                                                     <span class="text-warning mdi mdi-star"></span>
@@ -1083,14 +1083,14 @@
 
                                                 <!-- Product description -->
                                                 <div class="mt-4">
-                                                    <h6 class="font-14">Giá:</h6>
-                                                    <h3> $139.58</h3>
+                                                    <h6 class="font-14">Giá bán:</h6>
+                                                    <h3> <?php echo number_format($sanpham[0]['giamoi']) ?>vnd</h3>
                                                 </div>
                                     
                                                 <!-- Product description -->
                                                 <div class="mt-4">
                                                     <h6 class="font-14">Mô tả:</h6>
-                                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+                                                    <p><?php echo $sanpham[0]['mota'] ?></p>
                                                 </div>
 
                                                 <!-- Product information -->

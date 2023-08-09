@@ -177,13 +177,13 @@
                         <div class="card mt-3">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <a class="btn btn-info" href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                                    <a class="btn btn-info" href="?controller=trangchu"><i class="fa-solid fa-house"></i> Trang chủ</a>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <a class="btn btn-info" href="V_donhang.html"><i class="fa-solid fa-layer-group"></i> Xem đơn hàng</a>
+                                    <a class="btn btn-info" href="?controller=donhang"><i class="fa-solid fa-layer-group"></i> Xem đơn hàng</a>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <a class="btn btn-info" href="login_sigin.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng xuất</a>
+                                    <a class="btn btn-info" href="?controller=dangxuat"><i class="fa-solid fa-right-to-bracket"></i> Đăng xuất</a>
                                 </li>
                             </ul>
                         </div>

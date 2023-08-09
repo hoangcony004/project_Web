@@ -34,7 +34,7 @@ if (isset($_POST['btn_dangnhap'])) {
     // neu thoa man taat ca dieu kien ttren (khong con loi nao say ra)
     if (!$loi) {
         // gan id nguoi dung vao session
-        $_SESSION['ss_admin'] = $user[0]['id_admin'];
+        $_SESSION['ss_admin'] = $user[0]['id'];
         header('location: ?controller=trangchu');
     }
 }

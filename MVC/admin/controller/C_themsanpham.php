@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['ss_admin'])) {
-    $user = $db->get('admin', array('id_admin' => $_SESSION['ss_admin']));
+    $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
 
     if ($user[0]['cap'] == 1) {
         $data_nhacungcap = $db->get('nhacungcap', array());

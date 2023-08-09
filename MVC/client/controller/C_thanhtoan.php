@@ -9,7 +9,8 @@ if (isset($_POST['btn_thanhtoan'])) {
     $xa = $_POST['xa'];
     $thon = $_POST['thon'];
     $ghichu = $_POST['ghichu'];
-
+    $id_donhang = 1;
+    $id_khachhang = 1;
 
     //echo 'hotenla: '.$hoten;
     //echo 'gioi tinh la : '.$gioitinh;
@@ -18,20 +19,24 @@ if (isset($_POST['btn_thanhtoan'])) {
 
     $donhang = $db->get('donhang', array());
     foreach ($donhang as $key => $value) {
-        $id_donhang = $value['id_donhang']+1;
+        $id_donhang += $value['id'];
+    }
+    $khachhang = $db->get('khachhang', array());
+    foreach ($khachhang as $key => $value) {
+        $id_donhang += $value['id'];
     }
     // var_dump($id_donhang);
     // die;
 
     $tongtien = 0;
     foreach ($_SESSION['cart'] as $key => $value) {
-        $tongtien += $value['soluong'] * $value['giasanpham'];
+        $tongtien += $value['soluong'] * $value['giamoi'];
         $db->insert('chitietdonhang', array(
-            'donhang_id' => $id_donhang,
-            'sanpham_id' => $value['id_sanpham'],
+            'id_donhang' => $id_donhang,
+            'id_sanpham' => $value['id'],
             'soluong' => $value['soluong'],
             'tongtien' => $tongtien,
-            'mota' => $ghichu
+            'ghichu' => $ghichu
 
         ));
        
@@ -39,16 +44,12 @@ if (isset($_POST['btn_thanhtoan'])) {
     $db->insert(
         'donhang',
         array(
-            //'id_donhang' => $id_donhang,
-            'hovaten' => $hoten,
-            'gioitinh' => $gioitinh,
-            'email' => $email,
+            //'id_khachhang' => $id_khachhang,
             'sodienthoai' => $sodienthoai,
-            'tinhthanh' => $tinh,
+            'tinh_thanh' => $tinh,
             'quan_huyen' => $huyen,
             'xa_phuong' => $xa,
             'thon_xom' => $thon,
-            'ghichu' => $ghichu,
             'tongtien' => $tongtien,
             'trangthai' => 0,
 
