@@ -63,16 +63,16 @@
                         <div class="collapse" id="sidebarDashboards">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="V_trangchu.html">Thương mại</a>
+                                    <a href="?controller=trangchu">Thương mại</a>
                                 </li>
                                 <li>
-                                    <a href="V_phantich.html">Phân tích</a>
+                                    <a href="#">Phân tích</a>
                                 </li>
                                 <li>
-                                    <a href="V_CRM.html">CRM</a>
+                                    <a href="#">CRM</a>
                                 </li>
                                 <li>
-                                    <a href="V_duan.html">Dự án</a>
+                                    <a href="#">Dự án</a>
                                 </li>
                             </ul>
                         </div>
@@ -81,14 +81,14 @@
                     <li class="side-nav-title side-nav-item">Ứng dụng</li>
 
                     <li class="side-nav-item">
-                        <a href="apps-calendar.html" class="side-nav-link">
+                        <a href="#" class="side-nav-link">
                             <i class="uil-calender"></i>
                             <span> Lịch </span>
                         </a>
                     </li>
 
                     <li class="side-nav-item">
-                        <a href="apps-chat.html" class="side-nav-link">
+                        <a href="#" class="side-nav-link">
                             <i class="uil-comments-alt"></i>
                             <span> Trò chuyện </span>
                         </a>
@@ -103,28 +103,16 @@
                         <div class="collapse" id="sidebarEcommerce">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="V_danhsachsanpham.html">Danh sách sản phẩm</a>
+                                    <a href="?controller=danhsachsanpham">Danh sách sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="apps-ecommerce-products-details.html">Chi tiết sản phẩm</a>
+                                    <a href="?controller=donhang">Đơn đặt hàng</a>
                                 </li>
                                 <li>
-                                    <a href="apps-ecommerce-orders.html">Đơn đặt hàng</a>
+                                    <a href="?controller=khachhang">Khách hàng</a>
                                 </li>
                                 <li>
-                                    <a href="apps-ecommerce-orders-details.html">Chi tiết đặt hàng</a>
-                                </li>
-                                <li>
-                                    <a href="apps-ecommerce-customers.html">Khách hàng</a>
-                                </li>
-                                <li>
-                                    <a href="apps-ecommerce-shopping-cart.html">Giỏ hàng</a>
-                                </li>
-                                <li>
-                                    <a href="apps-ecommerce-checkout.html">Thanh toán</a>
-                                </li>
-                                <li>
-                                    <a href="apps-ecommerce-sellers.html">Người bán</a>
+                                    <a href="?controller=nhacungcap">Người bán</a>
                                 </li>
                             </ul>
                         </div>
@@ -139,13 +127,13 @@
                         <div class="collapse" id="sidebarquanly">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="V_themsanpham.html">Thêm sản phẩm</a>
+                                    <a href="?controller=themsanpham">Thêm sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="V_themnhanvien.html">Thêm khách hàng</a>
+                                    <a href="?controller=themkhachhang">Thêm khách hàng</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thêm đơn hàng</a>
+                                    <a href="?controller=themdonhang">Thêm đơn hàng</a>
                                 </li>
                             </ul>
                         </div>
@@ -160,10 +148,10 @@
                         <div class="collapse" id="sidebarEmail">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="apps-email-inbox.html">Hộp thư đến</a>
+                                    <a href="#">Hộp thư đến</a>
                                 </li>
                                 <li>
-                                    <a href="apps-email-read.html">Đọc mail</a>
+                                    <a href="#">Đọc mail</a>
                                 </li>
                             </ul>
                         </div>
@@ -178,23 +166,23 @@
                         <div class="collapse" id="sidebarProjects">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="apps-projects-list.html">Danh sách</a>
+                                    <a href="#">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="apps-projects-details.html">Chi tiết</a>
+                                    <a href="#">Chi tiết</a>
                                 </li>
                                 <li>
-                                    <a href="apps-projects-gantt.html">Gantt <span class="badge rounded-pill badge-light-lighten font-10 float-end">Mới</span></a>
+                                    <a href="#">Gantt <span class="badge rounded-pill badge-light-lighten font-10 float-end">Mới</span></a>
                                 </li>
                                 <li>
-                                    <a href="apps-projects-add.html">Tạo dự án <span class="badge rounded-pill badge-success-lighten font-10 float-end">Mới</span></a>
+                                    <a href="#">Tạo dự án <span class="badge rounded-pill badge-success-lighten font-10 float-end">Mới</span></a>
                                 </li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="side-nav-item">
-                        <a href="apps-social-feed.html" class="side-nav-link">
+                        <a href="#" class="side-nav-link">
                             <i class="uil-rss"></i>
                             <span> Nguồn cấp dữ liệu xã hội </span>
                         </a>
@@ -222,7 +210,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a href="apps-file-manager.html" class="side-nav-link">
+                        <a href="#" class="side-nav-link">
                             <i class="uil-folder-plus"></i>
                             <span> Quản lý tập tin </span>
                         </a>
@@ -231,111 +219,7 @@
                     <li class="side-nav-title side-nav-item">Phong tục</li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
-                            <i class="uil-copy-alt"></i>
-                            <span> Trang </span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="sidebarPages">
-                            <ul class="side-nav-second-level">
-                                <li>
-                                    <a href="pages-profile.html">Hồ sơ</a>
-                                </li>
-                                <li>
-                                    <a href="pages-profile-2.html">Hồ sơ 2</a>
-                                </li>
-                                <li>
-                                    <a href="pages-invoice.html">Hóa đơn</a>
-                                </li>
-                                <li>
-                                    <a href="pages-faq.html">Câu hỏi thường gặp</a>
-                                </li>
-                                <li>
-                                    <a href="pages-pricing.html">Định giá</a>
-                                </li>
-                                <li>
-                                    <a href="pages-maintenance.html">Bảo trì</a>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth">
-                                        <span> Xác thực </span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <div class="collapse" id="sidebarPagesAuth">
-                                        <ul class="side-nav-third-level">
-                                            <li>
-                                                <a href="pages-login.html">Đăng nhập</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-login-2.html">Login 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-register.html">Register</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-register-2.html">Register 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-logout.html">Logout</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-logout-2.html">Logout 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-recoverpw.html">Recover Password</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-recoverpw-2.html">Recover Password 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-lock-screen.html">Lock Screen</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-lock-screen-2.html">Lock Screen 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-confirm-mail.html">Confirm Mail</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-confirm-mail-2.html">Confirm Mail 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false" aria-controls="sidebarPagesError">
-                                        <span> Lỗi </span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <div class="collapse" id="sidebarPagesError">
-                                        <ul class="side-nav-third-level">
-                                            <li>
-                                                <a href="pages-404.html">Error 404</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-404-alt.html">Error 404-alt</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-500.html">Error 500</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="pages-starter.html">Trang bắt đầu</a>
-                                </li>
-                                <li>
-                                    <a href="pages-preloader.html">Tải trước</a>
-                                </li>
-                                <li>
-                                    <a href="pages-timeline.html">Mốc thời gian</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="side-nav-item">
-                        <a href="landing.html" target="_blank" class="side-nav-link">
+                        <a href="#" target="_blank" class="side-nav-link">
                             <i class="uil-globe"></i>
                             <span class="badge bg-secondary text-light float-end">Mới</span>
                             <span> Đổ bộ </span>
@@ -351,10 +235,10 @@
                         <div class="collapse" id="sidebarLayouts">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="layouts-horizontal.html">Nằm ngang</a>
+                                    <a href="V_namngang.html">Nằm ngang</a>
                                 </li>
                                 <li>
-                                    <a href="layouts-detached.html">Tách ra</a>
+                                    <a href="V_tachra.html">Tách ra</a>
                                 </li>
                             </ul>
                         </div>
@@ -371,25 +255,25 @@
                         <div class="collapse" id="sidebarBaseUI">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="ui-accordions.html">Accordions</a>
+                                    <a href="#">Accordions</a>
                                 </li>
                                 <li>
-                                    <a href="ui-alerts.html">Alerts</a>
+                                    <a href="#">Alerts</a>
                                 </li>
                                 <li>
-                                    <a href="ui-avatars.html">Avatars</a>
+                                    <a href="#">Avatars</a>
                                 </li>
                                 <li>
-                                    <a href="ui-badges.html">Badges</a>
+                                    <a href="#">Badges</a>
                                 </li>
                                 <li>
-                                    <a href="ui-breadcrumb.html">Breadcrumb</a>
+                                    <a href="#">Breadcrumb</a>
                                 </li>
                                 <li>
-                                    <a href="ui-buttons.html">Buttons</a>
+                                    <a href="#">Buttons</a>
                                 </li>
                                 <li>
-                                    <a href="ui-cards.html">Cards</a>
+                                    <a href="#">Cards</a>
                                 </li>
                                 <li>
                                     <a href="ui-carousel.html">Carousel</a>
@@ -452,13 +336,13 @@
                         <div class="collapse" id="sidebarExtendedUI">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="extended-dragula.html">Dragula</a>
+                                    <a href="#">Dragula</a>
                                 </li>
                                 <li>
-                                    <a href="extended-range-slider.html">Range Slider</a>
+                                    <a href="#">Range Slider</a>
                                 </li>
                                 <li>
-                                    <a href="extended-ratings.html">Ratings</a>
+                                    <a href="#">Ratings</a>
                                 </li>
                                 <li>
                                     <a href="extended-scrollbar.html">Scrollbar</a>
@@ -474,7 +358,7 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a href="widgets.html" class="side-nav-link">
+                        <a href="#" class="side-nav-link">
                             <i class="uil-layer-group"></i>
                             <span> Tiện ích </span>
                         </a>
@@ -489,10 +373,10 @@
                         <div class="collapse" id="sidebarIcons">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="icons-dripicons.html">Dripicons</a>
+                                    <a href="#">Dripicons</a>
                                 </li>
                                 <li>
-                                    <a href="icons-mdi.html">Material Design</a>
+                                    <a href="#">Material Design</a>
                                 </li>
                                 <li>
                                     <a href="icons-unicons.html">Unicons</a>
@@ -510,7 +394,7 @@
                         <div class="collapse" id="sidebarForms">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="form-elements.html">Basic Elements</a>
+                                    <a href="#">Basic Elements</a>
                                 </li>
                                 <li>
                                     <a href="form-advanced.html">Form Advanced</a>
@@ -694,7 +578,6 @@
                         </div>
                     </li>
                 </ul>
-
                 <!-- Help Box -->
                 <div class="help-box text-white text-center">
                     <a href="javascript: void(0);" class="float-end close-btn text-white">
@@ -956,7 +839,7 @@
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <a href="?controller=dangxuat" class="dropdown-item notify-item">
                                     <i class="mdi mdi-logout me-1"></i>
                                     <span>Đăng xuất</span>
                                 </a>
@@ -1038,12 +921,12 @@
 
                     <div class="row">
                         <div class="col-lg-12 mx-auto">
-                            <form action="#" method="post">
+                            <form action="#" method="post" enctype="multipart/form-data">
                                 <div class="card">
                                     <div class="card-header py-3 bg-transparent">
                                         <div class="d-sm-flex align-items-center">
                                             <h5 class="mb-2 mb-sm-0">Thêm sản phẩm mới</h5>
-                                            
+
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -1051,24 +934,43 @@
                                             <div class="col-12 col-lg-8">
                                                 <div class="card shadow-none bg-light border">
                                                     <div class="card-body">
-                                                        <form class="row g-3">
+
                                                         <div class="col-12">
-                                                                <label class="form-label"> Nhà cung cấp id: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập id nhà cung cấp..." name="tensp">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Tên sản phẩm: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên sản phẩm..." name="tensp">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Ảnh: </label>
-                                                                <input class="form-control" type="file">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Mô tả: </label>
-                                                                <textarea class="form-control" placeholder="Nhập mô tả..." rows="4" cols="4"></textarea>
-                                                            </div>
-                                                        </form>
+                                                            <label class="form-label">Id nhà cung cấp: </label>
+                                                            <input type="text" class="form-control" placeholder="Nhập id nhà cung cấp..." name="idncc">
+                                                            <?php if (isset($loi['idncc'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['idncc'] ?></p>
+                                                            <?php } ?>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label"> Id danh mục: </label>
+                                                            <input type="text" class="form-control" placeholder="Nhập id nhà cung cấp..." name="iddm">
+                                                            <?php if (isset($loi['iddm'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['iddm'] ?></p>
+                                                            <?php } ?>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Tên sản phẩm: </label>
+                                                            <input type="text" class="form-control" placeholder="Nhập tên sản phẩm..." name="tensp">
+                                                            <?php if (isset($loi['tensp'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['tensp'] ?></p>
+                                                            <?php } ?>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Ảnh: </label>
+                                                            <input class="form-control" type="file" name="anh">
+                                                            <?php if (isset($loi['anh'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['anh'] ?></p>
+                                                            <?php } ?>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Mô tả: </label>
+                                                            <textarea class="form-control" placeholder="Nhập mô tả..." rows="4" cols="4" name="mota"></textarea>
+                                                            <?php if (isset($loi['mota'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['mota'] ?></p>
+                                                            <?php } ?>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1079,49 +981,82 @@
                                                         <div class="row g-3">
                                                             <div class="col-12">
                                                                 <label class="form-label">Giá bán: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập giá bán...">
+                                                                <input type="text" class="form-control" placeholder="Nhập giá bán..." name="giamoi">
+                                                                <?php if (isset($loi['giamoi'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['giamoi'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Giá cũ: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập giá cũ...">
+                                                                <input type="text" class="form-control" placeholder="Nhập giá cũ..." name="giacu">
+                                                                <?php if (isset($loi['giacu'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['giacu'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
-                                                                <label class="form-label">Số lượng</label>
-                                                                <input type="text" class="form-control" placeholder="Nhập số lượng...">
+                                                                <label class="form-label">Số lượng: </label>
+                                                                <input type="number" class="form-control" placeholder="Nhập số lượng..." name="soluong">
+                                                                <?php if (isset($loi['soluong'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['soluong'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <hr>
                                                             <h4>Nguyên liệu</h4>
                                                             <div class="col-12">
                                                                 <label class="form-label">Thịt: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên thịt(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên thịt(hoặc để trống)..." name="thit" value="">
+                                                                <?php if (isset($loi['thit'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['thit'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Cá: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên cá(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên cá(hoặc để trống)..." name="ca" value="">
+                                                                <?php if (isset($loi['ca'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['ca'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Rau: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rau" value="">
+                                                                <?php if (isset($loi['rau'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['rau'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Củ: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập Tên củ(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập Tên củ(hoặc để trống)..." name="cu" value="">
+                                                                <?php if (isset($loi['cu'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['cu'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Quả: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên quả(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên quả(hoặc để trống)..." name="qua" value="">
+                                                                <?php if (isset($loi['qua'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['qua'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Rau thơm: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rauthom" value="">
+                                                                <?php if (isset($loi['rauthom'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['rauthom'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Gia vị: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên gia vị(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên gia vị(hoặc để trống)..." name="giavi" value="">
+                                                                <?php if (isset($loi['giavi'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['giavi'] ?></p>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Nguyên liệu khác: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên nguyên liệu(hoặc để trống)...">
+                                                                <input type="text" class="form-control" placeholder="Nhập tên nguyên liệu(hoặc để trống)..." name="nguyenlieukhac" value="">
+                                                                <?php if (isset($loi['nguyenlieukhac'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['nguyenlieukhac'] ?></p>
+                                                                <?php } ?>
                                                             </div>
 
                                                         </div><!--end row-->
@@ -1129,14 +1064,14 @@
                                                 </div>
                                             </div>
                                             <div class="card-header py-3 bg-transparent">
-                                        <div class="d-sm-flex align-items-center">
-                                            
-                                            <div class="ms-auto">
-                                                
-                                                <button type="submit" class="btn btn-primary" name="btn_themsp"><i class="fa-solid fa-plus"></i> Thêm sản phẩm</button>
+                                                <div class="d-sm-flex align-items-center">
+
+                                                    <div class="ms-auto">
+
+                                                        <button type="submit" class="btn btn-primary" name="btn_themsp"><i class="fa-solid fa-plus"></i> Thêm sản phẩm</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
                                         </div><!--end row-->
                                     </div>
                                 </div>

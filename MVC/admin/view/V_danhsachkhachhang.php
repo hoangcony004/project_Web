@@ -35,7 +35,6 @@
                 </span>
                 <span class="logo-sm">
                     <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
-                </span>
             </a>
 
             <!-- LOGO -->
@@ -623,30 +622,29 @@
                             <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="images/co_vn.png" alt="user-image" class="me-0 me-sm-1" height="12">
                                 <span class="align-middle d-none d-sm-inline-block">Tiếng Việt</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
-                                </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <img src="images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                                    </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
-                                </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <img src="images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                    </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
-                                </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <img src="images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                    </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
-                                </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <img src="images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                    </a>
 
-                            </div>
+                                </div>
                         </li>
 
                         <li class="dropdown notification-list">
@@ -917,7 +915,6 @@
                 </div>
                 <!-- end Topbar -->
 
-
                 <!-- Start Content-->
                 <div class="container-fluid">
 
@@ -929,10 +926,10 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Ăn nhanh 247</a></li>
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Ứng dụng</a></li>
-                                        <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
+                                        <li class="breadcrumb-item active">Danh sách khách hàng</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Chi tiết sản phẩm</h4>
+                                <h4 class="page-title">Danh sách khách hàng</h4>
                             </div>
                         </div>
                     </div>
@@ -942,142 +939,98 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-5">
-                                            <!-- Product image -->
-                                            <a href="javascript: void(0);" class="text-center d-block mb-4">
-                                                <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" class="img-fluid" style="max-width: 280px;" alt="Product-img">
-                                            </a>
+                                    <div class="row mb-2">
+                                        <div class="col-sm-4">
+                                            <a href="?controller=themkhachhang" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> Thêm khách hàng</a>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="text-sm-end">
+                                                <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog"></i></button>
+                                                <button type="button" class="btn btn-light mb-2 me-1">Import</button>
+                                                <button type="button" class="btn btn-light mb-2">Export</button>
+                                            </div>
+                                        </div><!-- end col-->
+                                    </div>
 
-                                        </div> <!-- end col -->
-                                        <div class="col-lg-7">
-                                            <form class="ps-lg-4">
-                                                <!-- Product title -->
-                                                <h3 class="mt-0"><?php echo $sanpham[0]['tensanpham'] ?> <a href="javascript: void(0);" class="text-muted"><i class="mdi mdi-square-edit-outline ms-2"></i></a> </h3>
-                                                <p class="mb-1">Ngày thêm: <?php echo $sanpham[0]['ngaythemsanpham'] ?></p>
-                                                <p class="font-16">
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                </p>
-
-                                                <!-- Product stock -->
-                                                <div class="mt-3">
-                                                    <h4><span class="badge badge-success-lighten">Còn hàng</span></h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
+                                            <form action="#" method="get">
+                                                <div class="input-group">
+                                                    <input type="search" class="form-control" placeholder="Tìm kiếm khách hàng..." name="keyword" 
+                                                        value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>">
+                                                    <button class="input-group-text btn-secondary" name="btn_timkh" type="submit">Tìm kiếm</button>
                                                 </div>
-
-                                                <!-- Product description -->
-                                                <div class="mt-4">
-                                                    <h6 class="font-14">Giá bán:</h6>
-                                                    <h3> <?php echo number_format($sanpham[0]['giamoi']) ?>vnd</h3>
-                                                </div>
-
-                                                <!-- Product description -->
-                                                <div class="mt-4">
-                                                    <h6 class="font-14">Mô tả:</h6>
-                                                    <p><?php echo $sanpham[0]['mota'] ?></p>
-                                                </div>
-
-                                                <!-- Product information -->
-                                                <div class="mt-4">
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Số lượng bán:</h6>
-                                                            <p class="text-sm lh-150">184</p>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Doanh thu:</h6>
-                                                            <p class="text-sm lh-150">$8,57,014</p>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Cổ phiếu:</h6>
-                                                            <p class="text-sm lh-150">10/11</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
                                             </form>
-                                        </div> <!-- end col -->
-                                    </div> <!-- end row-->
-
-                                    <div class="table-responsive mt-4">
-                                        <p>Sản phẩm khác</p>
-                                        <table class="table table-bordered table-centered mb-0">
-                                            <thead class="table-light">
+                                            <thead>
                                                 <tr>
-                                                    <th>Sản phẩm</th>
-                                                    <th>Giá bán</th>
-                                                    <th>Lượt mua</th>
-                                                    <th>Tổng tiền</th>
+                                                    <th style="width: 20px;">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                            <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>Ảnh</th>
+                                                    <th>Họ và tên</th>
+                                                    <th>Số điện thoại</th>
+                                                    <th>Email</th>
+                                                    <th>Địa chỉ</th>
+                                                    <th>Ngày thêm khách hàng</th>
+                                                    <th>Trạng thái</th>
+                                                    <th style="width: 75px;">Chức năng</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>ASOS Ridley Outlet - NYC</td>
-                                                    <td>$139.58</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">478 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 56%;" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <?php
+                                                foreach ($data_khachhang as $key => $value) { ?>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$1,89,547</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Marco Outlet - SRT</td>
-                                                    <td>$149.99</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">73 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 16%;" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$87,245</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Chairtest Outlet - HY</td>
-                                                    <td>$135.87</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">781 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$5,87,478</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Nworld Group - India</td>
-                                                    <td>$159.89</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">815 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 89%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$55,781</td>
-                                                </tr>
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="<?php echo $value['anh'] ?>" alt="table-user" class="me-2 rounded-circle">
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="text-body fw-semibold"><?php echo $value['hovaten'] ?></a>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $value['sodienthoai'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $value['email'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $value['diachi'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $value['ngaytao'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge badge-success-lighten">Tích cực</span>
+                                                        </td>
+
+                                                        <td>
+                                                            <a href="?controller=xulykhachhang&method=suakh&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="?controller=xulykhachhang&method=xoakh&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                <?php } ?>
                                             </tbody>
                                         </table>
-                                    </div> <!-- end table-responsive-->
-
+                                    </div>
                                 </div> <!-- end card-body-->
                             </div> <!-- end card-->
-                        </div> <!-- end col-->
+                        </div> <!-- end col -->
                     </div>
-                    <!-- end row-->
+                    <!-- end row -->
 
                 </div> <!-- container -->
 
             </div> <!-- content -->
+
+            <!-- content -->
 
             <!-- Footer Start -->
             <footer class="footer">

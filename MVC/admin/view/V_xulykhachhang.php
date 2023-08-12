@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -914,170 +914,64 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br>
                 <!-- end Topbar -->
-
 
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <!-- start page title -->
                     <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                                    <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Ăn nhanh 247</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Ứng dụng</a></li>
-                                        <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
-                                    </ol>
+                        <div class="col-lg-8 mx-auto">
+                            <div class="card">
+                                <div class="card-header py-3 bg-transparent">
+                                    <h5 class="mb-0">Sửa Khách hàng</h5>
                                 </div>
-                                <h4 class="page-title">Chi tiết sản phẩm</h4>
+                                <div class="card-body">
+                                    <div class="border p-3 rounded">
+                                        <form class="row g-3" action="#" method="post">
+                                            <div class="col-12">
+                                                <label class="form-label">Tên tài khoản</label>
+                                                <input type="text" class="form-control" placeholder="Nhập tên tài khoản..." name="username" value="<?php echo $data_khachhang[0]['tendangnhap'] ?>">
+                                                <?php if (isset($loi['username'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['username'] ?></p>
+                                                <?php } ?>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Mật khẩu</label>
+                                                <input type="text" class="form-control" placeholder="Nhập Mật khẩu..." name="password" value="<?php echo $data_khachhang[0]['matkhau'] ?>">
+                                                <?php if (isset($loi['password'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['password'] ?></p>
+                                                <?php } ?>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Họ và tên</label>
+                                                <input type="text" class="form-control" placeholder="Nhập họ và tên..." name="hoten" value="<?php echo $data_khachhang[0]['hovaten'] ?>">
+                                                <?php if (isset($loi['hoten'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['hoten'] ?></p>
+                                                <?php } ?>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Số điện thoại</label>
+                                                <input type="number" class="form-control" placeholder="Nhập số điện thoại..." name="sodt" value="<?php echo $data_khachhang[0]['sodienthoai'] ?>">
+                                                <?php if (isset($loi['sodt'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['sodt'] ?></p>
+                                                <?php } ?>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary px-4" type="submit" name="btn_suakh"><i class="fa-solid fa-pen"></i> Cập nhật khách hàng</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end page title -->
+                    </div><!--end row-->
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-5">
-                                            <!-- Product image -->
-                                            <a href="javascript: void(0);" class="text-center d-block mb-4">
-                                                <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" class="img-fluid" style="max-width: 280px;" alt="Product-img">
-                                            </a>
+                </div>
+                <!-- container -->
 
-                                        </div> <!-- end col -->
-                                        <div class="col-lg-7">
-                                            <form class="ps-lg-4">
-                                                <!-- Product title -->
-                                                <h3 class="mt-0"><?php echo $sanpham[0]['tensanpham'] ?> <a href="javascript: void(0);" class="text-muted"><i class="mdi mdi-square-edit-outline ms-2"></i></a> </h3>
-                                                <p class="mb-1">Ngày thêm: <?php echo $sanpham[0]['ngaythemsanpham'] ?></p>
-                                                <p class="font-16">
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                </p>
-
-                                                <!-- Product stock -->
-                                                <div class="mt-3">
-                                                    <h4><span class="badge badge-success-lighten">Còn hàng</span></h4>
-                                                </div>
-
-                                                <!-- Product description -->
-                                                <div class="mt-4">
-                                                    <h6 class="font-14">Giá bán:</h6>
-                                                    <h3> <?php echo number_format($sanpham[0]['giamoi']) ?>vnd</h3>
-                                                </div>
-
-                                                <!-- Product description -->
-                                                <div class="mt-4">
-                                                    <h6 class="font-14">Mô tả:</h6>
-                                                    <p><?php echo $sanpham[0]['mota'] ?></p>
-                                                </div>
-
-                                                <!-- Product information -->
-                                                <div class="mt-4">
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Số lượng bán:</h6>
-                                                            <p class="text-sm lh-150">184</p>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Doanh thu:</h6>
-                                                            <p class="text-sm lh-150">$8,57,014</p>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Cổ phiếu:</h6>
-                                                            <p class="text-sm lh-150">10/11</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </div> <!-- end col -->
-                                    </div> <!-- end row-->
-
-                                    <div class="table-responsive mt-4">
-                                        <p>Sản phẩm khác</p>
-                                        <table class="table table-bordered table-centered mb-0">
-                                            <thead class="table-light">
-                                                <tr>
-                                                    <th>Sản phẩm</th>
-                                                    <th>Giá bán</th>
-                                                    <th>Lượt mua</th>
-                                                    <th>Tổng tiền</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>ASOS Ridley Outlet - NYC</td>
-                                                    <td>$139.58</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">478 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 56%;" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$1,89,547</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Marco Outlet - SRT</td>
-                                                    <td>$149.99</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">73 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 16%;" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$87,245</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Chairtest Outlet - HY</td>
-                                                    <td>$135.87</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">781 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$5,87,478</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Nworld Group - India</td>
-                                                    <td>$159.89</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">815 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 89%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$55,781</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- end table-responsive-->
-
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row-->
-
-                </div> <!-- container -->
-
-            </div> <!-- content -->
+            </div>
+            <!-- content -->
 
             <!-- Footer Start -->
             <footer class="footer">

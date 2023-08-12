@@ -10,7 +10,7 @@ if (isset($_POST['btn_thanhtoan'])) {
     $thon = $_POST['thon'];
     $ghichu = $_POST['ghichu'];
     $id_donhang = 1;
-    $id_khachhang = 1;
+
 
     //echo 'hotenla: '.$hoten;
     //echo 'gioi tinh la : '.$gioitinh;
@@ -21,11 +21,14 @@ if (isset($_POST['btn_thanhtoan'])) {
     foreach ($donhang as $key => $value) {
         $id_donhang += $value['id'];
     }
-    $khachhang = $db->get('khachhang', array());
-    foreach ($khachhang as $key => $value) {
-        $id_donhang += $value['id'];
-    }
-    // var_dump($id_donhang);
+    // $khachhang = $db->get('khachhang', array());
+    // foreach ($khachhang as $key => $value) {
+    //     $id_khachhang += $value['id'];
+    // }
+   // use 'C_dangnhap.php';
+    // var_dump($_SESSION['ss_client']);
+
+
     // die;
 
     $tongtien = 0;
@@ -44,7 +47,7 @@ if (isset($_POST['btn_thanhtoan'])) {
     $db->insert(
         'donhang',
         array(
-            //'id_khachhang' => $id_khachhang,
+            'id_khachhang' => $_SESSION['ss_client'],
             'sodienthoai' => $sodienthoai,
             'tinh_thanh' => $tinh,
             'quan_huyen' => $huyen,
@@ -55,7 +58,6 @@ if (isset($_POST['btn_thanhtoan'])) {
 
         )
     );
-    //unset($id_donhang);
     unset($_SESSION['cart']);
     header('location: ?controller=thanhtoanthanhcong');
 }

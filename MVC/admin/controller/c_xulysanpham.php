@@ -1,71 +1,127 @@
 <?php
 if (isset($_SESSION['ss_admin'])) {
-    $user = $db->get('admin_nhanvien', array('id' => $_SESSION['ss_admin']));
-    $data_sanpham = $db->get('product', array());
-    if ($user[0]['level'] == 1) {
+    $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
+
+    if ($user[0]['cap'] <= 1) {
         $method = $_GET['method'];
         switch ($method) {
             case 'sua':
                 $id = $_GET['id'];
-                $data_sanpham = $db->get('product', array('id' => $id));
+                // $data_donhangg = $db->get('oder', array('id' => $id));
+                $sanpham = $db->get('sanpham', array('id'=>$id));
                 if (isset($_POST['btn_suasp'])) {
-                    $catalog_id = $_POST['catalog_id'];
-                    $img_link = $_FILES['img_link'];
+                    $idncc = $_POST['iddm'];
+                    $iddm = $_POST['idncc'];
                     $tensp = $_POST['tensp'];
-                    $soluong = $_POST['soluong'];
-                    $gia = $_POST['gia'];
+                    $anh = $_FILES['anh'];
                     $mota = $_POST['mota'];
+                    $giamoi = $_POST['giamoi'];
+                    $giacu = $_POST['giacu'];
+                    $soluong = $_POST['soluong'];
+                    $thit = $_POST['thit'];
+                    $ca = $_POST['ca'];
+                    $rau = $_POST['rau'];
+                    $cu = $_POST['cu'];
+                    $qua = $_POST['qua'];
+                    $rauthom = $_POST['rauthom'];
+                    $giavi = $_POST['giavi'];
+                    $nguyenlieukhac = $_POST['nguyenlieukhac'];
+
+                    //echo 'ten sp la: '.$tensp;
 
                     $loi = array();
-                    if ($catalog_id == '') {
-                        $loi['catalog_id'] = 'Catalog_id không được để trống!';
+                    if ($idncc == '') {
+                        $loi['idncc'] = 'ID nhà cung cấp không được để trống!';
                     }
-                    if ($img_link == '') {
-                        $loi['img_link'] = 'Ảnh không được để trống!';
+                    if ($iddm == '') {
+                        $loi['iddm'] = 'ID danh mục không được để trống!';
                     }
                     if ($tensp == '') {
                         $loi['tensp'] = 'Tên sản phẩm không được để trống!';
                     }
-                    if ($soluong == '') {
-                        $loi['soluong'] = 'Só lượng không được để trống!';
-                    }
-                    if ($gia == '') {
-                        $loi['gia'] = 'Giá không được để trống!';
+                    if ($anh == '') {
+                        $loi['anh'] = 'Ảnh không được để trống!';
                     }
                     if ($mota == '') {
-                        $loi['mota'] = 'Ghi chú không được để trống!';
+                        $loi['mota'] = 'Giá tiền không được để trống!';
                     }
-                    // xu ly fie anh
+                    if ($giamoi == '') {
+                        $loi['giamoi'] = 'Mô tả không được để trống!';
+                    }
+                    if ($giacu == '') {
+                        $loi['giacu'] = 'Giá mới không được để trống!';
+                    }
+                    if ($soluong == '') {
+                        $loi['soluong'] = 'Giá cũ không được để trống!';
+                    }
+                    if ($thit == '') {
+                        $loi['thit'] = 'Thịt không được để trống!';
+                    }
+                    if ($ca == '') {
+                        $loi['ca'] = 'Cá không được để trống!';
+                    }
+                    if ($rau == '') {
+                        $loi['rau'] = 'Rau không được để trống!';
+                    }
+                    if ($cu == '') {
+                        $loi['cu'] = 'Củ không được để trống!';
+                    }
+                    if ($qua == '') {
+                        $loi['qua'] = 'Quả không được để trống!';
+                    }
+                    if ($rauthom == '') {
+                        $loi['rauthom'] = 'Rau thơm không được để trống!';
+                    }
+                    if ($giavi == '') {
+                        $loi['giavi'] = 'Gia vị không được để trống!';
+                    }
+                    if ($nguyenlieukhac == '') {
+                        $loi['nguyenlieukhac'] = 'Nguyên liệu khác không được để trống!';
+                    }
+
+                    //Xử lý thêm file ảnh
                     $link = 'img/';
-                    // tao duong dan upload len he thong
-                    $link_full = $link . basename($_FILES['img_link']['name']);
+                    //Tạo đường dẫn upload lên hệ thống
+                    $link_full = $link . basename($_FILES['anh']['name']);
                     $uploadOk = 1;
-                    move_uploaded_file($_FILES['img_link']['tmp_name'], $link_full);
 
-
+                    move_uploaded_file($_FILES['anh']['tmp_name'], $link_full);
 
                     if (!$loi) {
                         $db->update(
-                            'product',
+                            'sanpham',
                             array(
-                                'catalog_id' => $catalog_id,
-                                'img_link' => $link_full,
-                                'name' => $tensp,
-                                'amount' => $soluong,
-                                'price' => $gia,
-                                'content' => $mota
+                                'id_nhacungcap' => $idncc,
+                                'id_danhmuc' => $iddm,
+                                'tensanpham' => $tensp,
+                                'anhsanpham' => $link_full,
+                                'mota' => $mota,
+                                'giamoi' => $giamoi,
+                                'giacu' => $giacu,
+                                'soluong' => $soluong
                             ),
                             array('id' => $id)
                         );
-                        header('location: ?controller=dssanpham');
+                        $db->update('nguyenlieu', array(
+                            'id_sanpham' => $id,
+                            'thit' => $thit,
+                            'ca' => $ca,
+                            'rau' => $rau,
+                            'cu' => $cu,
+                            'qua' => $qua,
+                            'rauthom' => $rauthom,
+                            'giavi' =>$giavi,
+                            'nguyenlieukhac'=>$nguyenlieukhac
+                        ));
+                        header('location: ?controller=danhsachsanpham');
                     }
                 }
-                require './view/v_suasp.php';
+                require './view/V_xulysanpham.php';
                 break;
             case 'xoasp':
                 $id = $_GET['id'];
-                $db->delete('product', array('id' => $id));
-                header('location: ?controller=dssanpham');
+                $db->delete('sanpham', array('id' => $id));
+                header('location: ?controller=danhsachsanpham');
                 break;
         }
     } else {
@@ -73,3 +129,5 @@ if (isset($_SESSION['ss_admin'])) {
         //header('location: ?controller=dsnhanvien');
     }
 }
+//require './view/V_suasanpham.php';
+header('location: ?controller=danhsachsanpham');

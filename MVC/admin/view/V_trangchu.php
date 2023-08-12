@@ -63,16 +63,16 @@
                             <div class="collapse" id="sidebarDashboards">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="V_trangchu.html">Thương mại</a>
+                                        <a href="?controller=trangchu">Thương mại</a>
                                     </li>
                                     <li>
-                                        <a href="V_phantich.html">Phân tích</a>
+                                        <a href="#">Phân tích</a>
                                     </li>
                                     <li>
-                                        <a href="dashboard-crm.html">CRM</a>
+                                        <a href="#">CRM</a>
                                     </li>
                                     <li>
-                                        <a href="V_duan.html">Dự án</a>
+                                        <a href="#">Dự án</a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,14 +81,14 @@
                         <li class="side-nav-title side-nav-item">Ứng dụng</li>
 
                         <li class="side-nav-item">
-                            <a href="V_lich.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Lịch </span>
                             </a>
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="V_trochuyen.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-comments-alt"></i>
                                 <span> Trò chuyện </span>
                             </a>
@@ -106,25 +106,13 @@
                                         <a href="?controller=danhsachsanpham">Danh sách sản phẩm</a>
                                     </li>
                                     <li>
-                                        <a href="V_chitietsanpham.html">Chi tiết sản phẩm</a>
+                                        <a href="?controller=donhang">Đơn đặt hàng</a>
                                     </li>
                                     <li>
-                                        <a href="V_dondathang.html">Đơn đặt hàng</a>
+                                        <a href="?controller=khachhang">Khách hàng</a>
                                     </li>
                                     <li>
-                                        <a href="V_chitietdathang.html">Chi tiết đặt hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_danhsachkhachhang.html">Khách hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_nguoiban.html">Giỏ hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_thanhtoan.html">Thanh toán</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_nguoiban.html">Người bán</a>
+                                        <a href="?controller=nhacungcap">Người bán</a>
                                     </li>
                                 </ul>
                             </div>
@@ -139,13 +127,13 @@
                             <div class="collapse" id="sidebarquanly">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="V_themsanpham.html">Thêm sản phẩm</a>
+                                        <a href="?controller=themsanpham">Thêm sản phẩm</a>
                                     </li>
                                     <li>
-                                        <a href="V_themkhachhang.html">Thêm khách hàng</a>
+                                        <a href="?controller=themkhachhang">Thêm khách hàng</a>
                                     </li>
                                     <li>
-                                        <a href="V_themdonhang.html">Thêm đơn hàng</a>
+                                        <a href="?controller=themdonhang">Thêm đơn hàng</a>
                                     </li>
                                 </ul>
                             </div>
@@ -160,10 +148,10 @@
                             <div class="collapse" id="sidebarEmail">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="V_inbox.html">Hộp thư đến</a>
+                                        <a href="#">Hộp thư đến</a>
                                     </li>
                                     <li>
-                                        <a href="V_read.html">Đọc mail</a>
+                                        <a href="#">Đọc mail</a>
                                     </li>
                                 </ul>
                             </div>
@@ -178,23 +166,23 @@
                             <div class="collapse" id="sidebarProjects">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="V_ds_duan.html">Danh sách</a>
+                                        <a href="#">Danh sách</a>
                                     </li>
                                     <li>
-                                        <a href="V_chitiet_duan.html">Chi tiết</a>
+                                        <a href="#">Chi tiết</a>
                                     </li>
                                     <li>
-                                        <a href="V_gantt_duan.html">Gantt <span class="badge rounded-pill badge-light-lighten font-10 float-end">Mới</span></a>
+                                        <a href="#">Gantt <span class="badge rounded-pill badge-light-lighten font-10 float-end">Mới</span></a>
                                     </li>
                                     <li>
-                                        <a href="V_taoduan.html">Tạo dự án <span class="badge rounded-pill badge-success-lighten font-10 float-end">Mới</span></a>
+                                        <a href="#">Tạo dự án <span class="badge rounded-pill badge-success-lighten font-10 float-end">Mới</span></a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="apps-social-feed.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-rss"></i>
                                 <span> Nguồn cấp dữ liệu xã hội </span>
                             </a>
@@ -222,7 +210,7 @@
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="V_quanlytaptin.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-folder-plus"></i>
                                 <span> Quản lý tập tin </span>
                             </a>
@@ -231,111 +219,7 @@
                         <li class="side-nav-title side-nav-item">Phong tục</li>
 
                         <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
-                                <i class="uil-copy-alt"></i>
-                                <span> Trang </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarPages">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="V_hoso.html">Hồ sơ</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_hoso2.html">Hồ sơ 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_hoadon.html">Hóa đơn</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_cauhoithuonggap.html">Câu hỏi thường gặp</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_dinhgia.html">Định giá</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_baotri.html">Bảo trì</a>
-                                    </li>
-                                    <li class="side-nav-item">
-                                        <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth">
-                                            <span> Xác thực </span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <div class="collapse" id="sidebarPagesAuth">
-                                            <ul class="side-nav-third-level">
-                                                <li>
-                                                    <a href="V_login.html">Đăng nhập</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_login2.html">Đăng nhập 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_dki.html">Đăng kí</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_dki2.html">Đăng kí 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_logout.html">Đăng xuất</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_logout2.html">Đăng xuất 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_khoiphucmatkhau.html">Khôi phục mật khẩu</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_khoiphucmatkhau2.html">Khôi phục mật khẩu 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_manhinhkhoa.html">Màn hình khóa</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_manhinhkhoa2.html">Màn hình khóa 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="V_xacnhanthu.html">Xác nhận thư</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-confirm-mail-2.html">Xác nhận thư 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="side-nav-item">
-                                        <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false" aria-controls="sidebarPagesError">
-                                            <span> Lỗi </span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <div class="collapse" id="sidebarPagesError">
-                                            <ul class="side-nav-third-level">
-                                                <li>
-                                                <a href="pages-404.html">Error 404</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-404-alt.html">Error 404-alt</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-500.html">Error 500</a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="V_trangbatdau.html">Trang bắt đầu</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_taitruoc.html">Tải trước</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_mocthoigian.html">Mốc thời gian</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a href="landing.html" target="_blank" class="side-nav-link">
+                            <a href="#" target="_blank" class="side-nav-link">
                                 <i class="uil-globe"></i>
                                 <span class="badge bg-secondary text-light float-end">Mới</span>
                                 <span> Đổ bộ </span>
@@ -371,25 +255,25 @@
                             <div class="collapse" id="sidebarBaseUI">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="ui-accordions.html">Accordions</a>
+                                        <a href="#">Accordions</a>
                                     </li>
                                     <li>
-                                        <a href="ui-alerts.html">Alerts</a>
+                                        <a href="#">Alerts</a>
                                     </li>
                                     <li>
-                                        <a href="ui-avatars.html">Avatars</a>
+                                        <a href="#">Avatars</a>
                                     </li>
                                     <li>
-                                        <a href="ui-badges.html">Badges</a>
+                                        <a href="#">Badges</a>
                                     </li>
                                     <li>
-                                        <a href="ui-breadcrumb.html">Breadcrumb</a>
+                                        <a href="#">Breadcrumb</a>
                                     </li>
                                     <li>
-                                        <a href="ui-buttons.html">Buttons</a>
+                                        <a href="#">Buttons</a>
                                     </li>
                                     <li>
-                                        <a href="ui-cards.html">Cards</a>
+                                        <a href="#">Cards</a>
                                     </li>
                                     <li>
                                         <a href="ui-carousel.html">Carousel</a>
@@ -452,13 +336,13 @@
                             <div class="collapse" id="sidebarExtendedUI">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="extended-dragula.html">Dragula</a>
+                                        <a href="#">Dragula</a>
                                     </li>
                                     <li>
-                                        <a href="extended-range-slider.html">Range Slider</a>
+                                        <a href="#">Range Slider</a>
                                     </li>
                                     <li>
-                                        <a href="extended-ratings.html">Ratings</a>
+                                        <a href="#">Ratings</a>
                                     </li>
                                     <li>
                                         <a href="extended-scrollbar.html">Scrollbar</a>
@@ -474,7 +358,7 @@
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="widgets.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-layer-group"></i>
                                 <span> Tiện ích </span>
                             </a>
@@ -489,10 +373,10 @@
                             <div class="collapse" id="sidebarIcons">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="icons-dripicons.html">Dripicons</a>
+                                        <a href="#">Dripicons</a>
                                     </li>
                                     <li>
-                                        <a href="icons-mdi.html">Material Design</a>
+                                        <a href="#">Material Design</a>
                                     </li>
                                     <li>
                                         <a href="icons-unicons.html">Unicons</a>
@@ -510,7 +394,7 @@
                             <div class="collapse" id="sidebarForms">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="form-elements.html">Basic Elements</a>
+                                        <a href="#">Basic Elements</a>
                                     </li>
                                     <li>
                                         <a href="form-advanced.html">Form Advanced</a>

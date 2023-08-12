@@ -26,7 +26,7 @@
 
                         <!-- Logo -->
                         <div class="card-header pt-4 pb-4 text-center bg-primary">
-                            <a href="index.html">
+                            <a href="#">
                                 <span><img style="width: 70px; height: 70px; border-radius: 50%;" src="images/logo_annhanh.jpg" alt=""></span>
                             </a>
                         </div>
@@ -58,13 +58,6 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="mb-3 mb-3">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="checkbox-signin" checked>
-                                        <label class="form-check-label" for="checkbox-signin">Ghi nhớ tôi</label>
-                                    </div>
-                                </div>
-
                                 <div class="mb-3 mb-0 text-center">
                                     <button class="btn btn-primary" type="submit" name="btn_dangnhap"> Đăng nhập </button>
                                 </div>
@@ -84,7 +77,7 @@
     <!-- end page -->
 
     <footer class="footer footer-alt">
-        2020 - 2024 © Hyper - Coderthemes.com
+        2023 © annhanh247 - nguyenduchoang522@gmail.com
     </footer>
 
     <!-- bundle -->

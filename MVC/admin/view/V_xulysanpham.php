@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Trang chu admin</title>
+    <title>Sửa sản phẩm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
     <meta content="Coderthemes" name="author">
@@ -805,8 +805,8 @@
                                     <img src="images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 </span>
                                 <span>
-                                    <span class="account-user-name">Hoàng</span>
-                                    <span class="account-position">Quản lý</span>
+                                    <span class="account-user-name"><?php echo $user[0]['hovaten'] ?></span>
+                                    <span class="account-position"><?php echo $user[0]['chucvu'] ?></span>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
@@ -840,7 +840,7 @@
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <a href="?controller=dangxuat" class="dropdown-item notify-item">
                                     <i class="mdi mdi-logout me-1"></i>
                                     <span>Đăng xuất</span>
                                 </a>
@@ -914,170 +914,175 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br>
                 <!-- end Topbar -->
-
 
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <!-- start page title -->
                     <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                                    <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Ăn nhanh 247</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Ứng dụng</a></li>
-                                        <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
-                                    </ol>
-                                </div>
-                                <h4 class="page-title">Chi tiết sản phẩm</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end page title -->
+                        <div class="col-lg-12 mx-auto">
+                            <form action="#" method="post" enctype="multipart/form-data">
+                                <div class="card">
+                                    <div class="card-header py-3 bg-transparent">
+                                        <div class="d-sm-flex align-items-center">
+                                            <h5 class="mb-2 mb-sm-0">Sửa sản phẩm</h5>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-5">
-                                            <!-- Product image -->
-                                            <a href="javascript: void(0);" class="text-center d-block mb-4">
-                                                <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" class="img-fluid" style="max-width: 280px;" alt="Product-img">
-                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-lg-8">
+                                                <div class="card shadow-none bg-light border">
+                                                    <div class="card-body">
 
-                                        </div> <!-- end col -->
-                                        <div class="col-lg-7">
-                                            <form class="ps-lg-4">
-                                                <!-- Product title -->
-                                                <h3 class="mt-0"><?php echo $sanpham[0]['tensanpham'] ?> <a href="javascript: void(0);" class="text-muted"><i class="mdi mdi-square-edit-outline ms-2"></i></a> </h3>
-                                                <p class="mb-1">Ngày thêm: <?php echo $sanpham[0]['ngaythemsanpham'] ?></p>
-                                                <p class="font-16">
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                    <span class="text-warning mdi mdi-star"></span>
-                                                </p>
-
-                                                <!-- Product stock -->
-                                                <div class="mt-3">
-                                                    <h4><span class="badge badge-success-lighten">Còn hàng</span></h4>
-                                                </div>
-
-                                                <!-- Product description -->
-                                                <div class="mt-4">
-                                                    <h6 class="font-14">Giá bán:</h6>
-                                                    <h3> <?php echo number_format($sanpham[0]['giamoi']) ?>vnd</h3>
-                                                </div>
-
-                                                <!-- Product description -->
-                                                <div class="mt-4">
-                                                    <h6 class="font-14">Mô tả:</h6>
-                                                    <p><?php echo $sanpham[0]['mota'] ?></p>
-                                                </div>
-
-                                                <!-- Product information -->
-                                                <div class="mt-4">
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Số lượng bán:</h6>
-                                                            <p class="text-sm lh-150">184</p>
+                                                        <div class="col-12">
+                                                            <label class="form-label">ID nhà cung cấp: </label>
+                                                            <input type="text" class="form-control" placeholder="Nhập id nhà cung cấp..." name="idncc" value="<?php echo $sanpham[0]['id_nhacungcap'] ?>">
+                                                            <?php if (isset($loi['idncc'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['idncc'] ?></p>
+                                                            <?php } ?>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Doanh thu:</h6>
-                                                            <p class="text-sm lh-150">$8,57,014</p>
+                                                        <div class="col-12">
+                                                            <label class="form-label">ID danh mục: </label>
+                                                            <input type="text" class="form-control" placeholder="Nhập id nhà cung cấp..." name="iddm" value="<?php echo $sanpham[0]['id_danhmuc'] ?>">
+                                                            <?php if (isset($loi['iddm'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['iddm'] ?></p>
+                                                            <?php } ?>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Cổ phiếu:</h6>
-                                                            <p class="text-sm lh-150">10/11</p>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Tên sản phẩm: </label>
+                                                            <input type="text" class="form-control" placeholder="Nhập tên sản phẩm..." name="tensp" value="<?php echo $sanpham[0]['tensanpham'] ?>">
+                                                            <?php if (isset($loi['tensp'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['tensp'] ?></p>
+                                                            <?php } ?>
                                                         </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Ảnh: </label>
+                                                            <input class="form-control" type="file" name="anh">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Mô tả: </label>
+                                                            <textarea class="form-control" placeholder="Nhập mô tả..." rows="4" cols="4" name="mota" value="<?php echo $sanpham[0]['mota'] ?>"></textarea>
+                                                            <?php if (isset($loi['mota'])) { ?>
+                                                                <p class="text-danger"><?php echo $loi['mota'] ?></p>
+                                                            <?php } ?>
+                                                        </div>
+
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                            </form>
-                                        </div> <!-- end col -->
-                                    </div> <!-- end row-->
-
-                                    <div class="table-responsive mt-4">
-                                        <p>Sản phẩm khác</p>
-                                        <table class="table table-bordered table-centered mb-0">
-                                            <thead class="table-light">
-                                                <tr>
-                                                    <th>Sản phẩm</th>
-                                                    <th>Giá bán</th>
-                                                    <th>Lượt mua</th>
-                                                    <th>Tổng tiền</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>ASOS Ridley Outlet - NYC</td>
-                                                    <td>$139.58</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">478 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 56%;" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="card shadow-none bg-light border">
+                                                    <div class="card-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-12">
+                                                                <label class="form-label">Giá bán: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập giá bán..." name="giamoi" value="<?php echo number_format($sanpham[0]['giamoi']) ?>">
+                                                                <?php if (isset($loi['giamoi'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['giamoi'] ?></p>
+                                                                <?php } ?>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$1,89,547</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Marco Outlet - SRT</td>
-                                                    <td>$149.99</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">73 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 16%;" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Giá cũ: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập giá cũ..." name="giacu" value="<?php echo number_format($sanpham[0]['giacu']) ?> ">
+                                                                <?php if (isset($loi['giacu'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['giacu'] ?></p>
+                                                                <?php } ?>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$87,245</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Chairtest Outlet - HY</td>
-                                                    <td>$135.87</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">781 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Số lượng</label>
+                                                                <input type="number" class="form-control" placeholder="Nhập số lượng..." name="soluong" value="<?php echo $sanpham[0]['soluong'] ?>">
+                                                                <?php if (isset($loi['soluong'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['soluong'] ?></p>
+                                                                <?php } ?>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$5,87,478</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Nworld Group - India</td>
-                                                    <td>$159.89</td>
-                                                    <td>
-                                                        <div class="progress-w-percent mb-0">
-                                                            <span class="progress-value">815 </span>
-                                                            <div class="progress progress-sm">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 89%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <hr>
+                                                            <h4>Nguyên liệu</h4>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Thịt: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập tên thịt(hoặc để trống)..." name="thit" value="">
+                                                                <?php if (isset($loi['thit'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['thit'] ?></p>
+                                                                <?php } ?>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>$55,781</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- end table-responsive-->
+                                                            <div class="col-12">
+                                                                <label class="form-label">Cá: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập tên cá(hoặc để trống)..." name="ca" value="">
+                                                                <?php if (isset($loi['ca'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['ca'] ?></p>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Rau: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rau" value="">
+                                                                <?php if (isset($loi['rau'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['rau'] ?></p>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Củ: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập Tên củ(hoặc để trống)..." name="cu" value="">
+                                                                <?php if (isset($loi['cu'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['cu'] ?></p>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Quả: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập tên quả(hoặc để trống)..." name="qua" value="">
+                                                                <?php if (isset($loi['qua'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['qua'] ?></p>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Rau thơm: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rauthom" value="">
+                                                                <?php if (isset($loi['rauthom'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['rauthom'] ?></p>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Gia vị: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập tên gia vị(hoặc để trống)..." name="giavi" value="">
+                                                                <?php if (isset($loi['giavi'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['giavi'] ?></p>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label class="form-label">Nguyên liệu khác: </label>
+                                                                <input type="text" class="form-control" placeholder="Nhập tên nguyên liệu(hoặc để trống)..." name="nguyenlieukhac" value="">
+                                                                <?php if (isset($loi['nguyenlieukhac'])) { ?>
+                                                                    <p class="text-danger"><?php echo $loi['nguyenlieukhac'] ?></p>
+                                                                <?php } ?>
+                                                            </div>
 
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row-->
+                                                        </div><!--end row-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-header py-3 bg-transparent">
+                                                <div class="d-sm-flex align-items-center">
 
-                </div> <!-- container -->
+                                                    <div class="ms-auto">
 
-            </div> <!-- content -->
+                                                        <button type="submit" class="btn btn-primary" name="btn_suasp"><i class="fa-solid fa-pen"></i> Cập nhật sản phẩm</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end row-->
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div><!--end row-->
+
+                </div>
+                <!-- container -->
+
+            </div>
+            <!-- content -->
 
             <!-- Footer Start -->
             <footer class="footer">

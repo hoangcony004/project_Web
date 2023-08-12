@@ -38,8 +38,52 @@ if (!isset($_SESSION['ss_client'])) {
             $_SESSION['ss_client1'] = $user[0]['hovaten'];
             header('location: ?controller=trangchu');
         }
+        require './view/V_dangnhap_dangky.php';
+    }else {
+        if (isset($_POST['btn_dangky'])) {
+            // lay du lieu ve
+            $tendk = $_POST['tendk'];
+            $sdtdk = $_POST['sdtdk'];
+            $mkdk = $_POST['mkdk'];
+            $rmkdk = $_POST['rmkdk'];
+            // kiem tra tai khoan
+            //echo 'ten dang nhap la : '.$tendk;
+            //b1 tao 1 mang luu tru cac loi
+            $loi1 = array();
+            if ($tendk == '') {
+                $loi['tendk'] = 'Tên đăng ký không được để trống!';
+            }
+            if ($sdtdk == '') {
+                $loi['sdtdk'] = 'Số điện thoại không được để trống!';
+            }
+            if ($mkdk == '') {
+                $loi['mkdk'] = 'Mật khẩu không được để trống!';
+            }
+            // if ($mkdk >= 8) {
+            //     $loi['mkdk'] = 'gjrgyk';
+            // }else {
+            //     $loi['mkdk'] = 'Mật khẩu phải lớn hơn hoặc bằng 8 ký tự!';
+            // }
+            if ($rmkdk != $mkdk) {
+                $loi['rmkdk'] = 'Mật khẩu không khớp!';
+            }
+    
+            if (!$loi) {
+                $db->insert('khachhang', array(
+                    'tendangnhap' => $tendk,
+                    'matkhau' => $mkdk,
+                    'sodienthoai' => $sdtdk
+                    
+                ));
+                header('location: ?controller=dangnhap');
+            }
+            
+        }
+        require './view/V_dangnhap_dangky.php';
     }
-    require './view/V_dangnhap_dangky.php';
+    
+
+    
 }
 // neu da dang nhap thi chuyen nguoi dung den trang chu
 header('location: ?controller=trangchu');

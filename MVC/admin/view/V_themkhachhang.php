@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -35,6 +35,7 @@
                     </span>
                     <span class="logo-sm">
                         <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
+                    </span>
                 </a>
 
                 <!-- LOGO -->
@@ -62,16 +63,16 @@
                             <div class="collapse" id="sidebarDashboards">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="V_trangchu.html">Thương mại</a>
+                                        <a href="?controller=trangchu">Thương mại</a>
                                     </li>
                                     <li>
-                                        <a href="V_phantich.html">Phân tích</a>
+                                        <a href="#">Phân tích</a>
                                     </li>
                                     <li>
-                                        <a href="dashboard-crm.html">CRM</a>
+                                        <a href="#">CRM</a>
                                     </li>
                                     <li>
-                                        <a href="V_duan.html">Dự án</a>
+                                        <a href="#">Dự án</a>
                                     </li>
                                 </ul>
                             </div>
@@ -80,14 +81,14 @@
                         <li class="side-nav-title side-nav-item">Ứng dụng</li>
 
                         <li class="side-nav-item">
-                            <a href="apps-calendar.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Lịch </span>
                             </a>
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="V_trochuyen.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-comments-alt"></i>
                                 <span> Trò chuyện </span>
                             </a>
@@ -102,28 +103,16 @@
                             <div class="collapse" id="sidebarEcommerce">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="apps-ecommerce-products.html">Danh sách sản phẩm</a>
+                                        <a href="?controller=danhsachsanpham">Danh sách sản phẩm</a>
                                     </li>
                                     <li>
-                                        <a href="apps-ecommerce-products-details.html">Chi tiết sản phẩm</a>
+                                        <a href="?controller=donhang">Đơn đặt hàng</a>
                                     </li>
                                     <li>
-                                        <a href="apps-ecommerce-orders.html">Đơn đặt hàng</a>
+                                        <a href="?controller=khachhang">Khách hàng</a>
                                     </li>
                                     <li>
-                                        <a href="apps-ecommerce-orders-details.html">Chi tiết đặt hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-ecommerce-customers.html">Khách hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-ecommerce-shopping-cart.html">Giỏ hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-ecommerce-checkout.html">Thanh toán</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-ecommerce-sellers.html">Người bán</a>
+                                        <a href="?controller=nhacungcap">Người bán</a>
                                     </li>
                                 </ul>
                             </div>
@@ -138,13 +127,13 @@
                             <div class="collapse" id="sidebarquanly">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="V_themsanpham.html">Thêm sản phẩm</a>
+                                        <a href="?controller=themsanpham">Thêm sản phẩm</a>
                                     </li>
                                     <li>
-                                        <a href="V_themkhachhang.html">Thêm khách hàng</a>
+                                        <a href="?controller=themkhachhang">Thêm khách hàng</a>
                                     </li>
                                     <li>
-                                        <a href="#">Thêm đơn hàng</a>
+                                        <a href="?controller=themdonhang">Thêm đơn hàng</a>
                                     </li>
                                 </ul>
                             </div>
@@ -159,10 +148,10 @@
                             <div class="collapse" id="sidebarEmail">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="apps-email-inbox.html">Hộp thư đến</a>
+                                        <a href="#">Hộp thư đến</a>
                                     </li>
                                     <li>
-                                        <a href="apps-email-read.html">Đọc mail</a>
+                                        <a href="#">Đọc mail</a>
                                     </li>
                                 </ul>
                             </div>
@@ -177,23 +166,23 @@
                             <div class="collapse" id="sidebarProjects">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="apps-projects-list.html">Danh sách</a>
+                                        <a href="#">Danh sách</a>
                                     </li>
                                     <li>
-                                        <a href="apps-projects-details.html">Chi tiết</a>
+                                        <a href="#">Chi tiết</a>
                                     </li>
                                     <li>
-                                        <a href="apps-projects-gantt.html">Gantt <span class="badge rounded-pill badge-light-lighten font-10 float-end">Mới</span></a>
+                                        <a href="#">Gantt <span class="badge rounded-pill badge-light-lighten font-10 float-end">Mới</span></a>
                                     </li>
                                     <li>
-                                        <a href="apps-projects-add.html">Tạo dự án <span class="badge rounded-pill badge-success-lighten font-10 float-end">Mới</span></a>
+                                        <a href="#">Tạo dự án <span class="badge rounded-pill badge-success-lighten font-10 float-end">Mới</span></a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="apps-social-feed.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-rss"></i>
                                 <span> Nguồn cấp dữ liệu xã hội </span>
                             </a>
@@ -221,7 +210,7 @@
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="apps-file-manager.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-folder-plus"></i>
                                 <span> Quản lý tập tin </span>
                             </a>
@@ -230,111 +219,7 @@
                         <li class="side-nav-title side-nav-item">Phong tục</li>
 
                         <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
-                                <i class="uil-copy-alt"></i>
-                                <span> Trang </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarPages">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="pages-profile.html">Hồ sơ</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-profile-2.html">Hồ sơ 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-invoice.html">Hóa đơn</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-faq.html">Câu hỏi thường gặp</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-pricing.html">Định giá</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-maintenance.html">Bảo trì</a>
-                                    </li>
-                                    <li class="side-nav-item">
-                                        <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth">
-                                            <span> Xác thực </span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <div class="collapse" id="sidebarPagesAuth">
-                                            <ul class="side-nav-third-level">
-                                                <li>
-                                                    <a href="pages-login.html">Đăng nhập</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-login-2.html">Login 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-register.html">Register</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-register-2.html">Register 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-logout.html">Logout</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-logout-2.html">Logout 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-recoverpw.html">Recover Password</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-recoverpw-2.html">Recover Password 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-lock-screen.html">Lock Screen</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-lock-screen-2.html">Lock Screen 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-confirm-mail.html">Confirm Mail</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pages-confirm-mail-2.html">Confirm Mail 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="side-nav-item">
-                                        <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false" aria-controls="sidebarPagesError">
-                                            <span> Lỗi </span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <div class="collapse" id="sidebarPagesError">
-                                            <ul class="side-nav-third-level">
-                                                <li>
-                                                <a href="pages-404.html">Error 404</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-404-alt.html">Error 404-alt</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-500.html">Error 500</a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="pages-starter.html">Trang bắt đầu</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-preloader.html">Tải trước</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-timeline.html">Mốc thời gian</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a href="landing.html" target="_blank" class="side-nav-link">
+                            <a href="#" target="_blank" class="side-nav-link">
                                 <i class="uil-globe"></i>
                                 <span class="badge bg-secondary text-light float-end">Mới</span>
                                 <span> Đổ bộ </span>
@@ -350,10 +235,10 @@
                             <div class="collapse" id="sidebarLayouts">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="layouts-horizontal.html">Nằm ngang</a>
+                                        <a href="V_namngang.html">Nằm ngang</a>
                                     </li>
                                     <li>
-                                        <a href="layouts-detached.html">Tách ra</a>
+                                        <a href="V_tachra.html">Tách ra</a>
                                     </li>
                                 </ul>
                             </div>
@@ -370,25 +255,25 @@
                             <div class="collapse" id="sidebarBaseUI">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="ui-accordions.html">Accordions</a>
+                                        <a href="#">Accordions</a>
                                     </li>
                                     <li>
-                                        <a href="ui-alerts.html">Alerts</a>
+                                        <a href="#">Alerts</a>
                                     </li>
                                     <li>
-                                        <a href="ui-avatars.html">Avatars</a>
+                                        <a href="#">Avatars</a>
                                     </li>
                                     <li>
-                                        <a href="ui-badges.html">Badges</a>
+                                        <a href="#">Badges</a>
                                     </li>
                                     <li>
-                                        <a href="ui-breadcrumb.html">Breadcrumb</a>
+                                        <a href="#">Breadcrumb</a>
                                     </li>
                                     <li>
-                                        <a href="ui-buttons.html">Buttons</a>
+                                        <a href="#">Buttons</a>
                                     </li>
                                     <li>
-                                        <a href="ui-cards.html">Cards</a>
+                                        <a href="#">Cards</a>
                                     </li>
                                     <li>
                                         <a href="ui-carousel.html">Carousel</a>
@@ -451,13 +336,13 @@
                             <div class="collapse" id="sidebarExtendedUI">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="extended-dragula.html">Dragula</a>
+                                        <a href="#">Dragula</a>
                                     </li>
                                     <li>
-                                        <a href="extended-range-slider.html">Range Slider</a>
+                                        <a href="#">Range Slider</a>
                                     </li>
                                     <li>
-                                        <a href="extended-ratings.html">Ratings</a>
+                                        <a href="#">Ratings</a>
                                     </li>
                                     <li>
                                         <a href="extended-scrollbar.html">Scrollbar</a>
@@ -473,7 +358,7 @@
                         </li>
 
                         <li class="side-nav-item">
-                            <a href="widgets.html" class="side-nav-link">
+                            <a href="#" class="side-nav-link">
                                 <i class="uil-layer-group"></i>
                                 <span> Tiện ích </span>
                             </a>
@@ -488,10 +373,10 @@
                             <div class="collapse" id="sidebarIcons">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="icons-dripicons.html">Dripicons</a>
+                                        <a href="#">Dripicons</a>
                                     </li>
                                     <li>
-                                        <a href="icons-mdi.html">Material Design</a>
+                                        <a href="#">Material Design</a>
                                     </li>
                                     <li>
                                         <a href="icons-unicons.html">Unicons</a>
@@ -509,7 +394,7 @@
                             <div class="collapse" id="sidebarForms">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="form-elements.html">Basic Elements</a>
+                                        <a href="#">Basic Elements</a>
                                     </li>
                                     <li>
                                         <a href="form-advanced.html">Form Advanced</a>
@@ -738,6 +623,7 @@
                                 <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                     <img src="images/co_vn.png" alt="user-image" class="me-0 me-sm-1" height="12"> 
                                     <span class="align-middle d-none d-sm-inline-block">Tiếng Việt</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+                                </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
 
                                     <!-- item-->
@@ -1026,470 +912,51 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div><br>
                     <!-- end Topbar -->
                     
-                     <!-- Start Content-->
-                     <div class="container-fluid">
-                        
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Ứng dụng</a></li>
-                                            <li class="breadcrumb-item active">Danh sách khách hàng</li>
-                                        </ol>
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                             <div class="card">
+                                <div class="card-header py-3 bg-transparent"> 
+                                    <h5 class="mb-0">Thêm Khách hàng</h5>
+                                </div>
+                               <div class="card-body">
+                                    <div class="border p-3 rounded">
+                                        <form class="row g-3" action="#" method="post">
+                                            <div class="col-12">
+                                                <label class="form-label">Tên tài khoản</label>
+                                                <input type="text" class="form-control" placeholder="Nhập tên tài khoản..." name="username">
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Mật khẩu</label>
+                                                <input type="password" class="form-control" placeholder="Nhập Mật khẩu..." name="password">
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Họ và tên</label>
+                                                <input type="text" class="form-control" placeholder="Nhập họ và tên..." name="hoten">
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Số điện thoại</label>
+                                                <input type="number" class="form-control" placeholder="Nhập số điện thoại..." name="sodt">
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary px-4" type="submit" name="btn_themkh"><i class="fa-solid fa-plus"></i> Thêm khách hàng</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <h4 class="page-title">Danh sách khách hàng</h4>
                                 </div>
                             </div>
-                        </div>     
-                        <!-- end page title --> 
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row mb-2">
-                                            <div class="col-sm-4">
-                                                <a href="V_themkhachhang.html" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> Thêm khách hàng</a>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="text-sm-end">
-                                                    <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog"></i></button>
-                                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
-                                                    <button type="button" class="btn btn-light mb-2">Export</button>
-                                                </div>
-                                            </div><!-- end col-->
-                                        </div>
-                
-                                        <div class="table-responsive">
-                                            <table class="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
-                                                <form action="#" method="post">
-                                                    <div class="input-group">
-                                                        <input type="search" class="form-control" placeholder="Tìm kiếm khách hàng...">
-                                                        <button class="input-group-text btn-secondary" name="btn_timkh" type="submit">Tìm kiếm</button>
-                                                    </div>
-                                                </form>
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 20px;">
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck1">
-                                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
-                                                            </div>
-                                                        </th>
-                                                        <th>Customer</th>
-                                                        <th>Phone</th>
-                                                        <th>Email</th>
-                                                        <th>Location</th>
-                                                        <th>Create Date</th>
-                                                        <th>Status</th>
-                                                        <th style="width: 75px;">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-4.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
-                                                        </td>
-                                                        <td>
-                                                            937-330-1634
-                                                        </td>
-                                                        <td>
-                                                            pauljfrnd@jourrapide.com
-                                                        </td>
-                                                        <td>
-                                                            New York
-                                                        </td>
-                                                        <td>
-                                                            07/07/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="V_suakhachhang.html" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck3">
-                                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-3.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Bryan J. Luellen</a>
-                                                        </td>
-                                                        <td>
-                                                            215-302-3376
-                                                        </td>
-                                                        <td>
-                                                            bryuellen@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            New York
-                                                        </td>
-                                                        <td>
-                                                            09/12/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck4">
-                                                                <label class="form-check-label" for="customCheck4">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-3.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Kathryn S. Collier</a>
-                                                        </td>
-                                                        <td>
-                                                            828-216-2190
-                                                        </td>
-                                                        <td>
-                                                            collier@jourrapide.com
-                                                        </td>
-                                                        <td>
-                                                            Canada
-                                                        </td>
-                                                        <td>
-                                                            06/30/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck5">
-                                                                <label class="form-check-label" for="customCheck5">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-1.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Timothy Kauper</a>
-                                                        </td>
-                                                        <td>
-                                                            (216) 75 612 706
-                                                        </td>
-                                                        <td>
-                                                            thykauper@rhyta.com
-                                                        </td>
-                                                        <td>
-                                                            Denmark
-                                                        </td>
-                                                        <td>
-                                                            09/08/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck6">
-                                                                <label class="form-check-label" for="customCheck6">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-5.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Zara Raws</a>
-                                                        </td>
-                                                        <td>
-                                                            (02) 75 150 655
-                                                        </td>
-                                                        <td>
-                                                            austin@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            Germany
-                                                        </td>
-                                                        <td>
-                                                            07/15/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck7">
-                                                                <label class="form-check-label" for="customCheck7">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-6.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Annette P. Kelsch</a>
-                                                        </td>
-                                                        <td>
-                                                            (+15) 73 483 758
-                                                        </td>
-                                                        <td>
-                                                            annette@email.net
-                                                        </td>
-                                                        <td>
-                                                            India
-                                                        </td>
-                                                        <td>
-                                                            09/05/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck8">
-                                                                <label class="form-check-label" for="customCheck8">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-7.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Jenny C. Gero</a>
-                                                        </td>
-                                                        <td>
-                                                            078 7173 9261
-                                                        </td>
-                                                        <td>
-                                                            jennygero@teleworm.us
-                                                        </td>
-                                                        <td>
-                                                            Lesotho
-                                                        </td>
-                                                        <td>
-                                                            08/02/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck9">
-                                                                <label class="form-check-label" for="customCheck9">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-8.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Edward Roseby</a>
-                                                        </td>
-                                                        <td>
-                                                            078 6013 3854
-                                                        </td>
-                                                        <td>
-                                                            edwardR@armyspy.com
-                                                        </td>
-                                                        <td>
-                                                            Monaco
-                                                        </td>
-                                                        <td>
-                                                            08/23/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck10">
-                                                                <label class="form-check-label" for="customCheck10">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-9.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Anna Ciantar</a>
-                                                        </td>
-                                                        <td>
-                                                            (216) 76 298 896
-                                                        </td>
-                                                        <td>
-                                                            annac@hotmai.us
-                                                        </td>
-                                                        <td>
-                                                            Philippines
-                                                        </td>
-                                                        <td>
-                                                            05/06/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck11">
-                                                                <label class="form-check-label" for="customCheck11">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-10.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Dean Smithies</a>
-                                                        </td>
-                                                        <td>
-                                                            077 6157 4248
-                                                        </td>
-                                                        <td>
-                                                            deanes@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            Singapore
-                                                        </td>
-                                                        <td>
-                                                            04/09/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck12">
-                                                                <label class="form-check-label" for="customCheck12">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-1.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Labeeb Ghali</a>
-                                                        </td>
-                                                        <td>
-                                                            050 414 8778
-                                                        </td>
-                                                        <td>
-                                                            labebswad@teleworm.us
-                                                        </td>
-                                                        <td>
-                                                            United Kingdom
-                                                        </td>
-                                                        <td>
-                                                            06/19/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck13">
-                                                                <label class="form-check-label" for="customCheck13">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="assets/images/users/avatar-2.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Rory Seekamp</a>
-                                                        </td>
-                                                        <td>
-                                                            078 5054 8877
-                                                        </td>
-                                                        <td>
-                                                            roryamp@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            United States
-                                                        </td>
-                                                        <td>
-                                                            03/24/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
                         </div>
-                        <!-- end row -->
-                        
-                    </div> <!-- container -->
+                    </div><!--end row-->
 
-                </div> <!-- content -->
+                    </div>
+                    <!-- container -->
 
+                </div>
                 <!-- content -->
 
                 <!-- Footer Start -->

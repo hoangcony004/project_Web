@@ -76,24 +76,32 @@
         <div class="form signup">
             <div class="form-content">
                 <header>Đăng ký</header>
-                <form action="#" method="post">
+                <form action="?controller=dangnhap" method="post">
                     <div class="field input-field">
-                        <input type="text" placeholder="Tên đăng nhập..." class="input">
+                        <input type="text" placeholder="Tên đăng nhập..." class="input" name="tendk" value="<?php echo (isset($tendk)) ? $tendk : '' ?>">
                     </div>
-
+                    <?php if (isset($loi['tendk'])) { ?>
+                        <p class="mt-1" style="color: red;"><?php echo $loi['tendk'] ?></p>
+                    <?php } ?>
                     <div class="field input-field">
-                        <input type="text" placeholder="Email/Số điện thoại..." class="input">
+                        <input type="text" placeholder="Số điện thoại..." class="input" name="sdtdk" value="<?php echo (isset($sdtdk)) ? $sdtdk : '' ?>">
                     </div>
-
+                    <?php if (isset($loi['sdtdk'])) { ?>
+                        <p class="mt-1" style="color: red;"><?php echo $loi['sdtdk'] ?></p>
+                    <?php } ?>
                     <div class="field input-field">
-                        <input type="password" placeholder="Nhập mật khẩu..." class="password">
+                        <input type="password" placeholder="Nhập mật khẩu..." class="password" name="mkdk" value="<?php echo (isset($mkdk)) ? $mkdk : '' ?>">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
-
+                    <?php if (isset($loi['mkdk'])) { ?>
+                        <p class="mt-1" style="color: red;"><?php echo $loi['mkdk'] ?></p>
+                    <?php } ?>
                     <div class="field input-field">
-                        <input type="password" placeholder="Nhập lại mật khẩu..." class="password">
+                        <input type="password" placeholder="Nhập lại mật khẩu..." class="password" name="rmkdk">
                     </div>
-
+                    <?php if (isset($loi['rmkdk'])) { ?>
+                        <p class="mt-1" style="color: red;"><?php echo $loi['rmkdk'] ?></p>
+                    <?php } ?>
                     <div class="field button-field">
                         <button type="submit" name="btn_dangky">Đăng ký</button>
                     </div>
