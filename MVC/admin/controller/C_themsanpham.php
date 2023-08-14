@@ -5,7 +5,7 @@ if (isset($_SESSION['ss_admin'])) {
     if ($user[0]['cap'] == 1) {
         $data_nhacungcap = $db->get('nhacungcap', array());
 
-        $data_sanpham=$db->get('sanpham',array('id'));
+        //$data_sanpham=$db->get('sanpham',array('id'));
         // foreach ($data_sanpham as $key => $value) {
         //     $data_sanpham += $value['id'];
         // }
@@ -27,7 +27,7 @@ if (isset($_SESSION['ss_admin'])) {
             $rauthom = $_POST['rauthom'];
             $giavi = $_POST['giavi'];
             $nguyenlieukhac = $_POST['nguyenlieukhac'];
-
+            $id_sanpham = 1;
             //echo 'ten la: '.$tensp;
             // khai bao loi
             $loi = array();
@@ -102,8 +102,15 @@ if (isset($_SESSION['ss_admin'])) {
                     'giacu' => $giacu,
                     'soluong' =>$soluong
                 ));
+                // var_dump(mysqli_insert_id($db));die;
+                // $data_sanpham = $db->get('sanpham', array());
+                // foreach ($data_sanpham as $key => $value) {
+                //     $id_sanpham += $value['id'];
+                // }
+                // var_dump($id_donhang);
+                // die;
                 $db->insert('nguyenlieu', array(
-                    //'id_sanpham' => $data_sanpham,
+                    'id_sanpham' => $db->getOrdId(),
                     'thit' => $thit,
                     'ca' => $ca,
                     'rau' => $rau,
