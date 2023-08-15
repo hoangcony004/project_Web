@@ -108,10 +108,20 @@
                         <h1><a href="#"><img style="width: 70px; border-radius: 50%;" src="img/logo_annhanh.jpg"></a></h1>
                     </div>
                 </div>
-
+                <?php if (isset($_SESSION['cart'])) {
+                    $tongtien = 0;
+                    foreach ($_SESSION['cart'] as $key => $value) {
+                        $tongtien += $value['soluong'] * $value['giamoi'];
+                        $sp = $_SESSION['cart'];
+                        $sl = count($sp);
+                    }
+                } else {
+                    $sl = 0;
+                    $tongtien = 0;
+                } ?>
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="?controller=giohang">Giỏ hàng<i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="?controller=giohang">Giỏ hàng<i class="fa fa-shopping-cart"></i> <span class="product-count"><?php echo  $sl ?></span></a>
                     </div>
                 </div>
             </div>
@@ -216,125 +226,87 @@
 
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name"><?php echo $sanpham[0]['tensanpham'] ?></h2>
-                                    <div class="product-inner-price">
-                                        <ins>$700.00</ins> <del>$100.00</del>
-                                    </div>
-
-                                    <form action class="cart">
-                                        <div class="quantity" style="margin-top: 5px;">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" max="10" step="1">
+                                    <?php
+                                    foreach ($sanpham as $key => $value) { ?>
+                                        <h2 class="product-name"><?php echo $sanpham[0]['tensanpham'] ?></h2>
+                                        <div class="product-inner-price">
+                                            <ins><?php echo number_format($sanpham[0]['giamoi']) ?>vnd</ins> <del><?php echo number_format($sanpham[0]['giacu']) ?>vnd</del>
                                         </div>
-                                        
-                                    </form>
-                                    <a style="margin-top: 5px;" class="add_to_cart_button" href="?controller=themgiohang&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                            Thêm giỏ hàng</a>
-                                    <div class="product-inner-category">
-                                        <p>Category: <a href>Summer</a>.
-                                            Tags: <a href>awesome</a>, <a href>best</a>, <a href>sale</a>,
-                                            <a href>shoes</a>.
-                                        </p>
-                                    </div>
 
+                                        <form action class="cart">
+                                            <div class="quantity" style="margin-top: 5px;">
+                                                <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" max="10" step="1">
+                                            </div>
+
+                                        </form>
+                                        <a style="margin-top: 5px;" class="add_to_cart_button" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                            Thêm giỏ hàng</a>
+                                        <div class="product-inner-category">
+                                            <p>Sản phẩm: <a style="text-decoration: none;" href="#"><?php echo $sanpham[0]['tensanpham'] ?></a>.
+                                                Đến từ: <a style="text-decoration: none;" href="#">annhanh247</a>.
+                                            </p>
+                                        </div>
+                                    <?php } ?>
                                     <div role="tabpanel">
                                         <ul class="product-tab" role="tablist">
                                             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mô tả</a></li>
                                             <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Đánh
                                                     giá</a></li>
-                                            <li role="presentation"><a href="#ttchitiet" aria-controls="ttchitiet" role="tab" data-toggle="tab">Thông
-                                                    số kĩ thuật</a></li>
+                                            <li role="presentation"><a href="#ttchitiet" aria-controls="ttchitiet" role="tab" data-toggle="tab">Nguyên liệu</a></li>
                                         </ul>
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="home">
-                                                <h2>Product Description</h2>
-                                                <p>Lorem ipsum dolor sit
-                                                    amet, consectetur
-                                                    adipiscing elit. Nam
-                                                    tristique, diam in
-                                                    consequat iaculis, est
-                                                    purus iaculis mauris,
-                                                    imperdiet facilisis ante
-                                                    ligula at nulla. Quisque
-                                                    volutpat nulla risus, id
-                                                    maximus ex aliquet ut.
-                                                    Suspendisse potenti.
-                                                    Nulla varius lectus id
-                                                    turpis dignissim porta.
-                                                    Quisque magna arcu,
-                                                    blandit quis felis
-                                                    vehicula, feugiat
-                                                    gravida diam. Nullam nec
-                                                    turpis ligula. Aliquam
-                                                    quis blandit elit, ac
-                                                    sodales nisl. Aliquam
-                                                    eget dolor eget elit
-                                                    malesuada aliquet. In
-                                                    varius lorem lorem,
-                                                    semper bibendum lectus
-                                                    lobortis ac.</p>
-
-                                                <p>Mauris placerat vitae
-                                                    lorem gravida viverra.
-                                                    Mauris in fringilla ex.
-                                                    Nulla facilisi. Etiam
-                                                    scelerisque tincidunt
-                                                    quam facilisis lobortis.
-                                                    In malesuada pulvinar
-                                                    neque a consectetur.
-                                                    Nunc aliquam gravida
-                                                    purus, non malesuada sem
-                                                    accumsan in. Morbi vel
-                                                    sodales libero.</p>
+                                                <h2>Mô tả sản phẩm</h2>
+                                                <?php
+                                                foreach ($sanpham as $key => $value) { ?>
+                                                    <p><?php echo $sanpham[0]['mota'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
-                                                <h2>Reviews</h2>
+                                                <h2>Đánh giá</h2>
                                                 <div class="submit-review">
-                                                    <p><label for="name">Name</label>
-                                                        <input name="name" type="text">
-                                                    </p>
-                                                    <p><label for="email">Email</label>
-                                                        <input name="email" type="email">
-                                                    </p>
-                                                    <div class="rating-chooser">
-                                                        <p>Your rating</p>
+                                                    <form action="#" method="post">
+                                                        <div class="rating-chooser">
 
-                                                        <div class="rating-wrap-post">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
+                                                            <div class="rating-wrap-post">
+                                                                <input type="radio" name="stars" id="star-1"  value=""/>
+                                                                <input type="radio" name="stars" id="star-2"  value=""/>
+                                                                <input type="radio" name="stars" id="star-3"  value=""/>
+                                                                <input type="radio" name="stars" id="star-4"  value=""/>
+                                                                <input type="radio" name="stars" id="star-5" checked value=""/>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <p><label for="review">Your
-                                                            review</label>
-                                                        <textarea name="review" id cols="30" rows="10"></textarea>
-                                                    </p>
-                                                    <p><input type="submit" value="Submit"></p>
+                                                        <p><label for="review">Bình luận</label>
+                                                            <textarea name="review" id cols="30" rows="10" placeholder="Nhập bình luận..."></textarea>
+                                                        </p>
+                                                        <p><input type="submit" name="btn_danhgia" value="Đánh giá"></p>
+                                                    </form>
                                                 </div>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="ttchitiet">
                                                 <div class="submit-review">
                                                     <table>
-                                                        <tr class="cart-subtotal">
-                                                            <th>Tên sản
-                                                                phẩm: &emsp;</th>
-                                                            <td><span class="amount">Iphone</span></td>
-                                                        </tr>
+                                                        <?php
+                                                        foreach ($nguyenlieu as $key => $value) { ?>
+                                                            <tr class="cart-subtotal">
+                                                                <th>Tên sản
+                                                                    phẩm: &emsp;</th>
+                                                                <td><span class="amount"><?php echo $nguyenlieu[0]['thit'] ?></span></td>
+                                                            </tr>
 
-                                                        <tr class="shipping">
-                                                            <th>Kích thước
-                                                                màn hình:
-                                                                &emsp;</th>
-                                                            <td>6.1 inches</td>
-                                                        </tr>
+                                                            <tr class="shipping">
+                                                                <th>Kích thước
+                                                                    màn hình:
+                                                                    &emsp;</th>
+                                                                <td>6.1 inches</td>
+                                                            </tr>
 
-                                                        <tr class="order-total">
-                                                            <th>Hệ điều
-                                                                hành: &emsp;</th>
-                                                            <td>IOS 16</td>
-                                                        </tr>
-
+                                                            <tr class="order-total">
+                                                                <th>Hệ điều
+                                                                    hành: &emsp;</th>
+                                                                <td>IOS 16</td>
+                                                            </tr>
+                                                        <?php } ?>
                                                     </table>
                                                     <a href="#">Xem thêm</a>
                                                 </div>

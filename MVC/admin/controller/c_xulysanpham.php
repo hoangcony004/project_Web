@@ -9,6 +9,7 @@ if (isset($_SESSION['ss_admin'])) {
                 $id = $_GET['id'];
                 // $data_donhangg = $db->get('oder', array('id' => $id));
                 $sanpham = $db->get('sanpham', array('id'=>$id));
+                $nguyenlieu = $db->get('nguyenlieu', array('sanpham_id'=>$id));
                 if (isset($_POST['btn_suasp'])) {
                     $idncc = $_POST['iddm'];
                     $iddm = $_POST['idncc'];
@@ -31,10 +32,10 @@ if (isset($_SESSION['ss_admin'])) {
 
                     $loi = array();
                     if ($idncc == '') {
-                        $loi['idncc'] = 'ID nhà cung cấp không được để trống!';
+                        $loi['idncc'] = 'Nhà cung cấp ID không được để trống!';
                     }
                     if ($iddm == '') {
-                        $loi['iddm'] = 'ID danh mục không được để trống!';
+                        $loi['iddm'] = 'Danh mục ID không được để trống!';
                     }
                     if ($tensp == '') {
                         $loi['tensp'] = 'Tên sản phẩm không được để trống!';
@@ -43,40 +44,16 @@ if (isset($_SESSION['ss_admin'])) {
                         $loi['anh'] = 'Ảnh không được để trống!';
                     }
                     if ($mota == '') {
-                        $loi['mota'] = 'Giá tiền không được để trống!';
+                        $loi['mota'] = 'Mô tả không được để trống!';
                     }
                     if ($giamoi == '') {
-                        $loi['giamoi'] = 'Mô tả không được để trống!';
+                        $loi['giamoi'] = 'Giá mới không được để trống!';
                     }
                     if ($giacu == '') {
-                        $loi['giacu'] = 'Giá mới không được để trống!';
+                        $loi['giacu'] = 'Giá cũ không được để trống!';
                     }
                     if ($soluong == '') {
-                        $loi['soluong'] = 'Giá cũ không được để trống!';
-                    }
-                    if ($thit == '') {
-                        $loi['thit'] = 'Thịt không được để trống!';
-                    }
-                    if ($ca == '') {
-                        $loi['ca'] = 'Cá không được để trống!';
-                    }
-                    if ($rau == '') {
-                        $loi['rau'] = 'Rau không được để trống!';
-                    }
-                    if ($cu == '') {
-                        $loi['cu'] = 'Củ không được để trống!';
-                    }
-                    if ($qua == '') {
-                        $loi['qua'] = 'Quả không được để trống!';
-                    }
-                    if ($rauthom == '') {
-                        $loi['rauthom'] = 'Rau thơm không được để trống!';
-                    }
-                    if ($giavi == '') {
-                        $loi['giavi'] = 'Gia vị không được để trống!';
-                    }
-                    if ($nguyenlieukhac == '') {
-                        $loi['nguyenlieukhac'] = 'Nguyên liệu khác không được để trống!';
+                        $loi['soluong'] = 'Số lượng không được để trống!';
                     }
 
                     //Xử lý thêm file ảnh
@@ -91,8 +68,8 @@ if (isset($_SESSION['ss_admin'])) {
                         $db->update(
                             'sanpham',
                             array(
-                                'id_nhacungcap' => $idncc,
-                                'id_danhmuc' => $iddm,
+                                'nhacungcap_id' => $idncc,
+                                'danhmuc_id' => $iddm,
                                 'tensanpham' => $tensp,
                                 'anhsanpham' => $link_full,
                                 'mota' => $mota,
@@ -103,7 +80,7 @@ if (isset($_SESSION['ss_admin'])) {
                             array('id' => $id)
                         );
                         $db->update('nguyenlieu', array(
-                            'id_sanpham' => $id,
+                            'sanpham_id' => $id,
                             'thit' => $thit,
                             'ca' => $ca,
                             'rau' => $rau,
@@ -112,7 +89,9 @@ if (isset($_SESSION['ss_admin'])) {
                             'rauthom' => $rauthom,
                             'giavi' =>$giavi,
                             'nguyenlieukhac'=>$nguyenlieukhac
-                        ));
+                        ),
+                        array('id' => $id)
+                    );
                         header('location: ?controller=danhsachsanpham');
                     }
                 }

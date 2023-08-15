@@ -963,12 +963,6 @@
                                             </form>
                                             <thead>
                                                 <tr>
-                                                    <th style="width: 20px;">
-                                                        <div class="form-check">
-                                                            <input type="checkbox" class="form-check-input" id="customCheck1">
-                                                            <label class="form-check-label" for="customCheck1">&nbsp;</label>
-                                                        </div>
-                                                    </th>
                                                     <th>Ảnh</th>
                                                     <th>Họ và tên</th>
                                                     <th>Số điện thoại</th>
@@ -983,12 +977,6 @@
                                                 <?php
                                                 foreach ($data_khachhang as $key => $value) { ?>
                                                     <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
-                                                            </div>
-                                                        </td>
                                                         <td class="table-user">
                                                             <img src="<?php echo $value['anh'] ?>" alt="table-user" class="me-2 rounded-circle">
                                                         </td>

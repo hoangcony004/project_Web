@@ -163,11 +163,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                                    <img style="width: 100px; height: 100px; border-radius: 50%;" src="<?php echo $khachhang[0]['anh'] ?>" alt="Admin" class="rounded-circle" width="150">
                                     <div class="mt-3">
-                                        <h4 style="margin-top: 7px;"><?php echo $_SESSION['ss_client1']; ?></h4>
+                                        <h4 style="margin-top: 7px;"><?php echo $khachhang[0]['hovaten'] ?></h4>
                                         <p class="text-secondary mb-1">Khách hàng thân thiết</p>
-                                        <p class="text-muted font-size-sm">Phus tho</p>
+                                        <p class="text-muted font-size-sm"><?php echo $khachhang[0]['diachi'] ?></p>
                                         <button class="btn btn-primary">Follow</button>
                                         <button class="btn btn-outline-primary">Message</button>
                                     </div>
@@ -180,7 +180,7 @@
                                     <a class="btn btn-info" href="?controller=trangchu"><i class="fa-solid fa-house"></i> Trang chủ</a>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <a class="btn btn-info" href="?controller=donhang"><i class="fa-solid fa-layer-group"></i> Xem đơn hàng</a>
+                                    <a class="btn btn-info" href="?controller=donhang&id=<?php echo $_SESSION['ss_client'] ?>"><i class="fa-solid fa-layer-group"></i> Xem đơn hàng</a>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                     <a class="btn btn-info" href="?controller=dangxuat"><i class="fa-solid fa-right-to-bracket"></i> Đăng xuất</a>
@@ -206,7 +206,7 @@
                                             <h6 class="mb-0">Họ tên: </h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" placeholder="Nhập họ tên..." name="hoten" >
+                                            <input type="text" placeholder="Nhập họ tên..." name="hoten" value="<?php echo $khachhang[0]['hovaten'] ?>">
                                         </div>
                                         <?php if (isset($loi['hoten'])) { ?>
                                             <p class="text-danger"><?php echo $loi['hoten'] ?></p>
@@ -218,7 +218,7 @@
                                             <h6 class="mb-0">Email: </h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" placeholder="Nhập email..." name="email">
+                                            <input type="text" placeholder="Nhập email..." name="email" value="<?php echo $khachhang[0]['email'] ?>">
                                         </div>
                                     </div>
                                     <hr>
@@ -228,7 +228,7 @@
                                             </h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" placeholder="Nhập số điện thoại..." name="sodienthoai">
+                                            <input type="text" placeholder="Nhập số điện thoại..." name="sodienthoai" value="<?php echo $khachhang[0]['sodienthoai'] ?>">
                                         </div>
                                     </div>
                                     <hr>
@@ -257,7 +257,7 @@
                                             <h6 class="mb-0">Địa chỉ: </h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" placeholder="Nhập địa chỉ(Nhập tỉnh)..." name="diachi">
+                                            <input type="text" placeholder="Nhập địa chỉ(Nhập tỉnh)..." name="diachi" value="<?php echo $khachhang[0]['diachi'] ?>">
                                         </div>
                                     </div>
                                     <hr>
@@ -303,27 +303,30 @@
                     <div class="col-sm-6 mb-3">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h6 class="d-flex align-items-center mb-3">Thông tin cá nhân</h6>
-                                <small style="margin-right: 200px;">Họ tên: </small>
-                                <div>
-                                    <p style="margin-left: 50px;">Nguyễn văn A</p>
-                                </div>
-                                <small style="margin-right: 200px;">Email: </small>
-                                <div>
-                                    <p style="margin-left: 50px;">Nguyenvana123@gmail.com</p>
-                                </div>
-                                <small style="margin-right: 200px;">Số điện thoại: </small>
-                                <div>
-                                    <p style="margin-left: 50px;">0123456789</p>
-                                </div>
-                                <small style="margin-right: 200px;">Giới tính: </small>
-                                <div>
-                                    <p style="margin-left: 50px;">Nam</p>
-                                </div>
-                                <small style="margin-right: 200px;">Địa chỉ: </small>
-                                <div>
-                                    <p style="margin-left: 50px;">Hà Nội</p>
-                                </div>
+                                <?php
+                                foreach ($khachhang as $key => $value) { ?>
+                                    <h6 class="d-flex align-items-center mb-3">Thông tin cá nhân</h6>
+                                    <small style="margin-right: 200px;">Họ tên: </small>
+                                    <div>
+                                        <p style="margin-left: 50px;"><?php echo $khachhang[0]['hovaten'] ?></p>
+                                    </div>
+                                    <small style="margin-right: 200px;">Email: </small>
+                                    <div>
+                                        <p style="margin-left: 50px;"><?php echo $khachhang[0]['email'] ?></p>
+                                    </div>
+                                    <small style="margin-right: 200px;">Số điện thoại: </small>
+                                    <div>
+                                        <p style="margin-left: 50px;"><?php echo $khachhang[0]['sodienthoai'] ?></p>
+                                    </div>
+                                    <small style="margin-right: 200px;">Giới tính: </small>
+                                    <div>
+                                        <p style="margin-left: 50px;"><?php echo $khachhang[0]['gioitinh'] ?></p>
+                                    </div>
+                                    <small style="margin-right: 200px;">Địa chỉ: </small>
+                                    <div>
+                                        <p style="margin-left: 50px;"><?php echo $khachhang[0]['diachi'] ?></p>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

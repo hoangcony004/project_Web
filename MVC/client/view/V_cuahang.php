@@ -120,12 +120,22 @@
                                 src="img/logo_annhanh.jpg"></a></h1>
                         </div>
                     </div>
-
+                    <?php if (isset($_SESSION['cart'])) {
+                    $tongtien = 0;
+                    foreach ($_SESSION['cart'] as $key => $value) {
+                        $tongtien += $value['soluong'] * $value['giamoi'];
+                        $sp = $_SESSION['cart'];
+                        $sl = count($sp);
+                    }
+                } else {
+                    $sl = 0;
+                    $tongtien = 0;
+                } ?>
                     <div class="col-sm-6">
                         <div class="shopping-item">
                             <a href="?controller=giohang">Giỏ hàng <i
                                     class="fa fa-shopping-cart"></i> <span
-                                    class="product-count">5</span></a>
+                                    class="product-count"><?php echo  $sl ?></span></a>
                         </div>
                     </div>
                 </div>

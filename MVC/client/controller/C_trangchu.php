@@ -10,4 +10,4 @@ if (isset($_GET['keyword'])) {
     $khachhang = $db->get('khachhang', array());
 }
 
-include 'view/V_trangchu_annhanh.php';
+include 'view/V_trangchu.php';

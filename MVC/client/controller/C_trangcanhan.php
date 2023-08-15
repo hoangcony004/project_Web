@@ -1,6 +1,6 @@
 <?php
-
-$khachhang = $db->get('khachhang', array());
+$id=$_GET['id'];
+$khachhang = $db->get('khachhang', array('id'=>$id));
 
 
 if (isset($_GET['id'])) {

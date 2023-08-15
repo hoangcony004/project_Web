@@ -981,14 +981,14 @@
                                                         <div class="row g-3">
                                                             <div class="col-12">
                                                                 <label class="form-label">Giá bán: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập giá bán..." name="giamoi">
+                                                                <input type="number" class="form-control" placeholder="Nhập giá bán..." name="giamoi">
                                                                 <?php if (isset($loi['giamoi'])) { ?>
                                                                     <p class="text-danger"><?php echo $loi['giamoi'] ?></p>
                                                                 <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Giá cũ: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập giá cũ..." name="giacu">
+                                                                <input type="number" class="form-control" placeholder="Nhập giá cũ..." name="giacu">
                                                                 <?php if (isset($loi['giacu'])) { ?>
                                                                     <p class="text-danger"><?php echo $loi['giacu'] ?></p>
                                                                 <?php } ?>
@@ -1005,58 +1005,41 @@
                                                             <div class="col-12">
                                                                 <label class="form-label">Thịt: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập tên thịt(hoặc để trống)..." name="thit" value="">
-                                                                <?php if (isset($loi['thit'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['thit'] ?></p>
-                                                                <?php } ?>
+
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Cá: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập tên cá(hoặc để trống)..." name="ca" value="">
-                                                                <?php if (isset($loi['ca'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['ca'] ?></p>
-                                                                <?php } ?>
+
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Rau: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rau" value="">
-                                                                <?php if (isset($loi['rau'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['rau'] ?></p>
-                                                                <?php } ?>
+
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Củ: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập Tên củ(hoặc để trống)..." name="cu" value="">
-                                                                <?php if (isset($loi['cu'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['cu'] ?></p>
-                                                                <?php } ?>
+
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Quả: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập tên quả(hoặc để trống)..." name="qua" value="">
-                                                                <?php if (isset($loi['qua'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['qua'] ?></p>
-                                                                <?php } ?>
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Rau thơm: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rauthom" value="">
-                                                                <?php if (isset($loi['rauthom'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['rauthom'] ?></p>
-                                                                <?php } ?>
+
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Gia vị: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập tên gia vị(hoặc để trống)..." name="giavi" value="">
-                                                                <?php if (isset($loi['giavi'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['giavi'] ?></p>
-                                                                <?php } ?>
+
                                                             </div>
                                                             <div class="col-12">
                                                                 <label class="form-label">Nguyên liệu khác: </label>
                                                                 <input type="text" class="form-control" placeholder="Nhập tên nguyên liệu(hoặc để trống)..." name="nguyenlieukhac" value="">
-                                                                <?php if (isset($loi['nguyenlieukhac'])) { ?>
-                                                                    <p class="text-danger"><?php echo $loi['nguyenlieukhac'] ?></p>
-                                                                <?php } ?>
+
                                                             </div>
 
                                                         </div><!--end row-->

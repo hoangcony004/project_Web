@@ -55,19 +55,18 @@
                                         ?>
                                         </a>
                                     </div>
-                                    <?php
-                                    foreach ($khachhang as $key => $value) { ?>
+
                                     <div class="dropdown-menu">
-                                        <a style="text-decoration: none;" href="?controller=trangcanhan&id=<?php echo $value['id'] ?>" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
+                                        <a style="text-decoration: none;" href="?controller=trangcanhan&id=<?php echo $_SESSION['ss_client'] ?>" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
                                             cá nhân</a>
-                                        <a style="text-decoration: none;" href="V_donhang.html" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
+                                        <a style="text-decoration: none;" href="?controller=donhang&id=<?php echo $_SESSION['ss_client'] ?>" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
                                             đơn hàng</a>
                                         <a style="text-decoration: none;" href="#" class="dropdown-item"><i class="fa-solid fa-gear"></i>&ensp;Cài
                                             đặt</a>
                                         <a style="text-decoration: none;" href="?controller=dangxuat" class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i>&ensp;Đăng
                                             xuất</a>
                                     </div>
-                                    <?php }?>
+
                                 </div>
                             </li>
                             <li><a style="text-decoration: none;" href="#"><i class="fa fa-heart"></i>&ensp;Yêu
@@ -104,10 +103,20 @@
                         <h1><a href="#"><img style="width: 70px; border-radius: 50%;" src="img/logo_annhanh.jpg"></a></h1>
                     </div>
                 </div>
-
+                <?php if (isset($_SESSION['cart'])) {
+                    $tongtien = 0;
+                    foreach ($_SESSION['cart'] as $key => $value) {
+                        $tongtien += $value['soluong'] * $value['giamoi'];
+                        $sp = $_SESSION['cart'];
+                        $sl = count($sp);
+                    }
+                } else {
+                    $sl = 0;
+                    $tongtien = 0;
+                } ?>
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="?controller=giohang">Giỏ hàng<i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="?controller=giohang">Giỏ hàng<i class="fa fa-shopping-cart"></i> <span class="product-count"><?php echo  $sl ?></span></a>
                     </div>
                 </div>
             </div>
@@ -138,8 +147,7 @@
                                 hệ</a></li>
                         <li>
                             <form action="#" method="get">
-                                <input type="search" placeholder="Tìm kiếm..." name="keyword" style=" border: 1px solid; border-radius: 5px; margin-top: 18px; padding: 2px 5px;"
-                                value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>">
+                                <input type="search" placeholder="Tìm kiếm..." name="keyword" style=" border: 1px solid; border-radius: 5px; margin-top: 18px; padding: 2px 5px;" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>">
                                 <button style="padding: 3px 15px; border: 1px solid; border-radius: 5px; background-color: cornflowerblue;
                                 "><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
@@ -243,11 +251,11 @@
                             foreach ($product as $key => $value) { ?>
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img  style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh">
+                                        <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh">
                                     </div>
 
                                     <h2><a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?> </a></h2>
-                                    
+
                                     <div class="product-carousel-price">
                                         <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
                                     </div>

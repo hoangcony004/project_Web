@@ -55,30 +55,6 @@ if (isset($_SESSION['ss_admin'])) {
             if ($soluong == '') {
                 $loi['soluong'] = 'Giá cũ không được để trống!';
             }
-            if ($thit == '') {
-                $loi['thit'] = 'Thịt không được để trống!';
-            }
-            if ($ca == '') {
-                $loi['ca'] = 'Cá không được để trống!';
-            }
-            if ($rau == '') {
-                $loi['rau'] = 'Rau không được để trống!';
-            }
-            if ($cu == '') {
-                $loi['cu'] = 'Củ không được để trống!';
-            }
-            if ($qua == '') {
-                $loi['qua'] = 'Quả không được để trống!';
-            }
-            if ($rauthom == '') {
-                $loi['rauthom'] = 'Rau thơm không được để trống!';
-            }
-            if ($giavi == '') {
-                $loi['giavi'] = 'Gia vị không được để trống!';
-            }
-            if ($nguyenlieukhac == '') {
-                $loi['nguyenlieukhac'] = 'Nguyên liệu khác không được để trống!';
-            }
             // xu ly fie anh
             $link = 'img/';
             // tao duong dan upload len he thong
@@ -89,12 +65,10 @@ if (isset($_SESSION['ss_admin'])) {
            // echo 'anh la" '.$link_full;
 
 
-
-
             if (!$loi) {
                 $db->insert('sanpham', array(
-                    'id_nhacungcap' => $idncc,
-                    'id_danhmuc' => $iddm,
+                    'nhacungcap_id' => $idncc,
+                    'danhmuc_id' => $iddm,
                     'tensanpham' => $tensp,
                     'anhsanpham' => $link_full,
                     'mota' => $mota,
@@ -110,7 +84,7 @@ if (isset($_SESSION['ss_admin'])) {
                 // var_dump($id_donhang);
                 // die;
                 $db->insert('nguyenlieu', array(
-                    'id_sanpham' => $db->getOrdId(),
+                    'sanpham_id' => $db->getOrdId(),
                     'thit' => $thit,
                     'ca' => $ca,
                     'rau' => $rau,

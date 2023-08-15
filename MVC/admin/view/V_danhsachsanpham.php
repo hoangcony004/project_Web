@@ -982,7 +982,7 @@
                                                         </div>
                                                     </th>
                                                     <th class="all">Sản phẩm</th>
-                                                    <th>Nhà cung cấp</th>
+                                                    <th>Nhà cung cấp ID</th>
                                                     <th>Ngày thêm sản phẩm</th>
                                                     <th>Giá bán</th>
                                                     <th>Số lượng</th>
@@ -1013,7 +1013,7 @@
                                                             </p>
                                                         </td>
                                                         <td>
-                                                            <?php echo $value['id_nhacungcap'] ?>
+                                                            <?php echo $value['nhacungcap_id'] ?>
                                                         </td>
                                                         <td>
                                                             <?php echo $value['ngaythemsanpham'] ?>

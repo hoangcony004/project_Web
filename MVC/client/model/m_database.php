@@ -105,4 +105,7 @@ class database
         $query = mysqli_query($this->conn, $sql);
         return $query;
     }
+    public function getOrdId() {
+        return $this->conn->insert_id;
+    }
 }
