@@ -269,11 +269,11 @@
                                                         <div class="rating-chooser">
 
                                                             <div class="rating-wrap-post">
-                                                                <input type="radio" name="stars" id="star-1"  value=""/>
-                                                                <input type="radio" name="stars" id="star-2"  value=""/>
-                                                                <input type="radio" name="stars" id="star-3"  value=""/>
-                                                                <input type="radio" name="stars" id="star-4"  value=""/>
-                                                                <input type="radio" name="stars" id="star-5" checked value=""/>
+                                                                <input type="radio" name="stars" id="star-1" value="" />
+                                                                <input type="radio" name="stars" id="star-2" value="" />
+                                                                <input type="radio" name="stars" id="star-3" value="" />
+                                                                <input type="radio" name="stars" id="star-4" value="" />
+                                                                <input type="radio" name="stars" id="star-5" checked value="" />
                                                             </div>
                                                         </div>
                                                         <p><label for="review">Bình luận</label>
@@ -319,153 +319,26 @@
                         </div>
 
                         <div class="related-products-wrapper">
-                            <h2 class="related-products-title">Related
-                                Products</h2>
+                            <h2 class="related-products-title">Sản phẩm mới</h2>
                             <div class="related-products-carousel">
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
+                                <?php
+                                foreach ($pizza as $key => $value) { ?>
+                                    <div class="single-product">
+                                        <div class="product-f-image">
+                                            <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
+
+                                        </div>
+                                        <h2><a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
+
+                                        <div class="product-carousel-price">
+                                            <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
+                                        </div>
+                                        <div class="product-option-shop">
+                                            <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                                Thêm giỏ hàng</a>
                                         </div>
                                     </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
-                                        </div>
-                                    </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
-                                        </div>
-                                    </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
-                                        </div>
-                                    </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
-                                        </div>
-                                    </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
-                                        </div>
-                                    </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
-                                        </div>
-                                    </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
-                                <div class="single-product">
-                                    <div class="product-f-image">
-                                        <img src="img/product-3.jpg" alt>
-                                        <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>
-                                                Mua ngay</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i>
-                                                Xem
-                                                chi tiết</a>
-                                        </div>
-                                    </div>
-
-                                    <h2>LG Leon 2015</h2>
-
-                                    <div class="product-carousel-price">
-                                        <ins>$400.00</ins> <del>$425.00</del>
-                                    </div>
-                                </div>
+                                <?php } ?>
 
                             </div>
                         </div>

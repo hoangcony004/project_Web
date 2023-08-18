@@ -165,10 +165,10 @@
                     <a href="#"><img style=" height: 400px;" src="img/baner-pizza.jpg" alt="Slide1"></a>
                 </li>
                 <li>
-                    <a href="#"><img style=" height: 400px;" src="img/banne_bbq.jpg" alt="Slide2"></a>
+                    <a href="#"><img style=" height: 400px;" src="img/banner_bbq.jpg" alt="Slide2"></a>
                 </li>
                 <li>
-                    <a href="#"><img style=" height: 400px;" src="img/banner-salad.webp" alt="Slide3"></a>
+                    <a href="#"><img style=" height: 400px;" src="img/banner_salad.webp" alt="Slide3"></a>
 
                 </li>
                 <li>
