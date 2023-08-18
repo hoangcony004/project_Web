@@ -42,6 +42,15 @@ switch ($controller) {
     case 'themdonhang':
         include 'controller/C_themdonhang.php';
         break;
+    case 'donhang':
+        include 'controller/C_donhang.php';
+        break;
+    case 'chitietdonhang':
+        include 'controller/C_chitietdonhang.php';
+        break;
+    case 'xulydonhang':
+        include 'controller/C_xulydonhang.php';
+        break;
     default:
         break;
 }

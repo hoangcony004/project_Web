@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Trang chu admin</title>
+        <title>Trang Them don hang</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
         <meta content="Coderthemes" name="author">
@@ -962,7 +962,7 @@
                                     <input type="text" class="form-control" placeholder="Nhập tổng tiền...">
                                   </div>
                                    <div class="col-12">
-                                     <button class="btn btn-primary px-4" type="submit" name="btn_themnv">Thêm đơn hàng</button>
+                                     <button class="btn btn-primary px-4" type="submit" name="btn_themnv"><i class="fa-solid fa-plus"></i> Thêm đơn hàng</button>
                                    </div>
                                  </form>
                                  </div>

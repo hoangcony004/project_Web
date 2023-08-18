@@ -64,9 +64,9 @@
                                         </a>
                                     </div>
                                     <div class="dropdown-menu">
-                                        <a style="text-decoration: none;" href="V_profile.html" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
+                                        <a style="text-decoration: none;" href="?controller=trangcanhan&id=<?php echo $_SESSION['ss_client'] ?>" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
                                             cá nhân</a>
-                                        <a style="text-decoration: none;" href="V_donhang.html" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
+                                        <a style="text-decoration: none;" href="?controller=donhang&id=<?php echo $_SESSION['ss_client'] ?>" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
                                             đơn hàng</a>
                                         <a style="text-decoration: none;" href="#" class="dropdown-item"><i class="fa-solid fa-gear"></i>&ensp;Cài
                                             đặt</a>

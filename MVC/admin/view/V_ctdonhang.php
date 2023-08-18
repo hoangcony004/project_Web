@@ -1,56 +1,51 @@
 ﻿<!DOCTYPE html>
-    <html lang="en">
-
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Trang chu admin</title>
+        <title>Order Details | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
         <meta content="Coderthemes" name="author">
-
-
-        <!-- third party css -->
-        <link href="css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
-        <!-- third party css end -->
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- App css -->
         <link href="css/icons.min.css" rel="stylesheet" type="text/css">
         <link href="css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
         <link href="css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
     </head>
 
-    <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false,
-         "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+    <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
         <!-- Begin page -->
-        <div class="wrapper">
-            <!-- ========== Left Sidebar Start ========== -->
-            <div class="leftside-menu">
-    
-                <!-- LOGO -->
-                <a href="index.html" class="logo text-center logo-light">
-                    <span class="logo-lg">
-                        <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
-                    </span>
-                    <span class="logo-sm">
-                        <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
-                    </span>
-                </a>
-
-                <!-- LOGO -->
-                <a href="index.html" class="logo text-center logo-dark">
-                    <span class="logo-lg">
-                        <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
-                    </span>
-                    <span class="logo-sm">
-                        <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
-                    </span>
-                </a>
-    
-                <div class="h-100" id="leftside-menu-container" data-simplebar="">
-
-                    <!--- Sidemenu -->
+                <!-- Begin page -->
+                <div class="wrapper">
+                    <!-- ========== Left Sidebar Start ========== -->
+                    <div class="leftside-menu">
+            
+                        <!-- LOGO -->
+                        <a href="index.html" class="logo text-center logo-light">
+                            <span class="logo-lg">
+                                <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
+                            </span>
+                            <span class="logo-sm">
+                                <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
+                            </span>
+                        </a>
+        
+                        <!-- LOGO -->
+                        <a href="index.html" class="logo text-center logo-dark">
+                            <span class="logo-lg">
+                                <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
+                            </span>
+                            <span class="logo-sm">
+                                <img style="border-radius: 50%;" src="images/logo_annhanh.jpg" alt="" width="70px">
+                            </span>
+                        </a>
+            
+                        <div class="h-100" id="leftside-menu-container" data-simplebar="">
+        
+                            <!--- Sidemenu -->
                     <ul class="side-nav">
 
                         <li class="side-nav-title side-nav-item">Bảng điều khiển</li>
@@ -578,27 +573,27 @@
                             </div>
                         </li>
                     </ul>
-
-                    <!-- Help Box -->
-                    <div class="help-box text-white text-center">
-                        <a href="javascript: void(0);" class="float-end close-btn text-white">
-                            <i class="mdi mdi-close"></i>
-                        </a>
-                        <img src="images/help-icon.svg" height="90" alt="Helper Icon Image">
-                        <h5 class="mt-3">Truy cập vô hạn</h5>
-                        <p class="mb-3">Nâng cấp tài khoản để có tất cả các quyền.</p>
-                        <a href="javascript: void(0);" class="btn btn-outline-light btn-sm">Nâng cấp</a>
+        
+                            <!-- Help Box -->
+                            <div class="help-box text-white text-center">
+                                <a href="javascript: void(0);" class="float-end close-btn text-white">
+                                    <i class="mdi mdi-close"></i>
+                                </a>
+                                <img src="images/help-icon.svg" height="90" alt="Helper Icon Image">
+                                <h5 class="mt-3">Truy cập vô hạn</h5>
+                                <p class="mb-3">Nâng cấp tài khoản để có tất cả các quyền.</p>
+                                <a href="javascript: void(0);" class="btn btn-outline-light btn-sm">Nâng cấp</a>
+                            </div>
+                            <!-- end Help Box -->
+                            <!-- End Sidebar -->
+        
+                            <div class="clearfix"></div>
+        
+                        </div>
+                        <!-- Sidebar -left -->
+        
                     </div>
-                    <!-- end Help Box -->
-                    <!-- End Sidebar -->
-
-                    <div class="clearfix"></div>
-
-                </div>
-                <!-- Sidebar -left -->
-
-            </div>
-            <!-- Left Sidebar End -->
+                    <!-- Left Sidebar End -->
 
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
@@ -914,7 +909,7 @@
                         </div>
                     </div>
                     <!-- end Topbar -->
-                    
+
                     <!-- Start Content-->
                     <div class="container-fluid">
                         
@@ -924,362 +919,170 @@
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Ăn nhanh 247</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Ứng dụng</a></li>
-                                            <li class="breadcrumb-item active">Đơn đặt hàng</li>
+                                            <li class="breadcrumb-item active">Chi tiết đơn hàng</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Đơn đặt hàng</h4>
+                                    <h4 class="page-title">Chi tiết đơn hàng</h4>
                                 </div>
                             </div>
                         </div>     
-                        <!-- end page title --> 
-
+                        <!-- end page title -->      
+                        
+                        
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-lg-8">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row mb-2">
-                                            <div class="col-xl-8">
-                                                <form class="row gy-2 gx-2 align-items-center justify-content-xl-start justify-content-between"  action="#" method="post">
-                                                    <div class="col-auto">
-                                                            <div class="input-group">
-                                                                <input type="search" class="form-control" placeholder="Tìm kiếm đơn hàng...">
-                                                                <button class="input-group-text btn-primary" name="btn_timkh" type="submit">Tìm kiếm</button>
-                                                            </div>
-                                                        </form>
-                                                    </div><br>                     
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <div class="text-xl-end mt-xl-0 mt-2">
-                                                    <a href="V_themdonhang.html" type="button" class="btn btn-danger mb-2 me-2"><i class="mdi mdi-basket me-1"></i> Thêm đơn hàng</a>
-                                                    <button type="button" class="btn btn-light mb-2">Export</button>
-                                                </div>
-                                            </div><!-- end col-->
-                                        </div>
-                
+                                        <h4 class="header-title mb-3">Đơn hàng này của người dùng có ID là:&emsp;<?php echo $id?></h4>
+            
                                         <div class="table-responsive">
-                                            <table class="table table-centered mb-0">
+                                            <table class="table mb-0">
                                                 <thead class="table-light">
-                                                    <tr>
-                                                        <th style="width: 20px;">
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck1">
-                                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
-                                                            </div>
-                                                        </th>
-                                                        <th>Order ID</th>
-                                                        <th>Date</th>
-                                                        <th>Payment Status</th>
-                                                        <th>Total</th>
-                                                        <th>Payment Method</th>
-                                                        <th>Order Status</th>
-                                                        <th style="width: 125px;">Action</th>
-                                                    </tr>
+                                                <tr>
+                                                    <th>Đơn hàng ID</th>
+                                                    <th>Sản phẩm ID</th>
+                                                    <th>Số lượng</th>
+                                                    <th>Tổng tiền</th>
+                                                    <th>Ngày giờ đặt hàng</th>
+                                                    <th>Ghi chú</th>
+                                                </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9708</a> </td>
-                                                        <td>
-                                                            August 05 2018 <small class="text-muted">10:29 PM</small>
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten"><i class="mdi mdi-coin"></i> Paid</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $176.41
-                                                        </td>
-                                                        <td>
-                                                            Mastercard
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-info-lighten">Shipped</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="V_suadonhang.html" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="#" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck3">
-                                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9707</a> </td>
-                                                        <td>August 04 2018 <small class="text-muted">08:18 AM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-warning-lighten"><i class="mdi mdi-timer-sand"></i> Awaiting Authorization</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $1,458.65
-                                                        </td>
-                                                        <td>
-                                                            Visa
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-warning-lighten">Processing</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck4">
-                                                                <label class="form-check-label" for="customCheck4">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9706</a> </td>
-                                                        <td>August 04 2018 <small class="text-muted">10:29 PM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten"><i class="mdi mdi-coin"></i> Paid</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $801.99
-                                                        </td>
-                                                        <td>
-                                                            Credit Card
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-warning-lighten">Processing</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck5">
-                                                                <label class="form-check-label" for="customCheck5">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9705</a> </td>
-                                                        <td>August 03 2018 <small class="text-muted">07:56 AM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten"><i class="mdi mdi-coin"></i> Paid</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $215.35
-                                                        </td>
-                                                        <td>
-                                                            Mastercard
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten">Delivered</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck6">
-                                                                <label class="form-check-label" for="customCheck6">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9704</a> </td>
-                                                        <td>May 22 2018 <small class="text-muted">07:22 PM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-danger-lighten"><i class="mdi mdi-cancel"></i> Payment Failed</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $2,514.36
-                                                        </td>
-                                                        <td>
-                                                            Paypal
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-danger-lighten">Cancelled</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck7">
-                                                                <label class="form-check-label" for="customCheck7">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9703</a> </td>
-                                                        <td>April 02 2018 <small class="text-muted">03:02 AM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten"><i class="mdi mdi-coin"></i> Paid</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $183.20
-                                                        </td>
-                                                        <td>
-                                                            Payoneer
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-info-lighten">Shipped</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck8">
-                                                                <label class="form-check-label" for="customCheck8">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9702</a> </td>
-                                                        <td>March 18 2018 <small class="text-muted">11:19 PM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-warning-lighten"><i class="mdi mdi-timer-sand"></i> Awaiting Authorization</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $1,768.41
-                                                        </td>
-                                                        <td>
-                                                            Visa
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-warning-lighten">Processing</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck9">
-                                                                <label class="form-check-label" for="customCheck9">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9701</a> </td>
-                                                        <td>February 01 2018 <small class="text-muted">07:22 AM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-info-lighten"><i class="mdi mdi-cash"></i> Unpaid</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $3,582.99
-                                                        </td>
-                                                        <td>
-                                                            Paypal
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-info-lighten">Shipped</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck10">
-                                                                <label class="form-check-label" for="customCheck10">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9700</a> </td>
-                                                        <td>January 22 2018 <small class="text-muted">08:09 PM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten"><i class="mdi mdi-coin"></i> Paid</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $923.95
-                                                        </td>
-                                                        <td>
-                                                            Credit Card
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten">Delivered</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck11">
-                                                                <label class="form-check-label" for="customCheck11">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="apps-ecommerce-orders-details.html" class="text-body fw-bold">#BM9699</a> </td>
-                                                        <td>January 17 2018 <small class="text-muted">02:30 PM</small></td>
-                                                        <td>
-                                                            <h5><span class="badge badge-success-lighten"><i class="mdi mdi-coin"></i> Paid</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            $5,177.68
-                                                        </td>
-                                                        <td>
-                                                            Mastercard
-                                                        </td>
-                                                        <td>
-                                                            <h5><span class="badge badge-info-lighten">Shipped</span></h5>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    
+                                                <?php
+                                                foreach ($data_ctdonhang as $key => $value) { ?>
+                                                <tr>
+                                                    <td><?php echo $value['donhang_id'] ?></td>
+                                                    <td><?php echo $value['sanpham_id'] ?></td>
+                                                    <td><?php echo $value['soluong'] ?></td>
+                                                    <td><?php echo number_format($value['tongtien']) ?>vnd</td>
+                                                    <td><?php echo $value['ngaydathang'] ?></td>
+                                                    <td><?php echo $value['ghichu'] ?></td>
+                                                </tr>
+                                                    <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
+                                        <!-- end table-responsive -->
+            
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+        
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-3">Order Summary</h4>
+            
+                                        <div class="table-responsive">
+                                            <table class="table mb-0">
+                                                <thead class="table-light">
+                                                <tr>
+                                                    <th>Description</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Grand Total :</td>
+                                                    <td>$1641</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shipping Charge :</td>
+                                                    <td>$23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Estimated Tax : </td>
+                                                    <td>$19.22</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total :</th>
+                                                    <th>$1683.22</th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- end table-responsive -->
+            
+                                    </div>
+                                </div>
                             </div> <!-- end col -->
                         </div>
-                        <!-- end row --> 
+                        <!-- end row -->
+        
+        
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-3">Shipping Information</h4>
+
+                                        <h5>Stanley Jones</h5>
+                                        
+                                        <address class="mb-0 font-14 address-lg">
+                                            795 Folsom Ave, Suite 600<br>
+                                            San Francisco, CA 94107<br>
+                                            <abbr title="Phone">P:</abbr> (123) 456-7890 <br>
+                                            <abbr title="Mobile">M:</abbr> (+01) 12345 67890
+                                        </address>
+            
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+        
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-3">Billing Information</h4>
+
+                                        <ul class="list-unstyled mb-0">
+                                            <li>
+                                                <p class="mb-2"><span class="fw-bold me-2">Payment Type:</span> Credit Card</p>
+                                                <p class="mb-2"><span class="fw-bold me-2">Provider:</span> Visa ending in 2851</p>
+                                                <p class="mb-2"><span class="fw-bold me-2">Valid Date:</span> 02/2020</p>
+                                                <p class="mb-0"><span class="fw-bold me-2">CVV:</span> xxx</p>
+                                            </li>
+                                        </ul>
+            
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+        
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-3">Delivery Info</h4>
+            
+                                        <div class="text-center">
+                                            <i class="mdi mdi-truck-fast h2 text-muted"></i>
+                                            <h5><b>UPS Delivery</b></h5>
+                                            <p class="mb-1"><b>Order ID :</b> xxxx235</p>
+                                            <p class="mb-0"><b>Payment Mode :</b> COD</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+        
                         
                     </div> <!-- container -->
 
                 </div> <!-- content -->
-
 
                 <!-- Footer Start -->
                 <footer class="footer">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> © Hoàng nà - nguyenduchoang522@gmail.com
+                                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-end footer-links d-none d-md-block">
-                                    <a href="https://www.facebook.com/profile.php?id=100020891342691">Facebook</a>
-                                    <a href="javascript: void(0);">Ủng hộ</a>
-                                    <a href="javascript: void(0);">Liện hệ với chúng tôi.</a>
+                                    <a href="javascript: void(0);">About</a>
+                                    <a href="javascript: void(0);">Support</a>
+                                    <a href="javascript: void(0);">Contact Us</a>
                                 </div>
                             </div>
                         </div>
@@ -1297,6 +1100,7 @@
         </div>
         <!-- END wrapper -->
 
+
         <!-- Right Sidebar -->
         <div class="end-bar">
 
@@ -1304,82 +1108,82 @@
                 <a href="javascript:void(0);" class="end-bar-toggle float-end">
                     <i class="dripicons-cross noti-icon"></i>
                 </a>
-                <h5 class="m-0">Cài đặt</h5>
+                <h5 class="m-0">Settings</h5>
             </div>
 
             <div class="rightbar-content h-100" data-simplebar="">
 
                 <div class="p-3">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Tùy chỉnh </strong> Màu nền, màu menu, v.v...
+                        <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
                     </div>
 
                     <!-- Settings -->
-                    <h5 class="mt-3">Bảng màu</h5>
+                    <h5 class="mt-3">Color Scheme</h5>
                     <hr class="mt-1">
 
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
-                        <label class="form-check-label" for="light-mode-check">Chế độ sáng</label>
+                        <label class="form-check-label" for="light-mode-check">Light Mode</label>
                     </div>
 
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark" id="dark-mode-check">
-                        <label class="form-check-label" for="dark-mode-check">Chế độ tối</label>
+                        <label class="form-check-label" for="dark-mode-check">Dark Mode</label>
                     </div>
        
 
                     <!-- Width -->
-                    <h5 class="mt-4">Chiều rộng</h5>
+                    <h5 class="mt-4">Width</h5>
                     <hr class="mt-1">
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="width" value="fluid" id="fluid-check" checked="">
-                        <label class="form-check-label" for="fluid-check">Mở rộng</label>
+                        <label class="form-check-label" for="fluid-check">Fluid</label>
                     </div>
 
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="width" value="boxed" id="boxed-check">
-                        <label class="form-check-label" for="boxed-check">Thu nhỏ</label>
+                        <label class="form-check-label" for="boxed-check">Boxed</label>
                     </div>
         
 
                     <!-- Left Sidebar-->
-                    <h5 class="mt-4">Tùy chỉnh menu</h5>
+                    <h5 class="mt-4">Left Sidebar</h5>
                     <hr class="mt-1">
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="theme" value="default" id="default-check">
-                        <label class="form-check-label" for="default-check">Mặc định</label>
+                        <label class="form-check-label" for="default-check">Default</label>
                     </div>
 
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="theme" value="light" id="light-check" checked="">
-                        <label class="form-check-label" for="light-check">Sáng</label>
+                        <label class="form-check-label" for="light-check">Light</label>
                     </div>
 
                     <div class="form-check form-switch mb-3">
                         <input class="form-check-input" type="checkbox" name="theme" value="dark" id="dark-check">
-                        <label class="form-check-label" for="dark-check">Tối</label>
+                        <label class="form-check-label" for="dark-check">Dark</label>
                     </div>
 
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="compact" value="fixed" id="fixed-check" checked="">
-                        <label class="form-check-label" for="fixed-check">Đã sửa</label>
+                        <label class="form-check-label" for="fixed-check">Fixed</label>
                     </div>
 
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="compact" value="condensed" id="condensed-check">
-                        <label class="form-check-label" for="condensed-check">Cô đọng</label>
+                        <label class="form-check-label" for="condensed-check">Condensed</label>
                     </div>
 
                     <div class="form-check form-switch mb-1">
                         <input class="form-check-input" type="checkbox" name="compact" value="scrollable" id="scrollable-check">
-                        <label class="form-check-label" for="scrollable-check">Có thể cuộn</label>
+                        <label class="form-check-label" for="scrollable-check">Scrollable</label>
                     </div>
 
                     <div class="d-grid mt-4">
-                        <button class="btn btn-primary" id="resetBtn">Đặt về mặc định</button>
+                        <button class="btn btn-primary" id="resetBtn">Reset to Default</button>
             
-                        <a href="#" class="btn btn-danger mt-3" target="_blank"><i class="mdi mdi-basket me-1"></i> Nâng cấp ngay</a>
+                        <a href="../../product/hyper-responsive-admin-dashboard-template/index.htm" class="btn btn-danger mt-3" target="_blank"><i class="mdi mdi-basket me-1"></i> Purchase Now</a>
                     </div>
                 </div> <!-- end padding-->
 
@@ -1388,6 +1192,7 @@
 
         <div class="rightbar-overlay"></div>
         <!-- /End-bar -->
+
 
         <!-- bundle -->
         <script src="js/vendor.min.js"></script>

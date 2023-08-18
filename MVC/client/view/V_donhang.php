@@ -69,9 +69,9 @@
                                         </a>
                                     </div>
                                     <div class="dropdown-menu">
-                                        <a style="text-decoration: none;" href="V_profile.html" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
+                                        <a style="text-decoration: none;" href="?controller=trangcanhan&id=<?php echo $_SESSION['ss_client'] ?>" class="dropdown-item"><i class="fa-regular fa-address-card"></i>&ensp;Trang
                                             cá nhân</a>
-                                        <a style="text-decoration: none;" href="V_donhang.html" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
+                                        <a style="text-decoration: none;" href="?controller=donhang&id=<?php echo $_SESSION['ss_client'] ?>" class="dropdown-item"><i class="fa-solid fa-layer-group"></i>&ensp;Xem
                                             đơn hàng</a>
                                         <a style="text-decoration: none;" href="#" class="dropdown-item"><i class="fa-solid fa-gear"></i>&ensp;Cài
                                             đặt</a>
@@ -174,7 +174,7 @@
 
     <div class="single-product-area">
         <h5 style="margin-left: 50px;">
-            <a style=" text-decoration: none;" href="cart.html">Quay lại giỏ
+            <a style=" text-decoration: none;" href="?controller=giohang">Quay lại giỏ
                 hàng</a>
         </h5>
         <div role="tabpanel">
@@ -208,18 +208,21 @@
                 <div role="tabpanel" class="tab-pane fade" id="profile" style="text-align: center;">
                     <h2>Chờ lấy hàng</h2>
                     <div style="margin-left: 500px;">
-                        <div class="single-shop-product" style="display: flex;">
-                            <div class="product-upper">
-                                <img style="width: 130px;" src="img/mi_y_sotcachua.jpeg" alt="anh">
+                        <?php
+                        foreach ($donhang as $key => $value) { ?>
+                            <div class="single-shop-product" style="display: flex;">
+                                <div class="product-upper">
+                                    <img style="width: 130px;" src="img/mi_y_sotcachua.jpeg" alt="anh">
 
+                                </div>
+                                <div style="">
+                                    <h4><?php echo $sanpham[0]['tensanpham'] ?></h4>
+                                    &emsp; &emsp;<ins style="text-decoration: none; color: blue;"><?php echo number_format($sanpham[0]['giamoi']) ?>vnd</ins> &emsp;<del><?php echo number_format($sanpham[0]['giacu']) ?>vnd</del><br><br>
+                                    <h3 style="margin-left: 200px;">Tổng thanh Toán: &emsp; <?php echo number_format($donhang[0]['tongtien']) ?>vnd</h3>
+                                    <p style="color: red;">Đang chờ xác nhận</p>
+                                </div>
                             </div>
-                            <div style="">
-                                <h4>Mi Y</h4>
-                                &emsp; &emsp;<ins style="text-decoration: none; color: blue;">80,000vnd</ins> &emsp;<del>100,000vnd</del><br><br>
-                                <h3 style="margin-left: 200px;">Tổng thanh Toán: &emsp; 80,000vnd</h3>
-                                <p style="color: chartreuse;">Đang chờ lấy hàng</p>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="danhgia" style="text-align: center;">
