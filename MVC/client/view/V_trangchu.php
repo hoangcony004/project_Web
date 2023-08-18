@@ -148,8 +148,7 @@
                         <li>
                             <form action="#" method="get">
                                 <input type="search" placeholder="Tìm kiếm..." name="keyword" style=" border: 1px solid; border-radius: 5px; margin-top: 18px; padding: 2px 5px;" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>">
-                                <button style="padding: 3px 15px; border: 1px solid; border-radius: 5px; background-color: cornflowerblue;
-                                "><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button style="padding: 3px 15px; border: 1px solid; border-radius: 5px; background-color: cornflowerblue;"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </li>
                     </ul>
@@ -224,7 +223,26 @@
                             <div class="container">
                                 <div class="row">
                                     <?php
-                                    foreach ($product as $key => $value) { ?>
+                                    foreach ($pizza as $key => $value) { ?>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="single-shop-product">
+                                                <div class="product-upper">
+                                                    <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
+                                                </div>
+                                                <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
+                                                <div class="product-carousel-price">
+                                                    <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
+                                                </div>
+
+                                                <div class="product-option-shop">
+                                                    <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="70" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                                        Thêm giỏ hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    foreach ($suonbbq as $key => $value) { ?>
                                         <div class="col-md-3 col-sm-6">
                                             <div class="single-shop-product">
                                                 <div class="product-upper">

@@ -943,12 +943,23 @@
                                                                 <p class="text-danger"><?php echo $loi['idncc'] ?></p>
                                                             <?php } ?>
                                                         </div>
-                                                        <div class="col-12">
+                                                        <!-- <div class="col-12">
                                                             <label class="form-label">ID danh mục: </label>
                                                             <input type="text" class="form-control" placeholder="Nhập id nhà cung cấp..." name="iddm" value="<?php echo $sanpham[0]['danhmuc_id'] ?>">
                                                             <?php if (isset($loi['iddm'])) { ?>
                                                                 <p class="text-danger"><?php echo $loi['iddm'] ?></p>
                                                             <?php } ?>
+                                                        </div> -->
+                                                        <div class="row mt-5">
+                                                            <h5 class="text col-md-2">Danh mục</h5>
+                                                            <select class="form-control col-md-6" name="catalog">
+                                                                <option value="<?php echo $product_catalog[0]['id'] ?>"><?php echo $product_catalog[0]['tennhacungcap'] ?></option>
+                                                                <?php foreach ($data_catalog as $key => $value) {
+                                                                    if ($product_catalog[0]['id'] != $value['id']) { ?>
+                                                                        <option value="<?php echo $value['id'] ?>"><?php echo $value['tennhacungcap'] ?></option>
+                                                                <?php }
+                                                                } ?>
+                                                            </select>
                                                         </div>
                                                         <div class="col-12">
                                                             <label class="form-label">Tên sản phẩm: </label>
@@ -961,7 +972,7 @@
                                                             <label class="form-label">Ảnh: </label>
                                                             <input class="form-control" type="file" name="anh">
                                                         </div>
-                                                        <div class="col-12" >
+                                                        <div class="col-12">
                                                             <label class="form-label">Mô tả: </label>
                                                             <input class="form-control" placeholder="Nhập mô tả..." name="mota" value="<?php echo $sanpham[0]['mota'] ?>">
                                                             <?php if (isset($loi['mota'])) { ?>

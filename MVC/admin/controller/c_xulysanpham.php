@@ -10,6 +10,8 @@ if (isset($_SESSION['ss_admin'])) {
                 // $data_donhangg = $db->get('oder', array('id' => $id));
                 $sanpham = $db->get('sanpham', array('id'=>$id));
                 $nguyenlieu = $db->get('nguyenlieu', array('sanpham_id'=>$id));
+                $product_catalog = $db->get('nhacungcap',array('id'=>$sanpham[0]['nhacungcap_id']));
+                $data_catalog = $db->get('nhacungcap',array());
                 if (isset($_POST['btn_suasp'])) {
                     $idncc = $_POST['iddm'];
                     $iddm = $_POST['idncc'];
