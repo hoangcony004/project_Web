@@ -51,6 +51,9 @@ switch ($controller) {
     case 'xulydonhang':
         include 'controller/C_xulydonhang.php';
         break;
+        case 'nhacungcap':
+            include 'controller/C_nhacungcap.php';
+            break;
     default:
         break;
 }

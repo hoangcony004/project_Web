@@ -172,7 +172,7 @@
 
                 </li>
                 <li>
-                    <a href="#"><img style=" height: 400px;" src="img/bannner_miy.jpg" alt="Slide4"></a>
+                    <a href="#"><img style=" height: 400px;" src="img/banner_miy.jpg" alt="Slide4"></a>
                 </li>
             </ul>
         </div>

@@ -4,34 +4,38 @@ if (isset($_SESSION['ss_admin'])) {
     $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
 
     if ($user[0]['cap'] == 1) {
-        if (isset($_POST['btn_themdh'])) {
-            $hoten = $_POST['hoten'];
-            $diachi = $_POST['diachi'];
+        if (isset($_POST['btn_themdonhang'])) {
+            $hovaten = $_POST['hovaten'];
             $sodt = $_POST['sodt'];
-            $soluong = $_POST['soluong'];
+            $tinhthanh = $_POST['tinhthanh'];
+            $quanhuyen = $_POST['quanhuyen'];
+            $xaphuong = $_POST['xaphuong'];
             $tongtien = $_POST['tongtien'];
-            $email = $_POST['email'];
+            $thonxom = $_POST['thonxom'];
+            $trangthai = 0;
 
-            // // khai bao loi
-            // $loi = array();
-            // if ($hoten == '') {
-            //     $loi['hoten'] = 'Người đặt hàng không được để trống!';
-            // }
-            // if ($diachi == '') {
-            //     $loi['diachi'] = 'Địa chỉ không được để trống!';
-            // }
-            // if ($sodt == '') {
-            //     $loi['sodt'] = 'Số điện thoại không được để trống!';
-            // }
-            // if ($email == '') {
-            //     $loi['email'] = 'Email không được để trống!';
-            // }
-            // if ($soluong == '') {
-            //     $loi['soluong'] = 'Số lượng không được để trống!';
-            // }
-            // if ($tongtien == '') {
-            //     $loi['tongtien'] = 'Tổng tiền không được để trống!';
-            // }
+
+            echo 'skjhshv'.$hovaten;
+            // khai bao loi
+            $loi = array();
+            if ($sodt == '') {
+                $loi['sodt'] = 'Số điện thoại không được để trống!';
+            }
+            if ($tinhthanh == '') {
+                $loi['tinhthanh'] = 'Tỉnh thành không được để trống!';
+            }
+            if ($quanhuyen == '') {
+                $loi['quanhuyen'] = 'Quận huyện không được để trống!';
+            }
+            if ($xaphuong == '') {
+                $loi['xaphuong'] = 'Xã phường không được để trống!';
+            }
+            if ($thonxom == '') {
+                $loi['thonxom'] = 'Thôn xóm không được để trống!';
+            }
+            if ($tongtien == '') {
+                $loi['tongtien'] = 'Tổng tiền không được để trống!';
+            }
             // if (!$loi) {
             //     $db->insert('oder', array(
             //         'full_name' => $hoten,

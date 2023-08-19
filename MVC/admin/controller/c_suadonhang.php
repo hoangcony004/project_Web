@@ -1,13 +1,13 @@
 <?php
 if (isset($_SESSION['ss_admin'])) {
-    $user = $db->get('admin_nhanvien', array('id' => $_SESSION['ss_admin']));
+    $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
     $data_donhang = $db->get('oder', array());
     $data_dathang = $db->get('oder', array());
     $data_sanpham = $db->get('order_detail', array());
 
 
 
-    if ($user[0]['level'] == 1) {
+    if ($user[0]['cap'] == 1) {
         $method = $_GET['method'];
         switch ($method) {
             case 'sua':

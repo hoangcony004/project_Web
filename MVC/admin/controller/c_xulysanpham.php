@@ -2,7 +2,7 @@
 if (isset($_SESSION['ss_admin'])) {
     $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
 
-    if ($user[0]['cap'] <= 1) {
+    if ($user[0]['cap'] == 1) {
         $method = $_GET['method'];
         switch ($method) {
             case 'sua':
@@ -13,8 +13,8 @@ if (isset($_SESSION['ss_admin'])) {
                 $product_catalog = $db->get('nhacungcap',array('id'=>$sanpham[0]['nhacungcap_id']));
                 $data_catalog = $db->get('nhacungcap',array());
                 if (isset($_POST['btn_suasp'])) {
-                    $idncc = $_POST['iddm'];
-                    $iddm = $_POST['idncc'];
+                    $idncc = $_POST['idncc'];
+                    $iddm = $_POST['iddm'];
                     $tensp = $_POST['tensp'];
                     $anh = $_FILES['anh'];
                     $mota = $_POST['mota'];
@@ -79,7 +79,7 @@ if (isset($_SESSION['ss_admin'])) {
                                 'giacu' => $giacu,
                                 'soluong' => $soluong
                             ),
-                            array('id' => $id)
+                        array('id' => $id)
                         );
                         $db->update('nguyenlieu', array(
                             'sanpham_id' => $id,
@@ -92,7 +92,7 @@ if (isset($_SESSION['ss_admin'])) {
                             'giavi' =>$giavi,
                             'nguyenlieukhac'=>$nguyenlieukhac
                         ),
-                        array('id' => $id)
+                        array('sanpham_id' => $id)
                     );
                         header('location: ?controller=danhsachsanpham');
                     }
@@ -111,4 +111,4 @@ if (isset($_SESSION['ss_admin'])) {
     }
 }
 //require './view/V_suasanpham.php';
-header('location: ?controller=danhsachsanpham');
+//header('location: ?controller=danhsachsanpham');

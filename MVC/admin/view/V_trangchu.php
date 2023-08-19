@@ -81,20 +81,6 @@
                         <li class="side-nav-title side-nav-item">Ứng dụng</li>
 
                         <li class="side-nav-item">
-                            <a href="#" class="side-nav-link">
-                                <i class="uil-calender"></i>
-                                <span> Lịch </span>
-                            </a>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a href="#" class="side-nav-link">
-                                <i class="uil-comments-alt"></i>
-                                <span> Trò chuyện </span>
-                            </a>
-                        </li>
-
-                        <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
                                 <i class="uil-store"></i>
                                 <span> Thương mại điện tử </span>
@@ -112,7 +98,7 @@
                                         <a href="?controller=khachhang">Khách hàng</a>
                                     </li>
                                     <li>
-                                        <a href="?controller=nhacungcap">Người bán</a>
+                                        <a href="?controller=nhacungcap">Nhà cung cấp</a>
                                     </li>
                                 </ul>
                             </div>
@@ -139,445 +125,7 @@
                             </div>
                         </li>
 
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
-                                <i class="uil-envelope"></i>
-                                <span> Email </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarEmail">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="#">Hộp thư đến</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Đọc mail</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
 
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
-                                <i class="uil-briefcase"></i>
-                                <span> Dự án </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarProjects">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="#">Danh sách</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Chi tiết</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Gantt <span class="badge rounded-pill badge-light-lighten font-10 float-end">Mới</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tạo dự án <span class="badge rounded-pill badge-success-lighten font-10 float-end">Mới</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a href="#" class="side-nav-link">
-                                <i class="uil-rss"></i>
-                                <span> Nguồn cấp dữ liệu xã hội </span>
-                            </a>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarTasks" aria-expanded="false" aria-controls="sidebarTasks" class="side-nav-link">
-                                <i class="uil-clipboard-alt"></i>
-                                <span> Nhiệm vụ </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarTasks">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="apps-tasks.html">Danh sách</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-tasks-details.html">Chi tiết</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-kanban.html">Bảng</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a href="#" class="side-nav-link">
-                                <i class="uil-folder-plus"></i>
-                                <span> Quản lý tập tin </span>
-                            </a>
-                        </li>
-
-                        <li class="side-nav-title side-nav-item">Phong tục</li>
-
-                        <li class="side-nav-item">
-                            <a href="#" target="_blank" class="side-nav-link">
-                                <i class="uil-globe"></i>
-                                <span class="badge bg-secondary text-light float-end">Mới</span>
-                                <span> Đổ bộ </span>
-                            </a>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarLayouts" aria-expanded="false" aria-controls="sidebarLayouts" class="side-nav-link">
-                                <i class="uil-window"></i>
-                                <span> Bố cục </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarLayouts">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="V_namngang.html">Nằm ngang</a>
-                                    </li>
-                                    <li>
-                                        <a href="V_tachra.html">Tách ra</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-            
-                        <li class="side-nav-title side-nav-item mt-1">Các thành phần</li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" class="side-nav-link">
-                                <i class="uil-box"></i>
-                                <span> Căn cứ </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarBaseUI">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="#">Accordions</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Alerts</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Avatars</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Badges</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Breadcrumb</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Buttons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Cards</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-carousel.html">Carousel</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-dropdowns.html">Dropdowns</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-embed-video.html">Embed Video</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-grid.html">Grid</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-list-group.html">List Group</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-modals.html">Modals</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-notifications.html">Notifications</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-offcanvas.html">Offcanvas</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-pagination.html">Pagination</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-popovers.html">Popovers</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-progress.html">Progress</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-ribbons.html">Ribbons</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-spinners.html">Spinners</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-tabs.html">Tabs</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-tooltips.html">Tooltips</a>
-                                    </li>
-                                    <li>
-                                        <a href="ui-typography.html">Typography</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false" aria-controls="sidebarExtendedUI" class="side-nav-link">
-                                <i class="uil-package"></i>
-                                <span> UI mở rộng </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarExtendedUI">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="#">Dragula</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Range Slider</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ratings</a>
-                                    </li>
-                                    <li>
-                                        <a href="extended-scrollbar.html">Scrollbar</a>
-                                    </li>
-                                    <li>
-                                        <a href="extended-scrollspy.html">Scrollspy</a>
-                                    </li>
-                                    <li>
-                                        <a href="extended-treeview.html">Treeview</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a href="#" class="side-nav-link">
-                                <i class="uil-layer-group"></i>
-                                <span> Tiện ích </span>
-                            </a>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarIcons" aria-expanded="false" aria-controls="sidebarIcons" class="side-nav-link">
-                                <i class="uil-streering"></i>
-                                <span> Biểu tượng </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarIcons">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="#">Dripicons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Material Design</a>
-                                    </li>
-                                    <li>
-                                        <a href="icons-unicons.html">Unicons</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarForms" aria-expanded="false" aria-controls="sidebarForms" class="side-nav-link">
-                                <i class="uil-document-layout-center"></i>
-                                <span> Các hình thức </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarForms">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="#">Basic Elements</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-advanced.html">Form Advanced</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-validation.html">Validation</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-wizard.html">Wizard</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-fileuploads.html">File Uploads</a>
-                                    </li>
-                                    <li>
-                                        <a href="form-editors.html">Editors</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
-                                <i class="uil-chart"></i>
-                                <span> Biểu đồ </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarCharts">
-                                <ul class="side-nav-second-level">
-                                    <li class="side-nav-item">
-                                        <a data-bs-toggle="collapse" href="#sidebarApexCharts" aria-expanded="false" aria-controls="sidebarApexCharts">
-                                            <span> Apex Charts </span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <div class="collapse" id="sidebarApexCharts">
-                                            <ul class="side-nav-third-level">
-                                                <li>
-                                                    <a href="charts-apex-area.html">Area</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-bar.html">Bar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-bubble.html">Bubble</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-candlestick.html">Candlestick</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-column.html">Column</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-heatmap.html">Heatmap</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-line.html">Line</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-mixed.html">Mixed</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-pie.html">Pie</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-radar.html">Radar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-radialbar.html">RadialBar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-scatter.html">Scatter</a>
-                                                </li>
-                                                <li>
-                                                    <a href="charts-apex-sparklines.html">Sparklines</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="charts-brite.html">Britecharts</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-chartjs.html">Chartjs</a>
-                                    </li>
-                                    <li>
-                                        <a href="charts-sparkline.html">Sparklines</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" class="side-nav-link">
-                                <i class="uil-table"></i>
-                                <span> Bảng </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarTables">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="tables-basic.html">Basic Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="tables-datatable.html">Data Tables</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" class="side-nav-link">
-                                <i class="uil-location-point"></i>
-                                <span> Bản đồ </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarMaps">
-                                <ul class="side-nav-second-level">
-                                    <li>
-                                        <a href="maps-google.html">Google Maps</a>
-                                    </li>
-                                    <li>
-                                        <a href="maps-vector.html">Vector Maps</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" class="side-nav-link">
-                                <i class="uil-folder-plus"></i>
-                                <span> Menu đa cấp </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <div class="collapse" id="sidebarMultiLevel">
-                                <ul class="side-nav-second-level">
-                                    <li class="side-nav-item">
-                                        <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false" aria-controls="sidebarSecondLevel">
-                                            <span> Second Level </span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <div class="collapse" id="sidebarSecondLevel">
-                                            <ul class="side-nav-third-level">
-                                                <li>
-                                                    <a href="javascript: void(0);">Item 1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript: void(0);">Item 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="side-nav-item">
-                                        <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false" aria-controls="sidebarThirdLevel">
-                                            <span> Third Level </span>
-                                            <span class="menu-arrow"></span>
-                                        </a>
-                                        <div class="collapse" id="sidebarThirdLevel">
-                                            <ul class="side-nav-third-level">
-                                                <li>
-                                                    <a href="javascript: void(0);">Item 1</a>
-                                                </li>
-                                                <li class="side-nav-item">
-                                                    <a data-bs-toggle="collapse" href="#sidebarFourthLevel" aria-expanded="false" aria-controls="sidebarFourthLevel">
-                                                        <span> Item 2 </span>
-                                                        <span class="menu-arrow"></span>
-                                                    </a>
-                                                    <div class="collapse" id="sidebarFourthLevel">
-                                                        <ul class="side-nav-forth-level">
-                                                            <li>
-                                                                <a href="javascript: void(0);">Item 2.1</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="javascript: void(0);">Item 2.2</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
 
                     <!-- Help Box -->
                     <div class="help-box text-white text-center">
@@ -1475,7 +1023,94 @@
         </div>
         <!-- END wrapper -->
 
-        .,
+        <!-- Right Sidebar -->
+    <div class="end-bar">
+
+<div class="rightbar-title">
+    <a href="javascript:void(0);" class="end-bar-toggle float-end">
+        <i class="dripicons-cross noti-icon"></i>
+    </a>
+    <h5 class="m-0">Cài đặt</h5>
+</div>
+
+<div class="rightbar-content h-100" data-simplebar="">
+
+    <div class="p-3">
+        <div class="alert alert-warning" role="alert">
+            <strong>Tùy chỉnh </strong> Màu nền, màu menu, v.v...
+        </div>
+
+        <!-- Settings -->
+        <h5 class="mt-3">Bảng màu</h5>
+        <hr class="mt-1">
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+            <label class="form-check-label" for="light-mode-check">Chế độ sáng</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark" id="dark-mode-check">
+            <label class="form-check-label" for="dark-mode-check">Chế độ tối</label>
+        </div>
+
+
+        <!-- Width -->
+        <h5 class="mt-4">Chiều rộng</h5>
+        <hr class="mt-1">
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="width" value="fluid" id="fluid-check" checked="">
+            <label class="form-check-label" for="fluid-check">Mở rộng</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="width" value="boxed" id="boxed-check">
+            <label class="form-check-label" for="boxed-check">Thu nhỏ</label>
+        </div>
+
+
+        <!-- Left Sidebar-->
+        <h5 class="mt-4">Tùy chỉnh menu</h5>
+        <hr class="mt-1">
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="theme" value="default" id="default-check">
+            <label class="form-check-label" for="default-check">Mặc định</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="theme" value="light" id="light-check" checked="">
+            <label class="form-check-label" for="light-check">Sáng</label>
+        </div>
+
+        <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" name="theme" value="dark" id="dark-check">
+            <label class="form-check-label" for="dark-check">Tối</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="compact" value="fixed" id="fixed-check" checked="">
+            <label class="form-check-label" for="fixed-check">Đã sửa</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="compact" value="condensed" id="condensed-check">
+            <label class="form-check-label" for="condensed-check">Cô đọng</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="compact" value="scrollable" id="scrollable-check">
+            <label class="form-check-label" for="scrollable-check">Có thể cuộn</label>
+        </div>
+
+        <div class="d-grid mt-4">
+            <button class="btn btn-primary" id="resetBtn">Đặt về mặc định</button>
+
+            <a href="#" class="btn btn-danger mt-3" target="_blank"><i class="mdi mdi-basket me-1"></i> Nâng cấp ngay</a>
+        </div>
+    </div> <!-- end padding-->
+
+</div>
+</div>
         <!-- bundle -->
         <script src="js/vendor.min.js"></script>
         <script src="js/app.min.js"></script>
