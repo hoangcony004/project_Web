@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shop Page- Ustora Demo</title>
+    <title>Ăn nhanh 247 - Cửa Hàng</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -182,7 +182,7 @@
                 <li role="presentation"><a href="#ttchitiet" aria-controls="ttchitiet" role="tab" data-toggle="tab">Mì Ý</a></li>
                 <li role="presentation"><a href="#danhgia" aria-controls="ttchitiet" role="tab" data-toggle="tab">Salad</a></li>
                 <li role="presentation"><a href="#dagiao" aria-controls="ttchitiet" role="tab" data-toggle="tab">Đồ uống</a></li>
-                <li role="presentation"><a href="#khac" aria-controls="ttchitiet" role="tab" data-toggle="tab">Khác</a></li>
+                <li role="presentation"><a href="#khac" aria-controls="ttchitiet" role="tab" data-toggle="tab">Tất cả sản phẩm</a></li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="home">

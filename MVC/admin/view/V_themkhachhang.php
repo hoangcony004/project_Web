@@ -353,8 +353,8 @@
                                     <img src="images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 </span>
                                 <span>
-                                    <span class="account-user-name">Hoàng</span>
-                                    <span class="account-position">Quản lý</span>
+                                    <span class="account-user-name"><?php echo $user[0]['hovaten'] ?></span>
+                                    <span class="account-position"><?php echo $user[0]['chucvu'] ?></span>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">

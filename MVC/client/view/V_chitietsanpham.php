@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product Page - Ustora Demo</title>
+    <title>Ăn nhanh 247 - Chi Tiết Sản Phẩm</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -199,6 +199,34 @@
                             <li><a style="text-decoration: none;" href="#">Cách ướp sườn BBQ đúng cách</a></li>
                         </ul>
                     </div>
+                    <div class="single-sidebar">
+                        <h2 class="sidebar-title">Đánh giá & Bình luận</h2>
+                        <ul>
+                            <h3 style="text-align: center;">Đánh giá</h3>
+                            <h4>5,0 &emsp;
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p  style="padding-top: 20px;">2 đánh giá</p>
+                            </h4><br>
+
+
+                            <h3 style="text-align: center;">Bình luận</h3>
+                            <div>
+                                <h5>Nguyeenx Vanw a</h5>
+                                <h6>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p  style="padding-top: 20px;">2 đánh giá</p>
+                            </h6>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="col-md-8">
@@ -251,7 +279,7 @@
                                         <ul class="product-tab" role="tablist">
                                             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mô tả</a></li>
                                             <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Đánh
-                                                    giá</a></li>
+                                                    giá & Bình luận</a></li>
                                             <li role="presentation"><a href="#ttchitiet" aria-controls="ttchitiet" role="tab" data-toggle="tab">Nguyên liệu</a></li>
                                         </ul>
                                         <div class="tab-content">

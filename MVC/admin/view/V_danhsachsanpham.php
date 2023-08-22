@@ -522,12 +522,12 @@
                                         <table class="table table-centered w-100 dt-responsive nowrap" id="products-datatable">
                                             <thead class="table-light">
                                                 <tr>
-                                                    <th class="all" style="width: 20px;">
+                                                    <td>
                                                         <div class="form-check">
-
-                                                            <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                                            <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                            <label class="form-check-label" for="customCheck2">&nbsp;</label>
                                                         </div>
-                                                    </th>
+                                                    </td>
                                                     <th class="all">Sản phẩm</th>
                                                     <th>Nhà cung cấp ID</th>
                                                     <th>Ngày thêm sản phẩm</th>
@@ -543,7 +543,7 @@
                                                     <tr>
                                                         <td>
                                                             <div class="form-check">
-
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
                                                                 <label class="form-check-label" for="customCheck2">&nbsp;</label>
                                                             </div>
                                                         </td>

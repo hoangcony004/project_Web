@@ -8,7 +8,6 @@ if (!isset($_SESSION['ss_client'])) {
         // lay du lieu ve
         $username = $_POST['username'];
         $password = $_POST['password'];
-        // kiem tra tai khoan
 
         // b1 tao 1 mang luu tru cac loi
         $loi = array();
@@ -18,7 +17,7 @@ if (!isset($_SESSION['ss_client'])) {
         if ($password == '') {
             $loi['password'] = 'Mật khẩu không được để trống!';
         }
-
+        
         if (!$loi) {
             $user = $db->get('khachhang', array('tendangnhap' => $username));
             if (empty($user)) {
@@ -26,6 +25,9 @@ if (!isset($_SESSION['ss_client'])) {
             }
             // neu ton tai user name thi kiem tra mat khau
             else {
+                // var_dump(md5($password));
+                // var_dump($user[0]['matkhau']);
+                // die;
                 if ($password != $user[0]['matkhau']) {
                     $loi['password'] = 'Sai mật khẩu!';
                 }
@@ -64,6 +66,7 @@ if (!isset($_SESSION['ss_client'])) {
             // }else {
             //     $loi['mkdk'] = 'Mật khẩu phải lớn hơn hoặc bằng 8 ký tự!';
             // }
+            md5($mkdk);
             if ($rmkdk != $mkdk) {
                 $loi['rmkdk'] = 'Mật khẩu không khớp!';
             }
@@ -71,7 +74,7 @@ if (!isset($_SESSION['ss_client'])) {
             if (!$loi) {
                 $db->insert('khachhang', array(
                     'tendangnhap' => $tendk,
-                    'matkhau' => $mkdk,
+                    'matkhau' => md5($mkdk),
                     'sodienthoai' => $sdtdk
                     
                 ));

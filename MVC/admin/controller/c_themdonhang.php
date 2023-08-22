@@ -15,9 +15,12 @@ if (isset($_SESSION['ss_admin'])) {
             $trangthai = 0;
 
 
-            echo 'skjhshv'.$hovaten;
+            // echo 'skjhshv'.$hovaten;
             // khai bao loi
             $loi = array();
+            if ($hovaten == '') {
+                $loi['hovaten'] = 'Họ và tên không được để trống!';
+            }
             if ($sodt == '') {
                 $loi['sodt'] = 'Số điện thoại không được để trống!';
             }
@@ -36,17 +39,19 @@ if (isset($_SESSION['ss_admin'])) {
             if ($tongtien == '') {
                 $loi['tongtien'] = 'Tổng tiền không được để trống!';
             }
-            // if (!$loi) {
-            //     $db->insert('oder', array(
-            //         'full_name' => $hoten,
-            //         'address' => $diachi,
-            //         'phone' => $sodt,
-            //         'amount' => $tongtien,
-            //         'email' => $email,
-            //         'status' => 0
-            //     ));
-            //     header('location: ?controller=trangchu');
-            // }
+            if (!$loi) {
+                $db->insert('donhang', array(
+                    'hovaten' => $hovaten,
+                    'sodienthoai' => $sodt,
+                    'tinh_thanh' => $tinhthanh,
+                    'quan_huyen' => $quanhuyen,
+                    'xa_phuong' => $xaphuong,
+                    'thon_xom' => $thonxom,
+                    'tongtien' => $tongtien,
+                    'trangthai' => 0
+                ));
+                header('location: ?controller=donhang');
+            }
         }
     } else {
         echo '<script>alert("Bạn không có quyền")</script>';

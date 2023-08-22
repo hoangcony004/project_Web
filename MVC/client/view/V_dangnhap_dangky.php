@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Responsive Login and Signup Form </title>
+    <title>Ăn nhanh 247 - Đăng Nhập & Đăng ký</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style_login.css">
@@ -36,7 +36,7 @@
                         <p class="mt-1" style="color: red;"><?php echo $loi['password'] ?></p>
                     <?php } ?>
                     <div class="form-link">
-                        <a style="text-decoration: none;" href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        <a style="text-decoration: none;" href="?controller=quenmatkhau" class="forgot-pass">Quên mật khẩu?</a>
                     </div>
 
                     <div class="field button-field">

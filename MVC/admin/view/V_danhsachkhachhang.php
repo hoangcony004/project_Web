@@ -351,8 +351,8 @@
                                     <img src="images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 </span>
                                 <span>
-                                    <span class="account-user-name">Hoàng</span>
-                                    <span class="account-position">Quản lý</span>
+                                    <span class="account-user-name"><?php echo $user[0]['hovaten'] ?></span>
+                                    <span class="account-position"><?php echo $user[0]['chucvu'] ?></span>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
@@ -510,7 +510,14 @@
                                             </form>
                                             <thead>
                                                 <tr>
+                                                <th style="width: 20px;">
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                        <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                                    </div>
+                                                </th>
                                                     <th>Ảnh</th>
+                                                    <th>Tên đăng nhập</th>
                                                     <th>Họ và tên</th>
                                                     <th>Số điện thoại</th>
                                                     <th>Email</th>
@@ -524,8 +531,17 @@
                                                 <?php
                                                 foreach ($data_khachhang as $key => $value) { ?>
                                                     <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                            <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                        </div>
+                                                    </td>
                                                         <td class="table-user">
                                                             <img src="<?php echo $value['anh'] ?>" alt="table-user" class="me-2 rounded-circle">
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $value['tendangnhap'] ?>
                                                         </td>
                                                         <td>
                                                             <a href="#" class="text-body fw-semibold"><?php echo $value['hovaten'] ?></a>

@@ -105,7 +105,39 @@ class database
         $query = mysqli_query($this->conn, $sql);
         return $query;
     }
-    public function getOrdId() {
+    public function getOrdId()
+    {
         return $this->conn->insert_id;
+    }
+}
+class User
+{
+    // khai báo các biến kết nôid tới cơ sở dũ liệu
+    protected $conn = null;
+    protected $host = 'localhost';
+    protected $user = 'root';
+    protected $pass = '';
+    protected $dbname = 'do_an_nhanh';
+
+    // tạo phương thức kết nối 
+    public function __construct()
+    {
+        $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
+        if (!$this->conn) {
+            echo 'Kết nối thất bại...';
+            exit();
+        }
+    }
+
+    private $users = [
+        'username' => '5f4dcc3b5aa765d61d8327deb882cf99' // MD5 hash of 'password'
+    ];
+
+    public function getUserByUsername($username)
+    {
+        if (array_key_exists($username, $this->users)) {
+            return $this->users[$username];
+        }
+        return false;
     }
 }

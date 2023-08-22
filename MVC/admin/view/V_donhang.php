@@ -353,8 +353,8 @@
                                     <img src="images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 </span>
                                 <span>
-                                    <span class="account-user-name">Hoàng</span>
-                                    <span class="account-position">Quản lý</span>
+                                    <span class="account-user-name"><?php echo $user[0]['hovaten'] ?></span>
+                                    <span class="account-position"><?php echo $user[0]['chucvu'] ?></span>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
@@ -564,7 +564,7 @@
                                                     </td>
                                                     <td>
                                                         <a href="?controller=chitietdonhang&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                        <a href="?controller=suadonhang&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                        <a href="?controller=xulydonhang&method=sua&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
                                                         <a href="?controller=xulydonhang&method=xoa&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                                     </td>
                                                 </tr>

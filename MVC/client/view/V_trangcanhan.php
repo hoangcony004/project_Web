@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Checkout Page - Ustora Demo</title>
+    <title>Ăn nhanh 247 - Trang Cá Nhân</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -169,7 +169,7 @@
                                         <p class="text-secondary mb-1">Khách hàng thân thiết</p>
                                         <p class="text-muted font-size-sm"><?php echo $khachhang[0]['diachi'] ?></p>
                                         <button class="btn btn-primary">Follow</button>
-                                        <button class="btn btn-outline-primary">Message</button>
+                                        <a href="?controller=doimatkhau&id=<?php echo $_SESSION['ss_client'] ?>" class="btn btn-primary">Đổi mật khẩu</a>
                                     </div>
                                 </div>
                             </div>

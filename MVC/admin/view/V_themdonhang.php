@@ -353,8 +353,8 @@
                                     <img src="images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 </span>
                                 <span>
-                                    <span class="account-user-name">Hoàng</span>
-                                    <span class="account-position">Quản lý</span>
+                                    <span class="account-user-name"><?php echo $user[0]['hovaten'] ?></span>
+                                    <span class="account-position"><?php echo $user[0]['chucvu'] ?></span>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
@@ -476,34 +476,55 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="border p-3 rounded">
-                                        <form class="row g-3" action="#" method="post">
+                                        <form class="row g-3" action="?controller=themdonhang" method="post">
                                             <div class="col-12">
                                                 <label class="form-label">Họ và tên: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập họ và tên..." name="hovaten">
+                                                <?php if (isset($loi['hovaten'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['hovaten'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Số điện thoại: </label>
                                                 <input type="number" class="form-control" placeholder="Nhập Số điện thoại..." name="sodt">
+                                                <?php if (isset($loi['sodt'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['sodt'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Tỉnh thành: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập tỉnh thành..." name="tinhthanh">
+                                                <?php if (isset($loi['tinhthanh'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['tinhthanh'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Quận huyện: </label>
-                                                <input type="number" class="form-control" placeholder="Nhập quận huyện..." name="quanhuyen">
+                                                <input type="text" class="form-control" placeholder="Nhập quận huyện..." name="quanhuyen">
+                                                <?php if (isset($loi['quanhuyen'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['quanhuyen'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Xã phường: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập xã phường..." name="xaphuong">
+                                                <?php if (isset($loi['xaphuong'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['xaphuong'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Thôn xóm</label>
                                                 <input type="text" class="form-control" placeholder="Nhập thôn xóm..." name="thonxom">
+                                                <?php if (isset($loi['thonxom'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['thonxom'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Tổng tiền</label>
                                                 <input type="text" class="form-control" placeholder="Nhập tổng tiền..." name="tongtien">
+                                                <?php if (isset($loi['tongtien'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['tongtien'] ?></p>
+                                                <?php } ?>
                                             </div>
                                             <div class="col-12">
                                                 <button class="btn btn-primary px-4" type="submit" name="btn_themdonhang"><i class="fa-solid fa-plus"></i> Thêm đơn hàng</button>

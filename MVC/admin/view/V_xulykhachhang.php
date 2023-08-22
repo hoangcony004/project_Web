@@ -353,9 +353,9 @@
                                     <img src="images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 </span>
                                 <span>
-                                    <span class="account-user-name">Hoàng</span>
-                                    <span class="account-position">Quản lý</span>
-                                </span>
+                                        <span class="account-user-name"><?php echo $user[0]['hovaten'] ?></span>
+                                        <span class="account-position"><?php echo $user[0]['chucvu'] ?></span>
+                                    </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
                                 <!-- item-->
@@ -486,7 +486,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Mật khẩu</label>
-                                                <input type="text" class="form-control" placeholder="Nhập Mật khẩu..." name="password" value="<?php echo $data_khachhang[0]['matkhau'] ?>">
+                                                <input type="password" class="form-control" placeholder="Nhập Mật khẩu..." name="password" value="<?php echo $data_khachhang[0]['matkhau'] ?>">
                                                 <?php if (isset($loi['password'])) { ?>
                                                     <p class="text-danger"><?php echo $loi['password'] ?></p>
                                                 <?php } ?>

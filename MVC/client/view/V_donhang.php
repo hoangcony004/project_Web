@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cart Page - Ustora Demo</title>
+    <title>Ăn nhanh 247 - Đơn Hàng</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -208,7 +208,7 @@
                 <div role="tabpanel" class="tab-pane fade" id="profile" style="text-align: center;">
                     <h2>Chờ lấy hàng</h2>
                     <div style="margin-left: 500px;">
-                        <?php
+                        <!-- <?php
                         foreach ($donhang as $key => $value) { ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
@@ -222,13 +222,13 @@
                                     <p style="color: red;">Đang chờ xác nhận</p>
                                 </div>
                             </div>
-                        <?php } ?>
+                        <?php } ?> -->
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="danhgia" style="text-align: center;">
                     <h2>Đang giao hàng</h2>
                     <div style="margin-left: 500px;">
-                        <?php
+                        <!-- <?php
                         foreach ($donhang as $key => $value) { ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
@@ -242,13 +242,13 @@
                                     <p style="color: red;">Đang chờ xác nhận</p>
                                 </div>
                             </div>
-                        <?php } ?>
+                        <?php } ?> -->
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="dagiao" style="text-align: center;">
                     <h2>Đã giao hàng</h2>
                     <div style="margin-left: 500px;">
-                        <?php
+                        <!-- <?php
                         foreach ($donhang as $key => $value) { ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
@@ -262,7 +262,7 @@
                                     <p style="color: red;">Đang chờ xác nhận</p>
                                 </div>
                             </div>
-                        <?php } ?>
+                        <?php } ?> -->
                     </div>
                 </div>
             </div>
