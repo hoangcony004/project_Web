@@ -519,7 +519,7 @@
                                     <div class="col-lg-7">
                                         <form class="ps-lg-4">
                                             <!-- Product title -->
-                                            <h3 class="mt-0"><?php echo $sanpham[0]['tensanpham'] ?> <a href="javascript: void(0);" class="text-muted"><i class="mdi mdi-square-edit-outline ms-2"></i></a> </h3>
+                                            <h3 class="mt-0"><?php echo $sanpham[0]['tensanpham'] ?> <a href="#" class="text-muted"><i class="mdi mdi-square-edit-outline ms-2"></i></a> </h3>
                                             <p class="mb-1">Ngày thêm: <?php echo $sanpham[0]['ngaythemsanpham'] ?></p>
                                             <p class="font-16">
                                                 <span class="text-warning mdi mdi-star"></span>

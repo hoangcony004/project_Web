@@ -165,9 +165,9 @@
         <br>
         <p>Đơn hàng sẽ được xử lý trong giây lát, bạn có thể theo dõi đơn hàng của mình ở phần xem đơn hàng.</p>
         <br><br><br>
-        <a href="?controller=trangchu" name="proceed" class="checkout-button button alt wc-forward" style="padding: 13px 25px; background-color: crimson; color:white; text-decoration: none; border-radius: 5px;"><i class="fa-solid fa-house"></i>
+        <a href="?controller=trangchu" class="checkout-button button alt wc-forward" style="padding: 13px 25px; background-color: crimson; color:white; text-decoration: none; border-radius: 5px;"><i class="fa-solid fa-house"></i>
             Trang chủ</a>
-        <a href="?controller=donhang" name="proceed" class="checkout-button button alt wc-forward" style="padding: 13px 25px; background-color: crimson; color:white; text-decoration: none; border-radius: 5px;"><i class="fa-solid fa-layer-group"></i>
+        <a href="?controller=donhang&id=<?php echo $_SESSION['ss_client'] ?>" class="checkout-button button alt wc-forward" style="padding: 13px 25px; background-color: crimson; color:white; text-decoration: none; border-radius: 5px;"><i class="fa-solid fa-layer-group"></i>
             Xem đơn hàng</a>
     </div>
 

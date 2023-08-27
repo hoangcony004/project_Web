@@ -1,7 +1,6 @@
 <?php
 if (isset($_POST['btn_thanhtoan'])) {
     $hoten = $_POST['hoten'];
-    $gioitinh = $_POST['fav_language'];
     $sodienthoai = $_POST['sodienthoai'];
     $email = $_POST['email'];
     $tinh = $_POST['tinh'];
@@ -10,13 +9,15 @@ if (isset($_POST['btn_thanhtoan'])) {
     $thon = $_POST['thon'];
     $ghichu = $_POST['ghichu'];
     $donhang_id = 1;
-    $khachhang_id = 1;
+    $chitietdonhang = 1;
+    //$khachhang_id = $_GET['id'];
+    //$khachhang_id = 1;
 
 
 
     $donhang = $db->get('donhang', array());
     foreach ($donhang as $key => $value) {
-        $donhang_id = $value['id'];
+        $donhang_id = $value['id'] +1;
     }
 
     // var_dump($_SESSION['ss_client']);
@@ -37,15 +38,23 @@ if (isset($_POST['btn_thanhtoan'])) {
     }
 
     // $data_oder_detail = $db->get('chitietdonhang',array('donhang_id'=>$donhang_id));
-    $khachhang = $db->get('khachhang', array('id'=>$_SESSION['ss_client']));
-    foreach ($khachhang as $key => $value) {
-        $khachhang_id = $value['id'];
+    // $khachhang = $db->get('khachhang', array('id'=>$_SESSION['ss_client']));
+    // foreach ($khachhang as $key => $value) {
+    //     $khachhang_id = $value['id'];
+    // }
+    $chitietdonhang = $db->get('chitietdonhang', array());
+    foreach ($chitietdonhang as $key => $value) {
+        $chitietdonhang_id = $value['id'] ;
     }
+
     $db->insert(
         'donhang',
         array(
-            'khachhang_id' =>$khachhang_id,
+            //'khachhang_id' =>$khachhang_id,
+            'hovaten' => $hoten,
+            'chitietdonhang_id' => $chitietdonhang_id,
             'sodienthoai' => $sodienthoai,
+            'email' => $email,
             'tinh_thanh' => $tinh,
             'quan_huyen' => $huyen,
             'xa_phuong' => $xa,

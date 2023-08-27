@@ -21,7 +21,7 @@
         <div class="form login">
             <div class="form-content">
                 <header>Đổi mật khẩu</header>
-                <form action="#" method="post">
+                <form action="?controller=doimatkhau&id=<?php echo $_SESSION['ss_client'] ?>" method="post">
                     <div class="field input-field">
                         <input type="password" placeholder="Nhập mật khẩu cũ..." class="password" name="matkhaucu">
                         <i class='bx bx-hide eye-icon'></i>

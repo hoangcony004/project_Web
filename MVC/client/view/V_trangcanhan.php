@@ -163,7 +163,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
-                                    <img style="width: 100px; height: 100px; border-radius: 50%;" src="<?php echo $khachhang[0]['anh'] ?>" alt="Admin" class="rounded-circle" width="150">
+                                    <img style="width: 100px; height: 100px; border-radius: 50%;" src="<?php echo $khachhang[0]['anh'] ?>" alt="Client" class="rounded-circle" width="150">
                                     <div class="mt-3">
                                         <h4 style="margin-top: 7px;"><?php echo $khachhang[0]['hovaten'] ?></h4>
                                         <p class="text-secondary mb-1">Khách hàng thân thiết</p>

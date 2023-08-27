@@ -197,7 +197,7 @@
                                         foreach ($_SESSION['cart'] as $key => $value) {
                                             $tongtien += $value['soluong'] * $value['giamoi'];
                                     ?>
-                                    
+
                                             <tbody>
 
                                                 <tr class="cart_item">
@@ -207,7 +207,7 @@
                                                     </td>
 
                                                     <td class="product-name">
-                                                        <a href="?controller=chitietsanpham&id=<?php echo $value['id']?>"><?php echo $value['tensanpham'] ?></a>
+                                                        <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham'] ?></a>
                                                     </td>
 
                                                     <td class="product-price">
@@ -243,6 +243,7 @@
                                                     </form>
                                                     <a href="?controller=xoatatca" class="button" style="padding: 13px 25px; background-color: chocolate; color:white; margin-left: 50px; text-decoration: none;">
                                                         Xóa tất cả</a>
+                                                        <?php // &id=<?php echo $_SESSION['ss_client'] ?>
                                                     <a href="?controller=thanhtoan" name="proceed" class="checkout-button button alt wc-forward" style="padding: 13px 25px; background-color: chocolate; color:white; text-decoration: none;">
                                                         Thanh toán</a>
                                                 </div>
@@ -260,25 +261,31 @@
                                     <h2>Bạn có thể quan tâm...</h2>
                                     <ul class="products">
                                         <li class="product">
-                                            <a href="#">
-                                                <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="img/mi_y_sotcachua.jpeg">
-                                                <h3>Mì Ý sốt cà chua</h3>
-                                                <span class="price"><span class="amount">59,000vnd</span>&ensp;&ensp;<del>79,000vnd</del></span>
-                                            </a>
+                                            <?php
+                                            foreach ($pizza3 as $key => $value) { ?>
+                                                <img style="width: 220px; height: 130px;" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $value['anhsanpham']; ?>">
+                                                <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>">
+                                                    <h3><?php echo $value['tensanpham']; ?></h3>
+                                                </a>
+                                                <span class="price"><ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del></span>
 
-                                            <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="22" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Thêm
-                                                giỏ hàng</a>
+                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="22" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Thêm
+                                                    giỏ hàng</a>
+                                            <?php } ?>
                                         </li>
 
                                         <li class="product">
-                                            <a href="single-product.html">
-                                                <img width="325" height="325" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="img/phomaique.jpg">
-                                                <h3>Phô mai que</h3>
-                                                <span class="price"><span class="amount">30,000vnd</span>&ensp;&ensp;<del>35,000vnd</del></span>
-                                            </a>
+                                        <?php
+                                            foreach ($pizza4 as $key => $value) { ?>
+                                                <img style="width: 220px; height: 130px;" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $value['anhsanpham']; ?>">
+                                                <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>">
+                                                    <h3><?php echo $value['tensanpham']; ?></h3>
+                                                </a>
+                                                <span class="price"><ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del></span>
 
-                                            <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="22" rel="nofollow" href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Thêm
-                                                giỏ hàng</a>
+                                                <a class="add_to_cart_button" data-quantity="1" data-product_sku data-product_id="22" rel="nofollow" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&ensp;Thêm
+                                                    giỏ hàng</a>
+                                            <?php } ?>
                                         </li>
                                     </ul>
                                 </div>
@@ -286,18 +293,18 @@
                                 <div class="cart_totals ">
                                     <h2>Tổng giỏ hàng</h2>
                                     <?php
-                                        if (isset($_SESSION['cart'])) {
-                                            $sp = $_SESSION['cart'];
-                                            $soluong = count($sp);
-                                        } else {
-                                            $soluong = 0;
-                                        }
-                                        ?>
+                                    if (isset($_SESSION['cart'])) {
+                                        $sp = $_SESSION['cart'];
+                                        $soluong = count($sp);
+                                    } else {
+                                        $soluong = 0;
+                                    }
+                                    ?>
                                     <table cellspacing="0">
                                         <tbody>
                                             <tr class="cart-subtotal">
                                                 <th>Tổng sản phẩm</th>
-                                                <td><span class="amount"><?php echo $soluong?></span></td>
+                                                <td><span class="amount"><?php echo $soluong ?></span></td>
                                             </tr>
 
                                             <tr class="order-total">
@@ -319,20 +326,26 @@
 
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Các sản phẩm</h2>
-                        <div class="thubmnail-recent">
-                            <img src="img/pizza_raucu.jpg" class="recent-thumb" alt>
-                            <h2><a style="text-decoration: none;" href="#">Pizza rau củ</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>60,000vnd</ins> <del>80,000vnd</del>
+                        <?php
+                        foreach ($pizza1 as $key => $value) { ?>
+                            <div class="thubmnail-recent">
+                                <img src="<?php echo $value['anhsanpham']; ?>" class="recent-thumb" alt>
+                                <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
+                                <div class="product-sidebar-price">
+                                    <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
+                                </div>
                             </div>
-                        </div>
-                        <div class="thubmnail-recent">
-                            <img src="img/tra-sua-matcha.jpg" class="recent-thumb" alt>
-                            <h2><a style="text-decoration: none;" href="#">Trà sữa matcha</a></h2>
-                            <div class="product-sidebar-price">
-                                <ins>25,000vnd</ins> <del>40,000vnd</del>
+                        <?php } ?>
+                        <?php
+                        foreach ($pizza2 as $key => $value) { ?>
+                            <div class="thubmnail-recent">
+                                <img src="<?php echo $value['anhsanpham']; ?>" class="recent-thumb" alt>
+                                <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
+                                <div class="product-sidebar-price">
+                                    <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
 
                     <div class="single-sidebar">

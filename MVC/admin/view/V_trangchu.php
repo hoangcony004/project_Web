@@ -548,14 +548,14 @@
                                             <?php 
                                                     $tongdt = 0;
                                                     foreach ($donhang as $key => $value) {
-                                                        $tongdt = $tongdh+$value['tongtien'];
+                                                        $tongdt1 = $tongdt+$value['tongtien'];
                                                     }
                                                 ?>
                                                 <div class="float-end">
                                                     <i class="mdi mdi-currency-usd widget-icon"></i>
                                                 </div>
                                                 <h5 class="text-muted fw-normal mt-0" title="Average Revenue">Doanh thu</h5>
-                                                <h3 class="mt-3 mb-3"><?php echo number_format($tongdt) ?>vnd</h3>
+                                                <h3 class="mt-3 mb-3"><?php echo number_format($tongdt1) ?>vnd</h3>
                                                 <p class="mb-0 text-muted">
                                                     <span class="text-danger me-2"><i class="mdi mdi-arrow-down-bold"></i> 7.00%</span>
                                                     <span class="text-nowrap">Từ tuần trước</span>

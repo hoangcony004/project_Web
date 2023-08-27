@@ -486,6 +486,9 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="card">
+                                <div>
+                                    <a style="padding:27px;" href="?controller=donhang">Quay lại đơn hàng</a>
+                                </div>
                                 <div class="card-body">
                                     <h4 class="header-title mb-3">Đơn hàng này của người dùng có ID là:&emsp;<?php echo $id ?></h4>
 

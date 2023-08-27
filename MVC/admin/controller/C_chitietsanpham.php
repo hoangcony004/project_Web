@@ -1,7 +1,9 @@
 <?php
 if (isset($_SESSION['ss_admin'])) {
+    $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
     $id=$_GET['id'];
     $sanpham = $db->get('sanpham',array('id'=>$id));
+        $data_sanpham = $db->get('sanpham', array());
 }
 
 

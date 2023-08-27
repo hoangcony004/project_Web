@@ -519,10 +519,14 @@
                                                         <label class="form-check-label" for="customCheck1">&nbsp;</label>
                                                     </div>
                                                 </th>
-                                                <th>Khách hàng ID</th>
+                                                <th>Họ và tên</th>
                                                 <th>Số điện thoại</th>
                                                 <th>Tổng tiền</th>
-                                                <th>Địa chỉ</th>
+                                                <th>Email</th>
+                                                <th>Tỉnh thành</th>
+                                                <th>Quạn huyện</th>
+                                                <th>Xã phường</th>
+                                                <th>Thôn xóm</th>
                                                 <th>Trạng thái</th>
                                                 <th style="width: 125px;">Chức năng</th>
                                             </tr>
@@ -537,7 +541,7 @@
                                                             <label class="form-check-label" for="customCheck2">&nbsp;</label>
                                                         </div>
                                                     </td>
-                                                    <td><a href="apps-ecommerce-orders-details" class="text-body fw-bold"><?php echo $value['khachhang_id'] ?></a> </td>
+                                                    <td><a href="#" class="text-body fw-bold"><?php echo $value['hovaten'] ?></a> </td>
                                                     <td>
                                                         <?php echo $value['sodienthoai'] ?>
                                                     </td>
@@ -545,13 +549,24 @@
                                                         <?php echo number_format($value['tongtien']) ?>vnd
                                                     </td>
                                                     <td>
+                                                        <?php echo $value['email'] ?>
+                                                    </td>
+                                                    <td>
                                                         <?php echo $value['tinh_thanh'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $value['quan_huyen'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $value['xa_phuong'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $value['thon_xom'] ?>
                                                     </td>
                                                     <td>
                                                         <h5><span class="badge badge-info-lighten">
                                                                 <?php
                                                                 if ($value['trangthai'] == 0) { ?>
-
                                                                     <p style="color: red;"><?php echo 'Chưa duyệt' ?></p>
                                                                     <a href="?controller=xulydonhang&method=duyet&id=<?php echo $value['id'] ?>" style="margin-left: 5px;"><i class="fa-solid fa-circle-down"></i> Duyệt ngay</a>
                                                                 <?php } else { ?>

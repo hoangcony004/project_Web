@@ -239,22 +239,10 @@
                                             </label>
                                             <input type="text" value placeholder="Nhập họ và tên..." id="billing_first_name" name="hoten" class="input-text ">
                                         </p>
-
-                                        <label class for="billing_first_name">Giới tính <abbr title="required" class="required">*</abbr>
-                                        </label>
-                                        <label class="btn btn-outline-decondary">Nam
-                                            <input type="radio" name="fav_language" value="Nam">
-                                        </label>
-
-
-                                        <label class="btn btn-outline-decondary">Nữ
-                                            <input type="radio" name="fav_language" value="Nữ">
-                                        </label>
-
                                         <p id="billing_company_field" class="form-row form-row-wide">
                                             <label class for="billing_company">Số
                                                 diện thoại <abbr title="required" class="required">*</abbr></label>
-                                            <input type="text" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text ">
+                                            <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text ">
                                         </p>
 
                                         <p id="billing_company_field" class="form-row form-row-wide">
@@ -301,13 +289,13 @@
                                 </div>
                         </div>
                         <?php
-                                        if (isset($_SESSION['cart'])) {
-                                            $sp = $_SESSION['cart'];
-                                            $soluong = count($sp);
-                                        } else {
-                                            $soluong = 0;
-                                        }
-                                        ?>
+                        if (isset($_SESSION['cart'])) {
+                            $sp = $_SESSION['cart'];
+                            $soluong = count($sp);
+                        } else {
+                            $soluong = 0;
+                        }
+                        ?>
                         <h3 id="order_review_heading">Đơn hàng của
                             bạn</h3>
 
@@ -328,16 +316,16 @@
                                     foreach ($_SESSION['cart'] as $key => $value) {
                                         $tongtien += $value['soluong'] * $value['giamoi'];
                                 ?>
-                                <tbody>
-                                    <tr class="cart_item">
-                                        <td class="product-name">
-                                            Tổng sản phẩm <strong class="product-quantity">×
-                                                <?php echo $soluong ?></strong> </td>
-                                        <td class="product-total">
-                                            <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                        <tbody>
+                                            <tr class="cart_item">
+                                                <td class="product-name">
+                                                    Tổng sản phẩm <strong class="product-quantity">×
+                                                        <?php echo $soluong ?></strong> </td>
+                                                <td class="product-total">
+                                                    <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                         <tfoot>
 
                                             <tr class="shipping">
@@ -357,7 +345,7 @@
 
                                         </tfoot>
                                 <?php }
-                                }?>
+                                } ?>
                             </table>
 
                             <div id="payment">

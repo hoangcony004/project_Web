@@ -217,7 +217,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Sản Phẩm Mới Nhất</h2>
+                        <h2 class="section-title" style="font-size: 42px; margin-top: 40px;"><b>Sản Phẩm Mới Nhất</b></h2>
                         <div class="single-product-area">
                             <div class="zigzag-bottom"></div>
                             <div class="container">
@@ -263,7 +263,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h2 class="section-title">Sản Phẩm bán chạy</h2>
+                        <h2 class="section-title" style="font-size: 42px; padding-bottom: 40px;"><b>Sản Phẩm Bán Chạy</b></h2>
                         <div class="product-carousel">
                             <?php
                             foreach ($product as $key => $value) { ?>

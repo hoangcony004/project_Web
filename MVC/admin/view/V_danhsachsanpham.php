@@ -504,6 +504,17 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
+                                <div class="row mb-2">
+                                        <div class="col-xl-8">
+                                            <form class="row gy-2 gx-2 align-items-center justify-content-xl-start justify-content-between" action="#" method="get">
+                                                <div class="col-auto">
+                                                    <div class="input-group">
+                                                        <input type="search" class="form-control" placeholder="Tìm kiếm sản phẩm..." name="keyword" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>">
+                                                        <button class="input-group-text btn-primary" name="btn_timkh" type="submit">Tìm kiếm</button>
+                                                    </div>
+                                            </form>
+                                        </div><br>
+                                    </div>
                                     <div class="row mb-2">
                                         <div class="col-sm-4">
                                             <a href="?controller=themsanpham" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i>

@@ -5,6 +5,7 @@
     // kiem tra nguoi dung cos click vao nut login khoong
     if (isset($_POST['btn_doimatkhau'])) {
         // lay du lieu ve
+        $id = $_GET['id'];
         $matkhaucu = $_POST['matkhaucu'];
         $matkhaumoi = $_POST['matkhaumoi'];
 
@@ -18,26 +19,30 @@
         }
         //echo 'matkhaucu'.$matkhaumoi;
         if (!$loi) {
-            $user = $db->get('khachhang', array('matkhau' => $matkhaucu));
+            $pass = $db->get('khachhang', array('matkhau' => $matkhaucu));
                 // var_dump(md5($password));
                 // var_dump($user[0]['matkhau']);
                 // die;
-                if ($matkhaucu != $user[0]['matkhau']) {
-                    $loi['matkhaucu'] = 'Sai mật khẩu!';
+                if (empty($pass)) {
+                    $loi['makhaucu'] = 'Sai mật khẩu!';
                 }
-
-                // if ($matkhaucu != $matkhaumoi) {
-                //     $loi['matkhaumoi'] = 'Mật khẩu không khớp!';
-                // }
+                // neu ton tai user name thi kiem tra mat khau
+                else {
+                    // var_dump(md5($password));
+                    // var_dump($user[0]['matkhau']);
+                    // die;
+                    $db->update(
+                        'khachhang',
+                        array(
+                            'matkhau' => $matkhaumoi,
+                            
+                        ),
+                        array('id' => $id)
+                    );
+                    header('location: ?controller=dangxuat');
+                }
            
         }
-        // // neu thoa man taat ca dieu kien ttren (khong con loi nao say ra)
-        // if (!$loi) {
-        //     // gan id nguoi dung vao session
-        //     $_SESSION['ss_client'] = $user[0]['id'];
-        //     $_SESSION['ss_client1'] = $user[0]['hovaten'];
-        //     header('location: ?controller=trangchu');
-        // }
 
     }
     require './view/V_doimatkhau.php';
