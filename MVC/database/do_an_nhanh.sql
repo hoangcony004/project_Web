@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 21, 2023 lúc 02:53 AM
+-- Thời gian đã tạo: Th8 28, 2023 lúc 03:01 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.1.17
 
@@ -105,8 +105,10 @@ CREATE TABLE `chitietdonhang` (
 --
 
 INSERT INTO `chitietdonhang` (`id`, `donhang_id`, `sanpham_id`, `soluong`, `tongtien`, `ngaydathang`, `ghichu`) VALUES
-(127, 61, 8, 1, 160000.00, '2023-08-18 14:42:09', 'test'),
-(128, 61, 2, 1, 79000.00, '2023-08-19 02:36:02', 'ưegweg');
+(177, 94, 7, 1, 160000.00, '2023-08-25 01:47:55', ''),
+(178, 95, 6, 1, 160000.00, '2023-08-25 01:48:27', ''),
+(179, 96, 4, 1, 79000.00, '2023-08-25 01:49:14', ''),
+(180, 97, 7, 1, 160000.00, '2023-08-27 13:36:37', '');
 
 -- --------------------------------------------------------
 
@@ -140,12 +142,14 @@ INSERT INTO `danhmuc` (`id`, `tendanhmuc`) VALUES
 CREATE TABLE `donhang` (
   `id` int(11) NOT NULL,
   `khachhang_id` int(11) DEFAULT NULL,
+  `chitietdonhang_id` int(11) NOT NULL,
   `hovaten` varchar(50) NOT NULL,
   `sodienthoai` varchar(11) DEFAULT NULL,
-  `tinh_thanh` varchar(50) DEFAULT NULL,
-  `quan_huyen` varchar(50) DEFAULT NULL,
-  `xa_phuong` varchar(50) DEFAULT NULL,
-  `thon_xom` varchar(50) DEFAULT NULL,
+  `email` varchar(50) NOT NULL,
+  `tinh_thanh` varchar(50) NOT NULL,
+  `quan_huyen` varchar(50) NOT NULL,
+  `xa_phuong` varchar(50) NOT NULL,
+  `thon_xom` varchar(50) NOT NULL,
   `tongtien` decimal(15,2) DEFAULT NULL,
   `trangthai` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -154,8 +158,11 @@ CREATE TABLE `donhang` (
 -- Đang đổ dữ liệu cho bảng `donhang`
 --
 
-INSERT INTO `donhang` (`id`, `khachhang_id`, `hovaten`, `sodienthoai`, `tinh_thanh`, `quan_huyen`, `xa_phuong`, `thon_xom`, `tongtien`, `trangthai`) VALUES
-(61, 2, '', '0388937608', 'Phú Thọ', 'Đoan Hùng', 'Vân Đồn', 'Khu 2', 160000.00, 0);
+INSERT INTO `donhang` (`id`, `khachhang_id`, `chitietdonhang_id`, `hovaten`, `sodienthoai`, `email`, `tinh_thanh`, `quan_huyen`, `xa_phuong`, `thon_xom`, `tongtien`, `trangthai`) VALUES
+(94, 2, 177, 'Nguyễn Đức Hoàng', '0388937608', 'nguyenvana', '', '', '', '', 160000.00, 0),
+(95, NULL, 178, 'Nguyễn Đức Hoàng', '5624575675', 'nguyenduchoangasjhdhvhashjd', '', '', '', '', 160000.00, 0),
+(96, NULL, 179, 'Nguyễn Đức Hoàng', '5624575675', 'návs', '', '', '', '', 79000.00, 1),
+(97, NULL, 180, 'Nguyễn Đức Hoàng', '0388937608', 'nguyenvana', 'ha noi', '', '', '', 160000.00, 0);
 
 -- --------------------------------------------------------
 
@@ -182,7 +189,12 @@ CREATE TABLE `khachhang` (
 
 INSERT INTO `khachhang` (`id`, `anh`, `tendangnhap`, `matkhau`, `hovaten`, `gioitinh`, `diachi`, `sodienthoai`, `email`, `ngaytao`) VALUES
 (2, 'img/google.png', 'client', '12345678', 'Nguyễn Đức Hoàng', 'nam', 'HCM', '0388937608', 'nguyenvana237@gmail.com', '0000-00-00 00:00:00'),
-(4, 'img/Screenshot (2).png', 'boynhangheo', '12345678', 'Nguyễn Đức Hoàng', 'nam', 'HCM', '5624575675', 'nguyenvana237@gmail.com', '2023-08-10 01:29:07');
+(4, 'img/Screenshot (2).png', 'boynhangheo', '12345678', 'Nguyễn Đức Hoàng', 'nam', 'HCM', '5624575675', 'nguyenvana237@gmail.com', '2023-08-10 01:29:07'),
+(8, NULL, 'admin1', '12345678', NULL, NULL, NULL, '1233456789', NULL, '2023-08-21 02:14:48'),
+(9, NULL, 'admin2', '25d55ad283aa400af464c76d713c07', NULL, NULL, NULL, '1233456789', NULL, '2023-08-21 02:16:05'),
+(10, NULL, 'admin3', '81dc9bdb52d04dc20036dbd8313ed0', NULL, NULL, NULL, '1233456789', NULL, '2023-08-21 02:19:18'),
+(11, 'img/', 'admin4', '827ccb0eea8a706c4c34a16891f84e', 'nguyen van a', '', '', '1233456789', '', '2023-08-21 02:27:43'),
+(12, NULL, 'boynhangheo1', '25f9e794323b453885f5181f1b624d', 'Nguyễn Đức Hoàng', NULL, NULL, '1235325', NULL, '2023-08-21 12:33:53');
 
 -- --------------------------------------------------------
 
@@ -323,6 +335,7 @@ ALTER TABLE `danhmuc`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `chitietdonhang_id` (`chitietdonhang_id`),
   ADD UNIQUE KEY `id_khachhang` (`khachhang_id`);
 
 --
@@ -378,7 +391,7 @@ ALTER TABLE `binhluan_danhgia`
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuc`
@@ -390,13 +403,13 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `nguyenlieu`

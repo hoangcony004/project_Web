@@ -8,7 +8,26 @@ if (isset($_SESSION['ss_admin'])) {
             case 'duyet':
                 $id = $_GET['id'];
                 $oder = $db->get('donhang', array('id' => $id));
+                $chitietdonhang = $db->get('chitietdonhang', array('donhang_id' => $id));
+                // lap lay donhang_id
+                foreach ($chitietdonhang as $key => $value) {
+                    $donhang_id = $value['donhang_id'] ;
+                }
+                // echo 'id la'.$donhang_id;
+                // die;
                 $db->update('donhang', array('trangthai' => 1), array('id' => $id));
+                // $db->update('sanpham', array(
+                //     'soluong' => -1,
+                    
+                // ),array('id'=> $id));
+
+
+
+
+
+
+
+
                 header('location: ?controller=donhang');
                 //require './view/v_trangchu-admin1.php';
                 break;

@@ -548,7 +548,7 @@
                                             <?php 
                                                     $tongdt = 0;
                                                     foreach ($donhang as $key => $value) {
-                                                        $tongdt1 = $tongdt+$value['tongtien'];
+                                                        $tongdt1 = $tongdt+=$value['tongtien'];
                                                     }
                                                 ?>
                                                 <div class="float-end">

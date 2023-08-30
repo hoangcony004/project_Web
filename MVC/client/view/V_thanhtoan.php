@@ -205,8 +205,7 @@
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="woocommerce">
-                            <div class="woocommerce-info">Phản hồi với chúng
-                                tôi? <a style="text-decoration: none;" class="showlogin" data-toggle="collapse" href="https://www.facebook.com/profile.php?id=100020891342691" aria-expanded="false" aria-controls="login-form-wrap"><i class="fa-brands fa-facebook"></i>
+                            <div class="woocommerce-info">Khuyến nghị đăng nhập trước thi thanh toán. Mọi thắc mắc liên hệ <i class="fa-solid fa-arrow-right"></i> <a style="text-decoration: none;" class="showlogin" data-toggle="collapse" href="https://www.facebook.com/profile.php?id=100020891342691" aria-expanded="false" aria-controls="login-form-wrap"><i class="fa-brands fa-facebook"></i>
                                     Facebbok</a>
                             </div>
 
@@ -233,171 +232,178 @@
                                 <div id="customer_details" class="col2-set">
                                     <div class="woocommerce-billing-fields">
                                         <h3 style="text-align: center;">Chi tiết thanh toán</h3>
-                                        <p id="billing_first_name_field" class="form-row form-row-first validate-required">
-                                            <label class for="billing_first_name">Họ
-                                                và tên <abbr title="required" class="required">*</abbr>
-                                            </label>
-                                            <input type="text" value placeholder="Nhập họ và tên..." id="billing_first_name" name="hoten" class="input-text ">
-                                        </p>
-                                        <p id="billing_company_field" class="form-row form-row-wide">
-                                            <label class for="billing_company">Số
-                                                diện thoại <abbr title="required" class="required">*</abbr></label>
-                                            <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text ">
-                                        </p>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <p id="billing_first_name_field" class="form-row form-row-first validate-required">
+                                                    <label class for="billing_first_name">Họ
+                                                        và tên <abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value placeholder="Nhập họ và tên..." id="billing_first_name" name="hoten" class="input-text ">
+                                                </p>
+                                                <p id="billing_company_field" class="form-row form-row-wide">
+                                                    <label class for="billing_company">Số
+                                                        diện thoại <abbr title="required" class="required">*</abbr></label>
+                                                    <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text ">
+                                                </p>
 
-                                        <p id="billing_company_field" class="form-row form-row-wide">
-                                            <label class for="billing_company">Email
-                                                <abbr title="required" class="required">*</abbr></label>
-                                            <input type="text" value placeholder="Nhập email..." id="billing_company" name="email" class="input-text ">
-                                        </p>
+                                                <p id="billing_company_field" class="form-row form-row-wide">
+                                                    <label class for="billing_company">Email
+                                                        <abbr title="required" class="required">*</abbr></label>
+                                                    <input type="text" value placeholder="Nhập email..." id="billing_company" name="email" class="input-text ">
+                                                </p>
 
-                                        <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
-                                            <label class for="billing_address_1">Tỉnh
-                                                / Thành phố <abbr title="required" class="required">*</abbr>
-                                            </label>
-                                            <input type="text" value placeholder="Nhập tỉnh/thành phố..." id="billing_address_1" name="tinh" class="input-text ">
-                                        </p>
+                                                <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
+                                                    <label class for="province">Tỉnh
+                                                        / Thành phố <abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value placeholder="Nhập tinh thanh..." id="billing_company" name="tinh" class="input-text ">
+                                                    <!-- <select id="province" name="tinh">
+                                                        <option value="chontinhthanh">Chọn tỉnh thành...</option>
 
-                                        <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
-                                            <label class for="billing_city">Quận
-                                                / huyện<abbr title="required" class="required">*</abbr>
-                                            </label>
-                                            <input type="text" value placeholder="Nhập Quận / huyện..." id="billing_city" name="huyen" class="input-text ">
-                                        </p>
+                                                        Danh sách 63 tỉnh thành khác
+                                                    </select> -->
+                                                </p>
 
-                                        <p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
-                                            <label class for="billing_state">Xã /
-                                                Phường</label>
-                                            <input type="text" id="billing_state" name="xa" placeholder="Nhập Xã / Phường..." value class="input-text ">
-                                        </p>
-                                        <p id="billing_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
-                                            <label class for="billing_postcode">Thôn
-                                                / Xóm / Số nhà <abbr title="required" class="required">*</abbr>
-                                            </label>
-                                            <input type="text" value placeholder="Nhập cụ thể..." id="billing_postcode" name="thon" class="input-text ">
-                                        </p>
+                                                <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
+                                                    <label class for="billing_city">Quận
+                                                        / huyện<abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value placeholder="Nhập Quận / huyện..." id="billing_city" name="huyen" class="input-text ">
+                                                </p>
 
-                                        <div class="clear"></div>
+                                                <p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
+                                                    <label class for="billing_state">Xã /
+                                                        Phường</label>
+                                                    <input type="text" id="billing_state" name="xa" placeholder="Nhập Xã / Phường..." value class="input-text ">
+                                                </p>
+                                                <p id="billing_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
+                                                    <label class for="billing_postcode">Thôn
+                                                        / Xóm / Số nhà <abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value placeholder="Nhập cụ thể..." id="billing_postcode" name="thon" class="input-text ">
+                                                </p>
 
-                                        <p id="order_comments_field" class="form-row notes">
-                                            <label class for="order_comments">Ghi
-                                                chú</label>
-                                            <textarea cols="5" rows="2" placeholder="Nhập không quá 20 ký tự." id="order_comments" class="input-text " name="ghichu"></textarea>
-                                        </p>
+                                                <div class="clear"></div>
 
+                                                <p id="order_comments_field" class="form-row notes">
+                                                    <label class for="order_comments">Ghi
+                                                        chú</label>
+                                                    <textarea cols="5" rows="2" placeholder="Nhập không quá 30 ký tự." id="order_comments" class="input-text " name="ghichu"></textarea>
+                                                </p>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                        </div>
-                        <?php
-                        if (isset($_SESSION['cart'])) {
-                            $sp = $_SESSION['cart'];
-                            $soluong = count($sp);
-                        } else {
-                            $soluong = 0;
-                        }
-                        ?>
-                        <h3 id="order_review_heading">Đơn hàng của
-                            bạn</h3>
+                                    <?php
+                                    if (isset($_SESSION['cart'])) {
+                                        $sp = $_SESSION['cart'];
+                                        $soluong = count($sp);
+                                    } else {
+                                        $soluong = 0;
+                                    }
+                                    ?>
+                                    <h3 id="order_review_heading">Đơn hàng của
+                                        bạn</h3>
 
-                        <div id="order_review" style="position: relative;">
+                                    <div id="order_review" style="position: relative;">
 
-                            <table class="shop_table">
-                                <thead>
-                                    <tr>
-                                        <th class="product-name">Sản
-                                            phẩm</th>
-                                        <th class="product-total">Tổng
-                                            cộng</th>
-                                    </tr>
-                                </thead>
-                                <?php
-                                $tongtien = 0;
-                                if (isset($_SESSION['cart'])) {
-                                    foreach ($_SESSION['cart'] as $key => $value) {
-                                        $tongtien += $value['soluong'] * $value['giamoi'];
-                                ?>
-                                        <tbody>
-                                            <tr class="cart_item">
-                                                <td class="product-name">
-                                                    Tổng sản phẩm <strong class="product-quantity">×
-                                                        <?php echo $soluong ?></strong> </td>
-                                                <td class="product-total">
-                                                    <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
+                                        <table class="shop_table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="product-name">Sản
+                                                        phẩm</th>
+                                                    <th class="product-total">Tổng
+                                                        cộng</th>
+                                                </tr>
+                                            </thead>
+                                            <?php
+                                            $tongtien = 0;
+                                            if (isset($_SESSION['cart'])) {
+                                                foreach ($_SESSION['cart'] as $key => $value) {
+                                                    $tongtien += $value['soluong'] * $value['giamoi'];
+                                            ?>
+                                                    <tbody>
+                                                        <tr class="cart_item">
+                                                            <td class="product-name">
+                                                                Tổng sản phẩm <strong class="product-quantity">×
+                                                                    <?php echo $soluong ?></strong> </td>
+                                                            <td class="product-total">
+                                                                <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
 
-                                            <tr class="shipping">
-                                                <th>Phương thức giao hàng</th>
-                                                <td>
+                                                        <tr class="shipping">
+                                                            <th>Phương thức giao hàng</th>
+                                                            <td>
 
-                                                    Miễn phí vận chuyển
-                                                    <input type="hidden" class="shipping_method" value="free_shipping" id="shipping_method_0" data-index="0" name="shipping_method[0]">
-                                                </td>
-                                            </tr>
+                                                                Miễn phí vận chuyển
+                                                                <input type="hidden" class="shipping_method" value="free_shipping" id="shipping_method_0" data-index="0" name="shipping_method[0]">
+                                                            </td>
+                                                        </tr>
 
-                                            <tr class="order-total">
-                                                <th>Tổng đơn hàng</th>
-                                                <td><strong><span class="amount"><?php echo number_format($tongtien) ?>vnd</span></strong>
-                                                </td>
-                                            </tr>
+                                                        <tr class="order-total">
+                                                            <th>Tổng đơn hàng</th>
+                                                            <td><strong><span class="amount"><?php echo number_format($tongtien) ?>vnd</span></strong>
+                                                            </td>
+                                                        </tr>
 
-                                        </tfoot>
-                                <?php }
-                                } ?>
-                            </table>
+                                                    </tfoot>
+                                            <?php }
+                                            } ?>
+                                        </table>
 
-                            <div id="payment">
-                                <ul class="payment_methods methods">
-                                    <li class="payment_method_bacs">
-                                        <input type="radio" data-order_button_text checked="checked" value="bacs" name="payment_method" class="input-radio" id="payment_method_bacs">
-                                        <label for="payment_method_bacs">Thanh
-                                            toán bằng tiền mặt
-                                        </label>
-                                        <div class="payment_box payment_method_bacs">
-                                            <p>Nhận hàng và đưa tiền
-                                                cho nhân viên giao
-                                                hàng.</p>
+                                        <div id="payment">
+                                            <ul class="payment_methods methods">
+                                                <li class="payment_method_bacs">
+                                                    <input type="radio" data-order_button_text checked="checked" value="bacs" name="payment_method" class="input-radio" id="payment_method_bacs">
+                                                    <label for="payment_method_bacs">Thanh
+                                                        toán bằng tiền mặt
+                                                    </label>
+                                                    <div class="payment_box payment_method_bacs">
+                                                        <p>Nhận hàng và đưa tiền
+                                                            cho nhân viên giao
+                                                            hàng.</p>
+                                                    </div>
+                                                </li>
+                                                <li class="payment_method_bacs">
+                                                    <input type="radio" data-order_button_text checked="checked" value="bacs" name="payment_method" class="input-radio" id="payment_method_bacs">
+                                                    <label for="payment_method_bacs">Thanh
+                                                        toán bằng Bankking
+                                                    </label>
+                                                    <div class="payment_box payment_method_bacs">
+                                                        <p>Số tài khoản:
+                                                            100876507576</p>
+                                                        <p>Chủ tài khoản: NGUYỄN
+                                                            ĐỨC HOÀNG</p>
+                                                        <p>Ngân hàng: VietinBank</p>
+                                                    </div>
+                                                </li>
+                                                <li class="payment_method_paypal">
+                                                    <input type="radio" data-order_button_text="Proceed to PayPal" value="paypal" name="payment_method" class="input-radio" id="payment_method_paypal">
+                                                    <label for="payment_method_paypal">Thanh
+                                                        toán qua thẻ <img alt="PayPal Acceptance Mark" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png"><a title="What is PayPal?" onclick="javascript:window.open('https://www.paypal.com/gb/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;" class="about_paypal" href="https://www.paypal.com/gb/webapps/mpp/paypal-popup">Thanh
+                                                            toán qua thẻ là gì?</a>
+                                                    </label>
+                                                </li>
+                                            </ul>
+
+                                            <div style="padding-bottom: 30px;" class="form-row place-order">
+                                                <button type="submit" name="btn_thanhtoan" class="btn btn-info">Thanh Toán</button>
+                                            </div>
+
+                                            <div class="clear"></div>
+
                                         </div>
-                                    </li>
-                                    <li class="payment_method_bacs">
-                                        <input type="radio" data-order_button_text checked="checked" value="bacs" name="payment_method" class="input-radio" id="payment_method_bacs">
-                                        <label for="payment_method_bacs">Thanh
-                                            toán bằng Bankking
-                                        </label>
-                                        <div class="payment_box payment_method_bacs">
-                                            <p>Số tài khoản:
-                                                100876507576</p>
-                                            <p>Chủ tài khoản: NGUYỄN
-                                                ĐỨC HOÀNG</p>
-                                            <p>Ngân hàng: VietinBank</p>
-                                        </div>
-                                    </li>
-                                    <li class="payment_method_paypal">
-                                        <input type="radio" data-order_button_text="Proceed to PayPal" value="paypal" name="payment_method" class="input-radio" id="payment_method_paypal">
-                                        <label for="payment_method_paypal">Thanh
-                                            toán qua thẻ <img alt="PayPal Acceptance Mark" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png"><a title="What is PayPal?" onclick="javascript:window.open('https://www.paypal.com/gb/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;" class="about_paypal" href="https://www.paypal.com/gb/webapps/mpp/paypal-popup">Thanh
-                                                toán qua thẻ là gì?</a>
-                                        </label>
-                                    </li>
-                                </ul>
+                                    </div>
+                            </form>
 
-                                <div class="form-row place-order">
-                                    <button type="submit" name="btn_thanhtoan" class="btn btn-info">Thanh Toán</button>
-                                </div>
-
-                                <div class="clear"></div>
-
-                            </div>
                         </div>
-                        </form>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <div class="footer-top-area">
@@ -508,6 +514,21 @@
 
     <!-- Main Script -->
     <script src="js/main.js"></script>
+
+    <script>
+        const provinces = [
+            "Hà Nội", "Hồ Chí Minh", "Hải Phòng", // Thêm các tỉnh thành khác vào đây
+        ];
+
+        const selectElement = document.getElementById("province");
+
+        provinces.forEach(province => {
+            const option = document.createElement("option");
+            option.value = province;
+            option.textContent = province;
+            selectElement.appendChild(option);
+        });
+    </script>
 </body>
 
 </html>
