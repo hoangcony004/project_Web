@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--
-	ustora by freshdesignweb.com
-	Twitter: https://twitter.com/freshdesignweb
-	URL: https://www.freshdesignweb.com/ustora/
--->
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="utf-8">
@@ -87,11 +82,11 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li>
-                                <div><span class="key">Mệnh giá : </span><span class="value">VND</span></div>
-                            </li>
+                                <div><span class="key">Mệnh Giá : </span><span class="value">VND</span></div>
+                            </li>-
 
                             <li class="dropdown dropdown-small">
-                                <div><span class="key">Ngôn ngữ : </span><span class="value">Vietnamse</span></div>
+                                <div><span class="key">Ngôn Ngữ : </span><span class="value">vietnamse</span></div>
                             </li>
                         </ul>
                     </div>

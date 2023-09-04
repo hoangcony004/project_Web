@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--
-	ustora by freshdesignweb.com
-	Twitter: https://twitter.com/freshdesignweb
-	URL: https://www.freshdesignweb.com/ustora/
--->
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="utf-8">
@@ -87,11 +82,11 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li>
-                                <div><span class="key">Mệnh giá : </span><span class="value">VND</span></div>
-                            </li>
+                                <div><span class="key">Mệnh Giá : </span><span class="value">VND</span></div>
+                            </li>-
 
                             <li class="dropdown dropdown-small">
-                                <div><span class="key">Ngôn ngữ : </span><span class="value">Vietnamse</span></div>
+                                <div><span class="key">Ngôn Ngữ : </span><span class="value">vietnamse</span></div>
                             </li>
                         </ul>
                     </div>
@@ -243,7 +238,8 @@
                                                     </form>
                                                     <a href="?controller=xoatatca" class="button" style="padding: 13px 25px; background-color: chocolate; color:white; margin-left: 50px; text-decoration: none;">
                                                         Xóa tất cả</a>
-                                                        <?php // &id=<?php echo $_SESSION['ss_client'] ?>
+                                                    <?php // &id=<?php echo $_SESSION['ss_client'] 
+                                                    ?>
                                                     <a href="?controller=thanhtoan" name="proceed" class="checkout-button button alt wc-forward" style="padding: 13px 25px; background-color: chocolate; color:white; text-decoration: none;">
                                                         Thanh toán</a>
                                                 </div>
@@ -275,7 +271,7 @@
                                         </li>
 
                                         <li class="product">
-                                        <?php
+                                            <?php
                                             foreach ($pizza4 as $key => $value) { ?>
                                                 <img style="width: 220px; height: 130px;" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $value['anhsanpham']; ?>">
                                                 <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>">

@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<!--
-	ustora by freshdesignweb.com
-	Twitter: https://twitter.com/freshdesignweb
-	URL: https://www.freshdesignweb.com/ustora/
--->
-<html lang="en">
+
+<html lang="vi">
 
 <head>
     <meta charset="utf-8">
@@ -92,11 +88,11 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li>
-                                <div><span class="key">Mệnh giá : </span><span class="value">VND</span></div>
-                            </li>
+                                <div><span class="key">Mệnh Giá : </span><span class="value">VND</span></div>
+                            </li>-
 
                             <li class="dropdown dropdown-small">
-                                <div><span class="key">Ngôn ngữ : </span><span class="value">Vietnamse</span></div>
+                                <div><span class="key">Ngôn Ngữ : </span><span class="value">vietnamse</span></div>
                             </li>
                         </ul>
                     </div>
@@ -209,7 +205,7 @@
                     <h2>Chờ lấy hàng</h2>
                     <div style="margin-left: 500px;">
                         <!-- <?php
-                        foreach ($donhang as $key => $value) { ?>
+                                foreach ($donhang as $key => $value) { ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
                                     <img style="width: 130px;" src="img/mi_y_sotcachua.jpeg" alt="anh">
@@ -229,7 +225,7 @@
                     <h2>Đang giao hàng</h2>
                     <div style="margin-left: 500px;">
                         <!-- <?php
-                        foreach ($donhang as $key => $value) { ?>
+                                foreach ($donhang as $key => $value) { ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
                                     <img style="width: 130px;" src="img/mi_y_sotcachua.jpeg" alt="anh">
@@ -249,7 +245,7 @@
                     <h2>Đã giao hàng</h2>
                     <div style="margin-left: 500px;">
                         <!-- <?php
-                        foreach ($donhang as $key => $value) { ?>
+                                foreach ($donhang as $key => $value) { ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
                                     <img style="width: 130px;" src="img/mi_y_sotcachua.jpeg" alt="anh">

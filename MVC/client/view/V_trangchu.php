@@ -81,11 +81,11 @@
                     <div class="header-right" style="margin-top: 7px;">
                         <ul class="list-unstyled list-inline">
                             <li>
-                                <div><span class="key">Mệnh giá : </span><span class="value">VND</span></div>
-                            </li>
+                                <div><span class="key">Mệnh Giá : </span><span class="value">VND</span></div>
+                            </li>-
 
                             <li class="dropdown dropdown-small">
-                                <div><span class="key">Ngôn ngữ : </span><span class="value">Vietnamse</span></div>
+                                <div><span class="key">Ngôn Ngữ : </span><span class="value">vietnamse</span></div>
                             </li>
                         </ul>
                     </div>
@@ -222,7 +222,7 @@
                             <div class="zigzag-bottom"></div>
                             <div class="container">
                                 <div class="row">
-                                <?php
+                                    <?php
                                     foreach ($product as $key => $value) { ?>
                                         <div class="col-md-3 col-sm-6">
                                             <div class="single-shop-product">

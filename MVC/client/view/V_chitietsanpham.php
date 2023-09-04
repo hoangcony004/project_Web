@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--
-	ustora by freshdesignweb.com
-	Twitter: https://twitter.com/freshdesignweb
-	URL: https://www.freshdesignweb.com/ustora/
--->
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="utf-8">
@@ -87,11 +82,11 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li>
-                                <div><span class="key">Mệnh giá : </span><span class="value">VND</span></div>
-                            </li>
+                                <div><span class="key">Mệnh Giá : </span><span class="value">VND</span></div>
+                            </li>-
 
                             <li class="dropdown dropdown-small">
-                                <div><span class="key">Ngôn ngữ : </span><span class="value">Vietnamse</span></div>
+                                <div><span class="key">Ngôn Ngữ : </span><span class="value">vietnamse</span></div>
                             </li>
                         </ul>
                     </div>
@@ -209,7 +204,7 @@
                                 <div>
                                     <h5>Nguyeenx Vanw a</h5>
                                     <h6>
-                                    <?php
+                                        <?php
                                         $tong = 0;
                                         foreach ($danhgiabinhluan as $key => $value) {
                                             $tong = count($danhgiabinhluan);
@@ -227,7 +222,7 @@
                                             $tongdg = count($danhgiabinhluan);
                                         }
                                         ?>
-                                        <p style="padding-top: 20px;"><?php echo $tongdg?> đánh giá</p>
+                                        <p style="padding-top: 20px;"><?php echo $tongdg ?> đánh giá</p>
                                     </h6>
                                 </div>
                             <?php } ?>
@@ -313,7 +308,7 @@
                                                         <p><label for="review">Bình luận</label>
                                                             <textarea name="binhluan" id cols="30" rows="10" placeholder="Nhập bình luận..."></textarea>
                                                         </p>
-                                                        <p><input type="submit" name="btn_danhgia" value="Đánh giá"></p>
+                                                        <p><input type="submit" name="btn_danhgia" value="Gửi"></p>
                                                     </form>
                                                 </div>
                                             </div>

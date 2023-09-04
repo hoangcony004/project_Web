@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--
-	ustora by freshdesignweb.com
-	Twitter: https://twitter.com/freshdesignweb
-	URL: https://www.freshdesignweb.com/ustora/
--->
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="utf-8">
@@ -87,11 +82,11 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li>
-                                <div><span class="key">Mệnh giá : </span><span class="value">VND</span></div>
-                            </li>
+                                <div><span class="key">Mệnh Giá : </span><span class="value">VND</span></div>
+                            </li>-
 
                             <li class="dropdown dropdown-small">
-                                <div><span class="key">Ngôn ngữ : </span><span class="value">Vietnamse</span></div>
+                                <div><span class="key">Ngôn Ngữ : </span><span class="value">vietnamse</span></div>
                             </li>
                         </ul>
                     </div>
@@ -242,8 +237,9 @@
                                                 </p>
                                                 <p id="billing_company_field" class="form-row form-row-wide">
                                                     <label class for="billing_company">Số
-                                                        diện thoại <abbr title="required" class="required">*</abbr></label>
-                                                    <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text ">
+                                                        điện thoại <abbr title="required" class="required">*</abbr></label>
+                                                    <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text "
+                                                    style="width: 500px; height: 40px;">
                                                 </p>
 
                                                 <p id="billing_company_field" class="form-row form-row-wide">
@@ -256,34 +252,78 @@
                                                     <label class for="province">Tỉnh
                                                         / Thành phố <abbr title="required" class="required">*</abbr>
                                                     </label>
-                                                    <input type="text" value placeholder="Nhập tinh thanh..." id="billing_company" name="tinh" class="input-text ">
-                                                    <!-- <select id="province" name="tinh">
-                                                        <option value="chontinhthanh">Chọn tỉnh thành...</option>
-
-                                                        Danh sách 63 tỉnh thành khác
-                                                    </select> -->
+                                                    <!-- <input type="text" value placeholder="Nhập tinh thanh..." id="billing_company" name="tinh" class="input-text "> -->
+                                                    <select name="tinh">
+                                                        <option value="">Chọn tỉnh thành...</option>
+                                                        <option value="Hà Nội">Hà Nội</option>
+                                                        <option value="TP.HCM">TP.HCM</option>
+                                                        <option value="An Giang">An Giang</option>
+                                                        <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                                        <option value="Bắc Giang">Bắc Giang</option>
+                                                        <option value="Bắc Kạn">Bắc Kạn</option>
+                                                        <option value="Bạc Liêu">Bạc Liêu</option>
+                                                        <option value="Bắc Ninh">Bắc Ninh</option>
+                                                        <option value="Bến Tre">Bến Tre</option>
+                                                        <option value="Bình Định">Bình Định</option>
+                                                        <option value="Bình Dương">Bình Dương</option>
+                                                        <option value="Bình Phước">Bình Phước</option>
+                                                        <option value="Bình Thuận">Bình Thuận</option>
+                                                        <option value="Cà Mau">Cà Mau</option>
+                                                        <option value="Cần Thơ">Cần Thơ</option>
+                                                        <option value="Cao Bằng">Cao Bằng</option>
+                                                        <option value="Đà Nẵng">Đà Nẵng</option>
+                                                        <option value="Đắk Lắk">Đắk Lắk</option>
+                                                        <option value="Đắk Nông">Đắk Nông</option>
+                                                        <option value="Điện Biên">Điện Biên</option>
+                                                        <option value="Đồng Nai">Đồng Nai</option>
+                                                        <option value="Đồng Tháp">Đồng Tháp</option>
+                                                        <option value="Gia Lai">Gia Lai</option>
+                                                        <option value="Hà Giang">Hà Giang</option>
+                                                        <option value="Hà Nam">Hà Nam</option>
+                                                        <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                        <option value="Hải Dương">Hải Dương</option>
+                                                        <option value="Hải Phòng">Hải Phòng/option>
+                                                        <option value="Hậu Giang">Hậu Giang</option>
+                                                        <option value="Hòa Bình">Hòa Bình</option>
+                                                        <option value="Hưng Yên">Hưng Yên</option>
+                                                        <option value="Khánh Hòa">Khánh Hòa</option>
+                                                        <option value="Kiên Giang">Kiên Giang</option>
+                                                        <option value="Kon Tum">Kon Tum</option>
+                                                        <option value="Lai Châu">Lai Châu</option>
+                                                        <option value="Lâm Đồng">Lâm Đồng</option>
+                                                        <option value="Lạng Sơn">Lạng Sơn</option>
+                                                        <option value="Lào Cai">Lào Cai</option>
+                                                        <option value="Long An">Long An</option>
+                                                        <option value="Nam Định">Nam Định</option>
+                                                        <option value="Nghệ An">Nghệ An</option>
+                                                        <option value="Ninh Bình">Ninh Bình</option>
+                                                        <option value="Ninh Thuận">Ninh Thuận</option>
+                                                        <option value="Phú Thọ">Phú Thọ</option>
+                                                        <option value="Phú Yên">Phú Yên</option>
+                                                        <option value="Quảng Bình">Quảng Bình</option>
+                                                        <option value="Quảng Nam">Quảng Nam</option>
+                                                        <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                        <option value="Quảng Ninh">Quảng Ninh</option>
+                                                        <option value="Quảng Trị">Quảng Trị</option>
+                                                        <option value="Sóc Trăng">Sóc Trăng</option>
+                                                        <option value="Sơn La">Sơn La</option>
+                                                        <option value="Tây Ninh">Tây Ninh</option>
+                                                        <option value="Thái Bình">Thái Bình</option>
+                                                        <option value="Thái Nguyên">Thái Nguyên</option>
+                                                        <option value="Thanh Hóa">Thanh Hóa</option>
+                                                        <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                                        <option value="Tiền Giang">Tiền Giang</option>
+                                                        <option value="Trà Vinh">Trà Vinh</option>
+                                                        <option value="Tuyên Quang">Tuyên Quang</option>
+                                                        <option value="Vĩnh Long">Vĩnh Long</option>
+                                                        <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                        <option value="Yên Bái">Yên Bái</option>
+                                                    </select>
                                                 </p>
-
-                                                <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
-                                                    <label class for="billing_city">Quận
-                                                        / huyện<abbr title="required" class="required">*</abbr>
-                                                    </label>
-                                                    <input type="text" value placeholder="Nhập Quận / huyện..." id="billing_city" name="huyen" class="input-text ">
+                                                <p id="order_comments_field" class="form-row notes">
+                                                    <label class for="order_comments">Địa chỉ chi tiết</label>
+                                                    <textarea cols="5" rows="4" placeholder="Nhập chi tiết địa chỉ của bạn..." id="order_comments" class="input-text " name="diachichitiet"></textarea>
                                                 </p>
-
-                                                <p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
-                                                    <label class for="billing_state">Xã /
-                                                        Phường</label>
-                                                    <input type="text" id="billing_state" name="xa" placeholder="Nhập Xã / Phường..." value class="input-text ">
-                                                </p>
-                                                <p id="billing_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
-                                                    <label class for="billing_postcode">Thôn
-                                                        / Xóm / Số nhà <abbr title="required" class="required">*</abbr>
-                                                    </label>
-                                                    <input type="text" value placeholder="Nhập cụ thể..." id="billing_postcode" name="thon" class="input-text ">
-                                                </p>
-
-                                                <div class="clear"></div>
 
                                                 <p id="order_comments_field" class="form-row notes">
                                                     <label class for="order_comments">Ghi
@@ -514,21 +554,6 @@
 
     <!-- Main Script -->
     <script src="js/main.js"></script>
-
-    <script>
-        const provinces = [
-            "Hà Nội", "Hồ Chí Minh", "Hải Phòng", // Thêm các tỉnh thành khác vào đây
-        ];
-
-        const selectElement = document.getElementById("province");
-
-        provinces.forEach(province => {
-            const option = document.createElement("option");
-            option.value = province;
-            option.textContent = province;
-            selectElement.appendChild(option);
-        });
-    </script>
 </body>
 
 </html>
