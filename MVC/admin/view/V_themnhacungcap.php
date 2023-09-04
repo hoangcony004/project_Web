@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Ăn nhanh 247 - Admin Đơn Hàng</title>
+    <title>Ăn nhanh 247 - Admin Thêm Đơn Hàng</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
     <meta content="Coderthemes" name="author">
@@ -462,169 +462,70 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br>
                 <!-- end Topbar -->
 
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <!-- start page title -->
                     <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                                    <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Ứng dụng</a></li>
-                                        <li class="breadcrumb-item active">Đơn đặt hàng</li>
-                                    </ol>
+                        <div class="col-lg-8 mx-auto">
+                            <div class="card">
+                                <div class="card-header py-3 bg-transparent">
+                                    <h5 class="mb-0">Thêm nhà cung cấp</h5>
                                 </div>
-                                <h4 class="page-title">Đơn đặt hàng</h4>
+                                <div class="card-body">
+                                    <div class="border p-3 rounded">
+                                        <form class="row g-3" action="#" method="post">
+                                            <div class="col-12">
+                                                <label class="form-label">Nhà cung cấp: </label>
+                                                <input type="text" class="form-control" placeholder="Nhập tên nhà cung cấp..." name="nhacungcap">
+                                                <?php if (isset($loi['nhacungcap'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['nhacungcap'] ?></p>
+                                                <?php } ?>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary px-4" type="submit" name="btn_themnhacungcap"><i class="fa-solid fa-plus"></i> Thêm đơn hàng</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end row-->
+
+                </div>
+                <!-- container -->
+
+            </div>
+            <!-- content -->
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © Hoàng nà - nguyenduchoang522@gmail.com
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-md-end footer-links d-none d-md-block">
+                                <a href="https://www.facebook.com/profile.php?id=100020891342691">Facebook</a>
+                                <a href="javascript: void(0);">Ủng hộ</a>
+                                <a href="javascript: void(0);">Liện hệ với chúng tôi.</a>
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row mb-2">
-                                        <div class="col-xl-8">
-                                            <form class="row gy-2 gx-2 align-items-center justify-content-xl-start justify-content-between" action="#" method="post">
-                                                <div class="col-auto">
-                                                    <div class="input-group">
-                                                        <input type="search" class="form-control" placeholder="Tìm kiếm đơn hàng...">
-                                                        <button class="input-group-text btn-primary" name="btn_timkh" type="submit">Tìm kiếm</button>
-                                                    </div>
-                                            </form>
-                                        </div><br>
-                                    </div>
-                                    <div class="col-xl-4">
-                                        <div class="text-xl-end mt-xl-0 mt-2">
-                                            <a href="?controller=themdonhang" type="button" class="btn btn-danger mb-2 me-2"><i class="mdi mdi-basket me-1"></i> Thêm đơn hàng</a>
-                                            <button type="button" class="btn btn-light mb-2">Export</button>&ensp;
-                                            <a href="?controller=xoadonhang" type="button" class="btn btn-danger mb-2 me-2"><i class="fa-solid fa-trash"></i> Xóa</a>
-                                        </div>
-                                    </div><!-- end col-->
-                                </div>
-
-                                <div class="table-responsive">
-                                    <table class="table table-centered mb-0">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th style="width: 20px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck1">
-                                                        <label class="form-check-label" for="customCheck1">&nbsp;</label>
-                                                    </div>
-                                                </th>
-                                                <th>Họ và tên</th>
-                                                <th>Số điện thoại</th>
-                                                <th>Tổng tiền</th>
-                                                <th>Email</th>
-                                                <th>Tỉnh thành</th>
-                                                <th>Quận huyện</th>
-                                                <th>Xã phường</th>
-                                                <th>Thôn xóm</th>
-                                                <th>Trạng thái</th>
-                                                <th style="width: 125px;">Chức năng</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            foreach ($data_donhang as $key => $value) { ?>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                            <label class="form-check-label" for="customCheck2">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <td><a href="#" class="text-body fw-bold"><?php echo $value['hovaten'] ?></a> </td>
-                                                    <td>
-                                                        <?php echo $value['sodienthoai'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo number_format($value['tongtien']) ?>vnd
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $value['email'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $value['tinh_thanh'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $value['quan_huyen'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $value['xa_phuong'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $value['thon_xom'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <h5><span class="badge badge-info-lighten">
-                                                                <?php
-                                                                if ($value['trangthai'] == 0) { ?>
-                                                                    <p style="color: red;"><?php echo 'Chưa duyệt' ?></p>
-                                                                    <a href="?controller=xulydonhang&method=duyet&id=<?php echo $value['id'] ?>" style="margin-left: 5px;"><i class="fa-solid fa-circle-down"></i> Duyệt ngay</a>
-                                                                <?php } else { ?>
-                                                                    <p style="color: green;"><?php echo 'Đã duyệt' ?></p>
-                                                                <?php } ?>
-                                                            </span></h5>
-
-
-                                                        </span></h5>
-                                                    </td>
-                                                    <td>
-                                                        <a href="?controller=chitietdonhang&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-eye"></i></a>
-                                                        <a href="?controller=xulydonhang&method=sua&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                        <a href="?controller=xulydonhang&method=xoa&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                    </td>
-                                                </tr>
-                                            <?php  } ?>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div> <!-- end card-body-->
-                        </div> <!-- end card-->
-                    </div> <!-- end col -->
                 </div>
-                <!-- end row -->
+            </footer>
+            <!-- end Footer -->
 
-            </div> <!-- container -->
+        </div>
 
-        </div> <!-- content -->
-
-
-        <!-- Footer Start -->
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script> © Hoàng nà - nguyenduchoang522@gmail.com
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-md-end footer-links d-none d-md-block">
-                            <a href="https://www.facebook.com/profile.php?id=100020891342691">Facebook</a>
-                            <a href="javascript: void(0);">Ủng hộ</a>
-                            <a href="javascript: void(0);">Liện hệ với chúng tôi.</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- end Footer -->
-
-    </div>
-
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
 
 
     </div>

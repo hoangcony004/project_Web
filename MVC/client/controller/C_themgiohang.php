@@ -26,4 +26,4 @@ if (isset($_SESSION['cart'])) {
     $_SESSION['cart'][$id]['soluong'] = 1;
     $_SESSION['cart'][$id]['giamoi'] = $product[0]['giamoi'];
 }
-header ('location: ?controller=trangchu');
+header ('location: ?controller=chitietsanpham&id='.$id);

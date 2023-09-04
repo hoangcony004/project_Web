@@ -54,6 +54,9 @@ switch ($controller) {
     case 'nhacungcap':
         include 'controller/C_nhacungcap.php';
         break;
+    case 'themnhacc':
+        include 'controller/C_themnhacungcap.php';
+        break;
     default:
         break;
 }

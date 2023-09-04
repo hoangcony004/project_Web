@@ -1060,6 +1060,13 @@
                                                 <?php } ?>
                                             </div>
                                             <div class="col-12">
+                                                <label class="form-label">Email: </label>
+                                                <input type="text" class="form-control" placeholder="Nhập email..." name="email" value="<?php echo $donhang[0]['email'] ?>">
+                                                <?php if (isset($loi['email'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['eamil'] ?></p>
+                                                <?php } ?>
+                                            </div>
+                                            <div class="col-12">
                                                 <label class="form-label">Tỉnh thành: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập tỉnh thành..." name="tinhthanh" value="<?php echo $donhang[0]['tinh_thanh'] ?>">
                                                 <?php if (isset($loi['tinhthanh'])) { ?>

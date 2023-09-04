@@ -150,8 +150,8 @@
                         <li><a href="https://www.facebook.com/profile.php?id=100020891342691">Liên
                                 hệ</a></li>
                         <li>
-                            <form action="#" method="post">
-                                <input type="search" placeholder="Tìm kiếm..." name="tim_kiem" style=" border: 1px solid; border-radius: 5px; margin-top: 20px;">
+                            <form action="#" method="get">
+                                <input type="search" placeholder="Tìm kiếm..." name="timkiem" style=" border: 1px solid; border-radius: 5px; margin-top: 20px;" value="<?php echo (isset($_GET['timkiem'])) ? $_GET['timkiem'] : '' ?>">
                                 <button style="padding: 2px 15px; border: 1px solid; border-radius: 5px; background-color: cornflowerblue;
                                 "><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>

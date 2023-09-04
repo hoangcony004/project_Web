@@ -4,7 +4,8 @@ if (isset($_SESSION['ss_admin'])) {
 
     if (isset($_GET['keyword'])) {
         $keyword = $_GET['keyword'];
-        $data_sanpham = $db->get('sanpham', array());
+        $data_sanpham = $db->get_like('sanpham', 'tensanpham', $keyword);
+        //header('location: ?controller=danhsachsanpham');
     } else {
         $data_sanpham = $db->get('sanpham', array());
     }

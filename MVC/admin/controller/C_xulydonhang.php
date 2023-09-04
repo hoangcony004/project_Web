@@ -41,6 +41,7 @@ if (isset($_SESSION['ss_admin'])) {
                 $donhang = $db->get('donhang', array('id' => $id));
                 if (isset($_POST['btn_xulydonhang'])) {
                     $hovaten = $_POST['hovaten'];
+                    $email = $_POST['email'];
                     $sodt = $_POST['sodt'];
                     $tinhthanh = $_POST['tinhthanh'];
                     $quanhuyen = $_POST['quanhuyen'];
@@ -53,6 +54,9 @@ if (isset($_SESSION['ss_admin'])) {
                     $loi = array();
                     if ($hovaten == '') {
                         $loi['hovaten'] = 'Họ và tên không được để trống!';
+                    }
+                    if ($email == '') {
+                        $loi['email'] = 'Email không được để trống!';
                     }
                     if ($sodt == '') {
                         $loi['sodt'] = 'Số điện thoại không được để trống!';
@@ -78,12 +82,12 @@ if (isset($_SESSION['ss_admin'])) {
                         $db->update('donhang', array(
                             'hovaten' => $hovaten,
                             'sodienthoai' => $sodt,
+                            'email' => $email,
                             'tinh_thanh' => $tinhthanh,
                             'quan_huyen' => $quanhuyen,
                             'xa_phuong' => $xaphuong,
                             'thon_xom' => $thonxom,
                             'tongtien' => $tongtien,
-                            'trangthai' => 0
                         ),array('id'=> $id)
                     );
                         header('location: ?controller=donhang');

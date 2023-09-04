@@ -203,7 +203,7 @@
                                                 <tr class="cart_item">
 
                                                     <td class="product-thumbnail">
-                                                        <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="<?php echo $value['anhsanpham'] ?>"></a>
+                                                        <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="<?php echo $value['anhsanpham'] ?>"></a>
                                                     </td>
 
                                                     <td class="product-name">

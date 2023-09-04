@@ -201,30 +201,36 @@
                     </div>
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Đánh giá & Bình luận</h2>
+
                         <ul>
-                            <h3 style="text-align: center;">Đánh giá</h3>
-                            <h4>5,0 &emsp;
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p  style="padding-top: 20px;">2 đánh giá</p>
-                            </h4><br>
+                            <h3 style="text-align: center;">Đánh giá & Bình luận</h3>
+                            <?php
+                            foreach ($danhgiabinhluan as $key => $value) { ?>
+                                <div>
+                                    <h5>Nguyeenx Vanw a</h5>
+                                    <h6>
+                                    <?php
+                                        $tong = 0;
+                                        foreach ($danhgiabinhluan as $key => $value) {
+                                            $tong = count($danhgiabinhluan);
+                                        }
+                                        ?>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
 
-
-                            <h3 style="text-align: center;">Bình luận</h3>
-                            <div>
-                                <h5>Nguyeenx Vanw a</h5>
-                                <h6>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p  style="padding-top: 20px;">2 đánh giá</p>
-                            </h6>
-                            </div>
+                                        <?php
+                                        $tongdg = 0;
+                                        foreach ($danhgiabinhluan as $key => $value) {
+                                            $tongdg = count($danhgiabinhluan);
+                                        }
+                                        ?>
+                                        <p style="padding-top: 20px;"><?php echo $tongdg?> đánh giá</p>
+                                    </h6>
+                                </div>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
@@ -293,19 +299,19 @@
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                                 <h2>Đánh giá</h2>
                                                 <div class="submit-review">
-                                                    <form action="#" method="post">
+                                                    <form action="?controller=danhgiabinhluan&id=<?php echo $value['id'] ?>" method="post">
                                                         <div class="rating-chooser">
 
                                                             <div class="rating-wrap-post">
-                                                                <input type="radio" name="stars" id="star-1" value="" />
-                                                                <input type="radio" name="stars" id="star-2" value="" />
-                                                                <input type="radio" name="stars" id="star-3" value="" />
-                                                                <input type="radio" name="stars" id="star-4" value="" />
-                                                                <input type="radio" name="stars" id="star-5" checked value="" />
+                                                                <input type="radio" name="stars" id="star-1" value="1" />
+                                                                <input type="radio" name="stars" id="star-2" value="2" />
+                                                                <input type="radio" name="stars" id="star-3" value="3" />
+                                                                <input type="radio" name="stars" id="star-4" value="4" />
+                                                                <input type="radio" name="stars" id="star-5" checked value="5" />
                                                             </div>
                                                         </div>
                                                         <p><label for="review">Bình luận</label>
-                                                            <textarea name="review" id cols="30" rows="10" placeholder="Nhập bình luận..."></textarea>
+                                                            <textarea name="binhluan" id cols="30" rows="10" placeholder="Nhập bình luận..."></textarea>
                                                         </p>
                                                         <p><input type="submit" name="btn_danhgia" value="Đánh giá"></p>
                                                     </form>

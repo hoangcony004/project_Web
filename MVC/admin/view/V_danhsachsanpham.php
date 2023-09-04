@@ -510,7 +510,7 @@
                                                 <div class="col-auto">
                                                     <div class="input-group">
                                                         <input type="search" class="form-control" placeholder="Tìm kiếm sản phẩm..." name="keyword" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>">
-                                                        <button class="input-group-text btn-primary" name="btn_timkh" type="submit">Tìm kiếm</button>
+                                                        <button class="input-group-text btn-primary" type="submit">Tìm kiếm</button>
                                                     </div>
                                             </form>
                                         </div><br>

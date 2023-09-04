@@ -30,7 +30,7 @@
                         <p class="mt-1" style="color: red;"><?php echo $loi['matkhaucu'] ?></p>
                     <?php } ?>
                     <div class="field input-field">
-                        <input type="password" placeholder="Nhập lại mật khẩu mới..." class="password" name="matkhaumoi">
+                        <input type="password" placeholder="Nhập mật khẩu mới..." class="password" name="matkhaumoi">
                     </div>
                     <?php if (isset($loi['matkhaumoi'])) { ?>
                         <p class="mt-1" style="color: red;"><?php echo $loi['matkhaumoi'] ?></p>

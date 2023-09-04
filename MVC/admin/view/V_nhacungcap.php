@@ -501,9 +501,9 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="text-xl-end mt-xl-0 mt-2">
-                        <a href="?controller=themdonhang" type="button" class="btn btn-danger mb-2 me-2"><i class="mdi mdi-basket me-1"></i> Nhà cung cấp</a>
+                        <a href="?controller=themnhacc" type="button" class="btn btn-danger mb-2 me-2"><i class="mdi mdi-plus-circle me-2"></i>Nhà cung cấp</a>
                         <button type="button" class="btn btn-light mb-2">Export</button>&ensp;
-                        <a href="?controller=xoadonhang" type="button" class="btn btn-danger mb-2 me-2"><i class="fa-solid fa-trash"></i> Xóa</a>
+                        <a href="#" type="button" class="btn btn-danger mb-2 me-2"><i class="fa-solid fa-trash"></i> Xóa</a>
                     </div>
                 </div><!-- end col-->
             </div>
@@ -518,7 +518,6 @@
                                     <label class="form-check-label" for="customCheck1">&nbsp;</label>
                                 </div>
                             </th>
-                            <th>Nhà cung cấp ID</th>
                             <th>Tên nhà cung cấp</th>
                             <th style="width: 125px;">Chức năng</th>
                         </tr>
@@ -533,14 +532,12 @@
                                         <label class="form-check-label" for="customCheck2">&nbsp;</label>
                                     </div>
                                 </td>
-                                <td><a href="apps-ecommerce-orders-details" class="text-body fw-bold"><?php echo $value['id'] ?></a> </td>
                                 <td>
                                     <?php echo $value['tennhacungcap'] ?>
                                 </td>
                                 
                                 <td>
-                                    <a href="?controller=suadonhang&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                    <a href="?controller=xulydonhang&method=xoa&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                    <a href="?controller=themnhacc&method=xoa&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                 </td>
                             </tr>
                         <?php  } ?>
