@@ -10,7 +10,7 @@ $miy = $db->get('sanpham', array('danhmuc_id' => 3));
 $salad = $db->get('sanpham', array('danhmuc_id' => 4));
 $douong = $db->get('sanpham', array('danhmuc_id' => 5));
 $khac = $db->get('sanpham', array('danhmuc_id' => 6));
-$danhgiabinhluan = $db->get('binhluan_danhgia', array());
+$binhluan_danhgia = $db->get('binhluan_danhgia', array('sanpham_id' => $id));
 
 $catalog = $db->get('nhacungcap',array('id'=>$sanpham[0]['nhacungcap_id']));
 require './view/V_chitietsanpham.php';

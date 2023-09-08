@@ -538,7 +538,7 @@
                                                         </div>
                                                     </td>
                                                         <td class="table-user">
-                                                            <img src="<?php echo $value['anh'] ?>" alt="table-user" class="me-2 rounded-circle">
+                                                            <img src="<?php echo $value['anh'] ?>" alt="anh_client" class="me-2 rounded-circle">
                                                         </td>
                                                         <td>
                                                             <?php echo $value['tendangnhap'] ?>

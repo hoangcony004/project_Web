@@ -198,31 +198,40 @@
                         <h2 class="sidebar-title">Đánh giá & Bình luận</h2>
 
                         <ul>
-                            <h3 style="text-align: center;">Đánh giá & Bình luận</h3>
                             <?php
-                            foreach ($danhgiabinhluan as $key => $value) { ?>
+                            foreach ($binhluan_danhgia as $key => $value) { ?>
                                 <div>
-                                    <h5>Nguyeenx Vanw a</h5>
+                                    <?php
+                                    foreach ($binhluan_danhgia as $key => $value) {
+                                        $tenkh = $db->get('khachhang', array('id' => $value['khachhang_id']));
+                                    }
+                                    ?>
+                                    <h5><?php echo $tenkh[0]['hovaten'] ?></h5>
                                     <h6>
                                         <?php
-                                        $tong = 0;
-                                        foreach ($danhgiabinhluan as $key => $value) {
-                                            $tong = count($danhgiabinhluan);
+                                        foreach ($binhluan_danhgia as $key => $value) { }
+                                        switch ($value['danhgia']) {
+                                            case '1':
+                                                echo '<i style="color: gold;" class="fa-solid fa-star"></i>';
+                                                break;
+                                            case '2':
+                                                echo '<i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i>';
+                                                break;
+                                            case '3':
+                                                echo '<i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i>';
+                                                break;
+                                            case '4':
+                                                echo '<i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i>';
+                                                break;
+                                            case '5':
+                                                echo '<i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i><i style="color: gold;" class="fa-solid fa-star"></i>';
+                                                break;
+                                            default:
+                                                # code...
+                                                break;
                                         }
                                         ?>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-
-                                        <?php
-                                        $tongdg = 0;
-                                        foreach ($danhgiabinhluan as $key => $value) {
-                                            $tongdg = count($danhgiabinhluan);
-                                        }
-                                        ?>
-                                        <p style="padding-top: 20px;"><?php echo $tongdg ?> đánh giá</p>
+                                        <p style="padding-top: 20px;"><?php echo $value['noidungbinhluan']; ?></p>
                                     </h6>
                                 </div>
                             <?php } ?>
@@ -316,11 +325,13 @@
                                                 <div class="submit-review">
                                                     <table>
                                                         <?php
-                                                        foreach ($nguyenlieu as $key => $value) { ?>
+                                                        foreach ($nguyenlieu as $key => $value) {
+                                                            $nguyenlieu1 = $db->get('sanpham', array('id' => $value['sanpham_id']));
+                                                        ?>
                                                             <tr class="cart-subtotal">
                                                                 <th>Tên sản
                                                                     phẩm: &emsp;</th>
-                                                                <td><span class="amount"><?php echo $nguyenlieu[0]['thit'] ?></span></td>
+                                                                <td><span class="amount"><?php echo $nguyenlieu1[0]['thit'] ?></span></td>
                                                             </tr>
 
                                                             <tr class="shipping">
