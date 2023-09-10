@@ -8,10 +8,8 @@ if (isset($_SESSION['ss_admin'])) {
             $hovaten = $_POST['hovaten'];
             $sodt = $_POST['sodt'];
             $tinhthanh = $_POST['tinhthanh'];
-            $quanhuyen = $_POST['quanhuyen'];
-            $xaphuong = $_POST['xaphuong'];
+            $diachichitiet = $_POST['diachichitiet'];
             $tongtien = $_POST['tongtien'];
-            $thonxom = $_POST['thonxom'];
             $trangthai = 0;
 
 
@@ -24,18 +22,7 @@ if (isset($_SESSION['ss_admin'])) {
             if ($sodt == '') {
                 $loi['sodt'] = 'Số điện thoại không được để trống!';
             }
-            if ($tinhthanh == '') {
-                $loi['tinhthanh'] = 'Tỉnh thành không được để trống!';
-            }
-            if ($quanhuyen == '') {
-                $loi['quanhuyen'] = 'Quận huyện không được để trống!';
-            }
-            if ($xaphuong == '') {
-                $loi['xaphuong'] = 'Xã phường không được để trống!';
-            }
-            if ($thonxom == '') {
-                $loi['thonxom'] = 'Thôn xóm không được để trống!';
-            }
+
             if ($tongtien == '') {
                 $loi['tongtien'] = 'Tổng tiền không được để trống!';
             }
@@ -44,9 +31,7 @@ if (isset($_SESSION['ss_admin'])) {
                     'hovaten' => $hovaten,
                     'sodienthoai' => $sodt,
                     'tinh_thanh' => $tinhthanh,
-                    'quan_huyen' => $quanhuyen,
-                    'xa_phuong' => $xaphuong,
-                    'thon_xom' => $thonxom,
+                    'diachichitiet' => $diachichitiet,
                     'tongtien' => $tongtien,
                     'trangthai' => 0
                 ));

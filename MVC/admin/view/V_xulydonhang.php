@@ -1074,24 +1074,10 @@
                                                 <?php } ?>
                                             </div>
                                             <div class="col-12">
-                                                <label class="form-label">Quận huyện: </label>
-                                                <input type="text" class="form-control" placeholder="Nhập quận huyện..." name="quanhuyen" value="<?php echo $donhang[0]['quan_huyen'] ?>">
-                                                <?php if (isset($loi['quanhuyen'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['quanhuyen'] ?></p>
-                                                <?php } ?>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label">Xã phường: </label>
-                                                <input type="text" class="form-control" placeholder="Nhập xã phường..." name="xaphuong" value="<?php echo $donhang[0]['xa_phuong'] ?>">
-                                                <?php if (isset($loi['xaphuong'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['xaphuong'] ?></p>
-                                                <?php } ?>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label">Thôn xóm</label>
-                                                <input type="text" class="form-control" placeholder="Nhập thôn xóm..." name="thonxom" value="<?php echo $donhang[0]['thon_xom'] ?>">
-                                                <?php if (isset($loi['thonxom'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['thonxom'] ?></p>
+                                                <label class="form-label">Địa chỉ chi tiết: </label>
+                                                <input type="text" class="form-control" placeholder="Nhập địa chỉ chi tiết..." name="diachichitiet" value="<?php echo $donhang[0]['diachichitiet'] ?>">
+                                                <?php if (isset($loi['diachichitiet'])) { ?>
+                                                    <p class="text-danger"><?php echo $loi['diachichitiet'] ?></p>
                                                 <?php } ?>
                                             </div>
                                             <div class="col-12">

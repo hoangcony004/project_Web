@@ -195,7 +195,14 @@
                                     <h4><?php echo $sanpham[0]['tensanpham'] ?></h4>
                                     &emsp; &emsp;<ins style="text-decoration: none; color: blue;"><?php echo number_format($sanpham[0]['giamoi']) ?>vnd</ins> &emsp;<del><?php echo number_format($sanpham[0]['giacu']) ?>vnd</del><br><br>
                                     <h3 style="margin-left: 200px;">Tổng thanh Toán: &emsp; <?php echo number_format($donhang[0]['tongtien']) ?>vnd</h3>
-                                    <p style="color: red;">Đang chờ xác nhận</p>
+                                    <p style="color: red;">
+                                        <?php
+                                        if ($value['trangthai'] == 0) { ?>
+                                    <p style="color: red;"><?php echo 'Đang chờ xác nhận' ?></p>
+                                <?php } else { ?>
+                                    <p style="color: green;"><?php echo 'Đã xác nhận' ?></p>
+                                <?php } ?>
+                                </p>
                                 </div>
                             </div>
                         <?php } ?>

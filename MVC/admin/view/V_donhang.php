@@ -524,9 +524,7 @@
                                                 <th>Tổng tiền</th>
                                                 <th>Email</th>
                                                 <th>Tỉnh thành</th>
-                                                <th>Quận huyện</th>
-                                                <th>Xã phường</th>
-                                                <th>Thôn xóm</th>
+                                                <th>Địa chỉ chi tiết</th>
                                                 <th>Trạng thái</th>
                                                 <th style="width: 125px;">Chức năng</th>
                                             </tr>
@@ -555,13 +553,7 @@
                                                         <?php echo $value['tinh_thanh'] ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $value['quan_huyen'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $value['xa_phuong'] ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $value['thon_xom'] ?>
+                                                        <?php echo $value['diachichitiet'] ?>
                                                     </td>
                                                     <td>
                                                         <h5><span class="badge badge-info-lighten">
