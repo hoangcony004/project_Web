@@ -323,32 +323,27 @@
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="ttchitiet">
                                                 <div class="submit-review">
-                                                    <table>
                                                         <?php
                                                         foreach ($nguyenlieu as $key => $value) {
-                                                            $nguyenlieu1 = $db->get('sanpham', array('id' => $value['sanpham_id']));
+                                                            //$nguyenlieu1 = $db->get('nguyenlieu', array('id' => $value['sanpham_id']));
+                                                            
                                                         ?>
-                                                            <tr class="cart-subtotal">
-                                                                <th>Tên sản
-                                                                    phẩm: &emsp;</th>
-                                                                <td><span class="amount"><?php echo $nguyenlieu1[0]['thit'] ?></span></td>
+                                                        <table>
+                                                            <tr>
+                                                                <th>Thịt:  &emsp;</th>
+                                                                <td><?php echo $nguyenlieu[0]['thit'] ?></td>
                                                             </tr>
-
-                                                            <tr class="shipping">
-                                                                <th>Kích thước
-                                                                    màn hình:
-                                                                    &emsp;</th>
-                                                                <td>6.1 inches</td>
+                                                            <tr>
+                                                                <th>Cá:  &emsp;</th>
+                                                                <td><?php echo $nguyenlieu[0]['ca'] ?></td>
                                                             </tr>
-
-                                                            <tr class="order-total">
-                                                                <th>Hệ điều
-                                                                    hành: &emsp;</th>
-                                                                <td>IOS 16</td>
+                                                            <tr>
+                                                                <th>Rau:  &emsp;</th>
+                                                                <td><?php echo $nguyenlieu[0]['rau'] ?></td>
                                                             </tr>
+                                                        </table><br>
                                                         <?php } ?>
-                                                    </table>
-                                                    <a href="#">Xem thêm</a>
+                                                    <a style="text-decoration: none;" href="#">Xem thêm</a>
                                                 </div>
                                             </div>
                                         </div>

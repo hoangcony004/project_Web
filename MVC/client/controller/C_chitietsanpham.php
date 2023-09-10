@@ -3,7 +3,7 @@
 
 $id=$_GET['id'];
 $sanpham = $db->get('sanpham',array('id'=>$id));
-$nguyenlieu = $db->get('nguyenlieu',array('id'=>$id));
+$nguyenlieu = $db->get('nguyenlieu',array('sanpham_id'=>$id));
 $pizza = $db->get('sanpham', array('danhmuc_id' => 1));
 $suonbbq = $db->get('sanpham', array('danhmuc_id' => 2));
 $miy = $db->get('sanpham', array('danhmuc_id' => 3));

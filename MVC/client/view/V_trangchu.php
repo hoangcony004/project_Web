@@ -136,7 +136,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Trang
+                        <li class="active"><a href="?controller=trangchu">Trang
                                 chủ</a></li>
                         <li><a href="?controller=cuahang">Cửa hàng</a></li>
                         <li><a href="?controller=giohang"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
