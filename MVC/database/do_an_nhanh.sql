@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th9 05, 2023 lúc 03:18 PM
+-- Thời gian đã tạo: Th9 11, 2023 lúc 03:59 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.1.17
 
@@ -89,9 +89,10 @@ CREATE TABLE `binhluan_danhgia` (
 --
 
 INSERT INTO `binhluan_danhgia` (`id`, `khachhang_id`, `sanpham_id`, `danhgia`, `noidungbinhluan`) VALUES
-(9, NULL, 11, '1', 'ACA'),
+(9, 2, 11, '1', 'ACA'),
 (10, 2, 6, '5', 'svasv'),
-(17, 8, 6, '5', 'avas');
+(17, 8, 6, '5', 'avas'),
+(18, 2, 5, '5', 'ngon qua');
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,9 @@ CREATE TABLE `chitietdonhang` (
 --
 
 INSERT INTO `chitietdonhang` (`id`, `donhang_id`, `sanpham_id`, `soluong`, `tongtien`, `diachi_chitiet`, `ngaydathang`, `ghichu`) VALUES
-(194, 108, 6, 1, 160000.00, '', '2023-09-04 13:45:55', '');
+(212, 125, 6, 1, 160000.00, '', '2023-09-11 13:51:56', ''),
+(213, 126, 7, 1, 160000.00, '', '2023-09-11 13:55:27', ''),
+(214, 127, 8, 1, 160000.00, '', '2023-09-11 13:56:36', '');
 
 -- --------------------------------------------------------
 
@@ -164,7 +167,9 @@ CREATE TABLE `donhang` (
 --
 
 INSERT INTO `donhang` (`id`, `khachhang_id`, `chitietdonhang_id`, `hovaten`, `sodienthoai`, `email`, `tinh_thanh`, `diachichitiet`, `tongtien`, `trangthai`) VALUES
-(108, 13, 194, 'nguyen van a', '5624575675', '', 'Bà Rịa - Vũng Tàu', '', 160000.00, 0);
+(125, 26, 212, 'Nguyễn Đức Hoàng', '0388937608', '', '', '', 160000.00, 0),
+(126, 25, 213, 'Nguyễn Đức Hoàng', '0388937608', 'nguyenduchoangasjhdhvhashjd', 'Bà Rịa - Vũng Tàu', '', 160000.00, 0),
+(127, 24, 214, 'Nguyễn Đức Hoàng', '5624575675', '', '', '', 160000.00, 0);
 
 -- --------------------------------------------------------
 
@@ -176,7 +181,7 @@ CREATE TABLE `khachhang` (
   `id` int(11) NOT NULL,
   `anh` varchar(50) DEFAULT NULL,
   `tendangnhap` varchar(50) DEFAULT NULL,
-  `matkhau` varchar(30) DEFAULT NULL,
+  `matkhau` varchar(100) DEFAULT NULL,
   `hovaten` varchar(50) DEFAULT NULL,
   `gioitinh` varchar(20) DEFAULT NULL,
   `diachi` varchar(50) DEFAULT NULL,
@@ -191,11 +196,10 @@ CREATE TABLE `khachhang` (
 
 INSERT INTO `khachhang` (`id`, `anh`, `tendangnhap`, `matkhau`, `hovaten`, `gioitinh`, `diachi`, `sodienthoai`, `email`, `ngaytao`) VALUES
 (2, 'img/google.png', 'client', '12345678', 'Nguyễn Đức Hoàng', 'nam', 'HCM', '0388937608', 'nguyenvana237@gmail.com', '0000-00-00 00:00:00'),
-(4, 'img/Screenshot (2).png', 'boynhangheo', '12345678', 'Nguyễn Đức Hoàng', 'nam', 'HCM', '5624575675', 'nguyenvana237@gmail.com', '2023-08-10 01:29:07'),
 (8, 'img/anhvaem.jpg', 'admin1', '12345678', 'Nguyễn Đức Hoàng', '', 'HCM', '1233456789', 'nguyenvana237@gmail.com', '2023-08-21 02:14:48'),
-(13, NULL, 'admin2', '25d55ad283aa400af464c76d713c07', NULL, NULL, NULL, '1233456789', NULL, '2023-08-30 01:11:40'),
-(15, 'img/', 'admin3', '25d55ad283aa400af464c76d713c07', 'nguyen van a', '', '', '1233456789', '', '2023-08-30 01:42:17'),
-(16, NULL, 'admin3', '2691675c9564a2ca3f2905d59c92cc', 'Nguyễn Đức Hoàng', NULL, NULL, '1233456789', NULL, '2023-08-30 01:42:29');
+(24, NULL, 'admin4', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, NULL, '1233456789', NULL, '2023-09-11 13:24:15'),
+(25, NULL, 'client1', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, NULL, '1233456789', NULL, '2023-09-11 13:28:32'),
+(26, NULL, 'boynhangheo1', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, NULL, '1233456789', NULL, '2023-09-11 13:32:57');
 
 -- --------------------------------------------------------
 
@@ -221,7 +225,7 @@ CREATE TABLE `nguyenlieu` (
 --
 
 INSERT INTO `nguyenlieu` (`id`, `sanpham_id`, `thit`, `ca`, `rau`, `cu`, `qua`, `rauthom`, `giavi`, `nguyenlieukhac`) VALUES
-(26, 60, 'sdhdadf', 'dsfhd', 'dfhdsf', 'adbsdb', '', '', '', 'fgjfg');
+(26, 60, 'Thịt bò', 'Cá lóc', 'Bắp cải', 'adbsdb', '', '', '', 'fgjfg');
 
 -- --------------------------------------------------------
 
@@ -386,13 +390,13 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `binhluan_danhgia`
 --
 ALTER TABLE `binhluan_danhgia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=215;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuc`
@@ -404,13 +408,13 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `nguyenlieu`
