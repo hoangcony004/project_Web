@@ -50,7 +50,7 @@
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Mật khẩu: </label>
                                     <div class="input-group input-group-merge">
-                                        <input type="password" class="form-control" placeholder="Nhập mật khẩu..." name="password" value="<?php echo (isset($password)) ? $password : '' ?>">
+                                        <input type="password" class="form-control" placeholder="Nhập mật khẩu..." name="password" >
 
                                     </div>
                                     <?php if (isset($loi['password'])) { ?>

@@ -20,7 +20,11 @@ if (isset($_POST['btn_dangnhap'])) {
     }
 
     if (!$loi) {
+        $password = md5($password);
         $user = $db->get('admin', array('tendangnhap' => $username));
+        // var_dump(md5($password));
+        // var_dump($user[0]['matkhau']);
+        // die;
         if (empty($user)) {
             $loi['username'] = 'Tên đăng nhập không tồn tại!';
         }
