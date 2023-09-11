@@ -90,11 +90,11 @@
                         <p class="mt-1" style="color: red;"><?php echo $loi['sdtdk'] ?></p>
                     <?php } ?>
                     <div class="field input-field">
-                        <input type="password" placeholder="Nhập mật khẩu..." class="password" name="mkdk" value="<?php echo (isset($mkdk)) ? $mkdk : '' ?>">
+                        <input type="password" placeholder="Nhập mật khẩu..." class="password" name="mkdk" value="<?php echo (isset($mkdk1)) ? $mkdk1 : '' ?>">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
-                    <?php if (isset($loi['mkdk'])) { ?>
-                        <p class="mt-1" style="color: red;"><?php echo $loi['mkdk'] ?></p>
+                    <?php if (isset($loi['mkdk1'])) { ?>
+                        <p class="mt-1" style="color: red;"><?php echo $loi['mkdk1'] ?></p>
                     <?php } ?>
                     <div class="field input-field">
                         <input type="password" placeholder="Nhập lại mật khẩu..." class="password" name="rmkdk">

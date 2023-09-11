@@ -26,4 +26,7 @@ if (isset($_SESSION['cart'])) {
     $_SESSION['cart'][$id]['soluong'] = 1;
     $_SESSION['cart'][$id]['giamoi'] = $product[0]['giamoi'];
 }
-header ('location: ?controller=giohang');
+// header ('location: ?controller=giohang');
+if (isset($_SERVER["HTTP_REFERER"])) {
+    header("Location: " . $_SERVER["HTTP_REFERER"]);
+}
