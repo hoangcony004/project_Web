@@ -58,9 +58,10 @@
                                     } ?>
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
+                                        
                                         if (isset($_SESSION['ss_client'])) {
-                                            echo '<a style="text-decoration: none;" href="#"><img src="img/user.png" width="25px" height="20px" alt>&ensp;' . $_SESSION['ss_client1'];
-                                        }
+                                            echo '<a style="text-decoration: none;" href="#">&ensp;' . $_SESSION['ss_client1'];
+                                        } 
                                         ?>
                                         </a>
                                     </div>
@@ -188,7 +189,7 @@
                         foreach ($donhang as $key => $value) { ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
-                                    <img style="width: 130px;" src="img/mi_y_sotcachua.jpeg" alt="anh">
+                                    <img style="width: 130px;" src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anh">
 
                                 </div>
                                 <div>

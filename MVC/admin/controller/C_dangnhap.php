@@ -26,9 +26,9 @@ if (isset($_POST['btn_dangnhap'])) {
         // var_dump($user[0]['matkhau']);
         // die;
         if (empty($user)) {
-            $loi['username'] = 'Tên đăng nhập không tồn tại!';
+            $loi['username'] = 'Tên đăng nhập hoặc mật khẩu không tồn tại!';
         }
-        // neu ton tai user name thif kiem tra mat khau
+        // neu ton tai user name thi kiem tra mat khau
         else {
             if ($password != $user[0]['matkhau']) {
                 $loi['password'] = 'Sai mật khẩu!';

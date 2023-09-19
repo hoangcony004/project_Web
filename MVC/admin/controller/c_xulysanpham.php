@@ -9,7 +9,6 @@ if (isset($_SESSION['ss_admin'])) {
                 $id = $_GET['id'];
                 // $data_donhangg = $db->get('oder', array('id' => $id));
                 $sanpham = $db->get('sanpham', array('id'=>$id));
-                $nguyenlieu = $db->get('nguyenlieu', array('sanpham_id'=>$id));
                 $product_catalog = $db->get('nhacungcap',array('id'=>$sanpham[0]['nhacungcap_id']));
                 $data_catalog = $db->get('nhacungcap',array());
                 if (isset($_POST['btn_suasp'])) {
@@ -22,13 +21,7 @@ if (isset($_SESSION['ss_admin'])) {
                     $giacu = $_POST['giacu'];
                     $soluong = $_POST['soluong'];
                     $thit = $_POST['thit'];
-                    $ca = $_POST['ca'];
-                    $rau = $_POST['rau'];
-                    $cu = $_POST['cu'];
-                    $qua = $_POST['qua'];
-                    $rauthom = $_POST['rauthom'];
-                    $giavi = $_POST['giavi'];
-                    $nguyenlieukhac = $_POST['nguyenlieukhac'];
+                    $nguyenlieu = $_POST['nguyenlieu'];
 
                     //echo 'ten sp la: '.$tensp;
 
@@ -77,23 +70,11 @@ if (isset($_SESSION['ss_admin'])) {
                                 'mota' => $mota,
                                 'giamoi' => $giamoi,
                                 'giacu' => $giacu,
-                                'soluong' => $soluong
+                                'soluong' => $soluong,
+                                'nguyenlieu' => $nguyenlieu
                             ),
                         array('id' => $id)
                         );
-                        $db->update('nguyenlieu', array(
-                            'sanpham_id' => $id,
-                            'thit' => $thit,
-                            'ca' => $ca,
-                            'rau' => $rau,
-                            'cu' => $cu,
-                            'qua' => $qua,
-                            'rauthom' => $rauthom,
-                            'giavi' =>$giavi,
-                            'nguyenlieukhac'=>$nguyenlieukhac
-                        ),
-                        array('sanpham_id' => $id)
-                    );
                         header('location: ?controller=danhsachsanpham');
                     }
                 }

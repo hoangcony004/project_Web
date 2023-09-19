@@ -31,22 +31,15 @@ if (isset($_POST['btn_dangnhap'])) {
                 $loi['password'] = 'Sai mật khẩu!';
             }
         }
-        // $password = md5($password);
-        // $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";  
-        // $result = mysqli_query($connect, $query);  
-        //var_dump(array('tendangnhap' => $username, 'matkhau' => $password));die;
-        //  $user = $db->get('khachhang', array('tendangnhap' => $username, 'matkhau' => $password));
-        //var_dump($user);die;
-        // gan id nguoi dung vao session
-        // $_SESSION['ss_client'] = $user[0]['id'];
-        // $_SESSION['ss_client1'] = $user[0]['hovaten'];
-        //header('location: ?controller=trangchu');
     }
     // neu thoa man taat ca dieu kien ttren (khong con loi nao say ra)
     if (!$loi) {
         // gan id nguoi dung vao session
         $_SESSION['ss_client'] = $user[0]['id'];
         $_SESSION['ss_client1'] = $user[0]['hovaten'];
+        $_SESSION['ss_client2'] = $user[0]['anh'];
+                    // var_dump($_SESSION['ss_client2']);
+            // die;
         header('location: ?controller=trangchu');
     }
     require './view/V_dangnhap_dangky.php';

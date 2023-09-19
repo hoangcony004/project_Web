@@ -12,7 +12,7 @@ if (isset($_SESSION['ss_client'])) {
         $donhang_id = 1;
         $chitietdonhang = 1;
         //$khachhang_id = $_GET['id'];
-        $khachhang_id = 1;
+        $khachhang_id = $_SESSION['ss_client'];
     
     
     
@@ -39,10 +39,10 @@ if (isset($_SESSION['ss_client'])) {
         }
     
         // $data_oder_detail = $db->get('chitietdonhang',array('donhang_id'=>$donhang_id));
-        $khachhang = $db->get('khachhang', array('id'=>$_SESSION['ss_client']));
-        foreach ($khachhang as $key => $value) {
-            $khachhang_id = $value['id'];
-        }
+        // $khachhang = $db->get('khachhang', array());
+        // foreach ($khachhang as $key => $value) {
+        //     $khachhang_id = $value['id'];
+        // }
         $chitietdonhang = $db->get('chitietdonhang', array());
         foreach ($chitietdonhang as $key => $value) {
             $chitietdonhang_id = $value['id'] ;

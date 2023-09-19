@@ -52,9 +52,10 @@
                                     } ?>
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
+                                        
                                         if (isset($_SESSION['ss_client'])) {
-                                            echo '<a style="text-decoration: none;" href="#"><img src="img/user.png" width="25px" height="20px" alt>&ensp;' . $_SESSION['ss_client1'];
-                                        }
+                                            echo '<a style="text-decoration: none;" href="#">&ensp;' . $_SESSION['ss_client1'];
+                                        } 
                                         ?>
                                         </a>
                                     </div>
@@ -324,26 +325,16 @@
                                             <div role="tabpanel" class="tab-pane fade" id="ttchitiet">
                                                 <div class="submit-review">
                                                         <?php
-                                                        foreach ($nguyenlieu as $key => $value) {
-                                                            //$nguyenlieu1 = $db->get('nguyenlieu', array('id' => $value['sanpham_id']));
-                                                            
+                                                        foreach ($sanpham as $key => $value) {
                                                         ?>
                                                         <table>
                                                             <tr>
-                                                                <th>Thịt:  &emsp;</th>
-                                                                <td><?php echo $nguyenlieu[0]['thit'] ?></td>
+                                                                <th>Các nguyên liệu chính:  &emsp;</th>
+                                                                <td><?php echo $sanpham[0]['nguyenlieu']?></td>
                                                             </tr>
-                                                            <tr>
-                                                                <th>Cá:  &emsp;</th>
-                                                                <td><?php echo $nguyenlieu[0]['ca'] ?></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>Rau:  &emsp;</th>
-                                                                <td><?php echo $nguyenlieu[0]['rau'] ?></td>
-                                                            </tr>
+                                                            
                                                         </table><br>
                                                         <?php } ?>
-                                                    <a style="text-decoration: none;" href="#">Xem thêm</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -545,39 +545,10 @@
                                                                     <p class="text-danger"><?php echo $loi['soluong'] ?></p>
                                                                 <?php } ?>
                                                             </div>
-                                                            <hr>
-                                                            <h4>Nguyên liệu</h4>
                                                             <div class="col-12">
-                                                                <label class="form-label">Thịt: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên thịt(hoặc để trống)..." name="thit" value="">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Cá: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên cá(hoặc để trống)..." name="ca" value="">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Rau: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rau" value="">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Củ: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập Tên củ(hoặc để trống)..." name="cu" value="">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Quả: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên quả(hoặc để trống)..." name="qua" value="">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Rau thơm: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên rau(hoặc để trống)..." name="rauthom" value="">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Gia vị: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên gia vị(hoặc để trống)..." name="giavi" value="">
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label class="form-label">Nguyên liệu khác: </label>
-                                                                <input type="text" class="form-control" placeholder="Nhập tên nguyên liệu(hoặc để trống)..." name="nguyenlieukhac" value="">
+                                                                <label class="form-label">Nguyên liệu: </label>
+                                                                <textarea id="" cols="25" rows="2.5" name="nguyenlieu" placeholder="Nhập nguyên liệu(hoặc để trống)..."></textarea>
+
                                                             </div>
 
                                                         </div><!--end row-->
