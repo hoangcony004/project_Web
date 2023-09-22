@@ -84,7 +84,7 @@
                         <p class="mt-1" style="color: red;"><?php echo $loi['tendk'] ?></p>
                     <?php } ?>
                     <div class="field input-field">
-                        <input type="text" placeholder="Số điện thoại..." class="input" name="sdtdk" value="<?php echo (isset($sdtdk)) ? $sdtdk : '' ?>">
+                        <input type="text" placeholder="Họ và tên..." class="input" name="sdtdk" value="<?php echo (isset($sdtdk)) ? $sdtdk : '' ?>">
                     </div>
                     <?php if (isset($loi['sdtdk'])) { ?>
                         <p class="mt-1" style="color: red;"><?php echo $loi['sdtdk'] ?></p>

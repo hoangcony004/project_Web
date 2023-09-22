@@ -1,15 +1,11 @@
 <?php
+// kiem tra dang nhap
 if (isset($_SESSION['ss_admin'])) {
     $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
-
+    // su dung mang 2 chieu kiem tra xem tai khoan co quyen khong
     if ($user[0]['cap'] == 1) {
         $data_nhacungcap = $db->get('nhacungcap', array());
-
-        //$data_sanpham=$db->get('sanpham',array('id'));
-        // foreach ($data_sanpham as $key => $value) {
-        //     $data_sanpham += $value['id'];
-        // }
-        
+        // lay du lieu tu o input nguoi dung nhap 
         if (isset($_POST['btn_themsp'])) {
             $idncc = $_POST['idncc'];
             $iddm = $_POST['iddm'];
@@ -21,7 +17,7 @@ if (isset($_SESSION['ss_admin'])) {
             $soluong = $_POST['soluong'];
             $nguyenlieu = $_POST['nguyenlieu'];
             $id_sanpham = 1;
-            //echo 'ten la: '.$tensp;
+
             // khai bao loi
             $loi = array();
             if ($idncc == '') {
@@ -55,10 +51,8 @@ if (isset($_SESSION['ss_admin'])) {
             $uploadOk = 1;
             move_uploaded_file($_FILES['anh']['tmp_name'], $link_full);
 
-           // echo 'anh la" '.$link_full;
-
-
             if (!$loi) {
+                // su dung function da co de su dung 
                 $db->insert('sanpham', array(
                     'nhacungcap_id' => $idncc,
                     'danhmuc_id' => $iddm,
@@ -70,38 +64,18 @@ if (isset($_SESSION['ss_admin'])) {
                     'nguyenlieu' => $nguyenlieu,
                     'soluong' =>$soluong
                 ));
-                // var_dump(mysqli_insert_id($db));die;
-                // $data_sanpham = $db->get('sanpham', array());
-                // foreach ($data_sanpham as $key => $value) {
-                //     $id_sanpham += $value['id'];
-                // }
-                // var_dump($id_donhang);
-                // die;
-
+                // chuyen huong nguoi dung
                 header('location: ?controller=danhsachsanpham');
                
             }
            
         }
     } else {
+        // hien thi thong bao
         echo '<script>alert("Bạn không có quyền")</script>';
     }
 } else {
+    // chuyen huong nguoi dung
     header('location: ?controller=dangnhap');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 require './view/v_themsanpham.php';

@@ -52,10 +52,10 @@
                                     } ?>
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
-                                        
+
                                         if (isset($_SESSION['ss_client'])) {
                                             echo '<a style="text-decoration: none;" href="#">&ensp;' . $_SESSION['ss_client1'];
-                                        } 
+                                        }
                                         ?>
                                         </a>
                                     </div>
@@ -210,7 +210,8 @@
                                     <h5><?php echo $tenkh[0]['hovaten'] ?></h5>
                                     <h6>
                                         <?php
-                                        foreach ($binhluan_danhgia as $key => $value) { }
+                                        foreach ($binhluan_danhgia as $key => $value) {
+                                        }
                                         switch ($value['danhgia']) {
                                             case '1':
                                                 echo '<i style="color: gold;" class="fa-solid fa-star"></i>';
@@ -252,13 +253,13 @@
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
                                     </div>
 
                                     <div class="product-gallery">
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt>
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
+                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
                                     </div>
                                 </div>
                             </div>
@@ -272,14 +273,14 @@
                                             <ins><?php echo number_format($sanpham[0]['giamoi']) ?>vnd</ins> <del><?php echo number_format($sanpham[0]['giacu']) ?>vnd</del>
                                         </div>
 
-                                        <form action class="cart">
+                                        <form action="?controller=themgiohang&id=<?php echo $value['id'] ?>" class="cart" method="post">
                                             <div class="quantity" style="margin-top: 5px;">
-                                                <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" max="10" step="1">
+                                                <input style="width: 80px;" type="number" size="5" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" max="1000" step="1">
                                             </div>
-
+                                            <button style="height: 35px; margin-top: 3px;" type="submit" name="btn_themgiohang"><i class="fa-sharp fa-solid fa-cart-shopping"></i> Thêm giỏ hàng</button>
+                                            <!-- <a style="margin-top: 5px;" class="add_to_cart_button" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                                Thêm giỏ hàng</a> -->
                                         </form>
-                                        <a style="margin-top: 5px;" class="add_to_cart_button" href="?controller=themgiohang&id=<?php echo $value['id'] ?>"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                            Thêm giỏ hàng</a>
                                         <div class="product-inner-category">
                                             <p>Sản phẩm: <a style="text-decoration: none;" href="#"><?php echo $sanpham[0]['tensanpham'] ?></a>.
                                                 Đến từ: <a style="text-decoration: none;" href="#">annhanh247</a>.
@@ -324,17 +325,17 @@
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="ttchitiet">
                                                 <div class="submit-review">
-                                                        <?php
-                                                        foreach ($sanpham as $key => $value) {
-                                                        ?>
+                                                    <?php
+                                                    foreach ($sanpham as $key => $value) {
+                                                    ?>
                                                         <table>
                                                             <tr>
-                                                                <th>Các nguyên liệu chính:  &emsp;</th>
-                                                                <td><?php echo $sanpham[0]['nguyenlieu']?></td>
+                                                                <th>Các nguyên liệu chính: &emsp;</th>
+                                                                <td><?php echo $sanpham[0]['nguyenlieu'] ?></td>
                                                             </tr>
-                                                            
+
                                                         </table><br>
-                                                        <?php } ?>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -351,7 +352,7 @@
                                 foreach ($pizza as $key => $value) { ?>
                                     <div class="single-product">
                                         <div class="product-f-image">
-                                            <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
+                                            <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anhsanpham"></a>
 
                                         </div>
                                         <h2><a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>

@@ -1,18 +1,22 @@
 <?php
 if (isset($_SESSION['ss_admin'])) {
+    // su dung function da co de su dung 
     $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
     $data_donhang = $db->get('oder', array());
     $data_dathang = $db->get('oder', array());
     $data_sanpham = $db->get('order_detail', array());
 
 
-
+    // su dung mang 2 chieu kiem tra xem tai khoan co quyen khong
     if ($user[0]['cap'] == 1) {
+        // lay method tu url 
         $method = $_GET['method'];
         switch ($method) {
             case 'sua':
+                // lay id tu url ve 
                 $id = $_GET['id'];
                 $data_donhangg = $db->get('oder', array('id' => $id));
+                // lay du lieu tu o input nguoi dung nhap
                 if (isset($_POST['btn_suadh'])) {
                     $hoten = $_POST['hoten'];
                     $diachi = $_POST['diachi'];
@@ -20,7 +24,7 @@ if (isset($_SESSION['ss_admin'])) {
                     $giatien = $_POST['giatien'];
                     $email = $_POST['email'];
                     $tongtien = $_POST['tongtien'];
-
+                    // khai bao cac loi
                     $loi = array();
                     if ($hoten == '') {
                         $loi['hoten'] = 'Họ tên không được để trống!';
@@ -42,6 +46,7 @@ if (isset($_SESSION['ss_admin'])) {
                     }
 
                     if (!$loi) {
+                        // su dung function da co de su dung 
                         $db->update(
                             'oder',
                             array(
@@ -54,14 +59,18 @@ if (isset($_SESSION['ss_admin'])) {
                             ),
                             array('id' => $id)
                         );
+                        // chuyen huong nguoi dung
                         header('location: ?controller=trangchu');
                     }
                 }
                 require './view/v_suadonhang.php';
                 break;
             case 'xoadh':
+                // lay id tu url ve 
                 $id = $_GET['id'];
+                // su dung function da co de su dung 
                 $db->delete('oder', array('id' => $id));
+                // chuyen huong nguoi dung
                 header('location: ?controller=trangchu');
                 break;
         }
@@ -69,4 +78,7 @@ if (isset($_SESSION['ss_admin'])) {
         echo '<script>alert("Bạn không có quyền")</script>';
         //header('location: ?controller=dsnhanvien');
     }
+}else {
+    // chuyen huong nguoi dung
+    header('location: ?controller=dangnhap');
 }

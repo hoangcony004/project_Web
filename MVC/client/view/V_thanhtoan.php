@@ -52,10 +52,10 @@
                                     } ?>
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
-                                        
+
                                         if (isset($_SESSION['ss_client'])) {
                                             echo '<a style="text-decoration: none;" href="#">&ensp;' . $_SESSION['ss_client1'];
-                                        } 
+                                        }
                                         ?>
                                         </a>
                                     </div>
@@ -239,8 +239,7 @@
                                                 <p id="billing_company_field" class="form-row form-row-wide">
                                                     <label class for="billing_company">Số
                                                         điện thoại <abbr title="required" class="required">*</abbr></label>
-                                                    <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text "
-                                                    style="width: 500px; height: 40px;">
+                                                    <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text " style="width: 500px; height: 40px;">
                                                 </p>
 
                                                 <p id="billing_company_field" class="form-row form-row-wide">
@@ -357,42 +356,44 @@
                                                         cộng</th>
                                                 </tr>
                                             </thead>
-                                            <?php
-                                            $tongtien = 0;
-                                            if (isset($_SESSION['cart'])) {
-                                                foreach ($_SESSION['cart'] as $key => $value) {
-                                                    $tongtien += $value['soluong'] * $value['giamoi'];
-                                            ?>
-                                                    <tbody>
+
+                                            <tbody>
+                                                <?php
+                                                $tongtien = 0;
+                                                if (isset($_SESSION['cart'])) {
+                                                    foreach ($_SESSION['cart'] as $key => $value) {
+                                                        $tongtien += $value['soluong'] * $value['giamoi'];
+                                                ?>
                                                         <tr class="cart_item">
                                                             <td class="product-name">
                                                                 Tổng sản phẩm <strong class="product-quantity">×
-                                                                    <?php echo $soluong ?></strong> </td>
+                                                                    <?php echo $value['soluong'] ?></strong> </td>
                                                             <td class="product-total">
-                                                                <span class="amount"><?php echo number_format($tongtien) ?>vnd</span>
+                                                                <span class="amount"><?php echo number_format($value['soluong'] * $value['giamoi']) ?>vnd</span>
                                                             </td>
                                                         </tr>
-                                                    </tbody>
-                                                    <tfoot>
+                                            </tbody>
+                                    <?php }
+                                                } ?>
+                                    <tfoot>
 
-                                                        <tr class="shipping">
-                                                            <th>Phương thức giao hàng</th>
-                                                            <td>
+                                        <tr class="shipping">
+                                            <th>Phương thức giao hàng</th>
+                                            <td>
 
-                                                                Miễn phí vận chuyển
-                                                                <input type="hidden" class="shipping_method" value="free_shipping" id="shipping_method_0" data-index="0" name="shipping_method[0]">
-                                                            </td>
-                                                        </tr>
+                                                Miễn phí vận chuyển
+                                                <input type="hidden" class="shipping_method" value="free_shipping" id="shipping_method_0" data-index="0" name="shipping_method[0]">
+                                            </td>
+                                        </tr>
 
-                                                        <tr class="order-total">
-                                                            <th>Tổng đơn hàng</th>
-                                                            <td><strong><span class="amount"><?php echo number_format($tongtien) ?>vnd</span></strong>
-                                                            </td>
-                                                        </tr>
+                                        <tr class="order-total">
+                                            <th>Tổng Thanh Toán</th>
+                                            <td><strong><span class="amount"><?php echo number_format($tongtien) ?>vnd</span></strong>
+                                            </td>
+                                        </tr>
 
-                                                    </tfoot>
-                                            <?php }
-                                            } ?>
+                                    </tfoot>
+
                                         </table>
 
                                         <div id="payment">

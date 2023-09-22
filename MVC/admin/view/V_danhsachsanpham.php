@@ -504,7 +504,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                <div class="row mb-2">
+                                    <div class="row mb-2">
                                         <div class="col-xl-8">
                                             <form class="row gy-2 gx-2 align-items-center justify-content-xl-start justify-content-between" action="#" method="get">
                                                 <div class="col-auto">
@@ -540,11 +540,12 @@
                                                         </div>
                                                     </td>
                                                     <th class="all">Sản phẩm</th>
-                                                    <th>Nhà cung cấp ID</th>
+                                                    <th>Nhà cung cấp</th>
                                                     <th>Ngày thêm sản phẩm</th>
                                                     <th>Giá bán</th>
                                                     <th>Số lượng</th>
                                                     <th>Mô tả</th>
+                                                    <th>Nguyên liệu</th>
                                                     <th style="width: 85px;">Hành động</th>
                                                 </tr>
                                             </thead>
@@ -570,8 +571,13 @@
                                                                 <span class="text-warning mdi mdi-star"></span>
                                                             </p>
                                                         </td>
+                                                        <?php
+                                                        foreach ($data_sanpham as $key => $value) {
+                                                            $nhacungcap = $db->get('nhacungcap', array('id' => $value['nhacungcap_id']));
+                                                        }
+                                                        ?>
                                                         <td>
-                                                            <?php echo $value['nhacungcap_id'] ?>
+                                                            <?php echo $nhacungcap[0]['tennhacungcap'] ?>
                                                         </td>
                                                         <td>
                                                             <?php echo $value['ngaythemsanpham'] ?>
@@ -585,6 +591,9 @@
                                                         </td>
                                                         <td>
                                                             <?php echo $value['mota'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $value['nguyenlieu'] ?>
                                                         </td>
 
                                                         <td class="table-action">

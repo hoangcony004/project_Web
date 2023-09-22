@@ -6,51 +6,46 @@ if (isset($_SESSION['ss_admin'])) {
         $method = $_GET['method'];
         switch ($method) {
             case 'duyet':
+                // lay id tu url ve 
                 $id = $_GET['id'];
+                // su dung function da co de su dung 
                 $oder = $db->get('donhang', array('id' => $id));
                 $chitietdonhang = $db->get('chitietdonhang', array('donhang_id' => $id));
                 // lap lay donhang_id
                 foreach ($chitietdonhang as $key => $value) {
-                    $donhang_id = $value['donhang_id'] ;
+                    $donhang_id = $value['donhang_id'];
                 }
                 // echo 'id la'.$donhang_id;
                 // die;
                 $db->update('donhang', array('trangthai' => 1), array('id' => $id));
-                // $db->update('sanpham', array(
-                //     'soluong' => -1,
-                    
-                // ),array('id'=> $id));
-
-
-
-
-
-
-
-
+                // chuyen huong nguoi dung
                 header('location: ?controller=donhang');
-                //require './view/v_trangchu-admin1.php';
                 break;
             case 'xoa':
+                // lay id tu url ve 
                 $id = $_GET['id'];
+                // su dung function da co de su dung 
                 $db->delete('donhang', array('id' => $id));
+                $db->delete('chitietdonhang', array('donhang_id' => $id));
+                // chuyen huong nguoi dung
                 header('location: ?controller=donhang');
                 break;
             case 'sua':
+                // lay id tu url ve 
                 $id = $_GET['id'];
+                // su dung function da co de su dung 
                 $donhang = $db->get('donhang', array('id' => $id));
+                // lay du lieu tu o input nguoi dung nhap 
                 if (isset($_POST['btn_xulydonhang'])) {
                     $hovaten = $_POST['hovaten'];
                     $email = $_POST['email'];
                     $sodt = $_POST['sodt'];
                     $tinhthanh = $_POST['tinhthanh'];
-                    $quanhuyen = $_POST['quanhuyen'];
-                    $xaphuong = $_POST['xaphuong'];
                     $tongtien = $_POST['tongtien'];
-                    $thonxom = $_POST['thonxom'];
+                    $diachichitiet = $_POST['diachichitiet'];
                     $trangthai = 0;
 
-
+                    // khai bao bien chua cac loi 
                     $loi = array();
                     if ($hovaten == '') {
                         $loi['hovaten'] = 'Họ và tên không được để trống!';
@@ -64,32 +59,29 @@ if (isset($_SESSION['ss_admin'])) {
                     if ($tinhthanh == '') {
                         $loi['tinhthanh'] = 'Tỉnh thành không được để trống!';
                     }
-                    if ($quanhuyen == '') {
-                        $loi['quanhuyen'] = 'Quận huyện không được để trống!';
-                    }
-                    if ($xaphuong == '') {
-                        $loi['xaphuong'] = 'Xã phường không được để trống!';
-                    }
-                    if ($thonxom == '') {
-                        $loi['thonxom'] = 'Thôn xóm không được để trống!';
+                    if ($diachichitiet == '') {
+                        $loi['diachichitiet'] = 'Địa chỉ chi tiết không được để trống!';
                     }
                     if ($tongtien == '') {
                         $loi['tongtien'] = 'Tổng tiền không được để trống!';
                     }
 
-
+                    
                     if (!$loi) {
-                        $db->update('donhang', array(
-                            'hovaten' => $hovaten,
-                            'sodienthoai' => $sodt,
-                            'email' => $email,
-                            'tinh_thanh' => $tinhthanh,
-                            'quan_huyen' => $quanhuyen,
-                            'xa_phuong' => $xaphuong,
-                            'thon_xom' => $thonxom,
-                            'tongtien' => $tongtien,
-                        ),array('id'=> $id)
-                    );
+                        // su dung function da co de su dung 
+                        $db->update(
+                            'donhang',
+                            array(
+                                'hovaten' => $hovaten,
+                                'sodienthoai' => $sodt,
+                                'email' => $email,
+                                'tinh_thanh' => $tinhthanh,
+                                'diachichitiet' => $diachichitiet,
+                                'tongtien' => $tongtien,
+                            ),
+                            array('id' => $id)
+                        );
+                        // chuyen huong nguoi dung 
                         header('location: ?controller=donhang');
                     }
                 }
@@ -97,7 +89,7 @@ if (isset($_SESSION['ss_admin'])) {
                 break;
         }
     } else {
+        // hien thi thong bao 
         echo '<script>alert("Bạn không có quyền")</script>';
-        //header('location: ?controller=dsnhanvien');
     }
 }

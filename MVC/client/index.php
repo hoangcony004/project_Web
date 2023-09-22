@@ -1,18 +1,18 @@
 <?php
+// khoi tao session
 session_start();
 include 'model/m_database.php';
 $db = new database();
 
 if (isset($_GET['controller'])) {
+    // lay gia tri controller tu url luu vao bien
     $controller = $_GET['controller'];
 } else {
     $controller = 'trangchu';
 }
-// echo 'controller/C_'. $controller. '.php';
-// die;
 
 
-
+// noi chuoi controller
  include 'controller/C_' . $controller . '.php';
 
 // switch ($controller) {

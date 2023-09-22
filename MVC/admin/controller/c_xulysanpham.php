@@ -1,16 +1,21 @@
 <?php
+// kiem tra dang nhap
 if (isset($_SESSION['ss_admin'])) {
     $user = $db->get('admin', array('id' => $_SESSION['ss_admin']));
 
+    // su dung mang 2 chieu kiem tra xem tai khoan co quyen khong
     if ($user[0]['cap'] == 1) {
+        // lay method tu url ve
         $method = $_GET['method'];
         switch ($method) {
             case 'sua':
+                // lay id tu url ve 
                 $id = $_GET['id'];
-                // $data_donhangg = $db->get('oder', array('id' => $id));
+                // su dung function da co de su dung 
                 $sanpham = $db->get('sanpham', array('id'=>$id));
                 $product_catalog = $db->get('nhacungcap',array('id'=>$sanpham[0]['nhacungcap_id']));
                 $data_catalog = $db->get('nhacungcap',array());
+                // lay du lieu tu o input nguoi dung nhap
                 if (isset($_POST['btn_suasp'])) {
                     $idncc = $_POST['idncc'];
                     $iddm = $_POST['iddm'];
@@ -23,8 +28,7 @@ if (isset($_SESSION['ss_admin'])) {
                     $thit = $_POST['thit'];
                     $nguyenlieu = $_POST['nguyenlieu'];
 
-                    //echo 'ten sp la: '.$tensp;
-
+                    // khai bao loi
                     $loi = array();
                     if ($idncc == '') {
                         $loi['idncc'] = 'Nhà cung cấp ID không được để trống!';
@@ -60,6 +64,7 @@ if (isset($_SESSION['ss_admin'])) {
                     move_uploaded_file($_FILES['anh']['tmp_name'], $link_full);
 
                     if (!$loi) {
+                        // su dung function da co de su dung 
                         $db->update(
                             'sanpham',
                             array(
@@ -75,21 +80,27 @@ if (isset($_SESSION['ss_admin'])) {
                             ),
                         array('id' => $id)
                         );
+                        // chuyen huong nguoi dung
                         header('location: ?controller=danhsachsanpham');
                     }
                 }
                 require './view/V_xulysanpham.php';
                 break;
             case 'xoasp':
+                // lay id tu url ve 
                 $id = $_GET['id'];
+                // su dung function da co de su dung 
                 $db->delete('sanpham', array('id' => $id));
+                // chuyen huong nguoi dung
                 header('location: ?controller=danhsachsanpham');
                 break;
         }
     } else {
+        // hien thi thong bao
         echo '<script>alert("Bạn không có quyền")</script>';
-        //header('location: ?controller=dsnhanvien');
     }
+}else {
+    // chuyen huong nguoi dung
+    header('location: ?controller=dangnhap');
 }
-//require './view/V_suasanpham.php';
-//header('location: ?controller=danhsachsanpham');
+

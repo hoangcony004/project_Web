@@ -1,16 +1,17 @@
 <?php
 // kiem tra nguoi dung da dan nhap chua
 if (isset($_SESSION['ss_admin'])) {
-    // neu da dang nhap thi chuyen nguoi dung den trang quan tri
+    // neu da dang nhap thi chuyen nguoi dung den trang chu
     header('location: ?controller=trangchu');
 }
-// kiem tra nguoi dung cos click vao nut lodin khoong
+// kiem tra nguoi dung co click vao nut login khong
+// lay du lieu tu o input nguoi dung nhap vao
 if (isset($_POST['btn_dangnhap'])) {
-    // lay du lieu ve
+    // lay du lieu ve luu vao bien 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    // kiem tra tai khoan
-    // b1 tao 1 mang luu tru cac loi
+
+    // tao 1 mang luu tru cac loi
     $loi = array();
     if ($username == '') {
         $loi['username'] = 'Tên đăng nhập không được để trống!';
@@ -20,25 +21,27 @@ if (isset($_POST['btn_dangnhap'])) {
     }
 
     if (!$loi) {
+        // kiem tra ma hoa mat khau 
         $password = md5($password);
+        // su dung function da co de su dung 
         $user = $db->get('admin', array('tendangnhap' => $username));
-        // var_dump(md5($password));
-        // var_dump($user[0]['matkhau']);
-        // die;
+        // kiem tra user nhap vao co khop voi database khong 
         if (empty($user)) {
+            // luu loi vao bien 
             $loi['username'] = 'Tên đăng nhập hoặc mật khẩu không tồn tại!';
         }
-        // neu ton tai user name thi kiem tra mat khau
+        // ton tai user name thi kiem tra mat khau
         else {
             if ($password != $user[0]['matkhau']) {
                 $loi['password'] = 'Sai mật khẩu!';
             }
         }
     }
-    // neu thoa man taat ca dieu kien ttren (khong con loi nao say ra)
+    // neu thoa man tat ca dieu kien tren (khong con loi nao say ra)
     if (!$loi) {
         // gan id nguoi dung vao session
         $_SESSION['ss_admin'] = $user[0]['id'];
+        // khi da xong chuyen huong nguoi dung
         header('location: ?controller=trangchu');
     }
 }

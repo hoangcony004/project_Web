@@ -1,7 +1,7 @@
 <?php
 class database
 {
-    // khai báo các biến kết nôid tới cơ sở dũ liệu
+    // khai báo các biến kết nối tới cơ sở dữ liệu
     protected $conn = null;
     protected $host = 'localhost';
     protected $user = 'root';
@@ -24,12 +24,13 @@ class database
         $sql = "SELECT * FROM $table";
         if (!empty($condittion)) {
             $sql .= " WHERE";
+            // lặp lấy key và value
             foreach ($condittion as $key => $value) {
                 $sql .= " $key = '$value' AND";
             }
+            // cắt and ở cuối
             $sql = trim($sql, "AND");
         }
-
         // thực thi câu lệnh
         $query = mysqli_query($this->conn, $sql);
         $ketqua = array();
@@ -40,7 +41,7 @@ class database
         }
         return $ketqua;
     }
-    // viet function lay du lieu theo dieu kien
+    // tạo phương thức lấy dữ liêụ theo điều kiện
     public function get_like($table, $column, $value)
     {
         $sql = "SELECT * FROM $table WHERE $column LIKE '%$value%'";
@@ -54,26 +55,26 @@ class database
         }
         return $ketqua;
     }
-    //viet function insert 
+    // tạo phương thức thêm dữ liệu vào database
     public function insert($table, $data = array())
     {
-        //B1: laays gia tri cua key cho vao mot mang 
+        // lấy giá trị key cho vào mảng
         $keys = array_keys($data);
-        // b2: xu ly chuoi voi mang (bien mang thanh moot chuoi)
+        //  Xử lý chuỗi với mảng (biến mảng thành một chuỗi)
         $column = implode(",", $keys);
-        //B3: xu ly gia tri
+        // xử lý giá trị
         $value_str = '';
         foreach ($data as $key => $value) {
             $value_str .= "'$value',";
         }
-        // B4: xoa dau phay o cuoi
+        // xóa dấu phẩy ở cuối
         $value_str = trim($value_str, ",");
-        //b5 viet câu lệnh sql
+        // viết câu lệnh sql
         $sql = "INSERT INTO $table ($column) VALUES ($value_str)";
         $query = mysqli_query($this->conn, $sql);
         return $query;
     }
-    // viet ham xoa
+    // tạo phương thức xóa dữ liệu 
     public function delete($table, $condition = array())
     {
         $sql = " DELETE FROM $table WHERE ";
@@ -85,16 +86,16 @@ class database
         $query = mysqli_query($this->conn, $sql);
         return $query;
     }
-    //  Hàm sửa dữ liệu trong cơ sở dữ liệu
+    //  tạo phương thức sửa dữ liệu trong database
     function update($table, $data = array(), $condition = array())
     {
         $value_str = '';
         foreach ($data as $key => $value) {
             $value_str .= "$key ='$value',";
         }
-        //xoa dau phay o cuoi
+        // xóa dấu phẩy ở cuối
         $value_str = trim($value_str, ",");
-        //viet câu lệnh sql
+        // viết câu lệnh sql
         $sql = "UPDATE $table SET $value_str WHERE ";
 
         foreach ($condition as $key => $value) {
@@ -104,40 +105,5 @@ class database
 
         $query = mysqli_query($this->conn, $sql);
         return $query;
-    }
-    public function getOrdId()
-    {
-        return $this->conn->insert_id;
-    }
-}
-class User
-{
-    // khai báo các biến kết nôid tới cơ sở dũ liệu
-    protected $conn = null;
-    protected $host = 'localhost';
-    protected $user = 'root';
-    protected $pass = '';
-    protected $dbname = 'do_an_nhanh';
-
-    // tạo phương thức kết nối 
-    public function __construct()
-    {
-        $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
-        if (!$this->conn) {
-            echo 'Kết nối thất bại...';
-            exit();
-        }
-    }
-
-    private $users = [
-        'username' => '5f4dcc3b5aa765d61d8327deb882cf99' // MD5 hash of 'password'
-    ];
-
-    public function getUserByUsername($username)
-    {
-        if (array_key_exists($username, $this->users)) {
-            return $this->users[$username];
-        }
-        return false;
     }
 }

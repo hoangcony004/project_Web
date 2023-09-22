@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th9 11, 2023 lúc 03:59 PM
+-- Thời gian đã tạo: Th9 22, 2023 lúc 04:55 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.1.17
 
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `anh` varchar(50) DEFAULT NULL,
   `tendangnhap` varchar(50) DEFAULT NULL,
-  `matkhau` varchar(30) DEFAULT NULL,
+  `matkhau` varchar(100) DEFAULT NULL,
   `hovaten` varchar(50) DEFAULT NULL,
   `gioitinh` varchar(20) DEFAULT NULL,
   `diachi` varchar(50) DEFAULT NULL,
@@ -47,8 +47,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `anh`, `tendangnhap`, `matkhau`, `hovaten`, `gioitinh`, `diachi`, `sodienthoai`, `email`, `ngaythemadmin`, `chucvu`, `cap`) VALUES
-(1, '', 'admin', '12345678', 'Nguyễn Đức Hoàng', 'Nam', 'Phú Thọ', '388937608', 'nguyenduchoang522@gmail.com', '0000-00-00 00:00:00', 'Quản lý', 1),
-(2, '', 'admin_pro', '12345678', 'Nguyễn Văn A', 'Nam', 'Hà Nội', '388937608', 'nguyenvana123@gmail.com', '0000-00-00 00:00:00', 'Nhân viên', 2);
+(2, '', 'admin_pro', '210b48b542659fb951a80a15c5997513', 'Nguyễn Văn A', 'Nam', 'Hà Nội', '388937608', 'nguyenvana123@gmail.com', '2023-09-12 01:02:16', 'Nhân viên', 2),
+(3, NULL, 'admin', '25d55ad283aa400af464c76d713c07ad', 'Nguyễn Đức Hoàng', 'Nam', '[value-7]', '12345678', '[value-9]', '2023-09-12 01:02:12', 'Quản Lý', 1);
 
 -- --------------------------------------------------------
 
@@ -89,10 +89,8 @@ CREATE TABLE `binhluan_danhgia` (
 --
 
 INSERT INTO `binhluan_danhgia` (`id`, `khachhang_id`, `sanpham_id`, `danhgia`, `noidungbinhluan`) VALUES
-(9, 2, 11, '1', 'ACA'),
-(10, 2, 6, '5', 'svasv'),
-(17, 8, 6, '5', 'avas'),
-(18, 2, 5, '5', 'ngon qua');
+(24, 25, 60, '5', 'test'),
+(25, 25, 2, '4', 'fdgsdag');
 
 -- --------------------------------------------------------
 
@@ -116,9 +114,8 @@ CREATE TABLE `chitietdonhang` (
 --
 
 INSERT INTO `chitietdonhang` (`id`, `donhang_id`, `sanpham_id`, `soluong`, `tongtien`, `diachi_chitiet`, `ngaydathang`, `ghichu`) VALUES
-(212, 125, 6, 1, 160000.00, '', '2023-09-11 13:51:56', ''),
-(213, 126, 7, 1, 160000.00, '', '2023-09-11 13:55:27', ''),
-(214, 127, 8, 1, 160000.00, '', '2023-09-11 13:56:36', '');
+(271, 0, 7, 9, 1440000.00, '', '2023-09-22 02:40:42', ''),
+(272, 181, 6, 1, 160000.00, '', '2023-09-22 02:41:05', '');
 
 -- --------------------------------------------------------
 
@@ -141,7 +138,8 @@ INSERT INTO `danhmuc` (`id`, `tendanhmuc`) VALUES
 (3, 'Mì Ý'),
 (4, 'Salad'),
 (5, 'Đồ uống'),
-(6, 'Khác');
+(6, 'Khác'),
+(7, '[value-2]');
 
 -- --------------------------------------------------------
 
@@ -151,8 +149,7 @@ INSERT INTO `danhmuc` (`id`, `tendanhmuc`) VALUES
 
 CREATE TABLE `donhang` (
   `id` int(11) NOT NULL,
-  `khachhang_id` int(11) DEFAULT NULL,
-  `chitietdonhang_id` int(11) NOT NULL,
+  `khachhang_id` int(11) NOT NULL,
   `hovaten` varchar(50) NOT NULL,
   `sodienthoai` varchar(11) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
@@ -166,10 +163,8 @@ CREATE TABLE `donhang` (
 -- Đang đổ dữ liệu cho bảng `donhang`
 --
 
-INSERT INTO `donhang` (`id`, `khachhang_id`, `chitietdonhang_id`, `hovaten`, `sodienthoai`, `email`, `tinh_thanh`, `diachichitiet`, `tongtien`, `trangthai`) VALUES
-(125, 26, 212, 'Nguyễn Đức Hoàng', '0388937608', '', '', '', 160000.00, 0),
-(126, 25, 213, 'Nguyễn Đức Hoàng', '0388937608', 'nguyenduchoangasjhdhvhashjd', 'Bà Rịa - Vũng Tàu', '', 160000.00, 0),
-(127, 24, 214, 'Nguyễn Đức Hoàng', '5624575675', '', '', '', 160000.00, 0);
+INSERT INTO `donhang` (`id`, `khachhang_id`, `hovaten`, `sodienthoai`, `email`, `tinh_thanh`, `diachichitiet`, `tongtien`, `trangthai`) VALUES
+(180, 25, 'Nguyễn Đức Hoàng', '', 'nguyenduchoangasjhdhvhashjd', '', '', 1440000.00, 0);
 
 -- --------------------------------------------------------
 
@@ -195,37 +190,7 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`id`, `anh`, `tendangnhap`, `matkhau`, `hovaten`, `gioitinh`, `diachi`, `sodienthoai`, `email`, `ngaytao`) VALUES
-(2, 'img/google.png', 'client', '12345678', 'Nguyễn Đức Hoàng', 'nam', 'HCM', '0388937608', 'nguyenvana237@gmail.com', '0000-00-00 00:00:00'),
-(8, 'img/anhvaem.jpg', 'admin1', '12345678', 'Nguyễn Đức Hoàng', '', 'HCM', '1233456789', 'nguyenvana237@gmail.com', '2023-08-21 02:14:48'),
-(24, NULL, 'admin4', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, NULL, '1233456789', NULL, '2023-09-11 13:24:15'),
-(25, NULL, 'client1', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, NULL, '1233456789', NULL, '2023-09-11 13:28:32'),
-(26, NULL, 'boynhangheo1', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, NULL, '1233456789', NULL, '2023-09-11 13:32:57');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `nguyenlieu`
---
-
-CREATE TABLE `nguyenlieu` (
-  `id` int(11) NOT NULL,
-  `sanpham_id` int(11) DEFAULT NULL,
-  `thit` varchar(50) DEFAULT NULL,
-  `ca` varchar(50) DEFAULT NULL,
-  `rau` varchar(50) DEFAULT NULL,
-  `cu` varchar(50) DEFAULT NULL,
-  `qua` varchar(50) DEFAULT NULL,
-  `rauthom` varchar(50) DEFAULT NULL,
-  `giavi` varchar(50) DEFAULT NULL,
-  `nguyenlieukhac` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `nguyenlieu`
---
-
-INSERT INTO `nguyenlieu` (`id`, `sanpham_id`, `thit`, `ca`, `rau`, `cu`, `qua`, `rauthom`, `giavi`, `nguyenlieukhac`) VALUES
-(26, 60, 'Thịt bò', 'Cá lóc', 'Bắp cải', 'adbsdb', '', '', '', 'fgjfg');
+(25, 'img/mi_y.jpg', 'client', '25d55ad283aa400af464c76d713c07ad', 'Nguyễn Đức Hoàng', '', 'HÀ Nội', '1233456789', 'nguyenvana237@gmail.com', '2023-09-11 13:28:32');
 
 -- --------------------------------------------------------
 
@@ -265,6 +230,7 @@ CREATE TABLE `sanpham` (
   `giacu` decimal(15,2) DEFAULT NULL,
   `soluong` int(11) DEFAULT NULL,
   `mota` varchar(500) DEFAULT NULL,
+  `nguyenlieu` varchar(500) NOT NULL,
   `ngaythemsanpham` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -272,30 +238,30 @@ CREATE TABLE `sanpham` (
 -- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
-INSERT INTO `sanpham` (`id`, `nhacungcap_id`, `danhmuc_id`, `tensanpham`, `anhsanpham`, `giamoi`, `giacu`, `soluong`, `mota`, `ngaythemsanpham`) VALUES
-(1, 1, 1, 'Pizza', 'img/pizza_raucu.jpg', 70000.00, 90000.00, 123, 'pizza ngon quá chừng', '2023-08-16 21:33:20'),
-(2, 2, 1, 'Pizza Xúc Xích', 'img/pizza_xucxich.jpg', 79000.00, 89000.00, 123, 'pizaa ngon quá', '2023-08-17 06:08:53'),
-(3, 3, 1, 'Pizza Nấm', 'img/pizza_nam.jpg', 79000.00, 89000.00, 123, 'pizaa ngon quá', '2023-08-17 06:08:59'),
-(4, 4, 1, 'Pizza Phô mai', 'img/pizza_phomai.jpg', 79000.00, 89000.00, 123, 'pizaa ngon quá', '2023-08-17 06:09:03'),
-(5, 1, 2, 'Sườn BBQ', 'img/suon_bbq.jpg', 160000.00, 145000.00, 123, 'Sườn ngon quá', '2023-08-17 06:09:06'),
-(6, 2, 2, 'Sườn BBQ 1', 'img/suon_bbq_nuongngo.jpeg', 160000.00, 145000.00, 123, 'Sườn ngon quá', '2023-08-17 06:09:09'),
-(7, 3, 2, 'Sườn BBQ 2', 'img/suon_bbq1.jpg', 160000.00, 145000.00, 123, 'Sườn ngon quá', '2023-08-17 06:09:17'),
-(8, 4, 2, 'Cơm Sườn', 'img/com-suon-nuong-bbq.png', 160000.00, 145000.00, 123, 'Sườn ngon quá', '2023-08-17 06:09:21'),
-(9, 1, 3, 'Mì Ý', 'img/humberger.jpg', 80000.00, 90000.00, 12345, 'tesstcsbf', '2023-08-16 21:33:44'),
-(10, 2, 3, 'Mì Ý Sốt Cà Chua', 'img/mi_y_sotcachua.jpeg', 110000.00, 120000.00, 123, 'Mì ý ngon quá', '2023-08-17 06:09:25'),
-(11, 3, 3, 'Mì Ý Xúc Xích', 'img/mi-y-xuc-xich.webp', 90000.00, 100000.00, 123, 'Mì ý ngon quá', '2023-08-17 06:09:29'),
-(12, 4, 3, 'Mì Ý Sốt Bò', 'img/mi_y_sotbobam.jpg', 160000.00, 145000.00, 123, 'Mì Ý ngon quá', '2023-08-17 06:09:32'),
-(13, 1, 4, 'Salad Nấm', 'img/salad_nam.jpg', 110000.00, 120000.00, 123, 'Salad ý ngon quá', '2023-08-17 06:09:35'),
-(14, 2, 4, 'Salad Rau Củ', 'img/salad_raucu.jpg', 90000.00, 100000.00, 123, 'Salad ngon quá', '2023-08-17 06:09:38'),
-(15, 3, 4, 'Salad Thịt Bò', 'img/salad_thitbo.jpg', 160000.00, 145000.00, 123, 'Salad ngon quá', '2023-08-17 06:09:41'),
-(16, 4, 4, 'Salad Tôm', 'img/salad_tom.webp', 160000.00, 145000.00, 123, 'Salad ngon quá', '2023-08-17 06:09:45'),
-(17, 1, 5, 'Trà Sữa Dâu Tây', 'img/sua-vi-dau.jpg', 110000.00, 120000.00, 123, 'Trà sữa ngon quá', '2023-08-17 06:09:48'),
-(18, 2, 5, 'Trà Sữa Matcha', 'img/tra-sua-matcha.jpg', 90000.00, 100000.00, 123, 'Trà sữa ngon quá', '2023-08-17 06:09:50'),
-(19, 3, 5, 'Trà sữa Đường đen', 'img/ts_tranchauduongden.jpeg', 160000.00, 145000.00, 123, 'Trà sữa ngon quá', '2023-08-17 06:09:55'),
-(20, 1, 6, 'Phô Mai Que', 'img/phomaique.jpg', 110000.00, 120000.00, 123, 'Phô mai ngon quá', '2023-08-17 06:09:58'),
-(21, 2, 6, 'Khoai Tây Chiên', 'img/khoataychien.webp', 90000.00, 100000.00, 123, 'Khoai tây ngon quá', '2023-08-17 06:10:01'),
-(22, 3, 6, 'Đế Pizza', 'img/de_pizza.jpg', 160000.00, 145000.00, 123, 'Đế ngon quá', '2023-08-17 06:10:03'),
-(60, 4, 6, 'Trà sữatrà 6', 'img/ts_tranchauduongden.jpeg', 25000.00, 30000.00, 208, 'tets', '2023-08-19 01:53:31');
+INSERT INTO `sanpham` (`id`, `nhacungcap_id`, `danhmuc_id`, `tensanpham`, `anhsanpham`, `giamoi`, `giacu`, `soluong`, `mota`, `nguyenlieu`, `ngaythemsanpham`) VALUES
+(1, 1, 1, 'Pizza', 'img/pizza_raucu.jpg', 70000.00, 90000.00, 123, 'pizza ngon quá chừng', 'ádgs', '2023-08-16 21:33:20'),
+(2, 2, 1, 'Pizza Xúc Xích', 'img/pizza_xucxich.jpg', 79000.00, 89000.00, 123, 'pizaa ngon quá', 'sdgsd', '2023-08-17 06:08:53'),
+(3, 3, 1, 'Pizza Nấm', 'img/pizza_nam.jpg', 79000.00, 89000.00, 123, 'pizaa ngon quá', 'xcvxcv', '2023-08-17 06:08:59'),
+(4, 4, 1, 'Pizza Phô mai', 'img/pizza_phomai.jpg', 79000.00, 89000.00, 123, 'pizaa ngon quá', 'xvczv', '2023-08-17 06:09:03'),
+(5, 1, 2, 'Sườn BBQ', 'img/suon_bbq.jpg', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'dfhvcb', '2023-08-17 06:09:06'),
+(6, 2, 2, 'Sườn BBQ 1', 'img/suon_bbq_nuongngo.jpeg', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'xcvxc', '2023-08-17 06:09:09'),
+(7, 3, 2, 'Sườn BBQ 2', 'img/suon_bbq1.jpg', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'cvbvc', '2023-08-17 06:09:17'),
+(8, 4, 2, 'Cơm Sườn', 'img/com-suon-nuong-bbq.png', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'cvb xc', '2023-08-17 06:09:21'),
+(9, 1, 3, 'Mì Ý', 'img/humberger.jpg', 80000.00, 90000.00, 12345, 'tesstcsbf', 'xzzxa', '2023-08-16 21:33:44'),
+(10, 2, 3, 'Mì Ý Sốt Cà Chua', 'img/mi_y_sotcachua.jpeg', 110000.00, 120000.00, 123, 'Mì ý ngon quá', 'dfhvc', '2023-08-17 06:09:25'),
+(11, 3, 3, 'Mì Ý Xúc Xích', 'img/mi-y-xuc-xich.webp', 90000.00, 100000.00, 123, 'Mì ý ngon quá', 'xcbvxzcs', '2023-08-17 06:09:29'),
+(12, 4, 3, 'Mì Ý Sốt Bò', 'img/mi_y_sotbobam.jpg', 160000.00, 145000.00, 123, 'Mì Ý ngon quá', 'dfhcv', '2023-08-17 06:09:32'),
+(13, 1, 4, 'Salad Nấm', 'img/salad_nam.jpg', 110000.00, 120000.00, 123, 'Salad ý ngon quá', 'xcvx', '2023-08-17 06:09:35'),
+(14, 2, 4, 'Salad Rau Củ', 'img/salad_raucu.jpg', 90000.00, 100000.00, 123, 'Salad ngon quá', 'fgndc', '2023-08-17 06:09:38'),
+(15, 3, 4, 'Salad Thịt Bò', 'img/salad_thitbo.jpg', 160000.00, 145000.00, 123, 'Salad ngon quá', 'cvngf', '2023-08-17 06:09:41'),
+(16, 4, 4, 'Salad Tôm', 'img/salad_tom.webp', 160000.00, 145000.00, 123, 'Salad ngon quá', 'fgncx', '2023-08-17 06:09:45'),
+(17, 1, 5, 'Trà Sữa Dâu Tây', 'img/sua-vi-dau.jpg', 110000.00, 120000.00, 123, 'Trà sữa ngon quá', 'cvbfg', '2023-08-17 06:09:48'),
+(18, 2, 5, 'Trà Sữa Matcha', 'img/tra-sua-matcha.jpg', 90000.00, 100000.00, 123, 'Trà sữa ngon quá', 'fdsc', '2023-08-17 06:09:50'),
+(19, 3, 5, 'Trà sữa Đường đen', 'img/ts_tranchauduongden.jpeg', 160000.00, 145000.00, 123, 'Trà sữa ngon quá', 'cbsd', '2023-08-17 06:09:55'),
+(20, 1, 6, 'Phô Mai Que', 'img/phomaique.jpg', 110000.00, 120000.00, 123, 'Phô mai ngon quá', 'dfhgre', '2023-08-17 06:09:58'),
+(21, 2, 6, 'Khoai Tây Chiên', 'img/khoataychien.webp', 90000.00, 100000.00, 123, 'Khoai tây ngon quá', 'dfha', '2023-08-17 06:10:01'),
+(22, 3, 6, 'Đế Pizza', 'img/de_pizza.jpg', 160000.00, 145000.00, 123, 'Đế ngon quá', 'xcbad', '2023-08-17 06:10:03'),
+(60, 4, 6, 'Trà sữatrà 6', 'img/de_pizza.jpg', 25000.00, 30000.00, 208, 'tets', 'ágsedrh', '2023-08-19 01:53:31');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -326,7 +292,7 @@ ALTER TABLE `binhluan_danhgia`
 --
 ALTER TABLE `chitietdonhang`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_donhang` (`donhang_id`,`sanpham_id`),
+  -- ADD UNIQUE KEY `donhang_id` (`donhang_id`,`sanpham_id`),
   ADD KEY `id_sanpham` (`sanpham_id`);
 
 --
@@ -340,21 +306,14 @@ ALTER TABLE `danhmuc`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `chitietdonhang_id` (`chitietdonhang_id`),
-  ADD UNIQUE KEY `id_khachhang` (`khachhang_id`);
+    ADD UNIQUE KEY `chitietdonhang_id` (`chitietdonhang_id`);
+  -- ADD UNIQUE KEY `id_khachhang` (`khachhang_id`);
 
 --
 -- Chỉ mục cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `nguyenlieu`
---
-ALTER TABLE `nguyenlieu`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_sanpham` (`sanpham_id`);
 
 --
 -- Chỉ mục cho bảng `nhacungcap`
@@ -378,7 +337,7 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `banner`
@@ -390,36 +349,30 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `binhluan_danhgia`
 --
 ALTER TABLE `binhluan_danhgia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=215;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=277;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuc`
 --
 ALTER TABLE `danhmuc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
---
--- AUTO_INCREMENT cho bảng `nguyenlieu`
---
-ALTER TABLE `nguyenlieu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
@@ -432,7 +385,7 @@ ALTER TABLE `nhacungcap`
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -456,12 +409,6 @@ ALTER TABLE `chitietdonhang`
 --
 ALTER TABLE `donhang`
   ADD CONSTRAINT `donhang_ibfk_1` FOREIGN KEY (`khachhang_id`) REFERENCES `khachhang` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Các ràng buộc cho bảng `nguyenlieu`
---
-ALTER TABLE `nguyenlieu`
-  ADD CONSTRAINT `nguyenlieu_ibfk_1` FOREIGN KEY (`sanpham_id`) REFERENCES `sanpham` (`id`);
 
 --
 -- Các ràng buộc cho bảng `sanpham`

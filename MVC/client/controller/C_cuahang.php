@@ -1,9 +1,9 @@
 <?php
 
-
+// lay du lieu tu url 
 if (isset($_GET['timkiem'])) {
     $keyword = $_GET['timkiem'];
-
+    // su dung function da co de su dung 
     $product = $db->get_like('sanpham', 'tensanpham', $keyword);
     $khachhang = $db->get('khachhang', array());
     $sanpham = $db->get('sanpham', array());
@@ -14,6 +14,7 @@ if (isset($_GET['timkiem'])) {
     $douong = $db->get('sanpham', array('danhmuc_id' => 5));
     $khac = $db->get('sanpham', array());
 } else {
+    // su dung function da co de su dung 
     $product = $db->get('sanpham', array());
     $khachhang = $db->get('khachhang', array());
     $sanpham = $db->get('sanpham', array());

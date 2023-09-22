@@ -490,14 +490,14 @@
                                     <a style="padding:27px;" href="?controller=donhang">Quay lại đơn hàng</a>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Đơn hàng này của người dùng có ID là:&emsp;<?php echo $id ?></h4>
+                                    <h4 class="header-title mb-3">Chi tiết đơn hàng này của đơn hàng có ID là:&emsp;<?php echo $id ?></h4>
 
                                     <div class="table-responsive">
                                         <table class="table mb-0">
                                             <thead class="table-light">
                                                 <tr>
                                                     <th>Đơn hàng ID</th>
-                                                    <th>Sản phẩm ID</th>
+                                                    <th>Sản phẩm</th>
                                                     <th>Số lượng</th>
                                                     <th>Tổng tiền</th>
                                                     <th>Ngày giờ đặt hàng</th>
@@ -506,10 +506,12 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                foreach ($data_ctdonhang as $key => $value) { ?>
+                                                foreach ($data_ctdonhang as $key => $value) {
+                                                    $tensanpham = $db->get('sanpham', array('id' => $value['sanpham_id']));
+                                                ?>
                                                     <tr>
                                                         <td><?php echo $value['donhang_id'] ?></td>
-                                                        <td><?php echo $value['sanpham_id'] ?></td>
+                                                        <td><?php echo $tensanpham[0]['tensanpham'] ?></td>
                                                         <td><?php echo $value['soluong'] ?></td>
                                                         <td><?php echo number_format($value['tongtien']) ?>vnd</td>
                                                         <td><?php echo $value['ngaydathang'] ?></td>
@@ -528,34 +530,33 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Order Summary</h4>
+                                    <h4 class="header-title mb-3">Bảng giá đơn hàng</h4>
 
                                     <div class="table-responsive">
                                         <table class="table mb-0">
                                             <thead class="table-light">
                                                 <tr>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
+                                                    <th>Chỉ mục</th>
+                                                    <th>Giá</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Grand Total :</td>
-                                                    <td>$1641</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Shipping Charge :</td>
-                                                    <td>$23</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Estimated Tax : </td>
-                                                    <td>$19.22</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Total :</th>
-                                                    <th>$1683.22</th>
-                                                </tr>
-                                            </tbody>
+                                            <?php
+                                            foreach ($data_donhang as $key => $value) { ?>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Tổng đơn hàng :</td>
+                                                        <td><?php echo number_format($value['tongtien']) ?>vnd</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Phí vận chuyển :</td>
+                                                        <td>Miễn phí vận chuyển</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Tổng cộng :</th>
+                                                        <th><?php echo number_format($value['tongtien']) ?>vnd</th>
+                                                    </tr>
+                                                </tbody>
+                                            <?php } ?>
                                         </table>
                                     </div>
                                     <!-- end table-responsive -->
@@ -571,17 +572,19 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mb-3">Shipping Information</h4>
+                                    <h4 class="header-title mb-3">Thông tin vận chuyển</h4>
+                                    <?php
+                                    foreach ($data_donhang as $key => $value) {
+                                        $khachhang = $db->get('khachhang', array('id' => $value['khachhang_id']));
+                                    ?>
 
-                                    <h5>Stanley Jones</h5>
+                                        <h5><?php echo $khachhang[0]['hovaten'] ?></h5>
 
-                                    <address class="mb-0 font-14 address-lg">
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890 <br>
-                                        <abbr title="Mobile">M:</abbr> (+01) 12345 67890
-                                    </address>
-
+                                        <address class="mb-0 font-14 address-lg">
+                                            <p>Địa chỉ: <?php echo $value['diachichitiet'] ?></p>
+                                            <abbr title="Phone">Số điện thoại: </abbr> <?php echo $value['sodienthoai'] ?>
+                                        </address>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div> <!-- end col -->
