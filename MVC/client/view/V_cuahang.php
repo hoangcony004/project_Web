@@ -101,7 +101,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="#"><img style="width: 70px; border-radius: 50%;" src="img/logo_annhanh.jpg"></a></h1>
+                        <h1><a href="?controller=trangchu"><img style="width: 70px; border-radius: 50%;" src="img/logo_annhanh.jpg"></a></h1>
                     </div>
                 </div>
                 <?php if (isset($_SESSION['cart'])) {

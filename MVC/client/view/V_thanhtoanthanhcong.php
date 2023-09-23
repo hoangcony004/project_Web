@@ -128,9 +128,9 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="shop.html">Cửa hàng</a></li>
-                        <li class="active"><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <li><a href="?controller=trangchu">Trang chủ</a></li>
+                        <li><a href="?controller=cuahang">Cửa hàng</a></li>
+                        <li class="active"><a href="?controller=giohang"><i class="fa-sharp fa-solid fa-cart-shopping"></i>
                                 Giỏ hàng</a></li>
                         <li><a href="#">Giới thiệu</a></li>
                         <li><a href="#">Tin tức</a></li>

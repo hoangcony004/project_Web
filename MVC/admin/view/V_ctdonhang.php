@@ -385,7 +385,7 @@
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <a href="?controller=dangxuat" class="dropdown-item notify-item">
                                     <i class="mdi mdi-logout me-1"></i>
                                     <span>Đăng xuất</span>
                                 </a>
