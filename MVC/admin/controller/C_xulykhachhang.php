@@ -27,28 +27,21 @@ if (isset($_SESSION['ss_admin'])) {
                     $password = $_POST['password'];
                     $hoten = $_POST['hoten'];
                     $sodt = $_POST['sodt'];
+                    $email = $_POST['email'];
+                    $diachi = $_POST['diachi'];
         
                     // khai bao loi
                     $loi = array();
-                    if ($username == '') {
-                        $loi['username'] = 'Tên đăng nhập không được để trống!';
-                    }
-                    if ($password == '') {
-                        $loi['password'] = 'Mật khẩu không được để trống!';
-                    }
-                    if ($hoten == '') {
-                        $loi['hoten'] = 'Họ và tên không được để trống!';
-                    }
-                    if ($sodt == '') {
-                        $loi['sodt'] = 'Số điện thoại không được để trống!';
-                    }
+                    $password = md5($password);
                     if (!$loi) {
                         // su dung function da co de su dung 
                         $db->update('khachhang', array(
                             'tendangnhap' => $username,
                             'matkhau' => $password,
                             'hovaten' => $hoten,
-                            'sodienthoai' => $sodt
+                            'sodienthoai' => $sodt,
+                            'email' => $email,
+                            'diachi' => $diachi
                         ),array('id' => $id)
                         );
                         // chuyen huong nguoi dung

@@ -25,6 +25,7 @@ if (isset($_SESSION['ss_client'])) {
 
             $db->insert('chitietdonhang', array(
                 'donhang_id' => $donhang_id,
+                'khachhang_id' => $_SESSION['ss_client'],
                 'sanpham_id' => $value['id'],
                 'soluong' => $value['soluong'],
                 'tongtien' => $value['soluong'] * $value['giamoi'],

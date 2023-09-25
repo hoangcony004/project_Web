@@ -11,13 +11,27 @@ if (isset($_SESSION['ss_admin'])) {
                 // su dung function da co de su dung 
                 $oder = $db->get('donhang', array('id' => $id));
                 $chitietdonhang = $db->get('chitietdonhang', array('donhang_id' => $id));
-                // lap lay donhang_id
+                // lap lay donhang_id va san pham
                 foreach ($chitietdonhang as $key => $value) {
+                    $sanpham = $db->get('sanpham', array('id' => $value['sanpham_id']));
+                    $soluongkho = $sanpham[0]['soluong'];
                     $donhang_id = $value['donhang_id'];
+                    $soluongdamua = $value['soluong'];
                 }
                 // echo 'id la'.$donhang_id;
                 // die;
                 $db->update('donhang', array('trangthai' => 1), array('id' => $id));
+
+                // tru san pham trong database
+                $tongsanpham  = $soluongkho-$soluongdamua;
+                $db->update(
+                    'sanpham',
+                    array(
+                        'soluong' => $tongsanpham
+                    ),
+                    array('id' => $sanpham[0]['id'])
+                );
+
                 // chuyen huong nguoi dung
                 header('location: ?controller=donhang');
                 break;
@@ -47,24 +61,6 @@ if (isset($_SESSION['ss_admin'])) {
 
                     // khai bao bien chua cac loi 
                     $loi = array();
-                    if ($hovaten == '') {
-                        $loi['hovaten'] = 'Họ và tên không được để trống!';
-                    }
-                    if ($email == '') {
-                        $loi['email'] = 'Email không được để trống!';
-                    }
-                    if ($sodt == '') {
-                        $loi['sodt'] = 'Số điện thoại không được để trống!';
-                    }
-                    if ($tinhthanh == '') {
-                        $loi['tinhthanh'] = 'Tỉnh thành không được để trống!';
-                    }
-                    if ($diachichitiet == '') {
-                        $loi['diachichitiet'] = 'Địa chỉ chi tiết không được để trống!';
-                    }
-                    if ($tongtien == '') {
-                        $loi['tongtien'] = 'Tổng tiền không được để trống!';
-                    }
 
                     
                     if (!$loi) {

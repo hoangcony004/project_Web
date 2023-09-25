@@ -52,10 +52,10 @@
                                     } ?>
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
-                                        
+
                                         if (isset($_SESSION['ss_client'])) {
                                             echo '<a style="text-decoration: none;" href="#">&ensp;' . $_SESSION['ss_client1'];
-                                        } 
+                                        }
                                         ?>
                                         </a>
                                     </div>
@@ -250,7 +250,11 @@
                                 </table>
                             </form>
                             <div>
-                                <a style="text-decoration: none;" href="?controller=donhang&id=<?php echo $_SESSION['ss_client'] ?>">Xem đơn hàng</a>
+                                <?php if (isset($_SESSION['ss_client'])) {
+                                    echo '<a style="text-decoration: none;" href="?controller=donhang&id=<?php echo $_SESSION["ss_client"] ?>Xem đơn hàng</a>';
+                                } else {
+                                } ?>
+
                             </div><br>
                             <div class="cart-collaterals">
 

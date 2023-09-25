@@ -1048,44 +1048,32 @@
                                             <div class="col-12">
                                                 <label class="form-label">Họ và tên: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập họ và tên..." name="hovaten" value="<?php echo $donhang[0]['hovaten'] ?>">
-                                                <?php if (isset($loi['hovaten'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['hovaten'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Số điện thoại: </label>
                                                 <input type="number" class="form-control" placeholder="Nhập Số điện thoại..." name="sodt" value="<?php echo $donhang[0]['sodienthoai'] ?>">
-                                                <?php if (isset($loi['sodt'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['sodt'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Email: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập email..." name="email" value="<?php echo $donhang[0]['email'] ?>">
-                                                <?php if (isset($loi['email'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['eamil'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Tỉnh thành: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập tỉnh thành..." name="tinhthanh" value="<?php echo $donhang[0]['tinh_thanh'] ?>">
-                                                <?php if (isset($loi['tinhthanh'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['tinhthanh'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Địa chỉ chi tiết: </label>
                                                 <input type="text" class="form-control" placeholder="Nhập địa chỉ chi tiết..." name="diachichitiet" value="<?php echo $donhang[0]['diachichitiet'] ?>">
-                                                <?php if (isset($loi['diachichitiet'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['diachichitiet'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Tổng tiền</label>
                                                 <input type="text" class="form-control" placeholder="Nhập tổng tiền..." name="tongtien" value="<?php echo $donhang[0]['tongtien'] ?>">
-                                                <?php if (isset($loi['tongtien'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['tongtien'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <button class="btn btn-primary px-4" type="submit" name="btn_xulydonhang"><i class="fa-solid fa-pen"></i> Sửa đơn hàng</button>

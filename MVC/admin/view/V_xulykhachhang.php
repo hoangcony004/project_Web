@@ -480,30 +480,32 @@
                                             <div class="col-12">
                                                 <label class="form-label">Tên tài khoản</label>
                                                 <input type="text" class="form-control" placeholder="Nhập tên tài khoản..." name="username" value="<?php echo $data_khachhang[0]['tendangnhap'] ?>">
-                                                <?php if (isset($loi['username'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['username'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Mật khẩu</label>
                                                 <input type="password" class="form-control" placeholder="Nhập Mật khẩu..." name="password" value="<?php echo $data_khachhang[0]['matkhau'] ?>">
-                                                <?php if (isset($loi['password'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['password'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Họ và tên</label>
                                                 <input type="text" class="form-control" placeholder="Nhập họ và tên..." name="hoten" value="<?php echo $data_khachhang[0]['hovaten'] ?>">
-                                                <?php if (isset($loi['hoten'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['hoten'] ?></p>
-                                                <?php } ?>
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <label class="form-label">Số điện thoại</label>
                                                 <input type="number" class="form-control" placeholder="Nhập số điện thoại..." name="sodt" value="<?php echo $data_khachhang[0]['sodienthoai'] ?>">
-                                                <?php if (isset($loi['sodt'])) { ?>
-                                                    <p class="text-danger"><?php echo $loi['sodt'] ?></p>
-                                                <?php } ?>
+                                                
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Email</label>
+                                                <input type="text" class="form-control" placeholder="Nhập email..." name="email" value="<?php echo $data_khachhang[0]['email'] ?>">
+                                                
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Địa chỉ</label>
+                                                <input type="text" class="form-control" placeholder="Nhập địa chỉ..." name="diachi" value="<?php echo $data_khachhang[0]['diachi'] ?>">
+                                                
                                             </div>
                                             <div class="col-12">
                                                 <button class="btn btn-primary px-4" type="submit" name="btn_suakh"><i class="fa-solid fa-pen"></i> Cập nhật khách hàng</button>

@@ -58,10 +58,10 @@
                                     } ?>
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
-                                        
+
                                         if (isset($_SESSION['ss_client'])) {
                                             echo '<a style="text-decoration: none;" href="#">&ensp;' . $_SESSION['ss_client1'];
-                                        } 
+                                        }
                                         ?>
                                         </a>
                                     </div>
@@ -186,22 +186,28 @@
                     <h2>Chờ Xác Nhận</h2>
                     <div style="margin-left: 500px;">
                         <?php
-                        foreach ($donhang as $key => $value) { ?>
+                        foreach ($chitietdonhang as $key => $value) {
+                            $sanpham = $db->get('sanpham', array('id' => $value['sanpham_id']));
+                        ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
-                                    <img style="width: 130px;" src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anh">
+                                    <img style="width: 150px; height: 80px;" src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anh">
 
                                 </div>
                                 <div>
                                     <h4><?php echo $sanpham[0]['tensanpham'] ?></h4>
+                                    <p>Số lượng <?php echo $value['soluong']?></p>
                                     &emsp; &emsp;<ins style="text-decoration: none; color: blue;"><?php echo number_format($sanpham[0]['giamoi']) ?>vnd</ins> &emsp;<del><?php echo number_format($sanpham[0]['giacu']) ?>vnd</del><br><br>
-                                    <h3 style="margin-left: 200px;">Tổng thanh Toán: &emsp; <?php echo number_format($donhang[0]['tongtien']) ?>vnd</h3>
+                                    <?php
+                                    foreach ($donhang as $key => $value) { ?>
+                                        <h3 style="margin-left: 200px;">Tổng thanh Toán: &emsp; <?php echo number_format($value['tongtien']) ?>vnd</h3>
                                         <?php
                                         if ($value['trangthai'] == 0) { ?>
-                                    <p style="color: red;"><?php echo 'Đang chờ xác nhận' ?></p>
-                                <?php } else { ?>
-                                    <p style="color: green;"><?php echo 'Đã xác nhận' ?></p>
-                                <?php } ?>
+                                            <p style="color: red;"><?php echo 'Đang chờ xác nhận' ?></p>
+                                        <?php } else { ?>
+                                            <p style="color: green;"><?php echo 'Đã xác nhận đơn hàng' ?></p>
+                                    <?php }
+                                    } ?>
                                 </div>
                             </div>
                         <?php } ?>

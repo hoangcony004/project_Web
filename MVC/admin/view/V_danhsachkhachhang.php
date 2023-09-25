@@ -510,20 +510,21 @@
                                             </form>
                                             <thead>
                                                 <tr>
-                                                <th style="width: 20px;">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="customCheck1">
-                                                        <label class="form-check-label" for="customCheck1">&nbsp;</label>
-                                                    </div>
-                                                </th>
+                                                    <th style="width: 20px;">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                            <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                                        </div>
+                                                    </th>
                                                     <th>Ảnh</th>
                                                     <th>Tên đăng nhập</th>
+                                                    <!-- <th>Mật khẩu</th> -->
                                                     <th>Họ và tên</th>
                                                     <th>Số điện thoại</th>
                                                     <th>Email</th>
                                                     <th>Địa chỉ</th>
                                                     <th>Ngày thêm khách hàng</th>
-                                                    <th>Trạng thái</th>
+
                                                     <th style="width: 75px;">Chức năng</th>
                                                 </tr>
                                             </thead>
@@ -531,18 +532,21 @@
                                                 <?php
                                                 foreach ($data_khachhang as $key => $value) { ?>
                                                     <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                            <label class="form-check-label" for="customCheck2">&nbsp;</label>
-                                                        </div>
-                                                    </td>
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
                                                         <td class="table-user">
                                                             <img src="<?php echo $value['anh'] ?>" alt="anh_client" class="me-2 rounded-circle">
                                                         </td>
                                                         <td>
                                                             <?php echo $value['tendangnhap'] ?>
                                                         </td>
+                                                        <!-- <td>
+                                                            <?php // echo $value['matkhau'] ?>
+                                                        </td> -->
                                                         <td>
                                                             <a href="#" class="text-body fw-semibold"><?php echo $value['hovaten'] ?></a>
                                                         </td>
@@ -558,10 +562,6 @@
                                                         <td>
                                                             <?php echo $value['ngaytao'] ?>
                                                         </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Tích cực</span>
-                                                        </td>
-
                                                         <td>
                                                             <a href="?controller=xulykhachhang&method=suakh&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
                                                             <a href="?controller=xulykhachhang&method=xoakh&id=<?php echo $value['id'] ?>" class="action-icon"> <i class="mdi mdi-delete"></i></a>

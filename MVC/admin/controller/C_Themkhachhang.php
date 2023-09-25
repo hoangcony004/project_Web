@@ -25,6 +25,7 @@ if (isset($_SESSION['ss_admin'])) {
             if ($sodt == '') {
                 $loi['sodt'] = 'Số điện thoại không được để trống!';
             }
+            $password = md5($password);
             if (!$loi) {
                 // su dung function da co de su dung 
                 $db->insert('khachhang', array(
