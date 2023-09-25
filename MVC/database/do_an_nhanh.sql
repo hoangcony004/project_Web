@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th9 22, 2023 lúc 04:55 AM
+-- Thời gian đã tạo: Th9 25, 2023 lúc 04:27 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.1.17
 
@@ -89,7 +89,6 @@ CREATE TABLE `binhluan_danhgia` (
 --
 
 INSERT INTO `binhluan_danhgia` (`id`, `khachhang_id`, `sanpham_id`, `danhgia`, `noidungbinhluan`) VALUES
-(24, 25, 60, '5', 'test'),
 (25, 25, 2, '4', 'fdgsdag');
 
 -- --------------------------------------------------------
@@ -100,6 +99,7 @@ INSERT INTO `binhluan_danhgia` (`id`, `khachhang_id`, `sanpham_id`, `danhgia`, `
 
 CREATE TABLE `chitietdonhang` (
   `id` int(11) NOT NULL,
+  `khachhang_id` int(11) NOT NULL,
   `donhang_id` int(11) DEFAULT NULL,
   `sanpham_id` int(11) DEFAULT NULL,
   `soluong` int(11) DEFAULT NULL,
@@ -113,9 +113,9 @@ CREATE TABLE `chitietdonhang` (
 -- Đang đổ dữ liệu cho bảng `chitietdonhang`
 --
 
-INSERT INTO `chitietdonhang` (`id`, `donhang_id`, `sanpham_id`, `soluong`, `tongtien`, `diachi_chitiet`, `ngaydathang`, `ghichu`) VALUES
-(271, 0, 7, 9, 1440000.00, '', '2023-09-22 02:40:42', ''),
-(272, 181, 6, 1, 160000.00, '', '2023-09-22 02:41:05', '');
+INSERT INTO `chitietdonhang` (`id`, `khachhang_id`, `donhang_id`, `sanpham_id`, `soluong`, `tongtien`, `diachi_chitiet`, `ngaydathang`, `ghichu`) VALUES
+(283, 27, 184, 5, 1, 160000.00, '', '2023-09-25 14:21:29', 'dfhsd'),
+(284, 25, 185, 8, 1, 160000.00, '', '2023-09-25 14:22:15', 'ghkg');
 
 -- --------------------------------------------------------
 
@@ -164,7 +164,8 @@ CREATE TABLE `donhang` (
 --
 
 INSERT INTO `donhang` (`id`, `khachhang_id`, `hovaten`, `sodienthoai`, `email`, `tinh_thanh`, `diachichitiet`, `tongtien`, `trangthai`) VALUES
-(180, 25, 'Nguyễn Đức Hoàng', '', 'nguyenduchoangasjhdhvhashjd', '', '', 1440000.00, 0);
+(184, 27, 'Nguyễn Đức Hoàng', '0388937608', 'nguyenvana237@gmail.com', 'Cà Mau', 'sadvsa', 160000.00, 0),
+(185, 25, 'Nguyễn Đức Hoàng', '5624575675', 'nguyenduchoang522@gmail.com', 'Cao Bằng', 'jgfj', 160000.00, 0);
 
 -- --------------------------------------------------------
 
@@ -190,7 +191,8 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`id`, `anh`, `tendangnhap`, `matkhau`, `hovaten`, `gioitinh`, `diachi`, `sodienthoai`, `email`, `ngaytao`) VALUES
-(25, 'img/mi_y.jpg', 'client', '25d55ad283aa400af464c76d713c07ad', 'Nguyễn Đức Hoàng', '', 'HÀ Nội', '1233456789', 'nguyenvana237@gmail.com', '2023-09-11 13:28:32');
+(25, 'img/mi_y.jpg', 'client', '25d55ad283aa400af464c76d713c07ad', 'Nguyễn Đức Hoàng', '', 'HÀ Nội', '1233456789', 'nguyenvana237@gmail.com', '2023-09-11 13:28:32'),
+(27, NULL, 'client1', '25f9e794323b453885f5181f1b624d0b', 'nguyen van a', NULL, NULL, NULL, NULL, '2023-09-25 13:58:06');
 
 -- --------------------------------------------------------
 
@@ -246,7 +248,7 @@ INSERT INTO `sanpham` (`id`, `nhacungcap_id`, `danhmuc_id`, `tensanpham`, `anhsa
 (5, 1, 2, 'Sườn BBQ', 'img/suon_bbq.jpg', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'dfhvcb', '2023-08-17 06:09:06'),
 (6, 2, 2, 'Sườn BBQ 1', 'img/suon_bbq_nuongngo.jpeg', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'xcvxc', '2023-08-17 06:09:09'),
 (7, 3, 2, 'Sườn BBQ 2', 'img/suon_bbq1.jpg', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'cvbvc', '2023-08-17 06:09:17'),
-(8, 4, 2, 'Cơm Sườn', 'img/com-suon-nuong-bbq.png', 160000.00, 145000.00, 123, 'Sườn ngon quá', 'cvb xc', '2023-08-17 06:09:21'),
+(8, 4, 2, 'Cơm Sườn', 'img/com-suon-nuong-bbq.png', 160000.00, 145000.00, 122, 'Sườn ngon quá', 'cvb xc', '2023-08-17 06:09:21'),
 (9, 1, 3, 'Mì Ý', 'img/humberger.jpg', 80000.00, 90000.00, 12345, 'tesstcsbf', 'xzzxa', '2023-08-16 21:33:44'),
 (10, 2, 3, 'Mì Ý Sốt Cà Chua', 'img/mi_y_sotcachua.jpeg', 110000.00, 120000.00, 123, 'Mì ý ngon quá', 'dfhvc', '2023-08-17 06:09:25'),
 (11, 3, 3, 'Mì Ý Xúc Xích', 'img/mi-y-xuc-xich.webp', 90000.00, 100000.00, 123, 'Mì ý ngon quá', 'xcbvxzcs', '2023-08-17 06:09:29'),
@@ -261,7 +263,7 @@ INSERT INTO `sanpham` (`id`, `nhacungcap_id`, `danhmuc_id`, `tensanpham`, `anhsa
 (20, 1, 6, 'Phô Mai Que', 'img/phomaique.jpg', 110000.00, 120000.00, 123, 'Phô mai ngon quá', 'dfhgre', '2023-08-17 06:09:58'),
 (21, 2, 6, 'Khoai Tây Chiên', 'img/khoataychien.webp', 90000.00, 100000.00, 123, 'Khoai tây ngon quá', 'dfha', '2023-08-17 06:10:01'),
 (22, 3, 6, 'Đế Pizza', 'img/de_pizza.jpg', 160000.00, 145000.00, 123, 'Đế ngon quá', 'xcbad', '2023-08-17 06:10:03'),
-(60, 4, 6, 'Trà sữatrà 6', 'img/de_pizza.jpg', 25000.00, 30000.00, 208, 'tets', 'ágsedrh', '2023-08-19 01:53:31');
+(70, 5, 4, 'test', 'img/user.png', 25000.00, 30000.00, 21232, 'jkhjij', 'dgsdrgh', '2023-09-25 13:59:54');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -292,7 +294,6 @@ ALTER TABLE `binhluan_danhgia`
 --
 ALTER TABLE `chitietdonhang`
   ADD PRIMARY KEY (`id`),
-  -- ADD UNIQUE KEY `donhang_id` (`donhang_id`,`sanpham_id`),
   ADD KEY `id_sanpham` (`sanpham_id`);
 
 --
@@ -306,8 +307,7 @@ ALTER TABLE `danhmuc`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`id`),
-    ADD UNIQUE KEY `chitietdonhang_id` (`chitietdonhang_id`);
-  -- ADD UNIQUE KEY `id_khachhang` (`khachhang_id`);
+  ADD KEY `donhang_ibfk_1` (`khachhang_id`);
 
 --
 -- Chỉ mục cho bảng `khachhang`
@@ -355,7 +355,7 @@ ALTER TABLE `binhluan_danhgia`
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=277;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=285;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuc`
@@ -367,13 +367,13 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT cho bảng `nhacungcap`
@@ -385,7 +385,7 @@ ALTER TABLE `nhacungcap`
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
