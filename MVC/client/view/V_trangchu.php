@@ -24,7 +24,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
+        .float-contact {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 99999;
+        }
 
+
+        .chat-facebook,
+        .call-hotline {
+            display: block;
+            margin-bottom: 6px;
+            line-height: 0;
+        }
+
+        @media (max-width: 480px) {
+
+
+            .chat-facebook,
+            .call-hotline {
+                display: inline-block;
+            }
+        }
     </style>
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
@@ -49,10 +71,10 @@
                                     } ?>
                                     <div class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
-                                        
+
                                         if (isset($_SESSION['ss_client'])) {
                                             echo '<a style="text-decoration: none;" href="#">&ensp;' . $_SESSION['ss_client1'];
-                                        } 
+                                        }
                                         ?>
                                         </a>
                                     </div>
@@ -531,6 +553,16 @@
     <!-- Slider -->
     <script type="text/javascript" src="js/bxslider.min.js"></script>
     <script type="text/javascript" src="js/script.slider.js"></script>
+
+
+    <div class="float-contact">
+        <div class="call-hotline">
+            <a href="tel:0388937608"><i style="font-size: 48px; color: greenyellow;" class="fa-solid fa-phone"></i></a>
+        </div><br>
+        <div class="chat-facebook">
+            <a href="https:m.me/100020891342691" target="_blank"><i style="font-size: 48px; color: blue;" class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+    </div>
 </body>
 
 </html>

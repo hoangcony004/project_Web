@@ -9,6 +9,31 @@
     <link rel="shortcut icon" href="img/logo_annhanh.jpg">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style_login.css">
+    <style>
+        .float-contact {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 99999;
+        }
+
+
+        .chat-facebook,
+        .call-hotline {
+            display: block;
+            margin-bottom: 6px;
+            line-height: 0;
+        }
+
+        @media (max-width: 480px) {
+
+
+            .chat-facebook,
+            .call-hotline {
+                display: inline-block;
+            }
+        }
+    </style>
 
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -133,6 +158,14 @@
 
     <!-- JavaScript -->
     <script src="js/script_login.js"></script>
+    <div class="float-contact">
+        <div class="call-hotline">
+            <a href="tel:0388937608"><i style="font-size: 48px; color: greenyellow;" class="fa-solid fa-phone"></i></a>
+        </div><br>
+        <div class="chat-facebook">
+            <a href="https:m.me/100020891342691" target="_blank"><i style="font-size: 48px; color: blue;" class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+    </div>
 </body>
 
 </html>

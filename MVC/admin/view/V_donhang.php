@@ -118,9 +118,6 @@
                                 <li>
                                     <a href="?controller=themkhachhang">Thêm khách hàng</a>
                                 </li>
-                                <li>
-                                    <a href="?controller=themdonhang">Thêm đơn hàng</a>
-                                </li>
                             </ul>
                         </div>
                     </li>
@@ -502,7 +499,6 @@
                                     </div>
                                     <div class="col-xl-4">
                                         <div class="text-xl-end mt-xl-0 mt-2">
-                                            <a href="?controller=themdonhang" type="button" class="btn btn-danger mb-2 me-2"><i class="mdi mdi-basket me-1"></i> Thêm đơn hàng</a>
                                             <button type="button" class="btn btn-light mb-2">Export</button>&ensp;
                                             <a href="?controller=xoadonhang" type="button" class="btn btn-danger mb-2 me-2"><i class="fa-solid fa-trash"></i> Xóa</a>
                                         </div>

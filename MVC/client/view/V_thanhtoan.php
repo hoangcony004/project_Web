@@ -16,6 +16,31 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Font Awesome -->
+    <style>
+        .float-contact {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 99999;
+        }
+
+
+        .chat-facebook,
+        .call-hotline {
+            display: block;
+            margin-bottom: 6px;
+            line-height: 0;
+        }
+
+        @media (max-width: 480px) {
+
+
+            .chat-facebook,
+            .call-hotline {
+                display: inline-block;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
@@ -556,6 +581,14 @@
 
     <!-- Main Script -->
     <script src="js/main.js"></script>
+    <div class="float-contact">
+        <div class="call-hotline">
+            <a href="tel:0388937608"><i style="font-size: 48px; color: greenyellow;" class="fa-solid fa-phone"></i></a>
+        </div><br>
+        <div class="chat-facebook">
+            <a href="https:m.me/100020891342691" target="_blank"><i style="font-size: 48px; color: blue;" class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+    </div>
 </body>
 
 </html>

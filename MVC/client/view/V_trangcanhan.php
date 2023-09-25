@@ -84,6 +84,29 @@
         .shadow-none {
             box-shadow: none !important;
         }
+        .float-contact {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 99999;
+        }
+
+
+        .chat-facebook,
+        .call-hotline {
+            display: block;
+            margin-bottom: 6px;
+            line-height: 0;
+        }
+
+        @media (max-width: 480px) {
+
+
+            .chat-facebook,
+            .call-hotline {
+                display: inline-block;
+            }
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -456,6 +479,14 @@
 
     <!-- Main Script -->
     <script src="js/main.js"></script>
+    <div class="float-contact">
+        <div class="call-hotline">
+            <a href="tel:0388937608"><i style="font-size: 48px; color: greenyellow;" class="fa-solid fa-phone"></i></a>
+        </div><br>
+        <div class="chat-facebook">
+            <a href="https:m.me/100020891342691" target="_blank"><i style="font-size: 48px; color: blue;" class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+    </div>
 </body>
 
 </html>

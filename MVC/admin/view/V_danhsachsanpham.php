@@ -116,9 +116,6 @@
                                 <li>
                                     <a href="?controller=themkhachhang">Thêm khách hàng</a>
                                 </li>
-                                <li>
-                                    <a href="?controller=themdonhang">Thêm đơn hàng</a>
-                                </li>
                             </ul>
                         </div>
                     </li>
