@@ -9,6 +9,11 @@ if (isset($_SESSION['ss_admin'])) {
     } else {
         $data_sanpham = $db->get('sanpham', array());
     }
+} else {
+    // chuyen huong nguoi dung
+        //header('location: ?controller=dangnhap');
+        echo "<script>alert('Bạn chưa đăng nhập!')</script>";
+        echo "<script>window.location.href = '?controller=dangnhap';</script>";
 }
 
 

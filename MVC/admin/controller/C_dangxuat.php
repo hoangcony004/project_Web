@@ -5,4 +5,6 @@ if (isset($_SESSION['ss_admin'])) {
     unset($_SESSION['ss_admin']);
 }
 // chuyen huong nguoi dung
-header('location: ?controller=dangnhap');
+    //header('location: ?controller=dangnhap');
+    echo "<script>alert('Đăng xuất thành công!')</script>";
+    echo "<script>window.location.href = '?controller=dangnhap';</script>";

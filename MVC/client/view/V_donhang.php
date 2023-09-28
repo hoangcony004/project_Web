@@ -213,6 +213,9 @@
                         <?php
                         foreach ($chitietdonhang as $key => $value) {
                             $sanpham = $db->get('sanpham', array('id' => $value['sanpham_id']));
+                            // $donhang1 = $db->get('donhang', array('id' => $value['donhang_id']));
+                            // var_dump($donhang1);
+                            // die;
                         ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
@@ -221,11 +224,12 @@
                                 </div>
                                 <div>
                                     <h4><?php echo $sanpham[0]['tensanpham'] ?></h4>
-                                    <p>Số lượng <?php echo $value['soluong']?></p>
+                                    <p>Số lượng <i style="font-size: 10px;" class="fa-solid fa-x"></i> <?php echo $value['soluong'] ?></p>
                                     &emsp; &emsp;<ins style="text-decoration: none; color: blue;"><?php echo number_format($sanpham[0]['giamoi']) ?>vnd</ins> &emsp;<del><?php echo number_format($sanpham[0]['giacu']) ?>vnd</del><br><br>
+                                    <h3 style="margin-left: 200px;">Tổng thanh Toán: &emsp; <?php echo number_format($value['tongtien']) ?>vnd</h3>
                                     <?php
                                     foreach ($donhang as $key => $value) { ?>
-                                        <h3 style="margin-left: 200px;">Tổng thanh Toán: &emsp; <?php echo number_format($value['tongtien']) ?>vnd</h3>
+
                                         <?php
                                         if ($value['trangthai'] == 0) { ?>
                                             <p style="color: red;"><?php echo 'Đang chờ xác nhận' ?></p>

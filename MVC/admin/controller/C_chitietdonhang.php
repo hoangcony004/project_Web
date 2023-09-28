@@ -10,7 +10,9 @@ if (isset($_SESSION['ss_admin'])) {
     $data_donhang = $db->get('donhang', array('id' => $id));
 } else {
     // chuyen huong den trang dang nhap
-    header('location: ?controller=dangnhap');
+    //header('location: ?controller=dangnhap');
+    echo "<script>alert('Bạn chưa đăng nhập!')</script>";
+    echo "<script>window.location.href = '?controller=dangnhap';</script>";
 }
 require './view/V_ctdonhang.php';
 

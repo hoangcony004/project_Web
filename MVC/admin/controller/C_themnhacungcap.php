@@ -20,7 +20,9 @@ if (isset($_SESSION['ss_admin'])) {
 
                 ));
                 // chuyen huong nguoi dung
-                header('location: ?controller=nhacungcap');
+                // header('location: ?controller=nhacungcap');
+                echo "<script>alert('Thêm nhà cung cấp thành công!')</script>";
+                echo "<script>window.location.href = '?controller=nhacungcacp';</script>";
             }
         } else {
             $method = $_GET['method'];
@@ -31,7 +33,9 @@ if (isset($_SESSION['ss_admin'])) {
                     // su dung function da co de su dung 
                     $db->delete('nhacungcap', array('id' => $id));
                     // chuyen huong nguoi dung
-                    header('location: ?controller=nhacungcap');
+                    //header('location: ?controller=dangnhap');
+                    echo "<script>alert('Xóa thành công!')</script>";
+                    echo "<script>window.location.href = '?controller=nhacungcap';</script>";
                     break;
             }
         }
@@ -41,7 +45,9 @@ if (isset($_SESSION['ss_admin'])) {
     }
 } else {
     // chuyen huong nguoi dung
-    header('location: ?controller=dangnhap');
+    //header('location: ?controller=dangnhap');
+    echo "<script>alert('Bạn chưa đăng nhập!')</script>";
+    echo "<script>window.location.href = '?controller=dangnhap';</script>";
 }
 
 require './view/V_themnhacungcap.php';

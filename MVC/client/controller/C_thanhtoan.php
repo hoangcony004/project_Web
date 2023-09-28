@@ -53,5 +53,7 @@ if (isset($_SESSION['ss_client'])) {
     }
     require 'view/V_thanhtoan.php';
 } else {
-    header('location: ?controller=dangnhap');
+        //header('location: ?controller=dangnhap');
+        echo "<script>alert('Bạn chưa đăng nhập!')</script>";
+        echo "<script>window.location.href = '?controller=dangnhap';</script>";
 }

@@ -52,7 +52,9 @@ if (isset($_POST['btn_capnhat'])) {
         array('id' => $id)
     );
     // chuyen huong nguoi dung
-    header('location: ?controller=trangchu');
+    // header('location: ?controller=trangchu');
+        echo "<script>alert('Cập nhật thông tin thành công!')</script>";
+        echo "<script>window.location.href = '?controller=trangcanhan&id=$id';</script>";
 };
 
 

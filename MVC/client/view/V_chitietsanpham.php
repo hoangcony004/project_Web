@@ -371,7 +371,7 @@
                         </div>
 
                         <div class="related-products-wrapper">
-                            <h2 class="related-products-title">Sản phẩm mới</h2>
+                            <h2 class="related-products-title">Sản phẩm</h2>
                             <div class="related-products-carousel">
                                 <?php
                                 foreach ($pizza as $key => $value) { ?>

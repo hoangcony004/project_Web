@@ -18,12 +18,11 @@ if (isset($_SESSION['ss_admin'])) {
                     $donhang_id = $value['donhang_id'];
                     $soluongdamua = $value['soluong'];
                 }
-                // echo 'id la'.$donhang_id;
-                // die;
+                // su dung function da co de su dung 
                 $db->update('donhang', array('trangthai' => 1), array('id' => $id));
 
                 // tru san pham trong database
-                $tongsanpham  = $soluongkho-$soluongdamua;
+                $tongsanpham  = $soluongkho - $soluongdamua;
                 $db->update(
                     'sanpham',
                     array(
@@ -33,7 +32,9 @@ if (isset($_SESSION['ss_admin'])) {
                 );
 
                 // chuyen huong nguoi dung
-                header('location: ?controller=donhang');
+                //header('location: ?controller=donhang');
+                echo "<script>alert('Duyệt thành công!')</script>";
+                echo "<script>window.location.href = '?controller=donhang';</script>";
                 break;
             case 'xoa':
                 // lay id tu url ve 
@@ -42,7 +43,9 @@ if (isset($_SESSION['ss_admin'])) {
                 $db->delete('donhang', array('id' => $id));
                 $db->delete('chitietdonhang', array('donhang_id' => $id));
                 // chuyen huong nguoi dung
-                header('location: ?controller=donhang');
+                // header('location: ?controller=donhang');
+                echo "<script>alert('Hủy đơn hàng thành công!')</script>";
+                echo "<script>window.location.href = '?controller=donhang';</script>";
                 break;
             case 'sua':
                 // lay id tu url ve 
@@ -62,7 +65,7 @@ if (isset($_SESSION['ss_admin'])) {
                     // khai bao bien chua cac loi 
                     $loi = array();
 
-                    
+
                     if (!$loi) {
                         // su dung function da co de su dung 
                         $db->update(
@@ -78,7 +81,9 @@ if (isset($_SESSION['ss_admin'])) {
                             array('id' => $id)
                         );
                         // chuyen huong nguoi dung 
-                        header('location: ?controller=donhang');
+                        // header('location: ?controller=donhang');
+                        echo "<script>alert('Sửa đơn hàng thành công!')</script>";
+                        echo "<script>window.location.href = '?controller=donhang';</script>";
                     }
                 }
                 require './view/V_xulydonhang.php';

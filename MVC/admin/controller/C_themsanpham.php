@@ -62,13 +62,13 @@ if (isset($_SESSION['ss_admin'])) {
                     'giamoi' => $giamoi,
                     'giacu' => $giacu,
                     'nguyenlieu' => $nguyenlieu,
-                    'soluong' =>$soluong
+                    'soluong' => $soluong
                 ));
                 // chuyen huong nguoi dung
-                header('location: ?controller=danhsachsanpham');
-               
+                // header('location: ?controller=danhsachsanpham');
+                echo "<script>alert('Thêm sản phẩm thành công!')</script>";
+                echo "<script>window.location.href = '?controller=danhsachsanpham';</script>";
             }
-           
         }
     } else {
         // hien thi thong bao
@@ -76,6 +76,8 @@ if (isset($_SESSION['ss_admin'])) {
     }
 } else {
     // chuyen huong nguoi dung
-    header('location: ?controller=dangnhap');
+    //header('location: ?controller=dangnhap');
+    echo "<script>alert('Bạn chưa đăng nhập!')</script>";
+    echo "<script>window.location.href = '?controller=dangnhap';</script>";
 }
 require './view/v_themsanpham.php';

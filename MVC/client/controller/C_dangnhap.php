@@ -36,11 +36,12 @@ if (isset($_POST['btn_dangnhap'])) {
         // gan id nguoi dung vao session
         $_SESSION['ss_client'] = $user[0]['id'];
         $_SESSION['ss_client1'] = $user[0]['hovaten'];
-            // chuyen huong nguoi dung
-        header('location: ?controller=trangchu');
+        // chuyen huong nguoi dung
+        // header('location: ?controller=trangchu');
+        echo "<script>alert('Đăng nhập thành công!')</script>";
+        echo "<script>window.location.href = '?controller=trangchu';</script>";
     }
     require './view/V_dangnhap_dangky.php';
-
 } else {
     // lay du lieu tu o input nguoi dung nhap
     if (isset($_POST['btn_dangky'])) {
@@ -81,8 +82,10 @@ if (isset($_POST['btn_dangnhap'])) {
                 'hovaten' => $sdtdk
 
             ));
-                // chuyen huong nguoi dung
-            header('location: ?controller=dangnhap');
+            // chuyen huong nguoi dung
+            // header('location: ?controller=dangnhap');
+            echo "<script>alert('Đăng ký thành công!')</script>";
+            echo "<script>window.location.href = '?controller=dangnhap';</script>";
         }
     }
     require './view/V_dangnhap_dangky.php';

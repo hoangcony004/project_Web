@@ -14,7 +14,9 @@ if (isset($_SESSION['ss_admin'])) {
                 // su dung function da co de su dung 
                 $db->delete('khachhang', array('id' => $id));
                 // chuyen huong nguoi dung
-                header('location: ?controller=khachhang');
+                // header('location: ?controller=khachhang');
+                echo "<script>alert('Xóa thành công!')</script>";
+                echo "<script>window.location.href = '?controller=khachhang';</script>";
                 break;
             case 'suakh':
                 // lay id tu url ve 
@@ -29,23 +31,28 @@ if (isset($_SESSION['ss_admin'])) {
                     $sodt = $_POST['sodt'];
                     $email = $_POST['email'];
                     $diachi = $_POST['diachi'];
-        
+
                     // khai bao loi
                     $loi = array();
                     $password = md5($password);
                     if (!$loi) {
                         // su dung function da co de su dung 
-                        $db->update('khachhang', array(
-                            'tendangnhap' => $username,
-                            'matkhau' => $password,
-                            'hovaten' => $hoten,
-                            'sodienthoai' => $sodt,
-                            'email' => $email,
-                            'diachi' => $diachi
-                        ),array('id' => $id)
+                        $db->update(
+                            'khachhang',
+                            array(
+                                'tendangnhap' => $username,
+                                'matkhau' => $password,
+                                'hovaten' => $hoten,
+                                'sodienthoai' => $sodt,
+                                'email' => $email,
+                                'diachi' => $diachi
+                            ),
+                            array('id' => $id)
                         );
                         // chuyen huong nguoi dung
-                        header('location: ?controller=khachhang');
+                        // header('location: ?controller=khachhang');
+                        echo "<script>alert('Sửa khách hàng thành công!')</script>";
+                        echo "<script>window.location.href = '?controller=khachhang';</script>";
                     }
                 }
                 break;
@@ -54,8 +61,10 @@ if (isset($_SESSION['ss_admin'])) {
         // hien thi thong bao
         echo '<script>alert("Bạn không có quyền")</script>';
     }
-}else {
+} else {
     // chuyen huong nguoi dung
-    header('location: ?controller=dangnhap');
+    //header('location: ?controller=dangnhap');
+    echo "<script>alert('Bạn chưa đăng nhập!')</script>";
+    echo "<script>window.location.href = '?controller=dangnhap';</script>";
 }
 require './view/V_xulykhachhang.php';

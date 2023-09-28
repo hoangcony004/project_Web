@@ -12,9 +12,9 @@ if (isset($_SESSION['ss_admin'])) {
                 // lay id tu url ve 
                 $id = $_GET['id'];
                 // su dung function da co de su dung 
-                $sanpham = $db->get('sanpham', array('id'=>$id));
-                $product_catalog = $db->get('nhacungcap',array('id'=>$sanpham[0]['nhacungcap_id']));
-                $data_catalog = $db->get('nhacungcap',array());
+                $sanpham = $db->get('sanpham', array('id' => $id));
+                $product_catalog = $db->get('nhacungcap', array('id' => $sanpham[0]['nhacungcap_id']));
+                $data_catalog = $db->get('nhacungcap', array());
                 // lay du lieu tu o input nguoi dung nhap
                 if (isset($_POST['btn_suasp'])) {
                     $idncc = $_POST['idncc'];
@@ -78,10 +78,12 @@ if (isset($_SESSION['ss_admin'])) {
                                 'soluong' => $soluong,
                                 'nguyenlieu' => $nguyenlieu
                             ),
-                        array('id' => $id)
+                            array('id' => $id)
                         );
                         // chuyen huong nguoi dung
-                        header('location: ?controller=danhsachsanpham');
+                        // header('location: ?controller=danhsachsanpham');
+                        echo "<script>alert('Sửa sản phẩm thành công!')</script>";
+                        echo "<script>window.location.href = '?controller=danhsachsanpham';</script>";
                     }
                 }
                 require './view/V_xulysanpham.php';
@@ -92,15 +94,18 @@ if (isset($_SESSION['ss_admin'])) {
                 // su dung function da co de su dung 
                 $db->delete('sanpham', array('id' => $id));
                 // chuyen huong nguoi dung
-                header('location: ?controller=danhsachsanpham');
+                // header('location: ?controller=danhsachsanpham');
+                echo "<script>alert('Xóa thành công!')</script>";
+                echo "<script>window.location.href = '?controller=danhsachsanpham';</script>";
                 break;
         }
     } else {
         // hien thi thong bao
         echo '<script>alert("Bạn không có quyền")</script>';
     }
-}else {
+} else {
     // chuyen huong nguoi dung
-    header('location: ?controller=dangnhap');
+    //header('location: ?controller=dangnhap');
+    echo "<script>alert('Bạn chưa đăng nhập!')</script>";
+    echo "<script>window.location.href = '?controller=dangnhap';</script>";
 }
-

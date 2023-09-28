@@ -11,34 +11,39 @@ if (isset($_POST['btn_doimatkhau'])) {
     if ($matkhaucu == '') {
         $loi['matkhaucu'] = 'Mật khẩu không được để trống!';
     }
-    if ($matkhaucu == '') {
+    if ($matkhaumoi == '') {
         $loi['matkhaumoi'] = 'Mật khẩu không được để trống!';
     }
 
     if (!$loi) {
         // su dung function da co de su dung 
-        $pass = $db->get('khachhang', array('matkhau' => $matkhaucu));
-        // var_dump($matkhaucu);
+        $pass = $db->get('khachhang', array('matkhau'));
+        // var_dump($pass);
         // die;
-        // kiem tra mat khau nhap vao co khop voi mat khau da co trong database khong
-        if (empty($pass)) {
-            $loi['makhaucu'] = 'Sai mật khẩu!';
-        } else {
-            $matkhaumoi = md5($matkhaumoi);
-            // var_dump($matkhaumoi);
-            // die;
-            // su dung function da co de su dung 
-            $db->update(
-                'khachhang',
-                array(
-                    'matkhau' => $matkhaumoi,
-
-                ),
-                array('id' => $id)
-            );
-            // chuyen huong nguoi dung
-            header('location: ?controller=dangxuat');
+        $matkhaucu1 = md5($matkhaucu);
+        foreach ($pass as $key => $value) {
+            // kiem tra mat khau nhap vao co khop voi mat khau da co trong database khong
+            if ($matkhaucu1 == $value['matkhau']) {
+                // ma hoa mat khau 
+                $matkhaumoi1 = md5($matkhaumoi);
+                // su dung function da co de su dung 
+                $db->update(
+                    'khachhang',
+                    array(
+                        'matkhau' => $matkhaumoi1,
+                    ),
+                    array('id' => $id)
+                );
+                // chuyen huong nguoi dung
+                // header('location: ?controller=dangxuat');
+                echo "<script>alert('Đổi mật khẩu thành công!')</script>";
+                echo "<script>window.location.href = '?controller=dangxuat';</script>";
+            } else {
+                echo "<script>alert('Sai mật khẩu!')</script>";
+                echo "<script>window.location.href = '?controller=doimatkhau&id=$id';</script>";
+            }
         }
     }
 }
+
 require './view/V_doimatkhau.php';
