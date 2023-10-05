@@ -5,7 +5,9 @@ if (isset($_SESSION['ss_admin'])) {
     // lay id tu url ve 
     $id=$_GET['id'];
     $sanpham = $db->get('sanpham',array('id'=>$id));
-        $data_sanpham = $db->get('sanpham', array());
+    // var_dump($sanpham);
+    // die;
+
 } else {
     // chuyen huong den trang dang nhap
     //header('location: ?controller=dangnhap');

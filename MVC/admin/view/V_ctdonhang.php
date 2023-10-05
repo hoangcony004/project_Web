@@ -579,7 +579,7 @@
 
                                         <address class="mb-0 font-14 address-lg">
                                             <p>Địa chỉ: <?php echo $value['diachichitiet'] ?></p>
-                                            <abbr title="Phone">Số điện thoại: </abbr> <?php echo $value['sodienthoai'] ?>
+                                            <p title="Phone">Số điện thoại: <?php echo $value['sodienthoai'] ?></p> 
                                         </address>
                                     <?php } ?>
                                 </div>

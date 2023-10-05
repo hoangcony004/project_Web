@@ -42,9 +42,9 @@ if (isset($_POST['btn_dangnhap'])) {
         // gan id nguoi dung vao session
         $_SESSION['ss_admin'] = $user[0]['id'];
         // khi da xong chuyen huong nguoi dung
-        //header('location: ?controller=dangnhap');
-        echo "<script>alert('Đăng nhập thành công!')</script>";
-        echo "<script>window.location.href = '?controller=dangnhap';</script>";
+        header('location: ?controller=dangnhap');
+        // echo "<script>alert('Đăng nhập thành công!')</script>";
+        // echo "<script>window.location.href = '?controller=dangnhap';</script>";
     }
 }
 

@@ -37,9 +37,9 @@ if (isset($_POST['btn_dangnhap'])) {
         $_SESSION['ss_client'] = $user[0]['id'];
         $_SESSION['ss_client1'] = $user[0]['hovaten'];
         // chuyen huong nguoi dung
-        // header('location: ?controller=trangchu');
-        echo "<script>alert('Đăng nhập thành công!')</script>";
-        echo "<script>window.location.href = '?controller=trangchu';</script>";
+        header('location: ?controller=trangchu');
+        // echo "<script>alert('Đăng nhập thành công!')</script>";
+        // echo "<script>window.location.href = '?controller=trangchu';</script>";
     }
     require './view/V_dangnhap_dangky.php';
 } else {
