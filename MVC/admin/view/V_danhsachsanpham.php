@@ -548,7 +548,9 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                foreach ($data_sanpham as $key => $value) { ?>
+                                                foreach ($data_sanpham as $key => $value) { 
+                                                    $nhacungcap = $db->get('nhacungcap', array('id' => $value['nhacungcap_id']));
+                                                    ?>
                                                     <tr>
                                                         <td>
                                                             <div class="form-check">
@@ -568,11 +570,6 @@
                                                                 <span class="text-warning mdi mdi-star"></span>
                                                             </p>
                                                         </td>
-                                                        <?php
-                                                        foreach ($data_sanpham as $key => $value) {
-                                                            $nhacungcap = $db->get('nhacungcap', array('id' => $value['nhacungcap_id']));
-                                                        }
-                                                        ?>
                                                         <td>
                                                             <?php echo $nhacungcap[0]['tennhacungcap'] ?>
                                                         </td>
