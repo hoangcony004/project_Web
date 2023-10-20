@@ -225,7 +225,7 @@
                                             <h6 class="mb-0">Họ tên: </h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" placeholder="Nhập họ tên..." name="hoten" value="<?php echo $khachhang[0]['hovaten'] ?>">
+                                            <input type="text" placeholder="Nhập họ tên..." name="hoten" value="`<?php echo $khachhang[0]['hovaten'] ?>`">
                                         </div>
                                         <?php if (isset($loi['hoten'])) { ?>
                                             <p class="text-danger"><?php echo $loi['hoten'] ?></p>

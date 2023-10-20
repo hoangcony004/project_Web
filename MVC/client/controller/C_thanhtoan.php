@@ -1,4 +1,6 @@
 <?php
+
+$khachhang = $db->get('khachhang', array('id' => $_SESSION['ss_client']));
 // kiem tra dang nhap
 if (isset($_SESSION['ss_client'])) {
     // lay du lieu tu o input luu vao bien

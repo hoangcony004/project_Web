@@ -259,18 +259,18 @@
                                                     <label class for="billing_first_name">Họ
                                                         và tên <abbr title="required" class="required">*</abbr>
                                                     </label>
-                                                    <input type="text" value placeholder="Nhập họ và tên..." id="billing_first_name" name="hoten" class="input-text ">
+                                                    <input type="text" value="<?php echo $khachhang[0]['hovaten'] ?>" placeholder="Nhập họ và tên..." id="billing_first_name" name="hoten" class="input-text ">
                                                 </p>
                                                 <p id="billing_company_field" class="form-row form-row-wide">
                                                     <label class for="billing_company">Số
                                                         điện thoại <abbr title="required" class="required">*</abbr></label>
-                                                    <input type="number" value placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text " style="width: 500px; height: 40px;">
+                                                    <input type="number" value="<?php echo $khachhang[0]['sodienthoai'] ?>" placeholder="Nhập Số điện thoại..." id="billing_company" name="sodienthoai" class="input-text " style="width: 500px; height: 40px;">
                                                 </p>
 
                                                 <p id="billing_company_field" class="form-row form-row-wide">
                                                     <label class for="billing_company">Email
                                                         <abbr title="required" class="required">*</abbr></label>
-                                                    <input type="text" value placeholder="Nhập email..." id="billing_company" name="email" class="input-text ">
+                                                    <input type="text" value="<?php echo $khachhang[0]['email'] ?>" placeholder="Nhập email..." id="billing_company" name="email" class="input-text ">
                                                 </p>
 
                                                 <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
@@ -435,7 +435,7 @@
                                                     </div>
                                                 </li>
                                                 <li class="payment_method_bacs">
-                                                    <input type="radio" data-order_button_text checked="checked" value="bacs" name="payment_method" class="input-radio" id="payment_method_bacs">
+                                                    <input type="radio" data-order_button_text  value="bacs" name="payment_method" class="input-radio" id="payment_method_bacs">
                                                     <label for="payment_method_bacs">Thanh
                                                         toán bằng Bankking
                                                     </label>
