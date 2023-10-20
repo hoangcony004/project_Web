@@ -224,7 +224,7 @@
                                                 <tr class="cart_item">
 
                                                     <td class="product-thumbnail">
-                                                        <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="<?php echo $value['anhsanpham'] ?>"></a>
+                                                        <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="../admin/<?php echo $value['anhsanpham'] ?>"></a>
                                                     </td>
 
                                                     <td class="product-name">
@@ -289,7 +289,7 @@
                                         <li class="product">
                                             <?php
                                             foreach ($pizza3 as $key => $value) { ?>
-                                                <img style="width: 220px; height: 130px;" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $value['anhsanpham']; ?>">
+                                                <img style="width: 220px; height: 130px;" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="../admin/<?php echo $value['anhsanpham']; ?>">
                                                 <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>">
                                                     <h3><?php echo $value['tensanpham']; ?></h3>
                                                 </a>
@@ -303,7 +303,7 @@
                                         <li class="product">
                                             <?php
                                             foreach ($pizza4 as $key => $value) { ?>
-                                                <img style="width: 220px; height: 130px;" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="<?php echo $value['anhsanpham']; ?>">
+                                                <img style="width: 220px; height: 130px;" alt="T_4_front" class="attachment-shop_catalog wp-post-image" src="../admin/<?php echo $value['anhsanpham']; ?>">
                                                 <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>">
                                                     <h3><?php echo $value['tensanpham']; ?></h3>
                                                 </a>
@@ -355,7 +355,7 @@
                         <?php
                         foreach ($pizza1 as $key => $value) { ?>
                             <div class="thubmnail-recent">
-                                <img src="<?php echo $value['anhsanpham']; ?>" class="recent-thumb" alt>
+                                <img src="../admin/<?php echo $value['anhsanpham']; ?>" class="recent-thumb" alt>
                                 <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                 <div class="product-sidebar-price">
                                     <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>
@@ -365,7 +365,7 @@
                         <?php
                         foreach ($pizza2 as $key => $value) { ?>
                             <div class="thubmnail-recent">
-                                <img src="<?php echo $value['anhsanpham']; ?>" class="recent-thumb" alt>
+                                <img src="../admin/<?php echo $value['anhsanpham']; ?>" class="recent-thumb" alt>
                                 <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                 <div class="product-sidebar-price">
                                     <ins><?php echo number_format($value['giamoi']) ?>vnd</ins> <del><?php echo number_format($value['giacu']) ?>vnd</del>

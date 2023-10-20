@@ -185,17 +185,17 @@
         <div class="block-slider block-slider4">
             <ul class id="bxslider-home4">
                 <li>
-                    <a href="#"><img style="" src="img/baner-pizza.jpg" alt="Slide1"></a>
+                    <a href="#"><img src="img/baner-pizza.jpg" alt="Slide1"></a>
                 </li>
                 <li>
-                    <a href="#"><img style="" src="img/banner_bbq.jpg" alt="Slide2"></a>
+                    <a href="#"><img src="img/banner_bbq.jpg" alt="Slide2"></a>
                 </li>
                 <li>
-                    <a href="#"><img style="" src="img/banner_salad.webp" alt="Slide3"></a>
+                    <a href="#"><img src="img/banner_salad.webp" alt="Slide3"></a>
 
                 </li>
                 <li>
-                    <a href="#"><img style="" src="img/banner_miy.jpg" alt="Slide4"></a>
+                    <a href="#"><img src="img/banner_miy.jpg" alt="Slide4"></a>
                 </li>
             </ul>
         </div>
@@ -250,7 +250,7 @@
                                         <div class="col-md-3 col-sm-6">
                                             <div class="single-shop-product">
                                                 <div class="product-upper">
-                                                    <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
+                                                    <a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt="anh"></a>
                                                 </div>
                                                 <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                 <div class="product-carousel-price">
@@ -273,7 +273,7 @@
                             foreach ($sanpham as $key => $value) { ?>
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt="anh">
+                                        <img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt="anh">
                                     </div>
 
                                     <h2><a href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?> </a></h2>

@@ -225,13 +225,10 @@
 
                         <ul>
                             <?php
-                            foreach ($binhluan_danhgia as $key => $value) { ?>
+                            foreach ($binhluan_danhgia as $key => $value) { 
+                                $tenkh = $db->get('khachhang', array('id' => $value['khachhang_id']));
+                                ?>
                                 <div>
-                                    <?php
-                                    foreach ($binhluan_danhgia as $key => $value) {
-                                        $tenkh = $db->get('khachhang', array('id' => $value['khachhang_id']));
-                                    }
-                                    ?>
                                     <h5><?php echo $tenkh[0]['hovaten'] ?></h5>
                                     <h6>
                                         <?php
@@ -278,13 +275,13 @@
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
+                                        <img src="../admin/<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
                                     </div>
 
                                     <div class="product-gallery">
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
-                                        <img src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
+                                        <img src="../admin/<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
+                                        <img src="../admin/<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
+                                        <img src="../admin/<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anhsanpham">
                                     </div>
                                 </div>
                             </div>

@@ -219,7 +219,7 @@
                         ?>
                             <div class="single-shop-product" style="display: flex;">
                                 <div class="product-upper">
-                                    <img style="width: 150px; height: 80px;" src="<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anh">
+                                    <img style="width: 150px; height: 80px;" src="../admin/<?php echo $sanpham[0]['anhsanpham'] ?>" alt="anh">
 
                                 </div>
                                 <div>

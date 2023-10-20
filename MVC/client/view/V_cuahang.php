@@ -220,7 +220,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="single-shop-product">
                                                             <div class="product-upper">
-                                                                <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt>
+                                                                <img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt>
                                                             </div>
                                                             <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                             <div class="product-carousel-price">
@@ -256,7 +256,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="single-shop-product">
                                                             <div class="product-upper">
-                                                                <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt>
+                                                                <img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt>
                                                             </div>
                                                             <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                             <div class="product-carousel-price">
@@ -292,7 +292,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="single-shop-product">
                                                             <div class="product-upper">
-                                                                <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt>
+                                                                <img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt>
                                                             </div>
                                                             <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                             <div class="product-carousel-price">
@@ -328,7 +328,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="single-shop-product">
                                                             <div class="product-upper">
-                                                                <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt>
+                                                                <img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt>
                                                             </div>
                                                             <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                             <div class="product-carousel-price">
@@ -364,7 +364,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="single-shop-product">
                                                             <div class="product-upper">
-                                                                <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt>
+                                                                <img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt>
                                                             </div>
                                                             <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                             <div class="product-carousel-price">
@@ -400,7 +400,7 @@
                                                     <div class="col-md-3 col-sm-6">
                                                         <div class="single-shop-product">
                                                             <div class="product-upper">
-                                                                <img style="width: 220px; height: 130px;" src="<?php echo $value['anhsanpham']; ?>" alt>
+                                                                <img style="width: 220px; height: 130px;" src="../admin/<?php echo $value['anhsanpham']; ?>" alt>
                                                             </div>
                                                             <h2><a style="text-decoration: none;" href="?controller=chitietsanpham&id=<?php echo $value['id'] ?>"><?php echo $value['tensanpham']; ?></a></h2>
                                                             <div class="product-carousel-price">
